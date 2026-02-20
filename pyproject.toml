@@ -1,10 +1,23 @@
 [project]
 name = "embellie"
 version = "0.1.0"
-description = "Add your description here"
+description = "The smallest possible text-to-speech system"
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.11"
 dependencies = [
     "torch",
     "g2p-en",
 ]
+
+[project.optional-dependencies]
+tn = [
+    "nemo_text_processing",
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
