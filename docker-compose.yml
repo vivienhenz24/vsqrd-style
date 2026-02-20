@@ -1,0 +1,15 @@
+services:
+  trainer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: embellie-trainer:latest
+    container_name: embellie-trainer
+    working_dir: /workspace
+    volumes:
+      - ./:/workspace
+    gpus: all
+    shm_size: "16gb"
+    stdin_open: true
+    tty: true
+    command: python main.py
