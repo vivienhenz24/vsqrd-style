@@ -6,13 +6,12 @@ readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "torch",
-    "g2p-en",
+    "num2words",
+    "misaki[en]",
 ]
 
-[project.optional-dependencies]
-tn = [
-    "nemo_text_processing",
-]
+[tool.uv.sources]
+misaki = { path = "g2p" }
 
 [dependency-groups]
 dev = [

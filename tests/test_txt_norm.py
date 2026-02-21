@@ -1,27 +1,39 @@
-import mifi.txt_norm as txt_norm
+from mifi.fe.txt_norm import normalize_text
 
 
-def test_normalize_text_falls_back_when_nemo_unavailable(monkeypatch) -> None:
-    monkeypatch.setattr(txt_norm, "_get_nemo_normalizer", lambda: None)
-
-    assert txt_norm.normalize_text("Raw Text") == "Raw Text"
+def test_plain_text_unchanged() -> None:
+    assert normalize_text("hello world") == "hello world"
 
 
-def test_normalize_text_uses_nemo_normalizer_and_strips(monkeypatch) -> None:
-    class FakeNormalizer:
-        def normalize(self, text: str, verbose: bool = False) -> str:
-            return f"  normalized: {text}  "
-
-    monkeypatch.setattr(txt_norm, "_get_nemo_normalizer", lambda: FakeNormalizer())
-
-    assert txt_norm.normalize_text("hello") == "normalized: hello"
+def test_strips_whitespace() -> None:
+    assert normalize_text("  hello  ") == "hello"
 
 
-def test_normalize_text_handles_normalizer_without_verbose(monkeypatch) -> None:
-    class LegacyNormalizer:
-        def normalize(self, text: str) -> str:
-            return "legacy"
+def test_integer_expanded() -> None:
+    result = normalize_text("I have 3 cats")
+    assert "3" not in result
+    assert "three" in result
 
-    monkeypatch.setattr(txt_norm, "_get_nemo_normalizer", lambda: LegacyNormalizer())
 
-    assert txt_norm.normalize_text("anything") == "legacy"
+def test_float_expanded() -> None:
+    result = normalize_text("score is 3.5")
+    assert "3.5" not in result
+
+
+def test_currency_dollar() -> None:
+    result = normalize_text("costs $5")
+    assert "$" not in result
+    assert "five" in result
+    assert "dollar" in result
+
+
+def test_currency_singular() -> None:
+    result = normalize_text("$1 only")
+    assert "dollar" in result
+    assert "dollars" not in result
+
+
+def test_ordinal_expanded() -> None:
+    result = normalize_text("finished 1st")
+    assert "1st" not in result
+    assert "first" in result
