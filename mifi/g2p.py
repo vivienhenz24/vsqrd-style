@@ -1,6 +1,6 @@
 from g2p_en import G2p
 
-from embellie.txt_norm import normalize_text
+from mifi.txt_norm import normalize_text
 
 
 _G2P = G2p()

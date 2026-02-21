@@ -1,4 +1,4 @@
-import embellie.g2p as g2p_module
+import mifi.g2p as g2p_module
 
 
 def test_text_to_phonemes_filters_empty_tokens(monkeypatch) -> None:

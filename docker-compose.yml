@@ -3,8 +3,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: embellie-trainer:latest
-    container_name: embellie-trainer
+    image: mifi-trainer:latest
+    container_name: mifi-trainer
     working_dir: /workspace
     volumes:
       - ./:/workspace
@@ -12,4 +12,4 @@ services:
     shm_size: "16gb"
     stdin_open: true
     tty: true
-    command: python -m embellie.main
+    command: python -m mifi.main

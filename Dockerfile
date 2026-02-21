@@ -14,9 +14,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 COPY pyproject.toml README.md ./
-COPY embellie ./embellie
+COPY mifi ./mifi
 
 RUN pip install --upgrade pip && pip install -e ".[tn]" \
     && python -c "import nltk; nltk.download('averaged_perceptron_tagger_eng', download_dir='/usr/local/share/nltk_data')"
 
-CMD ["python", "-m", "embellie.main"]
+CMD ["python", "-m", "mifi.main"]

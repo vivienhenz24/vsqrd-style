@@ -1,5 +1,5 @@
 [project]
-name = "embellie"
+name = "mifi"
 version = "0.1.0"
 description = "The smallest possible text-to-speech system"
 readme = "README.md"

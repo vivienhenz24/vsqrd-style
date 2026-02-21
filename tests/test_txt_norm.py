@@ -1,4 +1,4 @@
-import embellie.txt_norm as txt_norm
+import mifi.txt_norm as txt_norm
 
 
 def test_normalize_text_falls_back_when_nemo_unavailable(monkeypatch) -> None:

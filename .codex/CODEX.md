@@ -1,4 +1,4 @@
-# CODEX Context: Embellie
+# CODEX Context: Mifi
 
 ## Project Goal
 Build an extremely small, StyleTTS2-like non-autoregressive TTS model by mimicking the Kokoro approach while keeping the system minimal and practical.
@@ -27,7 +27,7 @@ Core reference files in Kokoro:
 - English chunking keeps phoneme chunks <= 510 chars with punctuation-aware splitting.
 - Inference entrypoint eventually calls `KPipeline.infer(...)`.
 
-Implication for Embellie:
+Implication for Mifi:
 - Start with strong English-first G2P + chunking.
 - Keep chunking deterministic and punctuation-aware.
 
@@ -36,7 +36,7 @@ Implication for Embellie:
 - Multiple voices can be blended by averaging tensors.
 - In original inference, one row from the voice pack is selected based on phoneme length (`pack[len(ps)-1]`).
 
-Implication for Embellie:
+Implication for Mifi:
 - Keep voice embedding format simple and cacheable.
 - Support blendable style vectors from day 1.
 
@@ -45,7 +45,7 @@ Implication for Embellie:
 - BOS/EOS are added; max context is enforced.
 - Phoneme strings are treated as discrete token sequences before timing/acoustic prediction.
 
-Implication for Embellie:
+Implication for Mifi:
 - Stable phoneme vocabulary and tokenization is core infrastructure.
 - Do not postpone vocab design.
 
@@ -61,7 +61,7 @@ In `forward_with_tokens`:
 Key trick:
 - Predict durations first, then expand token features into frame-level features.
 
-Implication for Embellie:
+Implication for Mifi:
 - Duration predictor is a first-class model component, not an afterthought.
 
 ### 5) Prosody prediction (F0 and noise)
@@ -73,7 +73,7 @@ Implemented by `ProsodyPredictor.F0Ntrain` with:
 - Duration encoder with alternating LSTM + adaptive layer norm conditioned on style.
 - Separate AdaIN residual stacks for F0 and N branches.
 
-Implication for Embellie:
+Implication for Mifi:
 - Keep separate controllable channels for periodic (pitch) and aperiodic/noise structure.
 
 ### 6) Text encoder path for content features
@@ -85,7 +85,7 @@ Frame-level streams:
 - `F0`
 - `N`
 
-Implication for Embellie:
+Implication for Mifi:
 - Preserve separation of content and prosody paths.
 
 ### 7) Decoder + ISTFT-based generator
@@ -97,16 +97,16 @@ Implication for Embellie:
 - Predicts magnitude/phase-like outputs.
 - Performs inverse STFT to waveform (`TorchSTFT` or ONNX-friendly `CustomSTFT`).
 
-Implication for Embellie:
+Implication for Mifi:
 - Final stage should be source-filter + ISTFT-like neural waveform synthesis, not only mel->HiFiGAN.
 
 ### 8) Timing metadata
 - Predicted duration is also used to approximate per-token timestamps for alignment/word timing output.
 
-Implication for Embellie:
+Implication for Mifi:
 - Expose timing metadata as a product feature, not just internal debug info.
 
-## Embellie Build Priorities
+## Mifi Build Priorities
 1. Reliable English G2P and phoneme normalization.
 2. Deterministic chunking and max-context handling.
 3. Phoneme vocab/tokenizer with BOS/EOS and OOV policy.
