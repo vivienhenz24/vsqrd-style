@@ -6,12 +6,27 @@ readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "torch",
+    "torchaudio",
     "num2words",
     "misaki[en]",
+    "loguru",
+    "soundfile",
+    "pydub",
+    "pyyaml",
+    "munch",
+    "librosa",
+    "matplotlib",
+    "accelerate",
+    "transformers",
+    "einops",
+    "einops-exts",
+    "tqdm",
+    "monotonic-align",
 ]
 
 [tool.uv.sources]
 misaki = { path = "g2p" }
+monotonic-align = { git = "https://github.com/resemble-ai/monotonic_align.git" }
 
 [dependency-groups]
 dev = [
