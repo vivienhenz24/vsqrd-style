@@ -79,6 +79,19 @@ def text_to_phonemes(g2p, text: str) -> str:
     return phonemes.strip()
 
 
+def pretokenize_rows(rows: list[dict], g2p, model: KModel) -> list[dict]:
+    out: list[dict] = []
+    for row in rows:
+        phonemes = text_to_phonemes(g2p, row["text"])
+        ids = _tokenize(phonemes, model.vocab).squeeze(0)  # [T]
+        if ids.shape[0] <= 2:
+            continue
+        if ids.shape[0] > model.context_length:
+            continue
+        out.append({**row, "phonemes": phonemes, "token_ids": ids, "token_len": int(ids.shape[0])})
+    return out
+
+
 def set_trainable_modules(model: KModel, train_modules: set[str]) -> None:
     for p in model.parameters():
         p.requires_grad_(False)
@@ -164,6 +177,48 @@ def synth_train_forward(
     return model.decoder(asr, F0_pred, N_pred, ref_s[:, :128]).squeeze()
 
 
+def synth_train_forward_batched(
+    model: KModel,
+    input_ids: torch.LongTensor,   # [B, T]
+    input_lengths: torch.LongTensor,  # [B]
+    ref_s: torch.Tensor,  # [B, 256]
+    speed: float = 1.0,
+) -> torch.Tensor:
+    text_mask = (
+        torch.arange(input_ids.shape[1], device=input_ids.device)
+        .unsqueeze(0)
+        .expand(input_ids.shape[0], -1)
+        .type_as(input_lengths)
+    )
+    text_mask = torch.gt(text_mask + 1, input_lengths.unsqueeze(1)).to(model.device)
+
+    bert_dur = model.bert(input_ids, attention_mask=(~text_mask).int())
+    d_en = model.bert_encoder(bert_dur).transpose(-1, -2)
+
+    s_prosody = ref_s[:, 128:]
+    d = model.predictor.text_encoder(d_en, s_prosody, input_lengths, text_mask)  # [B, T, H]
+    x, _ = model.predictor.lstm(d)
+    duration = model.predictor.duration_proj(x)
+    duration = torch.sigmoid(duration).sum(axis=-1) / speed  # [B, T]
+    pred_dur = torch.round(duration).clamp(min=1).long()
+
+    bsz, tlen = pred_dur.shape
+    frame_lens = pred_dur.sum(dim=1)
+    max_frames = int(frame_lens.max().item())
+    pred_aln_trg = torch.zeros((bsz, tlen, max_frames), device=model.device)
+    token_ix = torch.arange(tlen, device=model.device)
+    for b in range(bsz):
+        repeats = pred_dur[b]
+        idx = torch.repeat_interleave(token_ix, repeats)
+        pred_aln_trg[b, idx, torch.arange(idx.shape[0], device=model.device)] = 1
+
+    en = d.transpose(-1, -2) @ pred_aln_trg
+    F0_pred, N_pred = model.predictor.F0Ntrain(en, s_prosody)
+    t_en = model.text_encoder(input_ids, input_lengths, text_mask)
+    asr = t_en @ pred_aln_trg
+    return model.decoder(asr, F0_pred, N_pred, ref_s[:, :128]).squeeze(1)  # [B, S]
+
+
 def crop_to_min_len(a: torch.Tensor, b: torch.Tensor) -> tuple[torch.Tensor, torch.Tensor]:
     n = int(min(a.shape[-1], b.shape[-1]))
     if n <= 0:
@@ -175,7 +230,6 @@ def run_epoch(
     rows: list[dict],
     model: KModel,
     optimizer: torch.optim.Optimizer,
-    g2p,
     segments_dir: Path,
     ref_s: torch.Tensor,
     device: torch.device,
@@ -185,6 +239,7 @@ def run_epoch(
     lambda_melmean: float,
     train: bool,
     style_map: dict[str, torch.Tensor] | None = None,
+    batch_size: int = 4,
     log_every: int = 0,
     epoch_idx: int = 0,
     total_epochs: int = 0,
@@ -201,66 +256,75 @@ def run_epoch(
     t_loss = 0.0
     t_backward_step = 0.0
 
-    for i, row in enumerate(rows, start=1):
+    num_batches = (len(rows) + batch_size - 1) // batch_size
+    for i in range(num_batches):
+        batch_rows = rows[i * batch_size : (i + 1) * batch_size]
         mode = "train" if train else "val"
         if trace_every_step:
             logger.info(
                 f"TRACE {mode} epoch={epoch_idx}/{total_epochs} stage={stage_name} "
-                f"step={i}/{len(rows)} file={row['filename']} phase=begin"
+                f"step={i+1}/{num_batches} batch_n={len(batch_rows)} phase=begin"
             )
 
         t0 = time.perf_counter()
-        wav_path = segments_dir / row["filename"]
-        target = _load_audio(str(wav_path)).to(device)
+        targets = []
+        for row in batch_rows:
+            wav_path = segments_dir / row["filename"]
+            targets.append(_load_audio(str(wav_path)).to(device))
         dt = time.perf_counter() - t0
         t_load += dt
         if trace_every_step:
-            logger.info(f"TRACE {mode} step={i} phase=load dt={dt:.3f}s")
+            logger.info(f"TRACE {mode} step={i+1} phase=load dt={dt:.3f}s")
         if dt > hang_threshold_sec:
-            logger.warning(f"SLOW {mode} step={i} phase=load dt={dt:.3f}s file={row['filename']}")
+            logger.warning(f"SLOW {mode} step={i+1} phase=load dt={dt:.3f}s")
 
         t0 = time.perf_counter()
-        phonemes = text_to_phonemes(g2p, row["text"])
-        input_ids = _tokenize(phonemes, model.vocab).to(device)
+        lengths = torch.LongTensor([row["token_len"] for row in batch_rows]).to(device)
+        max_len = int(lengths.max().item())
+        input_ids = torch.zeros((len(batch_rows), max_len), dtype=torch.long, device=device)
+        for b, row in enumerate(batch_rows):
+            tid = row["token_ids"].to(device)
+            input_ids[b, : tid.shape[0]] = tid
         dt = time.perf_counter() - t0
         t_g2p += dt
         if trace_every_step:
-            logger.info(f"TRACE {mode} step={i} phase=g2p dt={dt:.3f}s tokens={input_ids.shape[1]}")
+            logger.info(f"TRACE {mode} step={i+1} phase=tokens dt={dt:.3f}s max_tokens={input_ids.shape[1]}")
         if dt > hang_threshold_sec:
-            logger.warning(f"SLOW {mode} step={i} phase=g2p dt={dt:.3f}s file={row['filename']}")
-        if input_ids.shape[1] <= 2:
-            logger.warning(f"Skipping {row['filename']}: no valid tokens")
-            continue
-
-        if input_ids.shape[1] > model.context_length:
-            logger.warning(f"Skipping {row['filename']}: token length {input_ids.shape[1]} > context {model.context_length}")
-            continue
+            logger.warning(f"SLOW {mode} step={i+1} phase=tokens dt={dt:.3f}s")
 
         if train:
             optimizer.zero_grad(set_to_none=True)
 
         t0 = time.perf_counter()
-        cond_s = style_map.get(row["filename"], ref_s) if style_map is not None else ref_s
-        cond_s = cond_s.to(device)
-        pred = synth_train_forward(model, input_ids, cond_s)
-        pred, target = crop_to_min_len(pred, target)
+        conds = []
+        for row in batch_rows:
+            c = style_map.get(row["filename"], ref_s) if style_map is not None else ref_s
+            conds.append(c.to(device).squeeze(0))
+        cond_s = torch.stack(conds, dim=0)  # [B,256]
+        pred = synth_train_forward_batched(model, input_ids, lengths, cond_s)  # [B,S]
         dt = time.perf_counter() - t0
         t_forward += dt
         if trace_every_step:
-            logger.info(f"TRACE {mode} step={i} phase=forward dt={dt:.3f}s")
+            logger.info(f"TRACE {mode} step={i+1} phase=forward dt={dt:.3f}s")
         if dt > hang_threshold_sec:
-            logger.warning(f"SLOW {mode} step={i} phase=forward dt={dt:.3f}s file={row['filename']}")
+            logger.warning(f"SLOW {mode} step={i+1} phase=forward dt={dt:.3f}s")
 
         t0 = time.perf_counter()
-        loss_stft = stft_loss(pred.unsqueeze(0), target.unsqueeze(0))
-        loss_melmean = F.mse_loss(_mel_band_means(pred, to_mel_cpu), _mel_band_means(target, to_mel_cpu))
-        loss = lambda_stft * loss_stft + lambda_melmean * loss_melmean
+        # Per-sample losses, averaged over the batch.
+        batch_losses = []
+        for b, target in enumerate(targets):
+            p = pred[b]
+            p, t = crop_to_min_len(p, target)
+            ls = stft_loss(p.unsqueeze(0), t.unsqueeze(0))
+            lm = F.mse_loss(_mel_band_means(p, to_mel_cpu), _mel_band_means(t, to_mel_cpu))
+            batch_losses.append(lambda_stft * ls + lambda_melmean * lm)
+        loss = torch.stack(batch_losses).mean()
         dt = time.perf_counter() - t0
         t_loss += dt
         if trace_every_step:
-            logger.info(f"TRACE {mode} step={i} phase=loss dt={dt:.3f}s loss={loss.item():.5f}")
+            logger.info(f"TRACE {mode} step={i+1} phase=loss dt={dt:.3f}s loss={loss.item():.5f}")
         if dt > hang_threshold_sec:
-            logger.warning(f"SLOW {mode} step={i} phase=loss dt={dt:.3f}s file={row['filename']}")
+            logger.warning(f"SLOW {mode} step={i+1} phase=loss dt={dt:.3f}s")
 
         if train:
             t0 = time.perf_counter()
@@ -270,30 +334,30 @@ def run_epoch(
             dt = time.perf_counter() - t0
             t_backward_step += dt
             if trace_every_step:
-                logger.info(f"TRACE {mode} step={i} phase=backward_step dt={dt:.3f}s")
+                logger.info(f"TRACE {mode} step={i+1} phase=backward_step dt={dt:.3f}s")
             if dt > hang_threshold_sec:
-                logger.warning(f"SLOW {mode} step={i} phase=backward_step dt={dt:.3f}s file={row['filename']}")
+                logger.warning(f"SLOW {mode} step={i+1} phase=backward_step dt={dt:.3f}s")
 
         total += float(loss.item())
         count += 1
 
-        if log_every > 0 and i % log_every == 0:
+        if log_every > 0 and (i + 1) % log_every == 0:
             denom = max(1, count)
             logger.info(
                 f"Epoch {epoch_idx:03d}/{total_epochs}  stage={stage_name}  "
-                f"{mode} step {i:>5}/{len(rows)}  "
+                f"{mode} step {i+1:>5}/{num_batches}  "
                 f"loss={loss.item():.5f}  running={total / max(1, count):.5f}"
             )
             logger.info(
-                f"  timing avg/sample ({mode}): "
+                f"  timing avg/batch ({mode}): "
                 f"load={1000*t_load/denom:.1f}ms  "
-                f"g2p={1000*t_g2p/denom:.1f}ms  "
+                f"tokens={1000*t_g2p/denom:.1f}ms  "
                 f"forward={1000*t_forward/denom:.1f}ms  "
                 f"loss={1000*t_loss/denom:.1f}ms  "
                 f"backward_step={1000*t_backward_step/denom:.1f}ms"
             )
         if trace_every_step:
-            logger.info(f"TRACE {mode} step={i} phase=end")
+            logger.info(f"TRACE {mode} step={i+1} phase=end")
 
     return total / max(1, count)
 
@@ -491,6 +555,7 @@ def main() -> None:
     parser.add_argument("--val-ratio", type=float, default=0.2)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--device", default=None, help="cpu/cuda/mps")
+    parser.add_argument("--batch-size", type=int, default=4, help="Mini-batch size for training/validation")
     parser.add_argument(
         "--train-modules",
         default="decoder,predictor,text_encoder,bert_encoder",
@@ -530,6 +595,13 @@ def main() -> None:
 
     model = KModel(repo_id="hexgrad/Kokoro-82M", config=args.config, model=args.model).to(device)
     g2p = build_g2p()
+    rows = pretokenize_rows(rows, g2p, model)
+    train_rows = pretokenize_rows(train_rows, g2p, model)
+    val_rows = pretokenize_rows(val_rows, g2p, model)
+    logger.info(
+        f"After tokenization filter -> all={len(rows)} train={len(train_rows)} val={len(val_rows)} "
+        f"(batch_size={args.batch_size})"
+    )
 
     ref_s = load_style_from_voicepack(Path(args.voicepack)).to(device)
     stage1_modules = {m.strip() for m in args.train_modules.split(",") if m.strip()}
@@ -648,7 +720,6 @@ def main() -> None:
             rows=train_rows,
             model=model,
             optimizer=optimizer,
-            g2p=g2p,
             segments_dir=Path(args.segments_dir),
             ref_s=ref_s,
             device=device,
@@ -658,6 +729,7 @@ def main() -> None:
             lambda_melmean=args.lambda_melmean,
             train=True,
             style_map=train_style_map,
+            batch_size=args.batch_size,
             log_every=args.log_every,
             epoch_idx=epoch,
             total_epochs=args.epochs,
@@ -671,7 +743,6 @@ def main() -> None:
                 rows=val_rows,
                 model=model,
                 optimizer=optimizer,
-                g2p=g2p,
                 segments_dir=Path(args.segments_dir),
                 ref_s=ref_s,
                 device=device,
@@ -681,6 +752,7 @@ def main() -> None:
                 lambda_melmean=args.lambda_melmean,
                 train=False,
                 style_map=train_style_map,
+                batch_size=args.batch_size,
                 log_every=args.log_every,
                 epoch_idx=epoch,
                 total_epochs=args.epochs,

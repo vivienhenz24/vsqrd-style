@@ -37,6 +37,7 @@ STAGE2_CACHE_LR="${STAGE2_CACHE_LR:-0.02}"
 LOG_EVERY="${LOG_EVERY:-10}"
 TRACE_EVERY_STEP="${TRACE_EVERY_STEP:-0}"
 HANG_THRESHOLD_SEC="${HANG_THRESHOLD_SEC:-8}"
+BATCH_SIZE="${BATCH_SIZE:-4}"
 
 # If true, build bootstrap via inversion. If false (default), use neutral seed style.
 USE_BOOTSTRAP_INVERSION="${USE_BOOTSTRAP_INVERSION:-0}"
@@ -44,6 +45,9 @@ USE_BOOTSTRAP_INVERSION="${USE_BOOTSTRAP_INVERSION:-0}"
 # Set MAX_ROWS to limit training set size for faster first run (e.g., MAX_ROWS=2000)
 MAX_ROWS="${MAX_ROWS:-0}"
 MAX_CLIP_SEC="${MAX_CLIP_SEC:-12.0}"
+# If 1 (default), install only deps needed for this training pipeline.
+# If 0, run full `uv sync`.
+MINIMAL_DEPS="${MINIMAL_DEPS:-1}"
 
 install_system_deps() {
   if command -v apt-get >/dev/null 2>&1; then
@@ -64,7 +68,19 @@ ensure_uv() {
 }
 
 install_python_env() {
-  uv sync
+  if [[ "$MINIMAL_DEPS" == "1" ]]; then
+    # Minimal environment for Kokoro fine-tune loop + voicepack generation.
+    uv venv
+    .venv/bin/python -m pip install --upgrade pip
+    .venv/bin/python -m pip install \
+      torch torchaudio \
+      "misaki[en]==0.9.4" \
+      loguru soundfile numpy \
+      huggingface_hub pyyaml munch \
+      transformers
+  else
+    uv sync
+  fi
 }
 
 repair_misaki_if_needed() {
@@ -304,6 +320,7 @@ run_training() {
     --stage2-cache-device "$device" \
     --val-ratio "$VAL_RATIO" \
     --seed "$SEED" \
+    --batch-size "$BATCH_SIZE" \
     --sample-every 1 \
     --log-every "$LOG_EVERY" \
     --hang-threshold-sec "$HANG_THRESHOLD_SEC" \
