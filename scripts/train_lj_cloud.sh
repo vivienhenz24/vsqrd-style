@@ -40,8 +40,10 @@ HANG_THRESHOLD_SEC="${HANG_THRESHOLD_SEC:-8}"
 BATCH_SIZE="${BATCH_SIZE:-2}"
 LOG_TIMINGS="${LOG_TIMINGS:-0}"
 
-# If true, build bootstrap via inversion. If false (default), use neutral seed style.
-USE_BOOTSTRAP_INVERSION="${USE_BOOTSTRAP_INVERSION:-0}"
+# If true (default), build bootstrap via inversion.
+# Neutral seed style is mainly for smoke tests and often sounds metallic.
+USE_BOOTSTRAP_INVERSION="${USE_BOOTSTRAP_INVERSION:-1}"
+FORCE_BOOTSTRAP_REBUILD="${FORCE_BOOTSTRAP_REBUILD:-0}"
 
 # Set MAX_ROWS to limit training set size for faster first run (e.g., MAX_ROWS=2000)
 MAX_ROWS="${MAX_ROWS:-0}"
@@ -269,6 +271,11 @@ PY
 bootstrap_voicepack() {
   local device="$1"
   mkdir -p "${ROOT_DIR}/voices"
+  if [[ "$FORCE_BOOTSTRAP_REBUILD" == "1" && -f "$BOOTSTRAP_VOICEPACK" ]]; then
+    echo "Removing existing bootstrap voicepack (FORCE_BOOTSTRAP_REBUILD=1): $BOOTSTRAP_VOICEPACK"
+    rm -f "$BOOTSTRAP_VOICEPACK"
+  fi
+
   if [[ -f "$BOOTSTRAP_VOICEPACK" ]]; then
     echo "Bootstrap voicepack exists: $BOOTSTRAP_VOICEPACK"
     return 0
