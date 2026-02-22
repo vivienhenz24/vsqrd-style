@@ -49,6 +49,44 @@ MAX_CLIP_SEC="${MAX_CLIP_SEC:-12.0}"
 # If 1 (default), install only deps needed for this training pipeline.
 # If 0, run full `uv sync`.
 MINIMAL_DEPS="${MINIMAL_DEPS:-1}"
+USE_WORKSPACE_ARTIFACTS="${USE_WORKSPACE_ARTIFACTS:-1}"
+ARTIFACT_ROOT="${ARTIFACT_ROOT:-/workspace/mifi_store}"
+
+setup_artifact_storage() {
+  if [[ "$USE_WORKSPACE_ARTIFACTS" != "1" ]]; then
+    return 0
+  fi
+
+  if [[ ! -d "/workspace" || ! -w "/workspace" ]]; then
+    echo "Workspace mount not writable; keeping artifacts under ${ROOT_DIR}."
+    return 0
+  fi
+
+  mkdir -p "${ARTIFACT_ROOT}"
+  local heavy_paths=("data" "weights" "voices" ".venv")
+  local name=""
+  for name in "${heavy_paths[@]}"; do
+    local src="${ROOT_DIR}/${name}"
+    local dst="${ARTIFACT_ROOT}/${name}"
+
+    if [[ -L "$src" ]]; then
+      continue
+    fi
+
+    if [[ -e "$src" && ! -e "$dst" ]]; then
+      echo "Relocating ${src} -> ${dst}"
+      mv "$src" "$dst"
+    fi
+
+    if [[ ! -e "$dst" ]]; then
+      mkdir -p "$dst"
+    fi
+
+    if [[ ! -e "$src" ]]; then
+      ln -s "$dst" "$src"
+    fi
+  done
+}
 
 install_system_deps() {
   if command -v apt-get >/dev/null 2>&1; then
@@ -348,23 +386,26 @@ install_system_deps
 echo "[2/7] Ensure uv"
 ensure_uv
 
-echo "[3/7] Install python env"
+echo "[3/8] Prepare artifact storage"
+setup_artifact_storage
+
+echo "[4/8] Install python env"
 install_python_env
 repair_misaki_if_needed
 
-echo "[4/7] Download LJSpeech"
+echo "[5/8] Download LJSpeech"
 download_ljspeech
 
-echo "[5/7] Download Kokoro weights/config"
+echo "[6/8] Download Kokoro weights/config"
 download_kokoro_weights
 
-echo "[6/7] Build + verify manifest"
+echo "[7/8] Build + verify manifest"
 build_manifest_and_verify
 
 DEVICE="$(resolve_train_device)"
 echo "Resolved train device: ${DEVICE}"
 
-echo "[7/7] Prepare seed voicepack + train"
+echo "[8/8] Prepare seed voicepack + train"
 bootstrap_voicepack "$DEVICE"
 run_training "$DEVICE"
 
