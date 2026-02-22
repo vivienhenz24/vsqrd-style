@@ -184,12 +184,16 @@ def run_epoch(
     lambda_melmean: float,
     train: bool,
     style_map: dict[str, torch.Tensor] | None = None,
+    log_every: int = 0,
+    epoch_idx: int = 0,
+    total_epochs: int = 0,
+    stage_name: str = "stage1",
 ) -> float:
     model.train(train)
     total = 0.0
     count = 0
 
-    for row in rows:
+    for i, row in enumerate(rows, start=1):
         wav_path = segments_dir / row["filename"]
         target = _load_audio(str(wav_path)).to(device)
 
@@ -222,6 +226,14 @@ def run_epoch(
 
         total += float(loss.item())
         count += 1
+
+        if log_every > 0 and i % log_every == 0:
+            mode = "train" if train else "val"
+            logger.info(
+                f"Epoch {epoch_idx:03d}/{total_epochs}  stage={stage_name}  "
+                f"{mode} step {i:>5}/{len(rows)}  "
+                f"loss={loss.item():.5f}  running={total / max(1, count):.5f}"
+            )
 
     return total / max(1, count)
 
@@ -430,6 +442,7 @@ def main() -> None:
     parser.add_argument("--sample-every", type=int, default=1, help="Write synthesis sample every N epochs (0 disables)")
     parser.add_argument("--sample-text", default=None, help="Text used for periodic synthesis samples")
     parser.add_argument("--sample-speed", type=float, default=1.0, help="Speed used for periodic synthesis samples")
+    parser.add_argument("--log-every", type=int, default=100, help="Per-epoch step logging interval (0 disables)")
     parser.add_argument("--final-voicepack", default=None, help="Optional output .pt voicepack written after training")
     parser.add_argument(
         "--final-voicepack-mode",
@@ -583,6 +596,10 @@ def main() -> None:
             lambda_melmean=args.lambda_melmean,
             train=True,
             style_map=train_style_map,
+            log_every=args.log_every,
+            epoch_idx=epoch,
+            total_epochs=args.epochs,
+            stage_name=current_stage,
         )
 
         with torch.no_grad():
@@ -600,6 +617,10 @@ def main() -> None:
                 lambda_melmean=args.lambda_melmean,
                 train=False,
                 style_map=train_style_map,
+                log_every=args.log_every,
+                epoch_idx=epoch,
+                total_epochs=args.epochs,
+                stage_name=current_stage,
             )
 
         logger.info(
