@@ -429,6 +429,8 @@ def maybe_write_sample(
     sample_speed: float,
     out_wav: Path,
     device: torch.device,
+    style_map: dict[str, torch.Tensor] | None = None,
+    sample_filename: str | None = None,
 ) -> bool:
     phonemes = text_to_phonemes(g2p, sample_text)
     input_ids = _tokenize(phonemes, model.vocab).to(device)
@@ -441,9 +443,20 @@ def maybe_write_sample(
         )
         return False
 
+    sample_style = ref_s
+    if style_map:
+        if sample_filename and sample_filename in style_map:
+            sample_style = style_map[sample_filename].to(device)
+        else:
+            sample_style = (
+                torch.stack([v.squeeze(0) for v in style_map.values()], dim=0)
+                .mean(dim=0, keepdim=True)
+                .to(device)
+            )
+
     model.eval()
     with torch.no_grad():
-        audio = synth_train_forward(model, input_ids, ref_s, speed=sample_speed).detach().cpu().numpy()
+        audio = synth_train_forward(model, input_ids, sample_style, speed=sample_speed).detach().cpu().numpy()
     out_wav.parent.mkdir(parents=True, exist_ok=True)
     sf.write(str(out_wav), audio, SAMPLE_RATE)
     return True
@@ -803,10 +816,13 @@ def main() -> None:
         if args.sample_every > 0 and epoch % args.sample_every == 0:
             if args.sample_text:
                 sample_text = args.sample_text
+                sample_filename = None
             elif val_rows:
                 sample_text = val_rows[0]["text"]
+                sample_filename = val_rows[0]["filename"]
             else:
                 sample_text = train_rows[0]["text"]
+                sample_filename = train_rows[0]["filename"]
             sample_wav = sample_dir / f"{out_model.stem}.epoch{epoch:03d}.wav"
             wrote = maybe_write_sample(
                 model=model,
@@ -816,6 +832,8 @@ def main() -> None:
                 sample_speed=args.sample_speed,
                 out_wav=sample_wav,
                 device=device,
+                style_map=train_style_map,
+                sample_filename=sample_filename,
             )
             if wrote:
                 logger.info(f"  Wrote sample -> {sample_wav}")
