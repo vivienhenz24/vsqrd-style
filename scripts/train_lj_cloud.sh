@@ -35,6 +35,7 @@ STAGE2_BERT_LR="${STAGE2_BERT_LR:-2e-6}"
 
 # Set MAX_ROWS to limit training set size for faster first run (e.g., MAX_ROWS=2000)
 MAX_ROWS="${MAX_ROWS:-0}"
+MAX_CLIP_SEC="${MAX_CLIP_SEC:-12.0}"
 
 install_system_deps() {
   if command -v apt-get >/dev/null 2>&1; then
@@ -56,6 +57,32 @@ ensure_uv() {
 
 install_python_env() {
   uv sync
+}
+
+repair_misaki_if_needed() {
+  # In some cloud builds, local-source misaki can miss packaged data modules.
+  if ! .venv/bin/python - <<'PY'
+import importlib
+import sys
+try:
+    import misaki
+    importlib.import_module("misaki.data")
+    importlib.import_module("misaki.en")
+except Exception as e:
+    print(f"[misaki-check] broken: {e}")
+    sys.exit(1)
+print("[misaki-check] ok")
+PY
+  then
+    echo "Reinstalling misaki[en] from PyPI to fix missing data module..."
+    .venv/bin/python -m pip install --upgrade --force-reinstall "misaki[en]"
+    .venv/bin/python - <<'PY'
+import importlib
+importlib.import_module("misaki.data")
+importlib.import_module("misaki.en")
+print("[misaki-check] repaired")
+PY
+  fi
 }
 
 resolve_train_device() {
@@ -118,6 +145,7 @@ metadata = Path(r"${LJ_METADATA}")
 wav_dir = Path(r"${LJ_WAV_DIR}")
 out_path = Path(r"${MANIFEST_PATH}")
 max_rows = int(r"${MAX_ROWS}")
+max_clip_sec = float(r"${MAX_CLIP_SEC}")
 seed = int(r"${SEED}")
 
 if not metadata.exists():
@@ -139,6 +167,8 @@ with metadata.open('r', encoding='utf-8') as f:
         info = sf.info(str(wav))
         dur = float(info.frames) / float(info.samplerate)
         if dur <= 0.2:
+            continue
+        if dur > max_clip_sec:
             continue
         rows.append({
             'filename': wav.name,
@@ -165,6 +195,7 @@ with out_path.open('w', encoding='utf-8', newline='') as f:
 print(f"manifest={out_path}")
 print(f"rows={len(rows)}")
 print(f"example={rows[0]['filename']} duration={rows[0]['end_sec']:.2f}s")
+print(f"max_clip_sec={max_clip_sec}")
 PY
 }
 
@@ -256,6 +287,7 @@ ensure_uv
 
 echo "[3/7] Install python env"
 install_python_env
+repair_misaki_if_needed
 
 echo "[4/7] Download LJSpeech"
 download_ljspeech
