@@ -189,6 +189,8 @@ def run_epoch(
     epoch_idx: int = 0,
     total_epochs: int = 0,
     stage_name: str = "stage1",
+    trace_every_step: bool = False,
+    hang_threshold_sec: float = 20.0,
 ) -> float:
     model.train(train)
     total = 0.0
@@ -200,15 +202,32 @@ def run_epoch(
     t_backward_step = 0.0
 
     for i, row in enumerate(rows, start=1):
+        mode = "train" if train else "val"
+        if trace_every_step:
+            logger.info(
+                f"TRACE {mode} epoch={epoch_idx}/{total_epochs} stage={stage_name} "
+                f"step={i}/{len(rows)} file={row['filename']} phase=begin"
+            )
+
         t0 = time.perf_counter()
         wav_path = segments_dir / row["filename"]
         target = _load_audio(str(wav_path)).to(device)
-        t_load += time.perf_counter() - t0
+        dt = time.perf_counter() - t0
+        t_load += dt
+        if trace_every_step:
+            logger.info(f"TRACE {mode} step={i} phase=load dt={dt:.3f}s")
+        if dt > hang_threshold_sec:
+            logger.warning(f"SLOW {mode} step={i} phase=load dt={dt:.3f}s file={row['filename']}")
 
         t0 = time.perf_counter()
         phonemes = text_to_phonemes(g2p, row["text"])
         input_ids = _tokenize(phonemes, model.vocab).to(device)
-        t_g2p += time.perf_counter() - t0
+        dt = time.perf_counter() - t0
+        t_g2p += dt
+        if trace_every_step:
+            logger.info(f"TRACE {mode} step={i} phase=g2p dt={dt:.3f}s tokens={input_ids.shape[1]}")
+        if dt > hang_threshold_sec:
+            logger.warning(f"SLOW {mode} step={i} phase=g2p dt={dt:.3f}s file={row['filename']}")
         if input_ids.shape[1] <= 2:
             logger.warning(f"Skipping {row['filename']}: no valid tokens")
             continue
@@ -225,26 +244,40 @@ def run_epoch(
         cond_s = cond_s.to(device)
         pred = synth_train_forward(model, input_ids, cond_s)
         pred, target = crop_to_min_len(pred, target)
-        t_forward += time.perf_counter() - t0
+        dt = time.perf_counter() - t0
+        t_forward += dt
+        if trace_every_step:
+            logger.info(f"TRACE {mode} step={i} phase=forward dt={dt:.3f}s")
+        if dt > hang_threshold_sec:
+            logger.warning(f"SLOW {mode} step={i} phase=forward dt={dt:.3f}s file={row['filename']}")
 
         t0 = time.perf_counter()
         loss_stft = stft_loss(pred.unsqueeze(0), target.unsqueeze(0))
         loss_melmean = F.mse_loss(_mel_band_means(pred, to_mel_cpu), _mel_band_means(target, to_mel_cpu))
         loss = lambda_stft * loss_stft + lambda_melmean * loss_melmean
-        t_loss += time.perf_counter() - t0
+        dt = time.perf_counter() - t0
+        t_loss += dt
+        if trace_every_step:
+            logger.info(f"TRACE {mode} step={i} phase=loss dt={dt:.3f}s loss={loss.item():.5f}")
+        if dt > hang_threshold_sec:
+            logger.warning(f"SLOW {mode} step={i} phase=loss dt={dt:.3f}s file={row['filename']}")
 
         if train:
             t0 = time.perf_counter()
             loss.backward()
             torch.nn.utils.clip_grad_norm_([p for p in model.parameters() if p.requires_grad], max_norm=1.0)
             optimizer.step()
-            t_backward_step += time.perf_counter() - t0
+            dt = time.perf_counter() - t0
+            t_backward_step += dt
+            if trace_every_step:
+                logger.info(f"TRACE {mode} step={i} phase=backward_step dt={dt:.3f}s")
+            if dt > hang_threshold_sec:
+                logger.warning(f"SLOW {mode} step={i} phase=backward_step dt={dt:.3f}s file={row['filename']}")
 
         total += float(loss.item())
         count += 1
 
         if log_every > 0 and i % log_every == 0:
-            mode = "train" if train else "val"
             denom = max(1, count)
             logger.info(
                 f"Epoch {epoch_idx:03d}/{total_epochs}  stage={stage_name}  "
@@ -259,6 +292,8 @@ def run_epoch(
                 f"loss={1000*t_loss/denom:.1f}ms  "
                 f"backward_step={1000*t_backward_step/denom:.1f}ms"
             )
+        if trace_every_step:
+            logger.info(f"TRACE {mode} step={i} phase=end")
 
     return total / max(1, count)
 
@@ -468,6 +503,8 @@ def main() -> None:
     parser.add_argument("--sample-text", default=None, help="Text used for periodic synthesis samples")
     parser.add_argument("--sample-speed", type=float, default=1.0, help="Speed used for periodic synthesis samples")
     parser.add_argument("--log-every", type=int, default=100, help="Per-epoch step logging interval (0 disables)")
+    parser.add_argument("--trace-every-step", action="store_true", help="Verbose per-step phase tracing (very noisy)")
+    parser.add_argument("--hang-threshold-sec", type=float, default=20.0, help="Warn if any phase exceeds this duration")
     parser.add_argument("--final-voicepack", default=None, help="Optional output .pt voicepack written after training")
     parser.add_argument(
         "--final-voicepack-mode",
@@ -625,6 +662,8 @@ def main() -> None:
             epoch_idx=epoch,
             total_epochs=args.epochs,
             stage_name=current_stage,
+            trace_every_step=args.trace_every_step,
+            hang_threshold_sec=args.hang_threshold_sec,
         )
 
         with torch.no_grad():
@@ -646,6 +685,8 @@ def main() -> None:
                 epoch_idx=epoch,
                 total_epochs=args.epochs,
                 stage_name=current_stage,
+                trace_every_step=args.trace_every_step,
+                hang_threshold_sec=args.hang_threshold_sec,
             )
 
         logger.info(
