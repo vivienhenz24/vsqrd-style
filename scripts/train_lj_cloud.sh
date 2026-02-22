@@ -34,6 +34,9 @@ STAGE2_LR="${STAGE2_LR:-1e-5}"
 STAGE2_BERT_LR="${STAGE2_BERT_LR:-2e-6}"
 STAGE2_CACHE_STEPS="${STAGE2_CACHE_STEPS:-60}"
 STAGE2_CACHE_LR="${STAGE2_CACHE_LR:-0.02}"
+LOG_EVERY="${LOG_EVERY:-10}"
+TRACE_EVERY_STEP="${TRACE_EVERY_STEP:-0}"
+HANG_THRESHOLD_SEC="${HANG_THRESHOLD_SEC:-8}"
 
 # If true, build bootstrap via inversion. If false (default), use neutral seed style.
 USE_BOOTSTRAP_INVERSION="${USE_BOOTSTRAP_INVERSION:-0}"
@@ -277,6 +280,11 @@ PY
 
 run_training() {
   local device="$1"
+  local trace_flag=()
+  if [[ "$TRACE_EVERY_STEP" == "1" ]]; then
+    trace_flag+=(--trace-every-step)
+  fi
+
   .venv/bin/python -m mifi.train_kokoro_finetune \
     --manifest "$MANIFEST_PATH" \
     --segments-dir "$LJ_WAV_DIR" \
@@ -297,11 +305,14 @@ run_training() {
     --val-ratio "$VAL_RATIO" \
     --seed "$SEED" \
     --sample-every 1 \
+    --log-every "$LOG_EVERY" \
+    --hang-threshold-sec "$HANG_THRESHOLD_SEC" \
     --final-voicepack "$FINAL_VOICEPACK" \
     --final-voicepack-mode cache_mean \
     --final-invert-steps 80 \
     --final-invert-lr 0.01 \
     --final-invert-device "$device" \
+    "${trace_flag[@]}" \
     --device "$device"
 }
 
