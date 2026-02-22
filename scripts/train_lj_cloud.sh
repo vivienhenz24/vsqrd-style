@@ -177,7 +177,7 @@ download_ljspeech() {
 
   if [[ ! -d "$LJ_DIR" ]]; then
     echo "Extracting LJSpeech..."
-    tar -xjf "$LJ_ARCHIVE" -C "${ROOT_DIR}/data"
+    tar --no-same-owner --no-same-permissions -xjf "$LJ_ARCHIVE" -C "${ROOT_DIR}/data"
   fi
 }
 
