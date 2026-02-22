@@ -70,7 +70,10 @@ ensure_uv() {
 install_python_env() {
   if [[ "$MINIMAL_DEPS" == "1" ]]; then
     # Minimal environment for Kokoro fine-tune loop + voicepack generation.
-    uv venv
+    uv venv --seed
+    if ! .venv/bin/python -m pip --version >/dev/null 2>&1; then
+      .venv/bin/python -m ensurepip --upgrade
+    fi
     .venv/bin/python -m pip install --upgrade pip
     .venv/bin/python -m pip install \
       torch torchaudio \
