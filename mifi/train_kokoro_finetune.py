@@ -1,6 +1,7 @@
 import argparse
 import csv
 import random
+import time
 from pathlib import Path
 
 import soundfile as sf
@@ -192,13 +193,22 @@ def run_epoch(
     model.train(train)
     total = 0.0
     count = 0
+    t_load = 0.0
+    t_g2p = 0.0
+    t_forward = 0.0
+    t_loss = 0.0
+    t_backward_step = 0.0
 
     for i, row in enumerate(rows, start=1):
+        t0 = time.perf_counter()
         wav_path = segments_dir / row["filename"]
         target = _load_audio(str(wav_path)).to(device)
+        t_load += time.perf_counter() - t0
 
+        t0 = time.perf_counter()
         phonemes = text_to_phonemes(g2p, row["text"])
         input_ids = _tokenize(phonemes, model.vocab).to(device)
+        t_g2p += time.perf_counter() - t0
         if input_ids.shape[1] <= 2:
             logger.warning(f"Skipping {row['filename']}: no valid tokens")
             continue
@@ -210,29 +220,44 @@ def run_epoch(
         if train:
             optimizer.zero_grad(set_to_none=True)
 
+        t0 = time.perf_counter()
         cond_s = style_map.get(row["filename"], ref_s) if style_map is not None else ref_s
         cond_s = cond_s.to(device)
         pred = synth_train_forward(model, input_ids, cond_s)
         pred, target = crop_to_min_len(pred, target)
+        t_forward += time.perf_counter() - t0
 
+        t0 = time.perf_counter()
         loss_stft = stft_loss(pred.unsqueeze(0), target.unsqueeze(0))
         loss_melmean = F.mse_loss(_mel_band_means(pred, to_mel_cpu), _mel_band_means(target, to_mel_cpu))
         loss = lambda_stft * loss_stft + lambda_melmean * loss_melmean
+        t_loss += time.perf_counter() - t0
 
         if train:
+            t0 = time.perf_counter()
             loss.backward()
             torch.nn.utils.clip_grad_norm_([p for p in model.parameters() if p.requires_grad], max_norm=1.0)
             optimizer.step()
+            t_backward_step += time.perf_counter() - t0
 
         total += float(loss.item())
         count += 1
 
         if log_every > 0 and i % log_every == 0:
             mode = "train" if train else "val"
+            denom = max(1, count)
             logger.info(
                 f"Epoch {epoch_idx:03d}/{total_epochs}  stage={stage_name}  "
                 f"{mode} step {i:>5}/{len(rows)}  "
                 f"loss={loss.item():.5f}  running={total / max(1, count):.5f}"
+            )
+            logger.info(
+                f"  timing avg/sample ({mode}): "
+                f"load={1000*t_load/denom:.1f}ms  "
+                f"g2p={1000*t_g2p/denom:.1f}ms  "
+                f"forward={1000*t_forward/denom:.1f}ms  "
+                f"loss={1000*t_loss/denom:.1f}ms  "
+                f"backward_step={1000*t_backward_step/denom:.1f}ms"
             )
 
     return total / max(1, count)
