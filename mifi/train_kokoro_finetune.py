@@ -295,48 +295,61 @@ def run_epoch(
         if train:
             optimizer.zero_grad(set_to_none=True)
 
-        t0 = time.perf_counter()
-        conds = []
-        for row in batch_rows:
-            c = style_map.get(row["filename"], ref_s) if style_map is not None else ref_s
-            conds.append(c.to(device).squeeze(0))
-        cond_s = torch.stack(conds, dim=0)  # [B,256]
-        pred = synth_train_forward_batched(model, input_ids, lengths, cond_s)  # [B,S]
-        dt = time.perf_counter() - t0
-        t_forward += dt
-        if trace_every_step:
-            logger.info(f"TRACE {mode} step={i+1} phase=forward dt={dt:.3f}s")
-        if dt > hang_threshold_sec:
-            logger.warning(f"SLOW {mode} step={i+1} phase=forward dt={dt:.3f}s")
-
-        t0 = time.perf_counter()
-        # Per-sample losses, averaged over the batch.
-        batch_losses = []
-        for b, target in enumerate(targets):
-            p = pred[b]
-            p, t = crop_to_min_len(p, target)
-            ls = stft_loss(p.unsqueeze(0), t.unsqueeze(0))
-            lm = F.mse_loss(_mel_band_means(p, to_mel_cpu), _mel_band_means(t, to_mel_cpu))
-            batch_losses.append(lambda_stft * ls + lambda_melmean * lm)
-        loss = torch.stack(batch_losses).mean()
-        dt = time.perf_counter() - t0
-        t_loss += dt
-        if trace_every_step:
-            logger.info(f"TRACE {mode} step={i+1} phase=loss dt={dt:.3f}s loss={loss.item():.5f}")
-        if dt > hang_threshold_sec:
-            logger.warning(f"SLOW {mode} step={i+1} phase=loss dt={dt:.3f}s")
-
-        if train:
+        try:
             t0 = time.perf_counter()
-            loss.backward()
-            torch.nn.utils.clip_grad_norm_([p for p in model.parameters() if p.requires_grad], max_norm=1.0)
-            optimizer.step()
+            conds = []
+            for row in batch_rows:
+                c = style_map.get(row["filename"], ref_s) if style_map is not None else ref_s
+                conds.append(c.to(device).squeeze(0))
+            cond_s = torch.stack(conds, dim=0)  # [B,256]
+            pred = synth_train_forward_batched(model, input_ids, lengths, cond_s)  # [B,S]
             dt = time.perf_counter() - t0
-            t_backward_step += dt
+            t_forward += dt
             if trace_every_step:
-                logger.info(f"TRACE {mode} step={i+1} phase=backward_step dt={dt:.3f}s")
+                logger.info(f"TRACE {mode} step={i+1} phase=forward dt={dt:.3f}s")
             if dt > hang_threshold_sec:
-                logger.warning(f"SLOW {mode} step={i+1} phase=backward_step dt={dt:.3f}s")
+                logger.warning(f"SLOW {mode} step={i+1} phase=forward dt={dt:.3f}s")
+
+            t0 = time.perf_counter()
+            # Per-sample losses, averaged over the batch.
+            batch_losses = []
+            for b, target in enumerate(targets):
+                p = pred[b]
+                p, t = crop_to_min_len(p, target)
+                ls = stft_loss(p.unsqueeze(0), t.unsqueeze(0))
+                lm = F.mse_loss(_mel_band_means(p, to_mel_cpu), _mel_band_means(t, to_mel_cpu))
+                batch_losses.append(lambda_stft * ls + lambda_melmean * lm)
+            loss = torch.stack(batch_losses).mean()
+            dt = time.perf_counter() - t0
+            t_loss += dt
+            if trace_every_step:
+                logger.info(f"TRACE {mode} step={i+1} phase=loss dt={dt:.3f}s loss={loss.item():.5f}")
+            if dt > hang_threshold_sec:
+                logger.warning(f"SLOW {mode} step={i+1} phase=loss dt={dt:.3f}s")
+
+            if train:
+                t0 = time.perf_counter()
+                loss.backward()
+                torch.nn.utils.clip_grad_norm_([p for p in model.parameters() if p.requires_grad], max_norm=1.0)
+                optimizer.step()
+                dt = time.perf_counter() - t0
+                t_backward_step += dt
+                if trace_every_step:
+                    logger.info(f"TRACE {mode} step={i+1} phase=backward_step dt={dt:.3f}s")
+                if dt > hang_threshold_sec:
+                    logger.warning(f"SLOW {mode} step={i+1} phase=backward_step dt={dt:.3f}s")
+        except RuntimeError as e:
+            if "out of memory" in str(e).lower():
+                logger.warning(
+                    f"OOM at {mode} step={i+1}/{num_batches} (batch_n={len(batch_rows)}). "
+                    "Skipping batch and clearing CUDA cache."
+                )
+                if train:
+                    optimizer.zero_grad(set_to_none=True)
+                if torch.cuda.is_available():
+                    torch.cuda.empty_cache()
+                continue
+            raise
 
         total += float(loss.item())
         count += 1
