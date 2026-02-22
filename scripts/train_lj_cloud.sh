@@ -75,7 +75,8 @@ print("[misaki-check] ok")
 PY
   then
     echo "Reinstalling misaki[en] from PyPI to fix missing data module..."
-    .venv/bin/python -m pip install --upgrade --force-reinstall "misaki[en]"
+    # Do not resolve deps here; resolving can try to redownload torch/cuda wheels.
+    .venv/bin/python -m pip install --no-deps --force-reinstall "misaki[en]==0.9.4"
     .venv/bin/python - <<'PY'
 import importlib
 importlib.import_module("misaki.data")
