@@ -38,3 +38,4 @@ outputs/
 # Data
 data/
 datasets/
+/weights/
