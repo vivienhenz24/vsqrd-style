@@ -25,13 +25,18 @@ OUT_MODEL="${OUT_MODEL:-${ROOT_DIR}/weights/kokoro-lj-ft.pth}"
 FINAL_VOICEPACK="${FINAL_VOICEPACK:-${ROOT_DIR}/voices/lj_finetuned.pt}"
 
 EPOCHS="${EPOCHS:-12}"
-STAGE1_EPOCHS="${STAGE1_EPOCHS:-4}"
+STAGE1_EPOCHS="${STAGE1_EPOCHS:-2}"
 VAL_RATIO="${VAL_RATIO:-0.02}"
 SEED="${SEED:-42}"
 LR="${LR:-2e-5}"
 BERT_LR="${BERT_LR:-5e-6}"
 STAGE2_LR="${STAGE2_LR:-1e-5}"
 STAGE2_BERT_LR="${STAGE2_BERT_LR:-2e-6}"
+STAGE2_CACHE_STEPS="${STAGE2_CACHE_STEPS:-60}"
+STAGE2_CACHE_LR="${STAGE2_CACHE_LR:-0.02}"
+
+# If true, build bootstrap via inversion. If false (default), use neutral seed style.
+USE_BOOTSTRAP_INVERSION="${USE_BOOTSTRAP_INVERSION:-0}"
 
 # Set MAX_ROWS to limit training set size for faster first run (e.g., MAX_ROWS=2000)
 MAX_ROWS="${MAX_ROWS:-0}"
@@ -208,6 +213,23 @@ bootstrap_voicepack() {
     return 0
   fi
 
+  if [[ "$USE_BOOTSTRAP_INVERSION" != "1" ]]; then
+    echo "Creating neutral seed voicepack (no inversion)..."
+    .venv/bin/python - <<'PY'
+from pathlib import Path
+import torch
+from mifi.style_inversion import build_voicepack
+
+out = Path("voices/lj_bootstrap.pt")
+s = torch.zeros(1, 256)
+pack = build_voicepack(s)
+out.parent.mkdir(parents=True, exist_ok=True)
+torch.save(pack, out)
+print("saved", out, "shape", tuple(pack.shape))
+PY
+    return 0
+  fi
+
   .venv/bin/python - <<PY
 import csv
 from pathlib import Path
@@ -268,14 +290,17 @@ run_training() {
     --bert-lr "$BERT_LR" \
     --stage2-lr "$STAGE2_LR" \
     --stage2-bert-lr "$STAGE2_BERT_LR" \
-    --stage2-style-mode fixed \
+    --stage2-style-mode cache \
+    --stage2-cache-steps "$STAGE2_CACHE_STEPS" \
+    --stage2-cache-lr "$STAGE2_CACHE_LR" \
+    --stage2-cache-device "$device" \
     --val-ratio "$VAL_RATIO" \
     --seed "$SEED" \
     --sample-every 1 \
     --final-voicepack "$FINAL_VOICEPACK" \
-    --final-voicepack-mode invert_longest \
-    --final-invert-steps 120 \
-    --final-invert-lr 0.02 \
+    --final-voicepack-mode cache_mean \
+    --final-invert-steps 80 \
+    --final-invert-lr 0.01 \
     --final-invert-device "$device" \
     --device "$device"
 }
@@ -302,7 +327,7 @@ build_manifest_and_verify
 DEVICE="$(resolve_train_device)"
 echo "Resolved train device: ${DEVICE}"
 
-echo "[7/7] Bootstrap voicepack + train"
+echo "[7/7] Prepare seed voicepack + train"
 bootstrap_voicepack "$DEVICE"
 run_training "$DEVICE"
 
