@@ -246,6 +246,7 @@ def run_epoch(
     stage_name: str = "stage1",
     trace_every_step: bool = False,
     hang_threshold_sec: float = 20.0,
+    log_timings: bool = False,
 ) -> float:
     model.train(train)
     total = 0.0
@@ -361,14 +362,15 @@ def run_epoch(
                 f"{mode} step {i+1:>5}/{num_batches}  "
                 f"loss={loss.item():.5f}  running={total / max(1, count):.5f}"
             )
-            logger.info(
-                f"  timing avg/batch ({mode}): "
-                f"load={1000*t_load/denom:.1f}ms  "
-                f"tokens={1000*t_g2p/denom:.1f}ms  "
-                f"forward={1000*t_forward/denom:.1f}ms  "
-                f"loss={1000*t_loss/denom:.1f}ms  "
-                f"backward_step={1000*t_backward_step/denom:.1f}ms"
-            )
+            if log_timings:
+                logger.info(
+                    f"  timing avg/batch ({mode}): "
+                    f"load={1000*t_load/denom:.1f}ms  "
+                    f"tokens={1000*t_g2p/denom:.1f}ms  "
+                    f"forward={1000*t_forward/denom:.1f}ms  "
+                    f"loss={1000*t_loss/denom:.1f}ms  "
+                    f"backward_step={1000*t_backward_step/denom:.1f}ms"
+                )
         if trace_every_step:
             logger.info(f"TRACE {mode} step={i+1} phase=end")
 
@@ -583,6 +585,7 @@ def main() -> None:
     parser.add_argument("--log-every", type=int, default=100, help="Per-epoch step logging interval (0 disables)")
     parser.add_argument("--trace-every-step", action="store_true", help="Verbose per-step phase tracing (very noisy)")
     parser.add_argument("--hang-threshold-sec", type=float, default=20.0, help="Warn if any phase exceeds this duration")
+    parser.add_argument("--log-timings", action="store_true", help="Print averaged timing logs at --log-every interval")
     parser.add_argument("--final-voicepack", default=None, help="Optional output .pt voicepack written after training")
     parser.add_argument(
         "--final-voicepack-mode",
@@ -749,6 +752,7 @@ def main() -> None:
             stage_name=current_stage,
             trace_every_step=args.trace_every_step,
             hang_threshold_sec=args.hang_threshold_sec,
+            log_timings=args.log_timings,
         )
 
         with torch.no_grad():
@@ -772,6 +776,7 @@ def main() -> None:
                 stage_name=current_stage,
                 trace_every_step=args.trace_every_step,
                 hang_threshold_sec=args.hang_threshold_sec,
+                log_timings=args.log_timings,
             )
 
         logger.info(

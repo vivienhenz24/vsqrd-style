@@ -37,7 +37,8 @@ STAGE2_CACHE_LR="${STAGE2_CACHE_LR:-0.02}"
 LOG_EVERY="${LOG_EVERY:-10}"
 TRACE_EVERY_STEP="${TRACE_EVERY_STEP:-0}"
 HANG_THRESHOLD_SEC="${HANG_THRESHOLD_SEC:-8}"
-BATCH_SIZE="${BATCH_SIZE:-1}"
+BATCH_SIZE="${BATCH_SIZE:-2}"
+LOG_TIMINGS="${LOG_TIMINGS:-0}"
 
 # If true, build bootstrap via inversion. If false (default), use neutral seed style.
 USE_BOOTSTRAP_INVERSION="${USE_BOOTSTRAP_INVERSION:-0}"
@@ -300,8 +301,12 @@ PY
 run_training() {
   local device="$1"
   local trace_flag=()
+  local timing_flag=()
   if [[ "$TRACE_EVERY_STEP" == "1" ]]; then
     trace_flag+=(--trace-every-step)
+  fi
+  if [[ "$LOG_TIMINGS" == "1" ]]; then
+    timing_flag+=(--log-timings)
   fi
 
   .venv/bin/python -m mifi.train_kokoro_finetune \
@@ -327,6 +332,7 @@ run_training() {
     --sample-every 1 \
     --log-every "$LOG_EVERY" \
     --hang-threshold-sec "$HANG_THRESHOLD_SEC" \
+    "${timing_flag[@]}" \
     --final-voicepack "$FINAL_VOICEPACK" \
     --final-voicepack-mode cache_mean \
     --final-invert-steps 80 \
