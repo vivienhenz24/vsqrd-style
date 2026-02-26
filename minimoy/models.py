@@ -585,7 +585,7 @@ def load_F0_models(path):
     # load F0 model
 
     F0_model = JDCNet(num_class=1, seq_len=192)
-    params = torch.load(path, map_location='cpu')['net']
+    params = torch.load(path, map_location='cpu', weights_only=False)['net']
     F0_model.load_state_dict(params)
     _ = F0_model.train()
     
@@ -601,7 +601,7 @@ def load_ASR_models(ASR_MODEL_PATH, ASR_MODEL_CONFIG):
 
     def _load_model(model_config, model_path):
         model = ASRCNN(**model_config)
-        params = torch.load(model_path, map_location='cpu')['model']
+        params = torch.load(model_path, map_location='cpu', weights_only=False)['model']
         model.load_state_dict(params)
         return model
 
@@ -622,7 +622,12 @@ def build_model(args, text_aligner, pitch_extractor, bert):
                 upsample_initial_channel=args.decoder.upsample_initial_channel,
                 resblock_dilation_sizes=args.decoder.resblock_dilation_sizes,
                 upsample_kernel_sizes=args.decoder.upsample_kernel_sizes, 
-                gen_istft_n_fft=args.decoder.gen_istft_n_fft, gen_istft_hop_size=args.decoder.gen_istft_hop_size) 
+                gen_istft_n_fft=args.decoder.gen_istft_n_fft,
+                gen_istft_hop_size=args.decoder.gen_istft_hop_size,
+                dec_inner_dim=getattr(args.decoder, 'dec_inner_dim', 1024),
+                vocos_dim=getattr(args.decoder, 'vocos_dim', 256),
+                vocos_intermediate_dim=getattr(args.decoder, 'vocos_intermediate_dim', 768),
+                vocos_num_layers=getattr(args.decoder, 'vocos_num_layers', 8))
     else:
         from Modules.hifigan import Decoder
         decoder = Decoder(dim_in=args.hidden_dim, style_dim=args.style_dim, dim_out=args.n_mels,
@@ -630,14 +635,15 @@ def build_model(args, text_aligner, pitch_extractor, bert):
                 upsample_rates = args.decoder.upsample_rates,
                 upsample_initial_channel=args.decoder.upsample_initial_channel,
                 resblock_dilation_sizes=args.decoder.resblock_dilation_sizes,
-                upsample_kernel_sizes=args.decoder.upsample_kernel_sizes) 
+                upsample_kernel_sizes=args.decoder.upsample_kernel_sizes,
+                dec_inner_dim=getattr(args.decoder, 'dec_inner_dim', 1024))
         
     text_encoder = TextEncoder(channels=args.hidden_dim, kernel_size=5, depth=args.n_layer, n_symbols=args.n_token)
     
     predictor = ProsodyPredictor(style_dim=args.style_dim, d_hid=args.hidden_dim, nlayers=args.n_layer, max_dur=args.max_dur, dropout=args.dropout)
     
-    style_encoder = StyleEncoder(dim_in=args.dim_in, style_dim=args.style_dim, max_conv_dim=args.hidden_dim) # acoustic style encoder
-    predictor_encoder = StyleEncoder(dim_in=args.dim_in, style_dim=args.style_dim, max_conv_dim=args.hidden_dim) # prosodic style encoder
+    style_encoder = StyleEncoder(dim_in=args.dim_in, style_dim=args.style_dim, max_conv_dim=args.max_conv_dim) # acoustic style encoder
+    predictor_encoder = StyleEncoder(dim_in=args.dim_in, style_dim=args.style_dim, max_conv_dim=args.max_conv_dim) # prosodic style encoder
         
     # define diffusion model
     if args.multispeaker:
@@ -694,7 +700,7 @@ def build_model(args, text_aligner, pitch_extractor, bert):
     return nets
 
 def load_checkpoint(model, optimizer, path, load_only_params=True, ignore_modules=[]):
-    state = torch.load(path, map_location='cpu')
+    state = torch.load(path, map_location='cpu', weights_only=False)
     params = state['net']
     for key in model:
         if key in params and key not in ignore_modules:

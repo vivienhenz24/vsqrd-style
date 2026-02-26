@@ -25,7 +25,6 @@ dependencies = [
 ]
 
 [tool.uv.sources]
-misaki = { path = "g2p" }
 monotonic-align = { git = "https://github.com/resemble-ai/monotonic_align.git" }
 
 [tool.uv.workspace]

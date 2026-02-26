@@ -4,6 +4,17 @@ import torch.nn.functional as F
 import torchaudio
 from transformers import AutoModel
 
+def _match_time(a, b):
+    min_t = min(a.shape[-1], b.shape[-1])
+    return a[..., :min_t], b[..., :min_t]
+
+def _ensure_batch_audio(x):
+    if x.dim() == 3 and x.size(1) == 1:
+        x = x.squeeze(1)
+    if x.dim() == 1:
+        x = x.unsqueeze(0)
+    return x
+
 class SpectralConvergengeLoss(torch.nn.Module):
     """Spectral convergence loss module."""
 
@@ -43,6 +54,7 @@ class STFTLoss(torch.nn.Module):
             Tensor: Spectral convergence loss value.
             Tensor: Log STFT magnitude loss value.
         """
+        x, y = _match_time(x, y)
         x_mag = self.to_mel(x)
         mean, std = -4, 4
         x_mag = (torch.log(1e-5 + x_mag) - mean) / std
@@ -154,6 +166,7 @@ class GeneratorLoss(torch.nn.Module):
         self.msd = msd
         
     def forward(self, y, y_hat):
+        y, y_hat = _match_time(y, y_hat)
         y_df_hat_r, y_df_hat_g, fmap_f_r, fmap_f_g = self.mpd(y, y_hat)
         y_ds_hat_r, y_ds_hat_g, fmap_s_r, fmap_s_g = self.msd(y, y_hat)
         loss_fm_f = feature_loss(fmap_f_r, fmap_f_g)
@@ -175,6 +188,7 @@ class DiscriminatorLoss(torch.nn.Module):
         self.msd = msd
         
     def forward(self, y, y_hat):
+        y, y_hat = _match_time(y, y_hat)
         # MPD
         y_df_hat_r, y_df_hat_g, _, _ = self.mpd(y, y_hat)
         loss_disc_f, losses_disc_f_r, losses_disc_f_g = discriminator_loss(y_df_hat_r, y_df_hat_g)
@@ -199,11 +213,14 @@ class WavLMLoss(torch.nn.Module):
         self.resample = torchaudio.transforms.Resample(model_sr, slm_sr)
      
     def forward(self, wav, y_rec):
+        wav = _ensure_batch_audio(wav)
+        y_rec = _ensure_batch_audio(y_rec)
+        wav, y_rec = _match_time(wav, y_rec)
         with torch.no_grad():
             wav_16 = self.resample(wav)
             wav_embeddings = self.wavlm(input_values=wav_16, output_hidden_states=True).hidden_states
         y_rec_16 = self.resample(y_rec)
-        y_rec_embeddings = self.wavlm(input_values=y_rec_16.squeeze(), output_hidden_states=True).hidden_states
+        y_rec_embeddings = self.wavlm(input_values=y_rec_16, output_hidden_states=True).hidden_states
 
         floss = 0
         for er, eg in zip(wav_embeddings, y_rec_embeddings):
@@ -212,6 +229,7 @@ class WavLMLoss(torch.nn.Module):
         return floss.mean()
     
     def generator(self, y_rec):
+        y_rec = _ensure_batch_audio(y_rec)
         y_rec_16 = self.resample(y_rec)
         y_rec_embeddings = self.wavlm(input_values=y_rec_16, output_hidden_states=True).hidden_states
         y_rec_embeddings = torch.stack(y_rec_embeddings, dim=1).transpose(-1, -2).flatten(start_dim=1, end_dim=2)
@@ -221,6 +239,9 @@ class WavLMLoss(torch.nn.Module):
         return loss_gen
     
     def discriminator(self, wav, y_rec):
+        wav = _ensure_batch_audio(wav)
+        y_rec = _ensure_batch_audio(y_rec)
+        wav, y_rec = _match_time(wav, y_rec)
         with torch.no_grad():
             wav_16 = self.resample(wav)
             wav_embeddings = self.wavlm(input_values=wav_16, output_hidden_states=True).hidden_states
@@ -243,6 +264,7 @@ class WavLMLoss(torch.nn.Module):
         return loss_disc_f.mean()
 
     def discriminator_forward(self, wav):
+        wav = _ensure_batch_audio(wav)
         with torch.no_grad():
             wav_16 = self.resample(wav)
             wav_embeddings = self.wavlm(input_values=wav_16, output_hidden_states=True).hidden_states

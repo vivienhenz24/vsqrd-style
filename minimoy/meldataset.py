@@ -41,25 +41,12 @@ class TextCleaner:
             try:
                 indexes.append(self.word_index_dictionary[char])
             except KeyError:
-                print(text)
+                continue
         return indexes
 
 np.random.seed(1)
 random.seed(1)
-SPECT_PARAMS = {
-    "n_fft": 2048,
-    "win_length": 1200,
-    "hop_length": 300
-}
-MEL_PARAMS = {
-    "n_mels": 80,
-}
-
-to_mel = torchaudio.transforms.MelSpectrogram(
-    n_mels=80, n_fft=2048, win_length=1200, hop_length=300)
-mean, std = -4, 4
-
-def preprocess(wave):
+def preprocess(wave, to_mel, mean=-4, std=4):
     wave_tensor = torch.from_numpy(wave).float()
     mel_tensor = to_mel(wave_tensor)
     mel_tensor = (torch.log(1e-5 + mel_tensor.unsqueeze(0)) - mean) / std
@@ -74,29 +61,35 @@ class FilePathDataset(torch.utils.data.Dataset):
                  validation=False,
                  OOD_data="Data/OOD_texts.txt",
                  min_length=50,
+                 n_mels=80,
+                 n_fft=2048,
+                 win_length=1200,
+                 hop_length=300,
+                 mean=-4,
+                 std=4,
                  ):
-
-        spect_params = SPECT_PARAMS
-        mel_params = MEL_PARAMS
 
         _data_list = [l.strip().split('|') for l in data_list]
         self.data_list = [data if len(data) == 3 else (*data, 0) for data in _data_list]
         self.text_cleaner = TextCleaner()
         self.sr = sr
+        self.hop_length = hop_length
 
         self.df = pd.DataFrame(self.data_list)
 
-        self.to_melspec = torchaudio.transforms.MelSpectrogram(**MEL_PARAMS)
-
-        self.mean, self.std = -4, 4
+        self.to_melspec = torchaudio.transforms.MelSpectrogram(
+            n_mels=n_mels, n_fft=n_fft, win_length=win_length, hop_length=hop_length
+        )
+        self.mean, self.std = mean, std
         self.data_augmentation = data_augmentation and (not validation)
         self.max_mel_length = 192
         
         self.min_length = min_length
         with open(OOD_data, 'r', encoding='utf-8') as f:
             tl = f.readlines()
-        idx = 1 if '.wav' in tl[0].split('|')[0] else 0
-        self.ptexts = [t.split('|')[idx] for t in tl]
+        self.ptexts = [self._extract_ood_text(t) for t in tl if t.strip()]
+        if not self.ptexts:
+            raise ValueError(f"No usable OOD text entries found in {OOD_data}")
         
         self.root_path = root_path
 
@@ -109,7 +102,7 @@ class FilePathDataset(torch.utils.data.Dataset):
         
         wave, text_tensor, speaker_id = self._load_tensor(data)
         
-        mel_tensor = preprocess(wave).squeeze()
+        mel_tensor = preprocess(wave, self.to_melspec, self.mean, self.std).squeeze()
         
         acoustic_feature = mel_tensor.squeeze()
         length_feature = acoustic_feature.size(1)
@@ -122,16 +115,23 @@ class FilePathDataset(torch.utils.data.Dataset):
         # get OOD text
         
         ps = ""
-        
-        while len(ps) < self.min_length:
-            rand_idx = np.random.randint(0, len(self.ptexts) - 1)
+        attempts = 0
+        max_attempts = 100
+        while len(ps) < self.min_length and attempts < max_attempts:
+            if len(self.ptexts) == 1:
+                rand_idx = 0
+            else:
+                rand_idx = np.random.randint(0, len(self.ptexts))
             ps = self.ptexts[rand_idx]
+            attempts += 1
+        if len(ps) < self.min_length:
+            ps = max(self.ptexts, key=len)
             
-            text = self.text_cleaner(ps)
-            text.insert(0, 0)
-            text.append(0)
+        text = self.text_cleaner(ps)
+        text.insert(0, 0)
+        text.append(0)
 
-            ref_text = torch.LongTensor(text)
+        ref_text = torch.LongTensor(text)
         
         return speaker_id, acoustic_feature, text_tensor, ref_text, ref_mel_tensor, ref_label, path, wave
 
@@ -158,7 +158,7 @@ class FilePathDataset(torch.utils.data.Dataset):
 
     def _load_data(self, data):
         wave, text_tensor, speaker_id = self._load_tensor(data)
-        mel_tensor = preprocess(wave).squeeze()
+        mel_tensor = preprocess(wave, self.to_melspec, self.mean, self.std).squeeze()
 
         mel_length = mel_tensor.size(1)
         if mel_length > self.max_mel_length:
@@ -166,6 +166,15 @@ class FilePathDataset(torch.utils.data.Dataset):
             mel_tensor = mel_tensor[:, random_start:random_start + self.max_mel_length]
 
         return mel_tensor, speaker_id
+
+    def _extract_ood_text(self, line):
+        parts = [p.strip() for p in line.strip().split('|')]
+        if len(parts) == 1:
+            return parts[0]
+        first = parts[0]
+        if '.wav' in first or '/' in first:
+            return parts[1]
+        return first
 
 
 class Collater(object):
@@ -252,4 +261,3 @@ def build_dataloader(path_list,
                              pin_memory=(device != 'cpu'))
 
     return data_loader
-

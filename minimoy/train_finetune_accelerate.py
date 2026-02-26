@@ -77,6 +77,14 @@ def main(config_path):
 
     data_params = config.get('data_params', None)
     sr = config['preprocess_params'].get('sr', 24000)
+    spect_params = config['preprocess_params'].get('spect_params', {})
+    hop_length = spect_params.get('hop_length', 300)
+    dataset_config = {
+        "n_mels": config.get('model_params', {}).get('n_mels', 80),
+        "n_fft": spect_params.get('n_fft', 2048),
+        "win_length": spect_params.get('win_length', 1200),
+        "hop_length": hop_length,
+    }
     train_path = data_params['train_data']
     val_path = data_params['val_data']
     root_path = data_params['root_path']
@@ -100,7 +108,7 @@ def main(config_path):
                                         min_length=min_length,
                                         batch_size=batch_size,
                                         num_workers=2,
-                                        dataset_config={},
+                                        dataset_config=dataset_config,
                                         device=device)
 
     val_dataloader = build_dataloader(val_list,
@@ -111,7 +119,7 @@ def main(config_path):
                                       validation=True,
                                       num_workers=0,
                                       device=device,
-                                      dataset_config={})
+                                      dataset_config=dataset_config)
     
     # load pretrained ASR model
     ASR_config = config.get('ASR_config', False)
@@ -129,6 +137,7 @@ def main(config_path):
     # build model
     model_params = recursive_munch(config['model_params'])
     multispeaker = model_params.multispeaker
+    use_diffusion = getattr(model_params, "use_diffusion", True)
     model = build_model(model_params, text_aligner, pitch_extractor, plbert)
     _ = [model[key].to(device) for key in model]
     
@@ -172,12 +181,14 @@ def main(config_path):
     dl = MyDataParallel(dl)
     wl = MyDataParallel(wl)
     
-    sampler = DiffusionSampler(
-        model.diffusion.diffusion,
-        sampler=ADPM2Sampler(),
-        sigma_schedule=KarrasSchedule(sigma_min=0.0001, sigma_max=3.0, rho=9.0), # empirical parameters
-        clamp=False
-    )
+    sampler = None
+    if use_diffusion:
+        sampler = DiffusionSampler(
+            model.diffusion.diffusion,
+            sampler=ADPM2Sampler(),
+            sigma_schedule=KarrasSchedule(sigma_min=0.0001, sigma_max=3.0, rho=9.0), # empirical parameters
+            clamp=False
+        )
     
     scheduler_params = {
         "max_lr": optimizer_params.lr,
@@ -240,7 +251,9 @@ def main(config_path):
                                 slmadv_params.max_len,
                                 batch_percentage=slmadv_params.batch_percentage,
                                 skip_update=slmadv_params.iter, 
-                                sig=slmadv_params.sig
+                                sig=slmadv_params.sig,
+                                hop_length=hop_length,
+                                use_diffusion=use_diffusion
                                )
 
     model, optimizer, train_dataloader = accelerator.prepare(
@@ -272,7 +285,7 @@ def main(config_path):
                 text_mask = length_to_mask(input_lengths).to(texts.device)
 
                 # compute reference styles
-                if multispeaker and epoch >= diff_epoch:
+                if use_diffusion and multispeaker and epoch >= diff_epoch:
                     ref_ss = model.style_encoder(ref_mels.unsqueeze(1))
                     ref_sp = model.predictor_encoder(ref_mels.unsqueeze(1))
                     ref = torch.cat([ref_ss, ref_sp], dim=1)
@@ -311,15 +324,15 @@ def main(config_path):
                 s = model.style_encoder(mel.unsqueeze(0).unsqueeze(1))
                 gs.append(s)
 
-            s_dur = torch.stack(ss).squeeze()  # global prosodic styles
-            gs = torch.stack(gs).squeeze() # global acoustic styles
+            s_dur = torch.stack(ss).reshape(len(mel_input_length), -1)  # global prosodic styles
+            gs = torch.stack(gs).reshape(len(mel_input_length), -1) # global acoustic styles
             s_trg = torch.cat([gs, s_dur], dim=-1).detach() # ground truth for denoiser
 
             bert_dur = model.bert(texts, attention_mask=(~text_mask).int())
             d_en = model.bert_encoder(bert_dur).transpose(-1, -2) 
             
             # denoiser training
-            if epoch >= diff_epoch:
+            if use_diffusion and epoch >= diff_epoch:
                 num_steps = np.random.randint(3, 5)
                 
                 if model_params.diffusion.dist.estimate_sigma_data:
@@ -372,8 +385,8 @@ def main(config_path):
                 p_en.append(p[bib, :, random_start:random_start+mel_len])
                 gt.append(mels[bib, :, (random_start * 2):((random_start+mel_len) * 2)])
                 
-                y = waves[bib][(random_start * 2) * 300:((random_start+mel_len) * 2) * 300]
-                wav.append(torch.from_numpy(y).to(device))
+                y = waves[bib][(random_start * 2) * hop_length:((random_start+mel_len) * 2) * hop_length]
+                wav.append(torch.from_numpy(y).float().to(device))
                 
                 # style reference (better to be different from the GT)
                 random_start = np.random.randint(0, mel_length - mel_len_st)
@@ -476,7 +489,7 @@ def main(config_path):
             optimizer.step('text_encoder')
             optimizer.step('text_aligner')
             
-            if epoch >= diff_epoch:
+            if use_diffusion and epoch >= diff_epoch:
                 optimizer.step('diffusion')
 
             d_loss_slm, loss_gen_lm = 0, 0
@@ -497,7 +510,7 @@ def main(config_path):
                                  waves, 
                                  mel_input_length,
                                  ref_texts, 
-                                 ref_lengths, use_ind, s_trg.detach(), ref if multispeaker else None)
+                                 ref_lengths, use_ind, s_trg.detach(), ref if (use_diffusion and multispeaker) else None)
 
                 if slm_out is not None:
                     d_loss_slm, loss_gen_lm, y_pred = slm_out
@@ -531,14 +544,16 @@ def main(config_path):
                         if p.grad is not None:
                             p.grad *= slmadv_params.scale
 
-                    for p in model.diffusion.parameters():
-                        if p.grad is not None:
-                            p.grad *= slmadv_params.scale
+                    if use_diffusion:
+                        for p in model.diffusion.parameters():
+                            if p.grad is not None:
+                                p.grad *= slmadv_params.scale
                     
                     optimizer.step('bert_encoder')
                     optimizer.step('bert')
                     optimizer.step('predictor')
-                    optimizer.step('diffusion')
+                    if use_diffusion:
+                        optimizer.step('diffusion')
 
                     # SLM discriminator loss
                     if d_loss_slm != 0:
@@ -584,7 +599,7 @@ def main(config_path):
                     batch = [b.to(device) for b in batch[1:]]
                     texts, input_lengths, ref_texts, ref_lengths, mels, mel_input_length, ref_mels = batch
                     with torch.no_grad():
-                        mask = length_to_mask(mel_input_length // (2 ** n_down)).to('cuda')
+                        mask = length_to_mask(mel_input_length // (2 ** n_down)).to(device)
                         text_mask = length_to_mask(input_lengths).to(texts.device)
 
                         _, _, s2s_attn = model.text_aligner(mels, mask, texts)
@@ -612,8 +627,8 @@ def main(config_path):
                         s = model.style_encoder(mel.unsqueeze(0).unsqueeze(1))
                         gs.append(s)
 
-                    s = torch.stack(ss).squeeze()
-                    gs = torch.stack(gs).squeeze()
+                    s = torch.stack(ss).reshape(len(mel_input_length), -1)
+                    gs = torch.stack(gs).reshape(len(mel_input_length), -1)
                     s_trg = torch.cat([s, gs], dim=-1).detach()
 
                     bert_dur = model.bert(texts, attention_mask=(~text_mask).int())
@@ -638,8 +653,8 @@ def main(config_path):
                         p_en.append(p[bib, :, random_start:random_start+mel_len])
 
                         gt.append(mels[bib, :, (random_start * 2):((random_start+mel_len) * 2)])
-                        y = waves[bib][(random_start * 2) * 300:((random_start+mel_len) * 2) * 300]
-                        wav.append(torch.from_numpy(y).to(device))
+                        y = waves[bib][(random_start * 2) * hop_length:((random_start+mel_len) * 2) * hop_length]
+                        wav.append(torch.from_numpy(y).float().to(device))
 
                     wav = torch.stack(wav).float().detach()
 

@@ -298,113 +298,104 @@ class SourceModuleHnNSF(torch.nn.Module):
 def padDiff(x):
     return F.pad(F.pad(x, (0,0,-1,1), 'constant', 0) - x, (0,0,0,-1), 'constant', 0)
 
+
+class LayerNorm1d(nn.Module):
+    def __init__(self, channels, eps=1e-5):
+        super().__init__()
+        self.norm = nn.LayerNorm(channels, eps=eps)
+
+    def forward(self, x):
+        return self.norm(x.transpose(1, 2)).transpose(1, 2)
+
+
+class ConvNeXtBlockAdaIN(nn.Module):
+    def __init__(self, channels, intermediate_channels, style_dim, kernel_size=7):
+        super().__init__()
+        self.dwconv = nn.Conv1d(
+            channels,
+            channels,
+            kernel_size=kernel_size,
+            padding=kernel_size // 2,
+            groups=channels,
+        )
+        self.norm1 = AdaIN1d(style_dim, channels)
+        self.norm2 = AdaIN1d(style_dim, channels)
+        self.pwconv1 = nn.Conv1d(channels, intermediate_channels, kernel_size=1)
+        self.pwconv2 = nn.Conv1d(intermediate_channels, channels, kernel_size=1)
+        self.gamma = nn.Parameter(torch.ones(1, channels, 1))
+
+    def forward(self, x, s):
+        residual = x
+        x = self.dwconv(x)
+        x = self.norm1(x, s)
+        x = F.gelu(x)
+        x = self.pwconv1(x)
+        x = F.gelu(x)
+        x = self.pwconv2(x)
+        x = self.norm2(x, s)
+        x = self.gamma * x
+        return residual + x
+
     
 class Generator(torch.nn.Module):
-    def __init__(self, style_dim, resblock_kernel_sizes, upsample_rates, upsample_initial_channel, resblock_dilation_sizes, upsample_kernel_sizes, gen_istft_n_fft, gen_istft_hop_size):
+    def __init__(
+        self,
+        style_dim,
+        resblock_kernel_sizes,
+        upsample_rates,
+        upsample_initial_channel,
+        resblock_dilation_sizes,
+        upsample_kernel_sizes,
+        gen_istft_n_fft,
+        gen_istft_hop_size,
+        vocos_dim=256,
+        vocos_intermediate_dim=768,
+        vocos_num_layers=8,
+    ):
         super(Generator, self).__init__()
 
-        self.num_kernels = len(resblock_kernel_sizes)
-        self.num_upsamples = len(upsample_rates)
-        resblock = AdaINResBlock1
-
-        self.m_source = SourceModuleHnNSF(
-                    sampling_rate=24000,
-                    upsample_scale=np.prod(upsample_rates) * gen_istft_hop_size,
-                    harmonic_num=8, voiced_threshod=10)
-        self.f0_upsamp = torch.nn.Upsample(scale_factor=np.prod(upsample_rates) * gen_istft_hop_size)
-        self.noise_convs = nn.ModuleList()
-        self.noise_res = nn.ModuleList()
-        
-        self.ups = nn.ModuleList()
-        for i, (u, k) in enumerate(zip(upsample_rates, upsample_kernel_sizes)):
-            self.ups.append(weight_norm(
-                ConvTranspose1d(upsample_initial_channel//(2**i), upsample_initial_channel//(2**(i+1)),
-                                k, u, padding=(k-u)//2)))
-
-        self.resblocks = nn.ModuleList()
-        for i in range(len(self.ups)):
-            ch = upsample_initial_channel//(2**(i+1))
-            for j, (k, d) in enumerate(zip(resblock_kernel_sizes,resblock_dilation_sizes)):
-                self.resblocks.append(resblock(ch, k, d, style_dim))
-                
-            c_cur = upsample_initial_channel // (2 ** (i + 1))
-            
-            if i + 1 < len(upsample_rates):  #
-                stride_f0 = np.prod(upsample_rates[i + 1:])
-                self.noise_convs.append(Conv1d(
-                    gen_istft_n_fft + 2, c_cur, kernel_size=stride_f0 * 2, stride=stride_f0, padding=(stride_f0+1) // 2))
-                self.noise_res.append(resblock(c_cur, 7, [1,3,5], style_dim))
-            else:
-                self.noise_convs.append(Conv1d(gen_istft_n_fft + 2, c_cur, kernel_size=1))
-                self.noise_res.append(resblock(c_cur, 11, [1,3,5], style_dim))
-                
-                
         self.post_n_fft = gen_istft_n_fft
-        self.conv_post = weight_norm(Conv1d(ch, self.post_n_fft + 2, 7, 1, padding=3))
-        self.ups.apply(init_weights)
-        self.conv_post.apply(init_weights)
-        self.reflection_pad = torch.nn.ReflectionPad1d((1, 0))
         self.stft = TorchSTFT(filter_length=gen_istft_n_fft, hop_length=gen_istft_hop_size, win_length=gen_istft_n_fft)
-        
-        
-    def forward(self, x, s, f0):
-        with torch.no_grad():
-            f0 = self.f0_upsamp(f0[:, None]).transpose(1, 2)  # bs,n,t
 
-            har_source, noi_source, uv = self.m_source(f0)
-            har_source = har_source.transpose(1, 2).squeeze(1)
-            har_spec, har_phase = self.stft.transform(har_source)
-            har = torch.cat([har_spec, har_phase], dim=1)
-        
-        for i in range(self.num_upsamples):
-            x = F.leaky_relu(x, LRELU_SLOPE)
-            x_source = self.noise_convs[i](har)
-            x_source = self.noise_res[i](x_source, s)
+        self.embed = nn.Conv1d(upsample_initial_channel, vocos_dim, kernel_size=7, padding=3)
+        self.pre_norm = LayerNorm1d(vocos_dim)
+        self.blocks = nn.ModuleList(
+            [
+                ConvNeXtBlockAdaIN(
+                    channels=vocos_dim,
+                    intermediate_channels=vocos_intermediate_dim,
+                    style_dim=style_dim,
+                )
+                for _ in range(vocos_num_layers)
+            ]
+        )
+        self.final_norm = LayerNorm1d(vocos_dim)
+        self.out_proj = nn.Conv1d(vocos_dim, self.post_n_fft + 2, kernel_size=1)
 
-            x = self.ups[i](x)
-            if i == self.num_upsamples - 1:
-                x = self.reflection_pad(x)
-
-            x = x + x_source
-            xs = None
-            for j in range(self.num_kernels):
-                if xs is None:
-                    xs = self.resblocks[i*self.num_kernels+j](x, s)
-                else:
-                    xs += self.resblocks[i*self.num_kernels+j](x, s)
-            x = xs / self.num_kernels
-        x = F.leaky_relu(x)
-        x = self.conv_post(x)
-        spec = torch.exp(x[:,:self.post_n_fft // 2 + 1, :])
+    def forward(self, x, s, f0=None):
+        x = self.embed(x)
+        x = self.pre_norm(x)
+        for block in self.blocks:
+            x = block(x, s)
+        x = self.final_norm(x)
+        x = self.out_proj(x)
+        spec = torch.exp(x[:, :self.post_n_fft // 2 + 1, :])
         phase = torch.sin(x[:, self.post_n_fft // 2 + 1:, :])
         return self.stft.inverse(spec, phase)
     
     def fw_phase(self, x, s):
-        for i in range(self.num_upsamples):
-            x = F.leaky_relu(x, LRELU_SLOPE)
-            x = self.ups[i](x)
-            xs = None
-            for j in range(self.num_kernels):
-                if xs is None:
-                    xs = self.resblocks[i*self.num_kernels+j](x, s)
-                else:
-                    xs += self.resblocks[i*self.num_kernels+j](x, s)
-            x = xs / self.num_kernels
-        x = F.leaky_relu(x)
-        x = self.reflection_pad(x)
-        x = self.conv_post(x)
-        spec = torch.exp(x[:,:self.post_n_fft // 2 + 1, :])
+        x = self.embed(x)
+        x = self.pre_norm(x)
+        for block in self.blocks:
+            x = block(x, s)
+        x = self.final_norm(x)
+        x = self.out_proj(x)
+        spec = torch.exp(x[:, :self.post_n_fft // 2 + 1, :])
         phase = torch.sin(x[:, self.post_n_fft // 2 + 1:, :])
         return spec, phase
 
     def remove_weight_norm(self):
-        print('Removing weight norm...')
-        for l in self.ups:
-            remove_weight_norm(l)
-        for l in self.resblocks:
-            l.remove_weight_norm()
-        remove_weight_norm(self.conv_pre)
-        remove_weight_norm(self.conv_post)
+        return
 
         
 class AdainResBlk1d(nn.Module):
@@ -471,41 +462,66 @@ class Decoder(nn.Module):
                 upsample_initial_channel=512,
                 resblock_dilation_sizes=[[1,3,5], [1,3,5], [1,3,5]],
                 upsample_kernel_sizes=[20, 12], 
-                gen_istft_n_fft=20, gen_istft_hop_size=5):
+                gen_istft_n_fft=20, gen_istft_hop_size=5,
+                dec_inner_dim=1024,
+                vocos_dim=256,
+                vocos_intermediate_dim=768,
+                vocos_num_layers=8):
         super().__init__()
         
         self.decode = nn.ModuleList()
         
-        self.encode = AdainResBlk1d(dim_in + 2, 1024, style_dim)
+        self.encode = AdainResBlk1d(dim_in + 2, dec_inner_dim, style_dim)
         
-        self.decode.append(AdainResBlk1d(1024 + 2 + 64, 1024, style_dim))
-        self.decode.append(AdainResBlk1d(1024 + 2 + 64, 1024, style_dim))
-        self.decode.append(AdainResBlk1d(1024 + 2 + 64, 1024, style_dim))
-        self.decode.append(AdainResBlk1d(1024 + 2 + 64, 512, style_dim, upsample=True))
+        self.decode.append(AdainResBlk1d(dec_inner_dim + 2 + 64, dec_inner_dim, style_dim))
+        self.decode.append(AdainResBlk1d(dec_inner_dim + 2 + 64, dec_inner_dim, style_dim))
+        self.decode.append(AdainResBlk1d(dec_inner_dim + 2 + 64, dec_inner_dim, style_dim))
+        self.decode.append(AdainResBlk1d(dec_inner_dim + 2 + 64, upsample_initial_channel, style_dim, upsample=True))
 
         self.F0_conv = weight_norm(nn.Conv1d(1, 1, kernel_size=3, stride=2, groups=1, padding=1))
         
         self.N_conv = weight_norm(nn.Conv1d(1, 1, kernel_size=3, stride=2, groups=1, padding=1))
         
         self.asr_res = nn.Sequential(
-            weight_norm(nn.Conv1d(512, 64, kernel_size=1)),
+            weight_norm(nn.Conv1d(dim_in, 64, kernel_size=1)),
         )
         
         
         self.generator = Generator(style_dim, resblock_kernel_sizes, upsample_rates, 
                                    upsample_initial_channel, resblock_dilation_sizes, 
-                                   upsample_kernel_sizes, gen_istft_n_fft, gen_istft_hop_size)
+                                   upsample_kernel_sizes, gen_istft_n_fft, gen_istft_hop_size,
+                                   vocos_dim=vocos_dim,
+                                   vocos_intermediate_dim=vocos_intermediate_dim,
+                                   vocos_num_layers=vocos_num_layers)
         
     def forward(self, asr, F0_curve, N, s):
+        if F0_curve.dim() == 3 and F0_curve.size(-1) == 1:
+            F0_curve = F0_curve.squeeze(-1)
+        if N.dim() == 3 and N.size(-1) == 1:
+            N = N.squeeze(-1)
+        if F0_curve.dim() == 1:
+            F0_curve = F0_curve.unsqueeze(0)
+        if N.dim() == 1:
+            N = N.unsqueeze(0)
+
         if self.training:
+            device = F0_curve.device
             downlist = [0, 3, 7]
             F0_down = downlist[random.randint(0, 2)]
             downlist = [0, 3, 7, 15]
             N_down = downlist[random.randint(0, 3)]
             if F0_down:
-                F0_curve = nn.functional.conv1d(F0_curve.unsqueeze(1), torch.ones(1, 1, F0_down).to('cuda'), padding=F0_down//2).squeeze(1) / F0_down
+                F0_curve = nn.functional.conv1d(
+                    F0_curve.unsqueeze(1),
+                    torch.ones(1, 1, F0_down, device=device, dtype=F0_curve.dtype),
+                    padding=F0_down // 2,
+                ).squeeze(1) / F0_down
             if N_down:
-                N = nn.functional.conv1d(N.unsqueeze(1), torch.ones(1, 1, N_down).to('cuda'), padding=N_down//2).squeeze(1)  / N_down
+                N = nn.functional.conv1d(
+                    N.unsqueeze(1),
+                    torch.ones(1, 1, N_down, device=device, dtype=N.dtype),
+                    padding=N_down // 2,
+                ).squeeze(1) / N_down
 
         
         F0 = self.F0_conv(F0_curve.unsqueeze(1))

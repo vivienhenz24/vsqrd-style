@@ -4,7 +4,7 @@ import torch.nn.functional as F
 
 class SLMAdversarialLoss(torch.nn.Module):
 
-    def __init__(self, model, wl, sampler, min_len, max_len, batch_percentage=0.5, skip_update=10, sig=1.5):
+    def __init__(self, model, wl, sampler, min_len, max_len, batch_percentage=0.5, skip_update=10, sig=1.5, hop_length=300, use_diffusion=True):
         super(SLMAdversarialLoss, self).__init__()
         self.model = model
         self.wl = wl
@@ -16,13 +16,15 @@ class SLMAdversarialLoss(torch.nn.Module):
         
         self.sig = sig
         self.skip_update = skip_update
+        self.hop_length = hop_length
+        self.use_diffusion = use_diffusion
         
     def forward(self, iters, y_rec_gt, y_rec_gt_pred, waves, mel_input_length, ref_text, ref_lengths, use_ind, s_trg, ref_s=None):
         text_mask = length_to_mask(ref_lengths).to(ref_text.device)
         bert_dur = self.model.bert(ref_text, attention_mask=(~text_mask).int())
         d_en = self.model.bert_encoder(bert_dur).transpose(-1, -2) 
         
-        if use_ind and np.random.rand() < 0.5:
+        if (not self.use_diffusion) or (use_ind and np.random.rand() < 0.5):
             s_preds = s_trg
         else:
             num_steps = np.random.randint(3, 5)
@@ -40,8 +42,9 @@ class SLMAdversarialLoss(torch.nn.Module):
                          embedding_mask_proba=0.1,
                          num_steps=num_steps).squeeze(1)
             
-        s_dur = s_preds[:, 128:]
-        s = s_preds[:, :128]
+        style_dim = s_preds.shape[-1] // 2
+        s_dur = s_preds[:, style_dim:]
+        s = s_preds[:, :style_dim]
         
         d, _ = self.model.predictor(d_en, s_dur, 
                                                 ref_lengths, 
@@ -120,8 +123,8 @@ class SLMAdversarialLoss(torch.nn.Module):
 
             # get ground truth clips
             random_start = np.random.randint(0, mel_length_gt - mel_len)
-            y = waves[bib][(random_start * 2) * 300:((random_start+mel_len) * 2) * 300]
-            wav.append(torch.from_numpy(y).to(ref_text.device))
+            y = waves[bib][(random_start * 2) * self.hop_length:((random_start+mel_len) * 2) * self.hop_length]
+            wav.append(torch.from_numpy(y).float().to(ref_text.device))
             
             if len(wav) >= self.batch_percentage * len(waves): # prevent OOM due to longer lengths
                 break
@@ -134,8 +137,8 @@ class SLMAdversarialLoss(torch.nn.Module):
         en = torch.stack(en)
         p_en = torch.stack(p_en)
         
-        F0_fake, N_fake = self.model.predictor.F0Ntrain(p_en, sp[:, 128:])
-        y_pred = self.model.decoder(en, F0_fake, N_fake, sp[:, :128])
+        F0_fake, N_fake = self.model.predictor.F0Ntrain(p_en, sp[:, style_dim:])
+        y_pred = self.model.decoder(en, F0_fake, N_fake, sp[:, :style_dim])
         
         # discriminator loss
         if (iters + 1) % self.skip_update == 0:

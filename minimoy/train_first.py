@@ -67,6 +67,14 @@ def main(config_path):
     
     data_params = config.get('data_params', None)
     sr = config['preprocess_params'].get('sr', 24000)
+    spect_params = config['preprocess_params'].get('spect_params', {})
+    hop_length = spect_params.get('hop_length', 300)
+    dataset_config = {
+        "n_mels": config.get('model_params', {}).get('n_mels', 80),
+        "n_fft": spect_params.get('n_fft', 2048),
+        "win_length": spect_params.get('win_length', 1200),
+        "hop_length": hop_length,
+    }
     train_path = data_params['train_data']
     val_path = data_params['val_data']
     root_path = data_params['root_path']
@@ -84,7 +92,7 @@ def main(config_path):
                                         min_length=min_length,
                                         batch_size=batch_size,
                                         num_workers=2,
-                                        dataset_config={},
+                                        dataset_config=dataset_config,
                                         device=device)
 
     val_dataloader = build_dataloader(val_list,
@@ -95,7 +103,7 @@ def main(config_path):
                                       validation=True,
                                       num_workers=0,
                                       device=device,
-                                      dataset_config={})
+                                      dataset_config=dataset_config)
     
     with accelerator.main_process_first():
         # load pretrained ASR model
@@ -183,7 +191,7 @@ def main(config_path):
             texts, input_lengths, _, _, mels, mel_input_length, _ = batch
             
             with torch.no_grad():
-                mask = length_to_mask(mel_input_length // (2 ** n_down)).to('cuda')
+                mask = length_to_mask(mel_input_length // (2 ** n_down)).to(device)
                 text_mask = length_to_mask(input_lengths).to(texts.device)
 
             ppgs, s2s_pred, s2s_attn = model.text_aligner(mels, mask, texts)
@@ -229,8 +237,8 @@ def main(config_path):
                 en.append(asr[bib, :, random_start:random_start+mel_len])
                 gt.append(mels[bib, :, (random_start * 2):((random_start+mel_len) * 2)])
 
-                y = waves[bib][(random_start * 2) * 300:((random_start+mel_len) * 2) * 300]
-                wav.append(torch.from_numpy(y).to(device))
+                y = waves[bib][(random_start * 2) * hop_length:((random_start+mel_len) * 2) * hop_length]
+                wav.append(torch.from_numpy(y).float().to(device))
                 
                 # style reference (better to be different from the GT)
                 random_start = np.random.randint(0, mel_length - mel_len_st)
@@ -336,7 +344,7 @@ def main(config_path):
                 texts, input_lengths, _, _, mels, mel_input_length, _ = batch
 
                 with torch.no_grad():
-                    mask = length_to_mask(mel_input_length // (2 ** n_down)).to('cuda')
+                    mask = length_to_mask(mel_input_length // (2 ** n_down)).to(device)
                     ppgs, s2s_pred, s2s_attn = model.text_aligner(mels, mask, texts)
 
                     s2s_attn = s2s_attn.transpose(-1, -2)
@@ -367,8 +375,8 @@ def main(config_path):
                     random_start = np.random.randint(0, mel_length - mel_len)
                     en.append(asr[bib, :, random_start:random_start+mel_len])
                     gt.append(mels[bib, :, (random_start * 2):((random_start+mel_len) * 2)])
-                    y = waves[bib][(random_start * 2) * 300:((random_start+mel_len) * 2) * 300]
-                    wav.append(torch.from_numpy(y).to('cuda'))
+                    y = waves[bib][(random_start * 2) * hop_length:((random_start+mel_len) * 2) * hop_length]
+                    wav.append(torch.from_numpy(y).float().to(device))
 
                 wav = torch.stack(wav).float().detach()
 
