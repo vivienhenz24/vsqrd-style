@@ -2,12 +2,13 @@
 __pycache__/
 *.py[cod]
 *.so
+/combined_dataset/
 
 # Virtual environments
 .venv/
 venv/
 env/
-
+.env
 # Tooling/cache
 .pytest_cache/
 .mypy_cache/
@@ -40,3 +41,12 @@ data/
 datasets/
 /weights/
 /voices/
+/alignments/
+/alignments_test/
+
+# StyleTTS2 training outputs
+StyleTTS2/Models/
+StyleTTS2/Utils/PLBERT_turkish/step_*.t7
+
+# HuggingFace cache
+.cache/

@@ -22,6 +22,8 @@ dependencies = [
     "einops-exts",
     "tqdm",
     "monotonic-align",
+    "python-dotenv",
+    "elevenlabs",
 ]
 
 [tool.uv.sources]
