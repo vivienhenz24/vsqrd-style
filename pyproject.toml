@@ -25,6 +25,7 @@ dependencies = [
     "python-dotenv",
     "elevenlabs",
     "pandas",
+    "tensorboard",
 ]
 
 [tool.uv.sources]
