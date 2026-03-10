@@ -26,40 +26,43 @@ cd $REPO_ROOT
 echo "--- Installing dependencies ---"
 uv sync
 PY="$REPO_ROOT/.venv/bin/python"
-HF_CLI="$REPO_ROOT/.venv/bin/huggingface-cli"
 
-# Download and extract dataset
-echo "--- Downloading dataset ---"
-"$HF_CLI" download $HF_DATASET combined_dataset.tar.gz \
-    --repo-type dataset --local-dir $REPO_ROOT --quiet
+# Download all files via Python API
+echo "--- Downloading dataset + alignments + models ---"
+"$PY" -c "
+import os, subprocess, sys
+from huggingface_hub import hf_hub_download, snapshot_download
+
+token = os.environ['HF_TOKEN']
+
+print('Downloading combined_dataset.tar.gz...')
+hf_hub_download('vsqrd/styletts2-turkish', 'combined_dataset.tar.gz',
+    repo_type='dataset', local_dir='$REPO_ROOT', token=token)
+
+print('Downloading alignments.tar.gz...')
+hf_hub_download('vsqrd/styletts2-turkish', 'alignments.tar.gz',
+    repo_type='dataset', local_dir='$REPO_ROOT', token=token)
+
+print('Downloading Turkish PL-BERT...')
+os.makedirs('$REPO_ROOT/StyleTTS2/Utils/PLBERT_turkish', exist_ok=True)
+for f in ['config.yml', 'step_160000.t7']:
+    hf_hub_download('vsqrd/pl-bert-turkish', f,
+        local_dir='$REPO_ROOT/StyleTTS2/Utils/PLBERT_turkish', token=token)
+
+print('Downloading F0 model...')
+hf_hub_download('yl4579/StyleTTS2-LibriTTS', 'Utils/JDC/bst.t7',
+    local_dir='$REPO_ROOT/StyleTTS2')
+
+print('All downloads complete')
+"
+
 echo "--- Extracting dataset ---"
 tar -xzf $REPO_ROOT/combined_dataset.tar.gz -C $REPO_ROOT
 rm $REPO_ROOT/combined_dataset.tar.gz
 
-# Download and extract alignments
-echo "--- Downloading alignments ---"
-"$HF_CLI" download $HF_DATASET alignments.tar.gz \
-    --repo-type dataset --local-dir $REPO_ROOT --quiet
 echo "--- Extracting alignments ---"
 tar -xzf $REPO_ROOT/alignments.tar.gz -C $REPO_ROOT
 rm $REPO_ROOT/alignments.tar.gz
-
-# Download Turkish PL-BERT (160k checkpoint only)
-echo "--- Downloading Turkish PL-BERT ---"
-mkdir -p $REPO_ROOT/StyleTTS2/Utils/PLBERT_turkish
-"$HF_CLI" download $HF_PLBERT \
-    config.yml \
-    step_160000.t7 \
-    --local-dir $REPO_ROOT/StyleTTS2/Utils/PLBERT_turkish \
-    --quiet
-
-# Download JDC pitch model (from StyleTTS2 LibriTTS repo)
-echo "--- Downloading F0 model ---"
-"$PY" -c "
-from huggingface_hub import hf_hub_download
-hf_hub_download('yl4579/StyleTTS2-LibriTTS', 'Utils/JDC/bst.t7', local_dir='StyleTTS2')
-print('F0 model downloaded')
-"
 
 echo "--- Verifying setup ---"
 "$PY" -c "
