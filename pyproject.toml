@@ -24,6 +24,7 @@ dependencies = [
     "monotonic-align",
     "python-dotenv",
     "elevenlabs",
+    "pandas",
 ]
 
 [tool.uv.sources]
