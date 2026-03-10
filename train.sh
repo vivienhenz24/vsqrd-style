@@ -43,6 +43,10 @@ downloads = [
 ]
 
 for repo, filename, repo_type, local_dir in downloads:
+    dest = os.path.join(local_dir, filename)
+    if os.path.exists(dest):
+        print(f'  skipping {filename} (already exists)')
+        continue
     os.makedirs(local_dir, exist_ok=True)
     kwargs = dict(repo_type=repo_type, local_dir=local_dir, token=token)
     if repo_type == 'model':
@@ -55,12 +59,22 @@ print('All downloads complete')
 "
 
 echo "--- Extracting dataset ---"
-tar --warning=no-unknown-keyword -xzf $REPO_ROOT/combined_dataset.tar.gz -C $REPO_ROOT
-rm $REPO_ROOT/combined_dataset.tar.gz
+if [ ! -d "$REPO_ROOT/combined_dataset" ]; then
+    tar --warning=no-unknown-keyword -xzf $REPO_ROOT/combined_dataset.tar.gz -C $REPO_ROOT
+    rm $REPO_ROOT/combined_dataset.tar.gz
+else
+    echo "  skipping (already extracted)"
+    rm -f $REPO_ROOT/combined_dataset.tar.gz
+fi
 
 echo "--- Extracting alignments ---"
-tar --warning=no-unknown-keyword -xzf $REPO_ROOT/alignments.tar.gz -C $REPO_ROOT
-rm $REPO_ROOT/alignments.tar.gz
+if [ ! -d "$REPO_ROOT/alignments" ]; then
+    tar --warning=no-unknown-keyword -xzf $REPO_ROOT/alignments.tar.gz -C $REPO_ROOT
+    rm $REPO_ROOT/alignments.tar.gz
+else
+    echo "  skipping (already extracted)"
+    rm -f $REPO_ROOT/alignments.tar.gz
+fi
 
 echo "--- Verifying setup ---"
 "$PY" -c "
