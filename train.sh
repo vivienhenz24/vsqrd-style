@@ -48,10 +48,6 @@ os.makedirs('$REPO_ROOT/StyleTTS2/Utils/PLBERT_turkish', exist_ok=True)
 hf_hub_download('vsqrd/pl-bert-turkish', 'step_160000.t7',
     local_dir='$REPO_ROOT/StyleTTS2/Utils/PLBERT_turkish', token=token)
 
-print('Downloading F0 model...')
-hf_hub_download('yl4579/StyleTTS2-LibriTTS', 'Utils/JDC/bst.t7',
-    local_dir='$REPO_ROOT/StyleTTS2')
-
 print('All downloads complete')
 "
 
