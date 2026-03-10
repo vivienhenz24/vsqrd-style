@@ -138,7 +138,11 @@ class FilePathDataset(torch.utils.data.Dataset):
     def _load_tensor(self, data):
         wave_path, text, speaker_id = data
         speaker_id = int(speaker_id)
-        wave, sr = sf.read(osp.join(self.root_path, wave_path))
+        full_path = osp.join(self.root_path, wave_path)
+        try:
+            wave, sr = sf.read(full_path)
+        except Exception as exc:
+            raise RuntimeError(f"Failed to read audio file: {full_path}") from exc
         if wave.shape[-1] == 2:
             wave = wave[:, 0].squeeze()
         if sr != 24000:
@@ -252,4 +256,3 @@ def build_dataloader(path_list,
                              pin_memory=(device != 'cpu'))
 
     return data_loader
-
