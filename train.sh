@@ -30,33 +30,36 @@ PY="$REPO_ROOT/.venv/bin/python"
 # Download all files via Python API
 echo "--- Downloading dataset + alignments + models ---"
 "$PY" -c "
-import os, subprocess, sys
-from huggingface_hub import hf_hub_download, snapshot_download
+import os
+from huggingface_hub import hf_hub_download
+from tqdm import tqdm
 
 token = os.environ['HF_TOKEN']
 
-print('Downloading combined_dataset.tar.gz...')
-hf_hub_download('vsqrd/styletts2-turkish', 'combined_dataset.tar.gz',
-    repo_type='dataset', local_dir='$REPO_ROOT', token=token)
+downloads = [
+    ('vsqrd/styletts2-turkish', 'combined_dataset.tar.gz', 'dataset', '$REPO_ROOT'),
+    ('vsqrd/styletts2-turkish', 'alignments.tar.gz',       'dataset', '$REPO_ROOT'),
+    ('vsqrd/pl-bert-turkish',   'step_160000.t7',          'model',   '$REPO_ROOT/StyleTTS2/Utils/PLBERT_turkish'),
+]
 
-print('Downloading alignments.tar.gz...')
-hf_hub_download('vsqrd/styletts2-turkish', 'alignments.tar.gz',
-    repo_type='dataset', local_dir='$REPO_ROOT', token=token)
-
-print('Downloading Turkish PL-BERT checkpoint...')
-os.makedirs('$REPO_ROOT/StyleTTS2/Utils/PLBERT_turkish', exist_ok=True)
-hf_hub_download('vsqrd/pl-bert-turkish', 'step_160000.t7',
-    local_dir='$REPO_ROOT/StyleTTS2/Utils/PLBERT_turkish', token=token)
+for repo, filename, repo_type, local_dir in downloads:
+    os.makedirs(local_dir, exist_ok=True)
+    kwargs = dict(repo_type=repo_type, local_dir=local_dir, token=token)
+    if repo_type == 'model':
+        kwargs.pop('repo_type')
+    print(f'Downloading {filename} from {repo}...')
+    hf_hub_download(repo, filename, **kwargs)
+    print(f'  done.')
 
 print('All downloads complete')
 "
 
 echo "--- Extracting dataset ---"
-tar -xzf $REPO_ROOT/combined_dataset.tar.gz -C $REPO_ROOT
+tar -xzf $REPO_ROOT/combined_dataset.tar.gz -C $REPO_ROOT 2>&1 | grep -v 'LIBARCHIVE.xattr'
 rm $REPO_ROOT/combined_dataset.tar.gz
 
 echo "--- Extracting alignments ---"
-tar -xzf $REPO_ROOT/alignments.tar.gz -C $REPO_ROOT
+tar -xzf $REPO_ROOT/alignments.tar.gz -C $REPO_ROOT 2>&1 | grep -v 'LIBARCHIVE.xattr'
 rm $REPO_ROOT/alignments.tar.gz
 
 echo "--- Verifying setup ---"

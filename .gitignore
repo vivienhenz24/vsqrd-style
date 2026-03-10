@@ -39,6 +39,7 @@ outputs/
 # Data
 data/
 datasets/
+!StyleTTS2/Data/
 /weights/
 /voices/
 /alignments/

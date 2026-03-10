@@ -1,0 +1,1000 @@
+combined_dataset/male_021392.wav|ɟœɾˈøʃmejɪ ˈɪnsan tæmsɪldʒˈɪjlɛ sørdørmemˈɪ ɪstˈɛrmisinɪz
+combined_dataset/male_019919.wav|œmˈɛr bˈɛj anketˈɪ ʃɪmdˈɪ tamˈamɫajaɫɯm tʃˈɔk kˈɯsa syɾedʒˈɛk
+combined_dataset/male_012020.wav|bʊ syɾɛtʃtˈɛ sizˈɪ zˈɔrɫajadʒak bɪr tʃˈœzymø kesɪnlˈɪklɛ œnɛrmˈɛk ɪstemˈæm
+combined_dataset/female_005575.wav|refeɾˈans numaɾˈanɯz ˈytʃ ˈytʃ ˈytʃ bˈɛʃ bˈir bˈɛʃ ˈytʃ secˈɪz jedˈi secˈɪz jedˈi oɫaɾˈak kajdedˈijoɾʊm
+combined_dataset/male_010888.wav|vadˈɛ fˈaɪz vɛ fatuɾˈa bɪlɟisˈɪ kajdɯnɯzdˈa ɟøndʒˈæl
+combined_dataset/male_013105.wav|œnymøzdekˈɪ pazartesˈɪ saˈat ˌondˈœrt otˈuz dʒivaɾˈɯ sizˈɪn itʃˈɪn ʊjɡˈʊn mˈudʊr
+combined_dataset/male_013759.wav|bʊ ˈisɪm fɔrmatˈɯ hˈæm sizˈɪn politʃˈenɪzdɛ hˈæm dɛ lɛhtarɫˈar kɯsmɯndˈa ajnˈɯ ʃekɪldˈɛ ɟœɾynedʒˈɛk
+combined_dataset/male_008354.wav|dʒevˈap bɛklˈɛtmedæn dʒaɾˈɪ hesabˈɯ kɔntrˈɔɫ ededʒˈejɪm
+combined_dataset/female_015180.wav|fatuɾˈa vɛ vadˈɛ detajɫaɾɯnˈɯ kɔntrˈɔɫ ˈetːɪm baʃkˈa bɪr fˈaɪz sˈoɾunʊz vˈar mɯ
+combined_dataset/male_005377.wav|œdˈemɛ kanaɫˈɯ oɫaɾˈak bˈanka havalesˈɪ jˈa da kˈart setʃenejˈɪ vˈar
+combined_dataset/male_013859.wav|ˈœndʒɛdæn havˈalɛ pˈɔsta tʃekˈɪ jˈa da ældˈæn œdˈemɛ ɟibˈɪ setʃenɛklˈɛr vardˈɯ ˈama artˈɯk tˈøm ɪʃlæmlˈɛr elɛktronˈɪk ilɛrlˈijɔr
+combined_dataset/female_013382.wav|ˈœndʒɛ ˈoɫajɯ nɛtlˈɛʃtiɾelɪm bˈœjlɛ tʃˈœzøm dahˈa hɯzɫˈɯ oɫˈʊr
+combined_dataset/male_020072.wav|ɪʃlˈeminizɛ aˈɪt refeɾansˈɯ ilˈetːɪm ɪstˈɛrsenɪz fatuɾˈa ɟibˈɪ sakɫajabilˈɪrsinɪz
+combined_dataset/female_002883.wav|bazˈɯ bɪlɟilˈeɾinɪz bændˈɛ ɛksˈɪk ɟœɾynˈyjɔr bɪrlɪktˈɛ tamˈamɫajaɫɯm mɯ
+combined_dataset/female_010534.wav|dʒaɾˈɪ hesˈap ɪʃlemɪndˈɛ aɫɯnˈan ødʒrˈɛt itʃˈɪn ɟeɾˈɛktʃɛ atʃɯkɫamasˈɯ vˈar mɯ
+combined_dataset/female_011602.wav|œdˈemɛ ɟynˈø jakɫaʃmˈɯʃ œzetˈɪ ʃɪmdˈɪ ɟœndeɾedʒˈejɪm
+combined_dataset/female_003161.wav|dʒenazˈɛ jˈa da defˈɪn masrafɫaɾɯnˈɯ karʃɯɫamaktˈan sˈoɾʊmɫʊ oɫadʒˈak lɛhtˈaɾɯnɯz kˈɪm oɫadʒˈak
+combined_dataset/male_005580.wav|øzɟˈynøm ɟøldanˈɛ hˈanɯm ʃʊ ˈan ɟœɾøntˈylemɛ ɛkranˈɯ kˈɯsa sˈyɾelɪ dɔndˈʊ
+combined_dataset/female_006891.wav|aɫanjˈa kajdɯnɯzˈɯ ɟœzdˈæn ɟetʃiɾˈijoɾʊm œzˈæl bɪr kɯsˈɯt ɟœɾønmˈyjɔr
+combined_dataset/female_001413.wav|bʊnɫaɾˈɯ ɪhtijˈadʒɯnɯz oɫˈan teminˈat tutaɾɯnˈɯ belɪrlˈɛrcæn refeɾˈans ɔɫmasˈɯ itʃˈɪn pajɫaʃˈɯjoɾʊm
+combined_dataset/male_012000.wav|bʊ ɟœɾˈøʃmejɛ aˈɪt refeɾˈans numaɾˈanɯz bˈɛʃ bˈin dˈœrtjˈyz kˌɯrksecˈɪz icˈi bˈin secˈɪzjˈyz otˌuzbˈɛʃ ˈicijyz ellˌidˈokuz oɫaɾˈak oɫʊʃtuɾʊɫdˈʊ
+combined_dataset/male_022344.wav|paɾˈa pˈʊɫ iadeleɾˈɪ vɛ prˈɪm pɫanˈɯ konusʊndˈa panˈɪk jˈɔk syɾedʒˈɪ bɪrlɪktˈɛ takˈɪp ededʒˈejɪz
+combined_dataset/female_013045.wav|ejøpsʊɫtˈan kazɯmdiɾˈɪk sokˈak kajdɯnˈɯzɫa ɯbanˈɯ bɪrlɪktˈɛ nɛtlˈɛʃtiɾelɪm
+combined_dataset/female_006324.wav|ɟeɾˈɛktʃɛjɪ dɛ nˈɛt bˈitʃɪmdɛ jazˈɯp sizˈɛ dʒevˈap veɾedʒˈejɪm
+combined_dataset/female_004917.wav|kɪmlˈɪk doːɾuɫamasɯnˈɯ saːɫamˈak adɯnˈa œːɾænmˈɛk ɪstedˈijɪm vˈar mɯ
+combined_dataset/male_012609.wav|adrˈɛs tejidˈɪ itʃˈɪn taɫatpaʃˈa bʊɫvaɾˈɯ yzeɾɪndˈɛ mɪ ikamˈɛt edˈijɔrsunʊz
+combined_dataset/female_017041.wav|puˈan kʊɫɫˈanɯmɯ setʃenejˈɪ atʃˈɯk mɯ bakabilˈɪr mˈisinɪz
+combined_dataset/female_023645.wav|dʒøzdanɯnɯzdakˈɪ tˌɛdʒˈɛ kɪmlˈɪk numaɾasɯnˈɯ okujabilˈɪr mˈisinɪz hatˈidʒɛ hˈanɯm
+combined_dataset/female_016836.wav|nazˈan hˈanɯm sizˈɪ buɡˈøn saˈat katʃtˈa ɟeɾˈɪ aɾamamˈɯ ɪstˈɛrsinɪz
+combined_dataset/male_019357.wav|bˈœjlɛ ɟœɾynˈyjɔrsa ɟœndɛrmˈɛk jeɾinˈɛ ˈœndʒɛ ɟœzdˈæn ɟetʃiɾelˈɪm mɪ
+combined_dataset/female_018789.wav|ɛvrakˈɯ ʊjɡuɫˈamada jˈøklɛ menysøndˈæn setʃˈɪn sɔnrˈa ɟœndˈɛr dejˈɪn
+combined_dataset/male_020447.wav|ɯbanˈɯ javaʃtʃˈa sœjlejˈɪn bæn tˈɛk tˈɛk jazadʒˈaːɯm
+combined_dataset/female_021443.wav|kusuɾˈa bakmajˈɯn paɾˈa pɫanˈɯ vɛ profˈɪl puanˈɯ kɔntrolˈø biɾˈaz uzadˈɯ hemˈæn toparɫˈɯjoɾʊm
+combined_dataset/female_010454.wav|dʒaɾˈɪ hesˈap mɯ jˌɔksa dʒøzdˈan bakijesˈɪjlɛ mɪ ɪʃlˈæm japadʒˈaksɯnɯz
+combined_dataset/male_012465.wav|baʃkˈa bɪr konudˈa dɛstˈɛk ɔɫmamˈɯ ɪstˈɛrmisinɪz sɛvɡˈɪ hˈanɯm
+combined_dataset/male_009446.wav|hørrijˈɛt dʒadːesˈɪ kajdɯnɯzˈɯ ɟœɾˈyjoɾʊm doːɾˈʊ biɾˈimɛ iletedʒˈejɪm
+combined_dataset/female_000408.wav|ɪstˈɛrsenɪz sizˈɛ kˈɯsa bɪr œzˈɛt ɟetʃejˈɪm teminˈat tutaɾˈɯ sɛtʃtˈijinɪz limitˈɛ ɟœɾˈɛ vefˈat vɛ kaɫɯdʒˈɯ sakatɫˈɯk ɟibˈɪ rɪsklɛrdˈɛ dˈɛvrejɛ ɟiɾˈijɔr
+combined_dataset/female_009202.wav|œzˈɛt oɫaɾˈak kartˈɯ kapatˈɯjoɾʊm ˈɛk bɪr talˈebinɪz vˈar mɯ
+combined_dataset/male_010902.wav|pˈɔsta pakˈɛt pɫanɫamasˈɯjɫa ɪlɟilˈɪ pajɫˈaʃɯm japabilˈɪr mˈisinɪz lˈøtfæn
+combined_dataset/female_020753.wav|janɫˈɯʃ anɫaʃˈɯɫma ɔɫdˈʊjsa hemˈæn dyzæltedʒˈejɪz meɾˈak ɛtmejˈɪn
+combined_dataset/female_004166.wav|kʊɫɫandˈɯɯɯnɯz iɫatʃɫaɾˈɯn isɪmleɾinˈɪ tˈɛk tˈɛk aɫabilˈɪr mˈijɪm lˈøtfæn
+combined_dataset/male_017197.wav|baːɫantɯjˈɯ jenidˈæn saːɫamˈak itʃˈɪn doːɾuɫamˈak adɯmˈɯ japadʒˈaːɯz meɾˈak ɛtmejˈɪn
+combined_dataset/male_005208.wav|atʃˈɯkɫama kɯsmɯndˈa refeɾˈans numaɾasɯnˈɯ da ɛklejedʒˈejɪm
+combined_dataset/female_012714.wav|œzˈør dilˈeɾɪm vadˈɛ vɛ fatuɾˈa ɛkranˈɯ biɾˈaz javˈaʃ atʃɯɫdˈɯ
+combined_dataset/female_002810.wav|ˈaz ˈœndʒɛ bɪr jˈazɯm hatasˈɯ ɔɫmˈʊʃ kusuɾˈa bakmajˈɯn
+combined_dataset/female_010160.wav|ɛksˈɪk kaɫˈɯrsa syɾˈɛtʃ bɛklˈɛr hemˈæn tamˈamɫajaɫɯm
+combined_dataset/female_015920.wav|fatuɾˈa vɛ vadˈɛ detajɫaɾɯnˈɯ vɛrɟˈɪjlɛ bɪrlɪktˈɛ doːɾˈuɫadɯm
+combined_dataset/male_005435.wav|refeɾˈans numaɾasɯnˈɯ kajdˈa aɫˈɯjoɾʊm ɪʃlˈæm baʃɫatadʒˈaːɯm ʃɪmdˈɪ
+combined_dataset/female_000678.wav|baʃvuɾujˈʊ baʃɫˈatmadan ˈœndʒɛ kɪmlˈɪk bɪlɟilˈeɾinizɪn sˈɔn kɔntrolynˈø japmˈam ɟeɾekˈijɔr
+combined_dataset/male_016159.wav|zelihˈa hˈanɯm buɫʊndˈuːnʊz ilˈɪn siɡɔrtadʒɯɫˈɯk mɛvzuatˈɯ ɟeɾejˈɪ sizˈɛ bazˈɯ bɪlɟilˈændɪrmɛ metɪnleɾinˈɪ sʊnmˈam ɟeɾekˈijɔr
+combined_dataset/male_021331.wav|pakˈɛt paɾˈoɫa pajɫˈaʃmadan doːɾˈuɫama adɯmɯnˈa ɟetʃelˈɪm lˈøtfæn ʃɪmdˈɪ
+combined_dataset/male_002877.wav|ʃøkrˈø bˈɛj polˈitʃɛ kapsamɯnˈɯ kɯsadʒˈa atʃˈɯkɫajajɯm
+combined_dataset/male_014495.wav|devˈam ˈɛtmedæn ˈœndʒɛ kardˈeʃinɪzlɛ konʊʃmˈak ɪstedˈijinizɪ anɫˈɯjoɾʊm
+combined_dataset/female_003854.wav|jirmˈi bˈin tˌɛlˈɛ teminˈat itʃˈɪn ajɫˈɯk ellˌidˈokuz tˌɛlˈɛ ɟœɾynˈyjɔr
+combined_dataset/male_000481.wav|œzˈæl kʊrjˈɛ setʃenejinˈɪ ɟœzdˈæn ɟetʃiɾˈɪp sizˈɛ sœjlejedʒˈejɪm
+combined_dataset/male_022529.wav|sˌɛmˌɛsˈɛ ˌilɛ ɟelˈæn ˌɔtˌɛpˈɛ kodunˈʊ ɟœɾˈyjɔr mˈusunʊz
+combined_dataset/male_012149.wav|ɪstˈɛrsenɪz dahˈa dyʃˈøk bɪr baʃɫanɡˈɯtʃ tutaɾˈɯjɫa baʃɫajˈɯp ileɾidˈɛ teminatˈɯ artˈɯrma setʃenejinˈɪ dɛ dejɛrlændiɾebilˈiɾɪz
+combined_dataset/male_018537.wav|sæmrˈa hˈanɯm ˈytʃ dˈɛ sedʒuɾˈɛ baːɫantɯsˈɯ joːˈʊn ɟœɾynˈyjɔr
+combined_dataset/female_003010.wav|ʃɪmdˈɪ kytʃˈøk bɪr kɔntrˈɔɫ dahˈa japadʒˈaːɯm lˈøtfæn bɪr dakikˈa hatːˈa kaɫˈɯn
+combined_dataset/male_005111.wav|ɪstˈɛrsenɪz baːɫantɯjˈɯ kuɾˈʊp adɯmɫaɾˈɯ tˈɛk tˈɛk œːɾenelˈɪm
+combined_dataset/female_000429.wav|kajˈɯt adrˈesinizɪ tejˈɪt ɛtmˈɛk itʃˈɪn bˈejoːɫʊ hørrijˈɛt dʒadːesˈɪ yzeɾɪndekˈɪ ˈadresinɪz halˈa ɟetʃɛrlˈɪ mɪ
+combined_dataset/female_002459.wav|bʊ bɪlɟileɾˈɪ ɪstˈɛrsenɪz sˌɛmˌɛsˈɛ oɫaɾˈak da pajɫaʃabilˈiɾɪm
+combined_dataset/female_023559.wav|baːɫantɯjˈɯ saːɫamˈak adɯnˈa doːɾˈuɫama bɪlɟisˈɪ aɫadʒˈaːɯm
+combined_dataset/male_011952.wav|siɡaɾˈa kʊɫɫanɯmɯnˈɯn prɪmleɾˈɪ dʒidːˈɪ ʃekɪldˈɛ artɯɾabɪldijinˈɪ bˈɪlɡinɪz ɔɫsˈʊn dijˈɛ pajɫaʃˈɯjoɾʊm
+combined_dataset/female_005885.wav|baːɫantɯjˈɯ saːɫadɯktˈan sɔnrˈa dɔsjajˈɯ doːɾuɫamˈak koɫajɫaʃadʒˈak
+combined_dataset/female_000449.wav|dʒˈæm bˈɛj baʃkˈa bɪr konudˈa sizˈɛ jardɯmdʒˈɯ ɔɫmamˈɯ ɪstˈɛrmisinɪz
+combined_dataset/male_003305.wav|ɪdʒrˈa dɔsjˈanɯzɫa ɪlɟilˈɪ atʃˈɯkɫama vɛ dʒevˈap syɾedʒinˈɪ buɡˈøn baʃɫatˈɯjoɾʊm
+combined_dataset/male_018258.wav|œzˈæl nɔtɫˈar bœlymøndˈɛ tʃˈœzøm adɯmɫaɾɯnˈɯ da ɟœɾebilˈɪrsinɪz
+combined_dataset/male_008143.wav|panˈɪk japmajˈɯn paɾˈa transfeɾˈɪ itʃˈɪn ɯbanˈɯ sakˈɪn okujadʒˈaːɯz
+combined_dataset/male_012578.wav|kremasjˈɔn ɪʃlæmleɾinˈɪn ɔrtˈaɫama malijetinˈɪn jakɫaʃˈɯk ˌonsecˈɪz bˈin tˌɛlˈɛ dʒivaɾɯndˈa oɫabɪldijinˈɪ pajɫaʃmˈak ɪstˈeɾɪm
+combined_dataset/female_012638.wav|ʃˈɛjma bˈæn akreditˈɪf adɯmɫaɾɯnˈɯ sadˈedʒɛ anɫatajˈɯm tˈøm ɛvrakˈɯ bɪrlɪktˈɛ ɟyvˈænlɛ ilɛrletelˈɪm taɾˈɯk bˈɛj
+combined_dataset/male_009948.wav|ødʒrˈɛtsɪz yɾˈøn tɛsliminˈɪ ɟœɾøntylejˈɪp sizˈɛ nˈɛt bɪlɡˈɪ veɾedʒˈejɪm
+combined_dataset/female_014518.wav|sizˈɪ buɡˈøn hanɡˈɪ saˈat aɾaɫɯɯɯndˈa ɟeɾˈɪ aɾamamˈɯ ɪstˈɛrsinɪz redʒˈɛp bˈɛj
+combined_dataset/female_017012.wav|ødʒrˈɛtsɪz doːɾˈuɫama adɯmɯnˈɯ bɪrlɪktˈɛ ɟœɾøntˈylejelɪm
+combined_dataset/male_023454.wav|ardɯndˈan rapoɾˈʊ œːɾenˈɪp dejɛrlændɪrmˈɛk dahˈa saːɫɯkɫˈɯ oɫˈʊr
+combined_dataset/female_005368.wav|œzˈæl kʊrjˈɛ setʃenejinˈɪ ɟœzdˈæn ɟetʃiɾˈɪp sizˈɛ sœjlejedʒˈejɪm
+combined_dataset/male_010830.wav|nɛvzˈat bˈɛj mˈɛrhaba bæn ajsˈʊn baːɫantɯjˈɯ bɪrlɪktˈɛ sˈaːɫajaɫɯm
+combined_dataset/female_001912.wav|ʃɪmdˈɪ ʊjɡʊnɫˈʊk adɯmɯnˈa ɟetʃˈijoɾʊz vɛ bɪrkˈatʃ kˈɯsa soɾˈʊ soɾadʒˈaːɯm
+combined_dataset/female_009192.wav|ʃɪmdˈɪ yjˈe doːɾuɫamasˈɯ japadʒˈaːɯm adɯmɫaɾˈɯ tˈɛk tˈɛk anɫatadʒˈaːɯm
+combined_dataset/male_010747.wav|biɾazdˈan saːɫanɯndʒˈa rapoɾˈʊ hemˈæn œːɾenedʒˈejɪz
+combined_dataset/male_002138.wav|dʒaɾˈɪ hesˈap ødʒrˈɛt ɟeɾɛktʃesinˈɪ hemˈæn atʃˈɯkɫajajɯm sɛvɡˈɪ hˈanɯm
+combined_dataset/male_006956.wav|dʒaɾˈɪ hesˈap ɪʃleminˈɛ daˈɪr atʃˈɯkɫama ɟœndeɾejˈɪm mɪ
+combined_dataset/male_001335.wav|œzˈɛt rapoɾˈʊ ɟœndɛrmˈɛk itʃˈɪn ˈɛpˈɔsta adrˈesinizɪ sœjlejebilˈɪr mˈisinɪz lˈøtfæn
+combined_dataset/male_010492.wav|ɟøndʒˈæl numaɾˈanɯz sɯfˈɯr bˈɛʃ dˈœrt dˈœrt ˌilɛ mɪ baʃlˈɯjɔr
+combined_dataset/female_000841.wav|bʊ tutaɾˈɯn soɾʊmɫusˈʊ vɛ lɛhtˈar oɫaɾˈak pˈaɾanɯn kˌimɛ aktaɾɯɫmasɯnˈɯ ɪstˈɛrsinɪz
+combined_dataset/female_010515.wav|ødʒrˈɛtsɪz tʃˈœzøm itʃˈɪn syɾedʒˈɪ dyzænlemˈɛk ɪstˈijoɾʊm
+combined_dataset/female_018534.wav|kazɯmdiɾˈɪk sokˈak numaɾasɯnˈɯ da døzɟˈøndʒɛ aɫajˈɯm mɯ
+combined_dataset/male_022191.wav|baːɫantɯjˈɯ saːɫˈarcæn ˈɛk bɪlɡˈɪ œːɾænmˈæm ɟeɾekˈijɔr mʊ
+combined_dataset/male_005124.wav|kˈartɯnɯz ɟœndeɾilˈɪndʒɛ œzˈæl bɪr sˌɛmˌɛsˈɛ dɛ dyʃedʒˈɛk
+combined_dataset/male_022548.wav|doːɾˈuɫama mesaʒˈɯ ɟældijɪndˈɛ œːɾænmˈɛk ɪstˈijoɾʊm
+combined_dataset/female_007514.wav|ataʃehˈɪr kajdɯnɯzˈɯ kɔntrˈɔɫ edˈɪp bɪlɡˈɪ pajɫaʃadʒˈaːɯm
+combined_dataset/male_005352.wav|kˈadɪr bˈɛj ɟedʒˈɪkmɛ nedenˈɪjlɛ zɔrɫandˈɯɯɯnɯzɯ anɫˈɯjoɾʊm saːɫˈɯɯɯnɯzɯ da dyʃønmˈɛk ɟeɾekˈɪr
+combined_dataset/male_008898.wav|boɾˈa bˈɛj byjøktʃɛkmedʒedˈɛ ɔɫdˈuːnuzʊ ɟœɾˈyjoɾʊm jardɯmdʒˈɯ oɫadʒˈaːɯm
+combined_dataset/male_015934.wav|adrˈɛs tejidˈɪ itʃˈɪn kadɯkˈœj tʃitʃɛktʃˈɪ sokˈak bɪlɟisˈɪ doːɾˈʊ mˈudʊr
+combined_dataset/female_006595.wav|møʃteɾˈɪ kajdɯnɯzdˈa ødʒrˈɛt kalemˈɪ ɟœɾøntˈylejejɪm mɪ
+combined_dataset/male_000378.wav|refeɾˈans numaɾˈanɯzɯ nˈɔt edˈijoɾʊm dˈokuz icˈi aɫtˈɯ jedˈi aɫtˈɯ dˈœrt bˈir sɯfˈɯr dˈokuz secˈɪz sɯfˈɯr
+combined_dataset/male_019939.wav|fatuɾˈa syɾedʒˈɪ vɛ fijˈat bɪlɟisˈɪ nˈɛt mɪjdˈɪ œmˈɛr bˈɛj
+combined_dataset/male_016722.wav|tˈɛ rˈɛ jedˈi secˈɪz sɯfˈɯr sɯfˈɯr sɯfˈɯr aɫtˈɯ dˈœrt sɯfˈɯr dˈokuz secˈɪz bˈir bˈɛʃ jedˈi ˈytʃ dˈokuz sɯfˈɯr icˈi dˈokuz jedˈi bˈir jedˈi dˈokuz
+combined_dataset/male_008473.wav|baːɫantˈɯ saːɫanɯndʒˈa dɔsjajˈɯ œːɾenˈɪp doːɾuɫajadʒˈaːɯm
+combined_dataset/female_002622.wav|teʃekːˈør edˈeɾɪm ajtˈæn hˈanɯm bɪlɟileɾˈɪ ɟøndʒˈælledɪm
+combined_dataset/male_021456.wav|œzˈɛt ɟetʃejˈɪm ataʃehˈɪr abdˈɪ ipɛktʃˈɪ dʒadːesˈɪ ɟœɾynˈyjɔr
+combined_dataset/male_012044.wav|tamˈamdɯr ɔ zamˈan tˈɛk numaɾˈa oɫaɾˈak sɯfˈɯrbˈɛʃˈytʃicˈɪ dˈœrtjˈyz kˌɯrkbˈir seksˌɛnjedˈi jirmˌiˈytʃ yzeɾɪndˈæn ilɛrlˈijoɾʊm
+combined_dataset/female_023542.wav|dʒøzdˈan dʒaɾˈɪ hesˈap bɪlɟisˈɪ kɔntrˈɔɫ edˈijoɾʊm
+combined_dataset/female_016785.wav|ɪstˈɛrsenɪz mɪthatpaʃˈa dʒadːesˈɪ adrˈesinɪzlɛ ɪlɟilˈɪ syɾedʒˈɪ dɛ konuʃabilˈiɾɪz
+combined_dataset/male_003525.wav|refeɾˈans numaɾˈanɯzɯ javaʃtʃˈa aɫabilˈɪr mˈijɪm lˈøtfæn
+combined_dataset/female_007967.wav|dʊjɡˈʊ hˈanɯm kˈʊr tʃˈɔk hɯzɫˈɯ dejiʃˈijɔr ɟedʒˈɪkmedæn ilˈɛrlejelɪm
+combined_dataset/male_012425.wav|sizˈɛ jardɯmdʒˈɯ oɫabɪldˈɪjsæm nˈɛ mʊtɫˈʊ ijˈi ɟønlˈɛr dilˈeɾɪm
+combined_dataset/male_023519.wav|metˈɪn bˈɛj akreditˈɪf mɛtninˈɪ bɪrlɪktˈɛ ɟœzdˈæn ɟetʃiɾˈɪp rɪskleɾˈɪ azaɫtˈɯɾɯz ændiʃelænmejˈɪn lˈøtfæn
+combined_dataset/male_014079.wav|ʃʊ ˈan ɛkrˈanɯmda setʃenɛkleɾˈɪ atʃˈɯjoɾʊm lˈøtfæn bɪr dakikˈa hatːˈa kaɫˈɯn
+combined_dataset/female_003403.wav|tamˈamdɯr vɛrdˈijinɪz bɪlɟileɾˈɪ baʃvˈuɾunuza ʃɪmdˈɪ ɪʃlˈijoɾʊm
+combined_dataset/male_021397.wav|jaʃadˈɯɯɯnɯz syɾedʒˈɪ ɟœzdˈæn ɟetʃiɾelˈɪm mynɛvvˈɛr hˈanɯm
+combined_dataset/female_018907.wav|tˈɛ rˈɛ jedˈi dˈœrt sɯfˈɯr sɯfˈɯr bˈir sɯfˈɯr ˈytʃ sɯfˈɯr bˈɛʃ bˈɛʃ jedˈi ˈytʃ icˈi bˈir bˈɛʃ bˈir aɫtˈɯ dˈœrt sɯfˈɯr bˈɛʃ dˈœrt dˈokuz
+combined_dataset/female_015375.wav|ɟøndʒˈæl numaɾˈanɯz sɯfˈɯr bˈɛʃ dˈœrt dˈœrt ˌilɛ mɪ baʃlˈɯjɔr
+combined_dataset/male_007972.wav|refeɾˈans numaɾˈanɯz da sɪstæmdˈɛ ɟœɾynˈænlɛ ajnˈɯ mɯ
+combined_dataset/male_018037.wav|refeɾˈans numaɾˈanɯz bˈir jedˈi dˈœrt aɫtˈɯ dˈœrt icˈi dˈœrt icˈi ˈytʃ icˈi icˈi ɟœɾynˈyjɔr
+combined_dataset/female_011288.wav|kɔntrolˈø ɪlɟilˈɪ ɯbˈan yzeɾɪndˈæn japmamˈɯ ɪstˈɛrmisinɪz
+combined_dataset/female_000935.wav|bɪlɟileɾˈɪ ɟøndʒælledɪktˈæn sɔnrˈa ɛkranˈa jansɯjˈan setʃenɛkleɾˈɪ sizˈɪnlɛ pajɫaʃadʒˈaːɯm
+combined_dataset/male_003543.wav|baːɫantˈɯ saːɫanɯndʒˈa ˈaː yzeɾɪndˈæn dɔsjajˈɯ dejɛrlændiɾedʒˈejɪm
+combined_dataset/male_008235.wav|dʒevˈap oɫaɾˈak dʒaɾˈɪ hesˈap onajˈɯ veɾebilˈɪr mˈisinɪz
+combined_dataset/female_013990.wav|ɯbanˈɯ javaʃtʃˈa okˈujoɾʊm lˈøtfæn kɔntrˈɔɫ edˈɪp onajɫajˈɯn
+combined_dataset/female_021555.wav|dʒevˈabɯnɯzɯ aɫˈɯr aɫmˈaz dʒaɾˈɪ hesˈap kɔntrolynˈø japadʒˈaːɯm
+combined_dataset/female_012796.wav|nɛtlɛʃmesˈɪ itʃˈɪn fatuɾˈa satɯrɫaɾɯnˈɯ tˈɛk tˈɛk soɾadʒˈaːɯm
+combined_dataset/female_005584.wav|dʒɔʃkˈʊn bˈɛj ødʒrˈɛt jˈɔk syɾedʒˈɪ ɟyvˈænlɛ jyɾytˈyɾøz
+combined_dataset/female_016256.wav|baːɫantˈɯ kɔptˈʊjsa œzˈør dilˈeɾɪm jenidˈæn saːɫamˈak ɪstˈijoɾʊm
+combined_dataset/female_014504.wav|ˈœndʒɛ œzˈør dilˈeɾɪm sɔnrˈa tʃˈœzymø bɪrlɪktˈɛ sœjlejedʒˈejɪm
+combined_dataset/male_009360.wav|jusˈʊf bˈæn kodˈʊ œːɾenˈɪp baːɫantɯjˈɯ saːɫamˈam ɟeɾekˈijɔr
+combined_dataset/female_005993.wav|profɛsjonˈældʒɛ ilˈɛrlejelɪm redʒˈɛp bˈɛj kˈart jenˈilemɛ ødʒretinˈɪ sɪstæmdˈæn ɟœɾøntylejedʒˈejɪm
+combined_dataset/male_021666.wav|vɛrɟˈɪjlɛ ɪlɟilˈɪ dˈejɪl sadˈedʒɛ doːɾˈuɫama japˈɯjoɾʊz
+combined_dataset/male_007857.wav|bæn baɾˈɯʃ talˈebinizɪ kajdˈa aɫˈɯp hɯzɫɯdʒˈa ɟeɾˈɪ dœnˈøʃ japadʒˈaːɯm dʒeɫˈaɫ bˈɛj
+combined_dataset/male_006026.wav|ɯbanˈɯ javaʃtʃˈa okujadʒˈaːɯm lˈøtfæn hazˈɯr oɫˈʊn
+combined_dataset/male_007537.wav|dʒevˈabɯnɯzɫa dʒaɾˈɪ ɪʃlemˈɪ ɟyvˈænlɛ dʊrduɾadʒˈaːɯz ʃɪmdˈɪ
+combined_dataset/male_008945.wav|œdemˈɛk ɪstedˈijinɪz tutaɾˈɯ da sœjlemˈɛk ɪstˈɛrmisinɪz
+combined_dataset/male_015443.wav|polˈitʃɛ setʃenɛklˈeɾimɪz sɛtʃtˈijinɪz teminatˈa ɟœɾˈɛ ajɫˈɯk icˈi bˈin bˈɛʃjˈyz tˌɛlˈɛ ˌilɛ aɫtˈɯ bˈin secˈɪzjˈyz tˌɛlˈɛ aɾasɯndˈa dejiʃebilˈijɔr bʊ ˈaɾaɫɯk bøttʃˈenizɛ ʊjɡˈʊn oɫˈʊr mʊ
+combined_dataset/male_010655.wav|dʒevˈap itʃˈɪn dʒaɾˈɪ ɛkranˈɯ atʃˈɯjoɾʊm dʒøzdˈan bɪlɟisˈɪ kɔntrˈɔɫ ededʒˈejɪm
+combined_dataset/male_010832.wav|oɫajˈɯn œzetinˈɪ sœjlejebilˈɪr mˈisinɪz paɾˈa mɯ kˈart mɯ sɯkɯʃtˈɯ
+combined_dataset/male_021743.wav|fɛhmˈɪ bˈɛj dʒaɾˈɪ hesˈap haɾekɛtleɾinˈɛ daˈɪr dʒevˈabɯnɯz vˈar mɯ
+combined_dataset/male_009088.wav|byjˈøk møʃteɾˈɪ ødʒretˈɪ ødʒrˈɛtsɪz yɾˈøn dyzænlˈijoɾʊz
+combined_dataset/male_012284.wav|ɟenˈæl tabɫojˈa baktˈɯɯɯmda dˈuɾumunʊz ɔɫdʊktʃˈa ijˈi ɟœɾynˈyjɔr
+combined_dataset/female_022452.wav|fatuɾˈa onajˈɯ vɛ vɛrɡˈɪ ɟyvænlijˈɪ itʃˈɪn ɔtpjˈɪ rakˈam rakˈam okujadʒˈaːɯm ʃɪmdˈɪ
+combined_dataset/female_003957.wav|pɫˈan vɛ teminatˈa ɟœɾˈɛ prɪmlˈɛr ɟenældˈɛ ajɫˈɯk dˈœrtjˈyz ellˈi tˌɛlˈɛ ˌilɛ bˈin secˈɪzjˈyz ellˈi tˌɛlˈɛ aɾasɯndˈa dejiʃˈijɔr bʊ ˈaɾaɫɯk bøttʃˈenizɛ ʊjɡˈʊn mʊ
+combined_dataset/male_016259.wav|tamˈamdɯr ˈæn ʊjɡˈʊn teminatˈɯ belɪrlejebɪlmˈæm itʃˈɪn sizˈɛ bɪrkˈatʃ kˈɯsa soɾˈʊ soɾadʒˈaːɯm
+combined_dataset/female_015726.wav|bɪz bʊ bɪldˈiɾimɪ hɯzɫɯdʒˈa tʃœzˈymɛ baːɫajadʒˈaːɯz
+combined_dataset/female_001769.wav|ˈɪlk prˈɪm œdemˈenizɪ hanɡˈɪ taɾɪhtˈɛ baʃɫatmˈak ɪstˈɛrsinɪz
+combined_dataset/female_017336.wav|ɪʃlemˈɪ ɟɛrtʃɛklɛʃtiɾedʒˈejɪm jaɫnɯzdʒˈa bɪrkˈatʃ bɪlɡˈɪ ridʒˈa ededʒˈejɪm
+combined_dataset/male_013246.wav|haɾikˈa adrˈɛs bɪlɟilˈeɾinizɪ bˈʊrsa vɛ karʃɯjakˈa ɪskelesˈɪ sokˈak oɫaɾˈak kajdedˈijoɾʊm
+combined_dataset/female_020521.wav|doːɾˈuɫama baːɫantɯsɯnˈɯ saːɫajˈɯp kajɯtɫaɾˈɯ dejɛrlændiɾedʒˈejɪm iɾˈæm bˈæn
+combined_dataset/male_007463.wav|hesˈap numaɾasɯnˈɯ da ɛklememˈɪ ɪstˈɛrmisinɪz tekˈɪn bˈɛj
+combined_dataset/female_021225.wav|doːɾuɫˈamajɯ saːɫamˈak adɯnˈa adɯnɯzˈɯ vɛ kˈonumʊ kajdedˈeɾɪm
+combined_dataset/female_018791.wav|œzˈør dilˈeɾɪm baːɫantˈɯ joːˈʊn bælɡˈɛ jøklemesˈɪ aːˈɯr ilɛrlˈijɔr
+combined_dataset/male_018460.wav|œːɾændˈijɪm bɪlɟileɾˈɪ sizˈɛ tˈɛk tˈɛk okujadʒˈaːɯm
+combined_dataset/male_011361.wav|ɛkrandˈa ˈytʃ dˈɛ sedʒuɾˈɛ sajfasˈɯ atʃɯɫɯndʒˈa bankˈanɯz doːɾˈuɫama ɪstˈɛr
+combined_dataset/female_010215.wav|ødʒrˈɛtsɪz doːɾˈuɫama japˈɯp byjˈøk tutaɾˈɯ ɟyvænlˈɪ bˈitʃɪmdɛ ɟœɾøntylejedʒˈejɪm nuɾˈɪ bˈɛj
+combined_dataset/male_004681.wav|byjˈøk tutˈar itʃˈɪn ødʒrˈɛt hesapɫamasˈɯ dyzˈænledɪm
+combined_dataset/female_001844.wav|polˈitʃɛ baʃɫadɯktˈan sɔnrˈa ɪptˈaɫ vejˌa dejiʃɪklˈɪk koʃʊɫɫaɾɯnˈɯ da ajrɯdʒˈa atʃɯkɫamamˈɯ ɪstˈɛrmisinɪz
+combined_dataset/male_015145.wav|ytʃøndʒˈø setʃenˈɛk ˈytʃjˈyz ellˈi bˈin tˌɛlˈɛ teminˈat vɛ ajɫˈɯk bˈin jedˈijˈyz jirmˈi tˌɛlˈɛ prˈɪm oɫaɾˈak hesapɫanˈɯjɔr
+combined_dataset/male_000670.wav|ˈœndʒɛ œzˈɛt ɛkranɯnˈɯ ɟœzdˈæn ɟetʃiɾˈemedɪm œzˈør dilˈeɾɪm
+combined_dataset/female_004809.wav|polˈitʃɛ dokymanɫaɾɯnˈɯ ɟœndeɾebɪlmˈæm itʃˈɪn ˈɛv adrˈesinizɪ aɫabilˈɪr mˈijɪm
+combined_dataset/female_019499.wav|baːɫantˈɯ yzeɾɪndˈæn œːɾænmˈɛk itʃˈɪn ɪʃlˈæm saatinˈɪ doːɾuɫamˈak ɪstˈijoɾʊm
+combined_dataset/male_003085.wav|dʊjɡˈʊ hˈanɯm kˈʊr tʃˈɔk hɯzɫˈɯ dejiʃˈijɔr ɟedʒˈɪkmedæn ilˈɛrlejelɪm
+combined_dataset/male_017131.wav|fɪndˈɛks rapoɾunˈʊ ʃɪmdˈɪ tʃɛkmemˈɪ onajlˈɯjɔr mˈusunʊz refeɾˈans numaɾasˈɯ doːɾˈʊ mʊ
+combined_dataset/male_012597.wav|ˈanɫadɯm kændˈɪ ˈevinɪzdɛ jaʃadˈɯɯɯnɯzɯ nˈɔt aɫdˈɯm
+combined_dataset/male_019661.wav|jaʃadˈɯɯɯnɯz ˈaksakɫɯk itʃˈɪn øzɟˈynøm byjˈøk bɪr maːduɾijˈɛt ɔɫmasˈɯn ɪstˈeɾɪm
+combined_dataset/male_021111.wav|kʊrjˈɛ buɡˈøn daːɯtˈɯma tʃɯkmˈɯʃ ɟœɾynˈyjɔr tyɫˈaj hˈanɯm
+combined_dataset/male_017052.wav|œzˈør dilˈeɾɪm joːʊnɫˈʊk nedenˈɪjlɛ baːɫantˈɯ ˈaksadɯ randˈevunuzʊ doːɾuɫajˈɯp dejɛrlændiɾedʒˈejɪm hemˈæn
+combined_dataset/female_018792.wav|baːɫantˈɯ saːɫanɯndʒˈa doːɾuɫajˈɯp dejɛrlændiɾedʒˈejɪm
+combined_dataset/female_018152.wav|byjˈøk ɟyvænlˈɪk adɯmˈɯ oɫaɾˈak sˌɛmˌɛsˈɛ doːɾˈuɫama zoɾʊnɫˈudʊr
+combined_dataset/male_021126.wav|fˈɔn vadˈɛ farkˈɯ jˈɔk kʊrjˈɛ fijˈat bɪlɟisˈɪ ɪstemˈijɔr
+combined_dataset/male_020263.wav|ɪstɪkɫˈaɫ dʒadːesˈɪ kajdɯnˈɯzɫa yjˈe hesˈabɯnɯzɯ ɟœɾøntˈyledɪm
+combined_dataset/male_021943.wav|dʒaɾˈɪ hesˈap ɛkranɯndˈan tɛkrˈar jˈøklemɛ atʃadʒˈaːɯm
+combined_dataset/female_018242.wav|ødʒrˈɛtsɪz tæmsɪldʒijˈɛ aktˈaɾɯm japmamˈɯ ɪstˈɛrmisinɪz
+combined_dataset/male_019235.wav|dʒevˈap veɾˈɪrsenɪz dʒaɾˈɪ hesˈapɫa ɛʃlɛʃtiɾˈɪp ɪʃlemˈɪ ɟɛrtʃɛklɛʃtiɾedʒˈejɪm sakˈɪn kaɫˈɯn bæn takɪptejˈɪm
+combined_dataset/female_003012.wav|bʊ nedˈænlɛ buɡˈøn ajnˈɯ teminˈat itʃˈɪn prɪmleɾˈɪn dahˈa jˈøksɛk tʃɯkmasˈɯ nɔrmˈaɫ ɟœɾynˈyjɔr
+combined_dataset/male_005707.wav|ˈʊːr bˈæn baːɫantɯjˈɯ saːɫajˈɯp ˈɛkstrejɪ œːɾenelˈɪm
+combined_dataset/male_011013.wav|ʃɪmdˈɪ bɪlɟileɾˈɪ œːɾænmˈɛk vɛ doːɾuɫamˈak adɯnˈa tɛkrˈar ededʒˈejɪm
+combined_dataset/female_022413.wav|baːɫantɯjˈɯ saːɫamˈak adɯnˈa sɪstˈæm ɫɔɡɫaɾɯnˈɯ doːɾuɫajˈɯp joːʊnɫˈʊː dejɛrlændiɾedʒˈejɪm ardɯndˈan dœnˈøʃ japadʒˈaːɯm
+combined_dataset/male_002558.wav|ødʒrˈɛtsɪz yjelˈɪk setʃenejinˈɪ ɟœɾøntylemˈɛk ɪstˈɛrmisinɪz
+combined_dataset/male_019317.wav|œzˈæl bɪr œzˈɛt hazɯrɫajˈɯp bˈœjlɛ tʃˈœzøm buɫadʒˈaːɯz meɾˈak ɛtmejˈɪn
+combined_dataset/female_013016.wav|dʒevˈabɯnɯzɯ aɫˈɯr aɫmˈaz dʒaɾˈɪ hesˈap numaɾasɯnˈɯ kɔntrˈɔɫ ededʒˈejɪm
+combined_dataset/female_021187.wav|dʒevˈap veɾebɪlmˈæm itʃˈɪn kazɯmdiɾˈɪk sokˈak tɛslimatɯnˈɯ dʒaɾˈɪ kajdˈa ɛklejedʒˈejɪm
+combined_dataset/male_021089.wav|dʒaɾˈɪ hesˈapɫa ɪlɟilˈɪ ɪʃlˈæm dɛ ɟɛrtʃɛklɛʃtiɾiledʒˈɛk mɪ
+combined_dataset/female_015738.wav|dʒevˈap veɾebɪlmˈæm itʃˈɪn dʒihazˈa paɾˈa mɯ kˈart mɯ sɯkɯʃtɯɯɯnˈɯ nɛtlˈɛʃtiɾelɪm mɪ
+combined_dataset/male_023572.wav|profˈɪl tejidˈɪ itʃˈɪn pˈɔsta kodˈʊ da ɟeɾɛklˈɪ mɪ hatˈidʒɛ hˈanɯm
+combined_dataset/male_013103.wav|ælbetːˈɛ sizˈɪ ɟeɾˈɪ ˈaɾama talˈebinizɪ oɫʊʃtuɾˈujoɾʊm
+combined_dataset/male_015991.wav|sɪzdˈæn bunˈʊ hemˈæn ʃɪmdˈɪ kaɾˈar vɛrmˈenizɪ ɪstemˈijoɾʊm
+combined_dataset/female_021024.wav|vadˈɛ vɛ fˈaɪz farkɯnˈɯ fatuɾˈa ɟibˈɪ nˈɛt atʃɯkɫajadʒˈaːɯm
+combined_dataset/female_008743.wav|ɯbanˈɯ tˈɛk tˈɛk okujadʒˈaːɯm tˈɛ rˈɛ ˈytʃ bˈir sɯfˈɯr sɯfˈɯr sɯfˈɯr aɫtˈɯ icˈi sɯfˈɯr secˈɪz dˈœrt icˈi sɯfˈɯr dˈœrt aɫtˈɯ sɯfˈɯr dˈokuz secˈɪz bˈɛʃ aɫtˈɯ dˈokuz aɫtˈɯ ˈytʃ
+combined_dataset/male_012955.wav|ejˈɛr ɪstˈɛrsenɪz sˌɛmˌɛsˈɛ ˌilɛ dɛ œzˈɛt bɪlɟijˈɪ pajɫaʃabilˈiɾɪm
+combined_dataset/female_008697.wav|kuɾˈuɫʊm jˈa da ɪptˈaɫ setʃˈiminizɛ ɟœɾˈɛ ilɛrlejedʒˈejɪm
+combined_dataset/female_012896.wav|pakˈɛt pɫanɫamasɯnˈɯ kɔntrˈɔɫ edˈɪp dyzæltejˈɪm mɪ
+combined_dataset/male_015965.wav|ʃɪmdˈɪ sizˈɛ ˈøtʃ farkɫˈɯ teminˈat setʃenejˈɪ sunadʒˈaːɯm ʊjɡˈʊn mʊ
+combined_dataset/male_006607.wav|dʒøzdˈan ɟelˈɪr bejˈanɯnɯzɯ atʃˈɯkɫama kɯsmɯnˈa nˈɔt ededʒˈejɪm
+combined_dataset/female_022116.wav|bʊ akreditɪftˈɛ hanɡˈɪ tˈɛslɪm ʃɛklinˈɪ sˈɛtʃtinɪz
+combined_dataset/female_010830.wav|dʒevˈap ɟelenˈɛ kadˈar ɪʃlˈeminɪz askɯdˈa kˈaɫmajadʒak meɾˈak ɛtmejˈɪn
+combined_dataset/female_012942.wav|byjˈøk ˈaksama vˈar ødʒrˈɛtsɪz kɔntrolˈø hemˈæn baʃɫatˈɯjoɾʊm
+combined_dataset/male_016074.wav|devˈam ˈɛtmedæn ˈœndʒɛ kɪmlˈɪk doːɾuɫamasˈɯ itʃˈɪn dˈoːʊm taɾˈihinizɪ tejˈɪt edˈɛr mˈisinɪz
+combined_dataset/male_012690.wav|teʃekːˈør edˈeɾɪm kˈajseɾɪ bɪlɟisˈɪ kajdɯmdˈa ɟœɾynˈyjɔr
+combined_dataset/female_015393.wav|ˈadresinɪz bˈejoːɫʊ nilyfˈɛr sokˈak oɫaɾˈak ɟœɾynˈyjɔr telefˈɔn numaɾˈanɯzɯ da aɫabilˈɪr mˈijɪm
+combined_dataset/female_017981.wav|fatuɾˈa tutaɾˈɯjɫa vadˈɛ bɪlɟisˈɪ ajnˈɯ dɔsjadˈa mɯ jˈɛr aɫˈɯjɔr
+combined_dataset/female_012417.wav|dʒevˈabɯnɯzɫa dʒaɾˈɪ ɪʃlemˈɪ ɟyvˈænlɛ dʊrduɾadʒˈaːɯz ʃɪmdˈɪ
+combined_dataset/female_010024.wav|dʒaɾˈɪ hesˈap itʃˈɪn atʃˈɯkɫama ɟɛtʃmemˈɪ ɪstˈɛrmisinɪz
+combined_dataset/female_012422.wav|meɾˈak ɛtmejˈɪn hesˈabɯnɯzɯ ɟetʃidʒˈɪ oɫaɾˈak ɟyvenˈɛ aɫˈɯjoɾʊm
+combined_dataset/male_013803.wav|baʃkˈa ɛklemˈɛk ɪstedˈijinɪz bɪr bɪlɡˈɪ vˈar mɯ mɛrjˈæm hˈanɯm
+combined_dataset/male_020098.wav|refeɾˈans aɫtˈɯ ˈytʃ sɯfˈɯr bˈir jedˈi bˈir dˈœrt ˈytʃ secˈɪz secˈɪz dˈokuz ˌilɛ takˈɪp ededʒˈejɪm
+combined_dataset/male_015458.wav|tamˈamdɯr baʃkˈa bɪr dˈuɾʊm ɔɫmadɯɯɯnˈɯ nˈɔt aɫdˈɯm
+combined_dataset/male_023244.wav|dʒøzdˈan haɾekɛtleɾɪndˈɛ dʒevˈap veɾedʒˈɛk bɪr atʃˈɯkɫama vˈar mɯ sɪzdˈɛ
+combined_dataset/female_014715.wav|mudˈanja dʒadːesˈɪ ˈadresinɪz kajɯtɫˈɯ onˈaj mesaʒˈɯ ˈoɾaja baːɫˈɯ dˈejɪl
+combined_dataset/male_005080.wav|ɪʃlˈæm ɟɛtʃmiʃˈɪ talˈebinizɪ kajdˈa aɫˈɯjoɾʊm nˈisan hˈanɯm
+combined_dataset/female_022565.wav|ɡazˈiantɛp ɡazˈɪ bʊɫvaɾˈɯ taɾafɯndˈajsanɯz bˈilɛ yzølmejˈɪn uzaktˈan tʃœzˈeɾɪz
+combined_dataset/male_023220.wav|paɾˈa haɾeketɪndˈɛ puˈan jˈa da pɫˈan ɛtkisˈɪ jˈɔk rahˈat oɫˈʊn
+combined_dataset/male_022280.wav|ɟœɾˈøʃmɛ œzetinˈɪ sizˈɛ ɟœndeɾejˈɪm mɪ dilˈɛrsenɪz refeɾˈans numaɾasˈɯjɫa takˈɪp edebilˈɪrsinɪz
+combined_dataset/female_024073.wav|ødʒrˈɛtsɪz ɟyvænlˈɪk adɯmɯnˈɯ hemˈæn baʃɫatˈɯjoɾʊm
+combined_dataset/male_014031.wav|tamamɫanmˈɯʃ baʃvˈuɾunuzʊn vɛ ɪlɟilˈɪ fɔrmɫˈaɾɯnɯzɯn bɪr kɔpjasˈɯ sizˈɛ iletiledʒˈɛk
+combined_dataset/male_004409.wav|baːɫantˈɯ kuɾˈʊp joːʊnɫˈʊː aʃɯndʒˈa sizˈɛ dœnedʒˈejɪm
+combined_dataset/female_001911.wav|bɪlɟijˈɪ vɛrdˈijinɪzdɛ sɪstæmdˈɛ lɛhtˈar aɫanɯnˈa hemˈæn ɪʃlejedʒˈejɪm
+combined_dataset/male_015340.wav|aɫtmˈɯʃ ˈaj vadˈɛ itʃˈɪn ajɫˈɯk icˈi bˈin bˈɛʃjˈyz tˌɛlˈɛ primˈɪ ʃʊ ˈan sɪstæmdˈɛ ɟœɾˈyjoɾʊm
+combined_dataset/female_024051.wav|bakijˈɛ bɪlɟisinˈɪ kuɾuʃˈa kadˈar dʊjmˈak ɪstˈɛrmisinɪz
+combined_dataset/female_010557.wav|bæn tʃaːɾˈɯ bajrˈampaʃa itʃˈɪn hemˈæn jardɯmdʒˈɯ oɫˈuɾʊm
+combined_dataset/female_022133.wav|tˌɛˌɛbˈɛ biɾɛjsˈæl bankadʒɯɫˈɯk adɯnˈa kajdˈɯ atʃˈɯp ɪndʒˈelemɛ syɾedʒinˈɪ buɡˈøn baʃɫatˈɯjoɾʊm
+combined_dataset/male_016313.wav|sɪstæmdˈɛ œdemˈenizɪ aɫdˈɯɯɯnɯz taɾˈɪhlɛ ˈujʊmɫʊ bɪr baʃɫanɡˈɯtʃ taɾihˈɪ belɪrlˈememɛ izˈɪn veɾilˈijɔr
+combined_dataset/female_016831.wav|mysaˈɪt ɔɫdˈuːnʊz ɟynˈø sœjlˈɛrsenɪz ødʒrˈɛtsɪz ɟeɾˈɪ ˈaɾama dyzænlejebilˈiɾɪm
+combined_dataset/female_000970.wav|sɪstæmdˈɛ jˈaʃ aɾaɫɯɯɯnˈa ɟœɾˈɛ ʊjɡˈʊn yɾˈøn tʃɯktɯɯɯndˈa hemˈæn sizˈɛ okujadʒˈaːɯm
+combined_dataset/female_002973.wav|dijabˈɛt koˈah aɫzheimˈɛr vejˌa kˈaɫp jɛtmɛzlijˈɪ ɟibˈɪ kronˈɪk bɪr tˈanɯnɯz vˈar mɯ
+combined_dataset/male_008017.wav|pakˈɛt pɫanɫamasɯnˈɯ kɔntrˈɔɫ edˈɪp dyzæltejˈɪm mɪ
+combined_dataset/female_023302.wav|meɾˈak ɛtmejˈɪn bɪrlɪktˈɛ hɯzɫɯdʒˈa kɔntrˈɔɫ edelˈɪm
+combined_dataset/male_014052.wav|ɟœɾˈøʃmedɛ medihˈa hˈanɯm da vˈar mɯ hatːˈa ɔɫdʊːndˈan emˈɪn oɫabilˈɪr mˈijɪm
+combined_dataset/male_022860.wav|ɟynˈɛʃ hˈanɯm møʃteɾˈɪ ɟyvænlijˈɪ itʃˈɪn kˈɯsa bɪr doːɾˈuɫama japˈɯjoɾʊz
+combined_dataset/female_022521.wav|dʒevˈabɯnɯzɫa hemˈæn dʒaɾˈɪ kajdˈɯ ɟøndʒællejedʒˈejɪm ˈitʃinɪz rahˈat ɔɫsˈʊn
+combined_dataset/male_015267.wav|hˈɛr jˈɯɫ jˈaʃ artːɯktʃˈa fijatɫaɾˈɯn jøksˈælmɛ ɪhtˈimalɪ ɔɫdʊːndˈan ʃartɫaɾˈɯ ˈɛrcændæn sabɪtlemˈɛk ɟenældˈɛ dahˈa avantaʒɫˈɯ oɫˈʊr
+combined_dataset/male_021720.wav|anɫˈɯjoɾʊm tutaɾˈɯ kuɾuʃunˈa kadˈar sœjlejedʒˈejɪm ʃɪmdˈɪ
+combined_dataset/female_009002.wav|atʃˈɯkɫama aɫanɯnˈa refeɾansˈɯ ɛklememˈɪ ɪstˈɛrmisinɪz
+combined_dataset/female_018982.wav|œzˈør dilˈeɾɪm dʒaɾˈɪ dʒevˈap ɟedʒɪktˈɪ ɪʃlemˈɪ jenidˈæn baʃɫatˈɯjoɾʊm
+combined_dataset/female_006213.wav|møʃteɾˈɪ bɪlɟilˈeɾinizɪ ɟøndʒællejˈɪp ødʒrˈɛtsɪz yɾˈøn setʃenɛkleɾinˈɪ dyʃønmemˈɪ ɪstˈɛrmisinɪz
+combined_dataset/male_009870.wav|møʃteɾˈɪ ɟyvænlijˈɪ itʃˈɪn bʊ ødʒretˈɪ ødʒrˈɛtsɪz ɪndʒelejˈɪp ɪʃlˈæm ɟœɾøntylemˈɛk ɪstˈijoɾʊm
+combined_dataset/male_014956.wav|sizˈɛ buɡˈøn hanɡˈɪ konudˈa jardɯmdʒˈɯ ɔɫmamˈɯ ɪstˈɛrsinɪz
+combined_dataset/male_019822.wav|ɯbanˈɯ javaʃtʃˈa okujadʒˈaːɯm doːɾˈʊ hesˈap ɔɫduːnˈʊ tejˈɪt edelˈɪm
+combined_dataset/female_010207.wav|bæn ɟœkhˈan kajseɾidˈæn aɾˈɯjoɾʊm nuɾˈɪ bˈɛj ɯbˈan doːɾuɫamasˈɯ vɛ transfeɾˈɪ bɪrlɪktˈɛ tamˈamɫajaɫɯm
+combined_dataset/female_010216.wav|zybɛjdˈɛ hˈanɯm dʒadːesˈɪ kajdɯnɯzˈɯ da kɔntrˈɔɫ edˈijoɾʊm
+combined_dataset/female_005835.wav|œːɾændˈijimɪz rakamɫˈarɫa ɪʃlemˈɪ rahattʃˈa pɫanɫˈaɾɯz
+combined_dataset/female_021498.wav|paɾˈa iadesˈɪ mɪ jˌɔksa polˈitʃɛ ɪptalˈɪ mɪ ɪstˈijɔrsunʊz
+combined_dataset/female_006658.wav|sˈelɪm bˈɛj ˈɛkstrejɪ hemˈæn atʃˈɯjoɾʊm kˈɯsa syɾedʒˈɛk
+combined_dataset/female_009653.wav|ødʒrˈɛtsɪz ɟœɾøntylejˈɪp byjˈøk fˈark vˈarsa bɪrlɪktˈɛ dyzˈænlejelɪm
+combined_dataset/female_012622.wav|refeɾˈans numaɾasɯnˈɯ pajɫaʃabilˈɪr mˈisinɪz lˈøtfæn
+combined_dataset/male_023378.wav|pakˈɛt pɫanɫamasˈɯ itʃˈɪn aɫsandʒˈak kɔrdˈɔn doːɾˈʊ mʊ vedˈat bˈɛj
+combined_dataset/male_011820.wav|tamˈamdɯr sˈelɪm bˈɛj ʃɪmdˈɪ bɪr sɔnrakˈɪ adˈɯma ɟetʃˈijoɾʊm
+combined_dataset/male_019882.wav|hamˈɪt bˈɛj pɫˈanɯnɯz tamˈam profˈilinizɛ nˈɔt dˈøʃtøm
+combined_dataset/male_017102.wav|ɛvrakˈɯ jøklˈɛrcæn dʒaɾˈɪ hesˈap kɯsmɯndˈa bɪr dʒevˈap ɟœɾˈyjɔr mˈusunʊz
+combined_dataset/female_022841.wav|kytʃøktʃˈɛkmedʒɛ tʃitʃɛktʃˈɪ sokˈak adresinˈɪ nˈɔt ˈetːɪm
+combined_dataset/male_011937.wav|ajɫˈɯk œdˈemɛ mɪ tɛrdʒˈɪh edˈɛrsinɪz jˌɔksa jɯɫɫˈɯk œdˈemɛ setʃenejinˈɛ dɛ bakmamˈɯ ɪstˈɛrmisinɪz
+combined_dataset/male_017582.wav|œzˈæl kodˈʊ ʃɪmdˈɪ iletedʒˈejɪm lˈøtfæn dikːˈatlɛ dɪnlejˈɪp nˈɔt aɫˈɯn
+combined_dataset/male_000219.wav|refeɾˈans numaɾˈanɯz doːɾˈʊ ɟœɾynˈyjɔr bʊ numˈaɾajɫa kajdˈɯ atʃmamˈɯ ɪstˈɛrmisinɪz
+combined_dataset/female_009662.wav|refeɾˈans numaɾˈanɯzɫa kajdˈɯ ˈatʃtɯm biɾazdˈan detajɫaɾˈɯ okujadʒˈaːɯm
+combined_dataset/male_018138.wav|ɟˈølsøm hˈanɯm sizˈɪ bɛklˈɛtmedæn ˈɪnsan tæmsɪldʒijˈɛ aktaɾˈɯjoɾʊm
+combined_dataset/female_011257.wav|jaʃanˈan ˈaksakɫɯk itʃˈɪn œzˈør dilˈeɾɪm baːɫantˈɯ joːʊnɫˈʊː ɪʃlemˈɪ ɟedʒˈɪktɪrdɪ
+combined_dataset/male_015421.wav|bʊ yɾˈøn baʃvuɾudˈa syɾɛtʃleɾˈɪ ɔɫdʊktʃˈa koɫajɫaʃtɯɾˈan sadelɛʃtiɾɪlmˈɪʃ bɪr dejɛrlændˈɪrmɛjlɛ ilɛrlˈijɔr
+combined_dataset/female_020776.wav|fatuɾˈa vɛ vadˈɛ konusˈʊ adʒˈɪl bɪlɟijˈɪ hemˈæn pajɫaʃˈɯjoɾʊm
+combined_dataset/male_011779.wav|ikɪndʒˈɪ setʃenˈɛk jˈyz bˈin tˌɛlˈɛ teminˈat vɛ ajɫˈɯk prˈɪm jakɫaʃˈɯk bˈin ellˈi tˌɛlˈɛ oɫˈʊr
+combined_dataset/female_023087.wav|tʃaːɾˈɯ sonudʒunˈʊ kajdˈa ɟetʃˈijoɾʊm dʒevabˈɯ sizˈɛ iletedʒˈejɪm
+combined_dataset/female_009552.wav|ɟelˈɪr bælɟˈenizɪ ʃɪmdˈɪ jˈøkledinɪz mɪ jˌɔksa biɾazdˈan mɯ ɟœndeɾedʒˈɛksinɪz
+combined_dataset/female_009734.wav|mʊstafˈa bˈɛj hˈɪtʃ meɾˈak ɛtmejˈɪn bɪrlɪktˈɛ koɫajdʒˈa tʃœzˈeɾɪz
+combined_dataset/male_010528.wav|ødʒretˈɪ kuɾuʃˈʊjɫa okujˈʊp byjˈøk tutaɾˈɯ nɛtlˈɛʃtiɾejɪm
+combined_dataset/female_016893.wav|dʒaɾˈɪ hesˈap dʒevabɯnˈɯ ʃɪmdˈɪ kɔntrˈɔɫ edejˈɪm oɫˈʊr mʊ
+combined_dataset/female_007954.wav|møʃteɾˈɪ ɛkranɯndˈan ɟøndʒˈæl kuɾˈʊ ɟœɾøntylejˈɪp iletedʒˈejɪm
+combined_dataset/male_014199.wav|ɔrtˈaɫama bɪr defˈɪn masrafˈɯ jakɫaʃˈɯk doksˈan bˈin tˌɛlˈɛjˈɛ kadˈar tʃɯkabilˈijɔr
+combined_dataset/female_008951.wav|ˈadresinɪz mɪthatpaʃˈa dʒadːesˈɪ oɫaɾˈak ɟœɾynˈyjɔr
+combined_dataset/male_022071.wav|razijˈɛ hˈanɯm baːɫantˈɯ ɟyvænlˈɪ kɪmlˈijinizɪ doːɾuɫamˈak itʃˈɪn bɪrkˈatʃ bɪlɡˈɪ aɫadʒˈaːɯm
+combined_dataset/female_014238.wav|ɪbrˈahɪm bˈɛj lˈøtfæn sˌɛmˌɛsˈɛtekˈɪ aɫtˈɯ hanelˈɪ kodˈʊ døzɟˈøndʒɛ sœjlejˈɪn
+combined_dataset/female_014782.wav|ɟœɾøʃmˈɛk ɪstedˈijinɪz bˈœløm œzˈæl mɪ jˌɔksa ɟenˈæl danˈɯʃma mɯ
+combined_dataset/female_021735.wav|dʒøzdˈan ɟyvænlijˈɪ itʃˈɪn doːɾˈuɫama japadʒˈaːɯm dʒaɾˈɪ hesˈap adɯmɯndˈa doːɾˈuɫama kodunuzˈʊ ɪstejedʒˈejɪm
+combined_dataset/female_012096.wav|paɾˈa iadesˈɪ pɫanˈɯ vɛ profˈɪl bɪlɟilˈeɾinizɪ pajɫaʃˈɯp tæmsɪldʒijˈɛ pyɾˈøzsøz aktaɾadʒˈaːɯm
+combined_dataset/male_013144.wav|bˈanka hesˈap bɪlɟilˈeɾinizɛ jˈa da bˈanka kartˈɯ vejˌa kredˈɪ kartɯnˈa eɾˈiʃiminɪz vˈar mɯ
+combined_dataset/male_021662.wav|taɫatpaʃˈa bʊɫvaɾˈɯ adresˈɪ doːɾˈʊ mʊ ɡaziɔsmanpaʃˈa ɟœɾynˈyjɔr tejˈɪt edˈɛr mˈisinɪz
+combined_dataset/female_021401.wav|miɾˈaj bˈæn ɪstˈanbʊɫ varɫˈɯk jœnˈetimɪ kɪmlˈɪk tejidˈɪ ˈɔɫmadan ɪʃlˈæm japamˈɯjoɾʊm lˈøtfæn hazˈɯr oɫˈʊn
+combined_dataset/female_021455.wav|sizˈɪ dyʃøndˈøm ødʒrˈɛtsɪz tʃˈœzøm itʃˈɪn yɾynˈø ɟœɾøntylejedʒˈejɪm
+combined_dataset/male_017589.wav|vadˈesɪz ɪʃlˈæm itʃˈɪn kodˈʊ pajɫaʃadʒˈaːɯm lˈøtfæn nˈɔt ɛdˈin
+combined_dataset/female_008922.wav|tˈøm adɯmɫaɾˈɯ tamamɫajɯndʒˈa hesˈabɯnɯzɯn atʃɯɫˈɯʃ jˈa da kapanˈɯʃ onajˈɯ sizˈɛ ajrɯdʒˈa iletiledʒˈɛk
+combined_dataset/male_021151.wav|ɟœndɛrmˈɛk ɪstedˈijinɪz bælɟejˈɪ bˈœjlɛ mɪ sˈɛtʃtinɪz redʒˈɛp bˈɛj
+combined_dataset/male_000190.wav|ardɯndˈan ɪntɛrnˈɛt baːɫˈantɯnɯzɯ kɔntrˈɔɫ edelˈɪm
+combined_dataset/male_007105.wav|vadˈɛ bɪlɟisɪndˈɛ bɪr farkɫɯɫˈɯk ɟœɾˈøndʒɛ ændiʃelænmˈenɪz doːˈaɫ bajrˈam bˈɛj
+combined_dataset/female_001859.wav|bʊ soɾuɫˈar sizˈɛ ˈæn nˈɛt vɛ ʊjɡˈʊn primˈɪ hesapɫajabɪlmˈæm itʃˈɪn ɟeɾɛklˈɪ
+combined_dataset/female_002923.wav|ʃʊ andˈa dʒenazˈɛ masrafɫˈaɾɯnɯzɯ karʃɯɫamˈak itʃˈɪn mɛvdʒˈʊt bɪr politʃˈenɪz jˈa da biɾˈikiminɪz vˈar mɯ
+combined_dataset/male_012106.wav|bʊ iɫatʃɫˈar hanɡˈɪ rahatsɯzɫɯkɫˈar itʃˈɪn kʊɫɫanɯɫˈɯjɔr kɯsadʒˈa anɫatabilˈɪr mˈisinɪz
+combined_dataset/male_000061.wav|tyɫˈaj hˈanɯm hemˈæn baːɫantˈɯ saːɫajˈɯp œːɾenelˈɪm bɪrlɪktˈɛ
+combined_dataset/female_002580.wav|bʊ tutaɾˈɯn talˈebinɪzdæn dyʃˈøk kaɫdɯɯɯnˈɯ bilˈijoɾʊm biɾazdˈan dahˈa jˈøksɛk setʃenɛkleɾˈɪ dɛ konuʃadʒˈaːɯz
+combined_dataset/male_015961.wav|ɪhtijˈatʃ halɪndˈɛ bʊ biɾˈikimɪ bˈɔrtʃ oɫaɾˈak kʊɫɫˈanma vejˌa prˈɪm œdemeleɾinˈɛ dɛstˈɛk ˈɔɫma setʃenˈejinɪz oɫˈujɔr
+combined_dataset/female_009940.wav|ødʒrˈɛt ɟœɾˈøndʒɛ ændiʃelænmˈenɪz tʃˈɔk anɫaʃɯɫˈɯr nˈisan hˈanɯm
+combined_dataset/female_014519.wav|esænjˈʊrt sakˈarja dʒadːesˈɪ itʃˈɪn ʊjɡˈʊn mˈusunʊz
+combined_dataset/male_010303.wav|nedʒatˈɪ bˈɛj ɟœɾøʃmˈemizɪ toparɫajˈɯp kˈɯsa bɪr œzˈɛt ɟetʃˈijoɾʊm
+combined_dataset/female_002198.wav|œdˈemejɪ vadˈesɪz hesˈap biɾˈikɪm hesabˈɯ jˈa da kredˈɪ kartˈɯ ˌilɛ japmˈak ɪstˈɛrmisinɪz
+combined_dataset/female_016623.wav|sizˈɪ hatːˈa bɛklɛtmemˈɪ ɪstˈɛrmisinɪz hamˈɪt bˈɛj
+combined_dataset/female_017790.wav|yjˈe doːɾˈuɫama ɛkranˈɯ bazˈæn byjˈøk joːʊnɫʊktˈa dyʃˈyjɔr
+combined_dataset/male_023577.wav|pakˈɛt bɪlɟisˈɪ ɪstemˈijoɾʊm sadˈedʒɛ kɪmlˈɪk tejidˈɪ japˈɯjoɾʊz
+combined_dataset/male_012202.wav|benˈɪm japtˈɯɯɯm ɪʃlˈæm sɪzdˈæn temˈæl bɪlɟileɾˈɪ aɫˈɯp ʊjɡˈʊn pɫˈan aɫtɛrnatɪfleɾinˈɪ karʃɯɫaʃtɯɾaɾˈak ˈæn ijˈi ˈøtʃ setʃenejˈɪ sʊnmˈaktɯr
+combined_dataset/male_014306.wav|finˈaɫ masrˈaf politʃˈenɪzdɛ nakdˈɛ eɾˈiʃɪm sizˈɪn itʃˈɪn œnæmlˈɪ mɪ ømrˈan hˈanɯm
+combined_dataset/female_014557.wav|kodunˈʊz hazˈɯrsa javaʃtʃˈa okujabilˈɪrsinɪz bɪrlɪktˈɛ doːɾˈuɫajaɫɯm
+combined_dataset/female_020888.wav|refeɾˈans icˈi bˈir sɯfˈɯr ˈytʃ bˈɛʃ aɫtˈɯ aɫtˈɯ jedˈi bˈir aɫtˈɯ ˈytʃ doːɾˈʊ mʊ
+combined_dataset/female_014010.wav|dʒadːedˈɛ hanɡˈɪ ɟiɾiʃˈɛ jakˈɯnsɯnɯz doːɾˈʊ dʒadːˈɛ sˈetʃimɪ japajˈɯm
+combined_dataset/male_022077.wav|doːɾˈuɫama ødʒrˈɛtsɪz byjˈøk bɪr ɪʃlˈæm dˈejɪl meɾˈak ɛtmejˈɪn
+combined_dataset/female_000641.wav|hesapɫˈamajɯ japˈarcæn kˈɯsa bɪr syɾˈɛ hatːˈa kaɫabilˈɪr mˈisinɪz lˈøtfæn
+combined_dataset/female_003936.wav|tʃɛʃmedekˈɪ kajdɯnɯzˈɯ tʃˈœzøm varɫˈɯk jœnˈetimɪ adɯnˈa oɫʊʃtuɾˈujoɾʊm vɛ refeɾˈans numaɾˈanɯz bˈir bˈir bˈɛʃ ˈytʃ ˈytʃ sɯfˈɯr dˈokuz bˈir secˈɪz secˈɪz ˈytʃ oɫadʒˈak
+combined_dataset/female_002892.wav|kajɯtɫˈɯ hˈat yzeɾɪndˈæn konʊʃtˈuːmuzʊ tejˈɪt edebilˈɪr mˈisinɪz
+combined_dataset/female_007169.wav|ɯbanˈɯ dikːˈatlɛ sœjlejedʒˈejɪm lˈøtfæn baʃtˈan sonˈa kɔntrˈɔɫ edeɾˈɛk nˈɔt aɫˈɯn
+combined_dataset/female_006711.wav|bæn nɛslihˈan tˌɛˌɛbˈɛ jatˈɯɾɯm kampanjaɫaɾɯnˈɯ kɯsadʒˈa pajɫaʃadʒˈaːɯm œmˈɛr bˈɛj
+combined_dataset/female_015593.wav|baːɫantˈɯ saːɫandˈɯ mɯ ɛvraːˈɯ doːɾuɫajabɪldinˈɪz mɪ
+combined_dataset/female_007499.wav|ødʒrˈɛtsɪz taksˈɪt dyzænlemˈɛk sizˈɛ ʊjɡˈʊn oɫˈʊr mʊ
+combined_dataset/female_019375.wav|metˈɪn bˈɛj vakˈɪt kajbˈɛtmedæn bakijejˈɪ nɛtlˈɛʃtiɾelɪm syɾˈɛtʃ uzamasˈɯn
+combined_dataset/female_015444.wav|dʒaɾˈɪ hesaptˈa bʊ tʃɯkɯʃˈɯn ɟeɾɛktʃesˈɪ vˈar mɯ sˈɪzdʒɛ
+combined_dataset/female_005901.wav|sizˈɪ anɫˈɯjoɾʊm ødʒrˈɛt vɛ ɪʃlˈæm ɟedʒɪkmesˈɪ dʒˈan sɯkɯdʒˈɯ
+combined_dataset/female_015641.wav|zɛhrˈa hˈanɯm byjˈøk møʃteɾˈɪ mæmnunijetˈɪ itʃˈɪn syɾedʒˈɪ sadˈɛ tutˈujoɾʊm
+combined_dataset/male_015135.wav|mˈɛrhaba mynˈɪr bˈɛj bæn elˈɪf tˌɛˌɛbˈɛ jatˈɯɾɯm møʃteɾˈɪ hɪzmɛtleɾɪndˈæn aɾˈɯjoɾʊm
+combined_dataset/male_012027.wav|ʃʊ ˈan bˈejoːɫʊ bœlɟesˈɪ kajdɯnɯzˈɯ ɛkrandˈa atʃˈɯjoɾʊm lˈøtfæn kˈɯsa bɪr syɾˈɛ bɛklejˈɪn
+combined_dataset/female_014028.wav|refeɾˈansɫa dʒevˈap veɾˈɪp dʒaɾˈɪ syɾedʒˈɪ baʃɫatadʒˈaːɯm
+combined_dataset/male_001125.wav|ɯbˈan doːɾuɫamasˈɯ japaɫˈɯm mɯ ɛkrandakˈɪ hesˈap doːɾˈʊ mʊ
+combined_dataset/male_006580.wav|møʃteɾˈɪ numaɾˈanɯzɯ døzɟˈøndʒɛ ɟœɾøntylemˈɛk ɪstˈijoɾʊm
+combined_dataset/female_017821.wav|dilˈɛrsenɪz sonudʒˈʊ œzˈæl bɪr œzˈɛtlɛ ɟœndeɾejˈɪm
+combined_dataset/male_015848.wav|bʊ dˈuɾʊm itʃˈɪn bɪr iɫˈatʃ kʊɫɫandˈɯɯɯnɯzɯ belˈɪrtːinɪz adɯnˈɯ pajɫaʃabilˈɪr mˈisinɪz
+combined_dataset/male_004878.wav|bæn bɛrnˈa kajˈɯp kˈart bɪldiɾˈiminizɪ rɛsmˈɪ kajdˈa aɫˈɯjoɾʊm
+combined_dataset/female_004637.wav|dɛprɛsjˈɔn anksijetˈɛ vejˌa bænzeɾˈɪ bɪr nedˈænlɛ dyzænlˈɪ psikijatrˈɪk iɫˈatʃ kʊɫɫanˈɯjɔr mˈusunʊz
+combined_dataset/male_001828.wav|kampanjˈa kapsamɯndˈa ødʒrˈɛtsɪz ɪʃlˈæm hakːˈɯ da vˈar dʊjmˈak ɪstˈɛrmisinɪz
+combined_dataset/male_003666.wav|nuɾˈɪ bˈɛj bʊ aʃˈamada baʃkˈa bɪr talˈebinɪz vˈar mɯ
+combined_dataset/male_022074.wav|baːɫantɯjˈɯ saːɫajˈɯp kajdˈɯ dejɛrlændiɾeɾˈɛk ilɛrlejedʒˈejɪm
+combined_dataset/male_015575.wav|ɟœɾøʃmˈemɪzdɛ œdˈemɛ ɟynynˈø nɛtlɛʃtiɾˈɪp tˈøm detajɫaɾˈɯ bɪrlɪktˈɛ yzeɾɪndˈæn ɟetʃˈeɾɪz
+combined_dataset/male_019003.wav|ødʒrˈɛt bɪlɟisinˈɪ javaʃtʃˈa nˈɛt bˈitʃɪmdɛ tɛkrarɫˈar mˈɯsɯnɯz
+combined_dataset/female_003822.wav|teʃekːˈør edˈeɾɪm bɪlɟijˈɪ kɔntrˈɔɫ ɛtmˈɛk itʃˈɪn bɪr sanijˈɛ bɛkletedʒˈejɪm
+combined_dataset/female_007188.wav|refeɾˈans numaɾˈanɯzɯ sɪstæmdˈɛ kajdˈa aɫˈɯjoɾʊm lˈøtfæn bɛklejˈɪn
+combined_dataset/female_012387.wav|joːʊnɫˈʊk oɫabilˈɪr doːɾuɫˈamajɯ saːɫamˈak itʃˈɪn bɛkletedʒˈejɪm
+combined_dataset/female_004899.wav|dʒaɾˈɪ hesˈap kapanɯʃˈɯ itʃˈɪn ɟeɾˈɛktʃɛ vɛ ɪʃlˈæm onajˈɯ konusʊndˈa kˈɯsa bɪr atʃˈɯkɫama japajˈɯm mɯ
+combined_dataset/female_004444.wav|ʃɪmdˈɪ ikˈɪ farkɫˈɯ ʃɪrkˈɛt yzeɾɪndˈæn tɛklˈɪf taɾamasˈɯ japadʒˈaːɯm vɛ sizˈɛ ˈæn ʊjɡˈʊn oɫanˈɯ sunadʒˈaːɯm
+combined_dataset/male_015413.wav|ɪstˈɛrsenɪz mɛvdʒˈʊt œdedˈijinɪz tutˈarɫa kɯjasɫajaɾˈak bøttʃˈenizɛ ˈæn ʊjɡˈʊn aɾaɫɯɯˈɯ nɛtlˈɛʃtiɾelɪm
+combined_dataset/male_011804.wav|ajnˈɯ ʃekɪldˈɛ œdedˈijinɪz prˈɪm dɛ zamˈanɫa artmˈaz
+combined_dataset/female_014987.wav|kɪmlˈɪk sɔrɡusˈʊ itʃˈɪn bɪrkˈatʃ bɪlɡˈɪ aɫadʒˈaːɯm
+combined_dataset/male_006261.wav|dʒøzdˈan bakijˈenizɪ ɟœɾˈøp ødʒretˈɪ dɛ hemˈæn hesapɫajadʒˈaːɯm
+combined_dataset/female_021547.wav|refeɾˈans numaɾasˈɯ bʊ ʃekɪldˈɛ ɟœɾynˈyjɔr doːɾˈʊ mˈudʊr janɫˈɯʃsa hemˈæn dyzæltejˈɪm
+combined_dataset/female_017086.wav|ødʒrˈɛtsɪz ɪptˈaɫ setʃenejinˈɪ ɟœɾøntˈyledɪm saadˈɛt hˈanɯm
+combined_dataset/male_020910.wav|bæn enˈɛs saadˈɛt hˈanɯm telefˈɔn numaɾˈanɯzɯ vɛ adrˈesinizɪ bɪrlɪktˈɛ tejˈɪt edelˈɪm
+combined_dataset/male_021084.wav|joːʊnɫˈʊk artˈɯjɔr randevujˈʊ ʃɪmdˈɪ nɛtlˈɛʃtiɾelɪm
+combined_dataset/female_016882.wav|ɪstˈɛrsenɪz œzˈæl nˈɔt oɫaɾˈak refeɾansˈɯ belɪrtˈɪp ɟœɾˈøʃmejɪ kɯsadʒˈa œzɛtlejebilˈiɾɪm
+combined_dataset/male_010557.wav|ʃøphelˈɪ yɾˈøn itʃˈɪn ødʒrˈɛtsɪz kɔntrˈɔɫ ɪstˈɛrmisinɪz
+combined_dataset/male_014337.wav|tʃaɫɯʃtˈɯɯɯnɯz kˈuɾumʊn adɯnˈɯ œːɾenebilˈɪr mˈijɪm
+combined_dataset/female_000383.wav|bʊ setʃenɛklɛrdˈæn hanɟisˈɪ ɪhtijatʃɫˈaɾɯnɯza vɛ bøttʃˈenizɛ dahˈa ʊjɡˈʊn ɟœɾynˈyjɔr
+combined_dataset/male_016693.wav|ɟeɾˈɪ bɪldiɾˈiminizɪ refeɾˈans numaɾasˈɯjɫa kajdˈa aɫadʒˈaːɯm
+combined_dataset/male_008111.wav|tʃɛkmˈekœj konˈak mɛjdanˈɯ kajdɯnˈɯz itʃˈɪn doːɾˈuɫama kodunˈʊ ʃɪmdˈɪ okˈujoɾʊm
+combined_dataset/female_022306.wav|sˈɔn bɪr kˈɛz dʒøzdˈan vɛ aɫɯdʒˈɯ bɪlɟileɾinˈɪ kɔntrˈɔɫ edˈijoɾʊm
+combined_dataset/male_008224.wav|øzɟˈynøm fatuɾˈa vɛ vɛrɡˈɪ farkˈɯ tutaɾˈɯ ɛtkˈiledɪ
+combined_dataset/female_023636.wav|refeɾˈans numaɾˈanɯzɯ javaʃtʃˈa pajɫaʃˈɯr mˈɯsɯnɯz
+combined_dataset/male_023774.wav|sɛrdˈaɾˈɯ ɛkrˈæm sokˈak adresinˈɪ doːɾˈʊ baːɫamˈak itʃˈɪn tɛkrˈar doːɾˈuɫajaɫɯm mɯ ʃɪmdˈɪ
+combined_dataset/female_021820.wav|fɛhmˈɪ bˈɛj dʒaɾˈɪ hesˈap haɾekɛtleɾinˈɛ daˈɪr dʒevˈabɯnɯz vˈar mɯ
+combined_dataset/female_020766.wav|ʃɪmdˈɪ ɯbanˈɯ tɛkrˈar ededʒˈejɪm tˌɛɾˈɛ ˌilɛ baʃɫajˈan hesˈap bɪlɟisinˈɪ bɪrlɪktˈɛ tejˈɪt edelˈɪm
+combined_dataset/female_011268.wav|atʃˈɯkɫama kɯsmɯndˈa dʒaɾˈɪ hesˈap ødʒrˈɛt detajˈɯ ɟœɾynˈyjɔr
+combined_dataset/female_011804.wav|hidajˈɛt bˈɛj baːɫantˈɯ saːɫamˈak itʃˈɪn œːɾænmˈɛk ɪstˈijoɾʊm
+combined_dataset/male_020491.wav|ɟœnˈøl hˈanɯm hemˈæn jardɯmdʒˈɯ oɫˈujoɾʊm ˈitʃinɪz rahˈat ɔɫsˈʊn
+combined_dataset/male_022151.wav|baːɫantɯjˈɯ ʃɪmdˈɪ saːɫajˈɯp doːɾˈuɫama japajˈɯm mɯ
+combined_dataset/female_003990.wav|dʒenazˈɛ ɪʃlemˈɪ itʃˈɪn ɟelenɛksˈæl defˈɪn mɪ jˌɔksa kremasjˈɔn mʊ tɛrdʒˈɪh edˈɛrsinɪz
+combined_dataset/female_012634.wav|fatuɾˈa vɛ vadˈɛ farkɯnˈɯ bɪrlɪktˈɛ nɛtlˈɛʃtiɾelɪm
+combined_dataset/male_010890.wav|arzˈʊ hˈanɯm sˌɛmˌɛsˈɛ ˌilɛ ɟelˈæn doːɾˈuɫama kodunˈʊ javaʃtʃˈa okujabilˈɪr mˈisinɪz bæn nˈɔt aɫadʒˈaːɯm
+combined_dataset/male_018378.wav|didˈæm bˈæn ˌɔtˌɛpˈɛ kodunˈʊ rakˈam rakˈam iletedʒˈejɪm
+combined_dataset/male_013823.wav|møʃteɾilˈeɾimɪn byjˈøk kɯsmˈɯ œdˈemejɪ ajˈɯn bˈir ˈɪ ˌilɛ bˈɛʃ ˈɪ aɾasɯnˈa ajarlˈɯjɔr tʃønkˈø bʊ taɾɪhlˈɛr ɟenældˈɛ sˌɛsˌɛˈɯ œdemeleɾˈɪjlɛ dˈænk ɟelˈijɔr
+combined_dataset/male_012286.wav|ɔnɫˈar da sizˈɛ ˈæn ʊjɡˈʊn tɛklifˈɪ sunadʒˈak siɡɔrtˈa saːɫajɯdʒɯsɯnˈɯ bizˈɛ ɟeɾˈɪ bˈɪldiɾedʒɛk
+combined_dataset/male_014652.wav|adrˈɛs tejidˈɪ dɛ japaɫˈɯm mɯ samsʊndˈa taɫatpaʃˈa bʊɫvaɾˈɯ yzeɾɪndekˈɪ ˈadresinɪz doːɾˈʊ mʊ
+combined_dataset/female_000466.wav|bʊ yɾønlɛrdˈɛ tʃoːˈʊ zamˈan kˈapsamɫɯ bɪr saːɫˈɯk muajenesˈɪ ɟeɾɛkmˈijɔr bʊ sizˈɪn itʃˈɪn ʊjɡˈʊn oɫˈʊr mʊ
+combined_dataset/female_004367.wav|benˈɪm adˈɯm sæltʃˈʊk bˌenˌɛpˈɛ paɾibˈas leasˈɪnɡ soɫutiˈɔns tˈørkijɛ møʃteɾˈɪ dɛstˈɛk ekibɪndejˈɪm
+combined_dataset/female_020398.wav|profˈɪl vɛ pɫˈanɫama atʃɯsɯndˈan hanɡˈɪ saatˈɪ tɛrdʒˈɪh edˈɛrsinɪz
+combined_dataset/female_022984.wav|kemˈaɫ bˈɛj antˈaɫja itʃˈɪn ˈɪnsan tæmsɪldʒˈɪjlɛ ɟœɾøʃmˈɛk ɪstˈijɔr mˈusunʊz
+combined_dataset/female_011560.wav|ødʒrˈɛtsɪz bɪlɟilˈændɪrmɛ japˈɯjoɾʊm meɾˈak ɛtmejˈɪn
+combined_dataset/male_020043.wav|dʒevˈap itʃˈɪn kˈɔd icˈi bˈir dˈœrt aɫtˈɯ icˈi dˈokuz
+combined_dataset/male_011137.wav|telefˈɔn numaɾˈanɯz sɯfˈɯr bˈɛʃ bˈɛʃ dˈœrt dˈokuz aɫtˈɯ secˈɪz ˈytʃ secˈɪz icˈi dˈœrt doːɾˈʊ mʊ
+combined_dataset/female_019002.wav|vadˈesɪz hesˈapɫa ɪlɟilˈɪ vɛrɡˈɪ vɛ fˈaɪz farkɯnˈɯ kɔntrˈɔɫ edejˈɪm mɪ
+combined_dataset/female_001038.wav|bʊ tʃɯkˈan rakamɫˈar bøttʃˈenizɛ ʊjɡˈʊn oɫˈʊr mʊ sɛrpˈɪl hˈanɯm
+combined_dataset/female_004371.wav|sˌɛmˌɛsˈɛ kʊɫɫanmˈɯjɔrsanɯz hˈɪtʃ prɔblˈæm dˈejɪl bɪrlɪktˈɛ nˈɔt aɫaɾˈak ilɛrlejebilˈiɾɪz
+combined_dataset/female_023158.wav|sɛrkˈan bˈæn sizˈɪ tɛkrˈar aɾamˈamɯzɯ hanɡˈɪ saˈat aɾaɫɯɯɯndˈa ɪstˈɛrsinɪz
+combined_dataset/female_007118.wav|refeɾˈans numaɾˈanɯzɯ kajdˈa ɛklˈijoɾʊm sɪstæmdekˈɪ refeɾansˈɯ nˈɔt ˈetːɪm
+combined_dataset/female_022953.wav|fijˈat farkˈɯ jˈɔk doːɾˈuɫama tamamˈæn ɟyvænlˈɪk amatʃɫˈɯ
+combined_dataset/female_000942.wav|pajɫaʃtˈɯɯɯnɯz bɪlɟilˈɛr sadˈedʒɛ tɛklˈɪf vɛ dejɛrlˈændɪrmɛ amadʒˈɯjɫa kʊɫɫanɯɫadʒˈaktɯr
+combined_dataset/male_010397.wav|dʒevˈap itʃˈɪn dʒaɾˈɪ hesˈap kɔntrolˈø japajˈɯm mɯ
+combined_dataset/male_004794.wav|adrˈesinizɪ dʒʊmhuɾijˈɛt dʒadːesˈɪ oɫaɾˈak ɟœɾˈyjoɾʊm kɔntrˈɔɫ ededʒˈejɪm
+combined_dataset/female_002920.wav|bajrampaʃadakˈɪ kajdɯnɯzˈɯ ɛkrandˈa atʃˈɯjoɾʊm lˈøtfæn bɪr dakikˈa bɛklˈɛr mˈisinɪz
+combined_dataset/male_013447.wav|bɪlɟileɾˈɪ sɪstˈemɛ ɟiɾˈɛrcæn kˈɯsa bɪr bˈɛklemɛ aɫadʒˈaːɯm lˈøtfæn hatːˈan ajrɯɫmajˈɯn
+combined_dataset/female_000351.wav|tamˈamdɯr siɡaɾˈa kʊɫɫanmadˈɯɯɯnɯzɯ nˈɔt edˈijoɾʊm
+combined_dataset/female_002615.wav|bʊ ˈaɾada sœjledɪklˈeɾinizɪ tˈam dujˈamadɯm bɪr kˈɛz dahˈa atʃɯkɫˈar mˈɯsɯnɯz
+combined_dataset/male_000901.wav|bæn tɔɫɡˈa jardɯmdʒˈɯ ɔɫmaktˈan mæmnunijˈɛt dujˈaɾɯm sɛvɡˈɪ hˈanɯm
+combined_dataset/male_007289.wav|dʒøzdˈan kajɯtɫaɾɯnˈa ɟœɾˈɛ dʒevˈap syɾesˈɪ buɡˈøn tamamɫanˈɯr
+combined_dataset/male_016724.wav|sɪstˈæm hatasˈɯ ɟœɾynˈyjɔr ɪʃlæmleɾˈɪ dˈʊrdʊrdʊm ataʃehˈɪr ekibinˈɛ hemˈæn bɪldiɾˈijoɾʊm
+combined_dataset/female_017253.wav|ødʒrˈɛtsɪz ɟœɾøntylemˈɛk itʃˈɪn bɪr izˈɪn ridʒˈa ededʒˈejɪm
+combined_dataset/female_001586.wav|hanɡˈɪ teminˈat sevijesinˈɪ dyʃynˈyjɔrsunʊz œrnejˈɪn ellˈi bˈin tˌɛlˈɛ mɪ jˌɔksa jˈyz bˈin tˌɛlˈɛ ɟibˈɪ dahˈa jˈøksɛk bɪr tutˈar mɯ
+combined_dataset/male_004665.wav|ɪbrˈahɪm bˈɛj ɟœɾøʃmˈɛk ɟyzˈæl œzˈæl tʃˈœzymø œzˈɛtlejejɪm
+combined_dataset/male_017006.wav|ødʒrˈɛtsɪz ɪptˈaɫ setʃenejinˈɪ ɟœɾøntˈyledɪm saadˈɛt hˈanɯm
+combined_dataset/female_008816.wav|ødʒrˈɛt jansɯmasɯnˈɯ ɪʃlˈæm saatinˈɛ ɟœɾˈɛ hesapɫajadʒˈaːɯm
+combined_dataset/female_013655.wav|dejɛrlˈɪ ɟœɾˈyʃynøz bˈizɪm itʃˈɪn œnæmlˈɪ nazˈan hˈanɯm
+combined_dataset/male_000204.wav|dʒøzdˈan doːɾuɫamasˈɯ japˈarsanɯz tʃabˈʊk sonˈʊtʃ aɫˈɯɾɯz
+combined_dataset/female_004260.wav|standˈart varɫˈɯk jœnetiminˈɛ uɫaʃtˈɯɯɯnɯz itʃˈɪn teʃekːˈør edˈeɾɪm bæn ahmˈɛt
+combined_dataset/female_010331.wav|sabrijˈɛ hˈanɯm byjˈøk bɪr ɟyvˈænlɛ ilˈɛrlejelɪm ʃɪfrˈenizɪ ødʒrˈɛtsɪz jenilejebilˈiɾɪz
+combined_dataset/female_002965.wav|siɡaɾˈa kʊɫɫanˈɯjɔr mˈusunʊz jˌɔksa hˈɪtʃ kʊɫɫˈanmadɯnɯz mɯ
+combined_dataset/male_014711.wav|ɟœɾøʃmˈemizɪ antaɫjadˈan japtˈɯɯɯnɯzɯ tejˈɪt edˈɛr mˈisinɪz
+combined_dataset/female_007625.wav|dʒaɾˈɪ hesˈap kapanˈɯʃ ɟeɾɛktʃˈenizɪ kɯsadʒˈa atʃɯkɫajabilˈɪr mˈisinɪz
+combined_dataset/male_000707.wav|meɾˈak ɛtmejˈɪn doːɾˈuɫama sɔnrasˈɯ paɾˈa hemˈæn baːɫanˈɯr
+combined_dataset/female_004717.wav|sizˈɛ koɫajɫˈɯk ɔɫmasˈɯ itʃˈɪn iletˈiʃɪm bɪlɟilˈeɾimɪ pajɫaʃajˈɯm ʊjɡˈʊn ɔɫdˈuːnʊzda banˈa ɟeɾˈɪ dœnebilˈɪrsinɪz
+combined_dataset/male_016258.wav|ˈanɫadɯm hidajˈɛt bˈɛj bʊ pˈaɾanɯn dʒenazˈɛ vɛ defˈɪn masrafɫaɾɯnˈɯ østlenedʒˈɛk kiʃijˈɛ mɪ jˌɔksa sɛvdˈijinɪz biɾinˈɛ mɪ ɟɪtmesinˈɪ ɪstˈɛrsinɪz
+combined_dataset/male_021937.wav|pakˈɛt sˈetʃimɪ kɯsmɯndˈa pˌɛdˌɛfˈɛ jˈøklemɛ ɟœɾynˈyjɔr mʊ
+combined_dataset/male_014223.wav|amˈadʒɯmɯz mømkˈøn oɫˈan ˈæn jˈøksɛk teminatˈɯ bøttʃˈenizɛ ˈæn ʊjɡˈʊn malijˈɛtlɛ sunabɪlmˈɛk
+combined_dataset/male_010225.wav|pakˈɛt pɫˈanɫama notunˈʊ ˈɛkledɪm prˈɪm vɛ polˈitʃɛ detajˈɯ da tamˈam
+combined_dataset/male_008488.wav|bˈœjlɛ ɟœɾøʃmˈɛk itʃˈɪn ʊjɡˈʊn saˈat sœjlejebilˈɪr mˈisinɪz
+combined_dataset/female_004908.wav|refeɾˈans kajdɯnɯzˈɯ oɫʊʃtuɾˈujoɾʊm metˈɪn bˈɛj numaɾˈanɯzɯ sɪstæmdˈɛ nˈɔt edˈijoɾʊm
+combined_dataset/male_003078.wav|dʒøzdˈan bakijˈenizɪ kɔntrˈɔɫ edˈɪp dʒevˈap veɾejˈɪm mɪ
+combined_dataset/male_021039.wav|paɾˈa tʃˈekimɪ sɔnrasˈɯ profˈɪl puanˈɯ dejɪʃtˈɪ mɪ pakˈɛt pɫanɫamasˈɯ japaɫˈɯm mɯ
+combined_dataset/male_002008.wav|yɾˈøn sˈetʃimɪ tamˈam ɟœɾøntylemˈɛk itʃˈɪn sˈɔn bɪr onˈaj aɫadʒˈaːɯm
+combined_dataset/male_003087.wav|sizˈɪ anɫˈɯjoɾʊm dʊjɡˈʊ hˈanɯm bʊ daɫɡaɫˈanma ˈɪnsanɯ tedɪrɡˈɪn edˈɛr
+combined_dataset/male_017388.wav|pɯnˈar hˈanɯm sœjledɪklˈeɾinizɪ tˈam ɟœɾˈemedɪm bˈœjlɛ mɪ
+combined_dataset/female_002205.wav|ˈadresinɪz avdʒɯɫˈar barbaɾˈɔs bʊɫvaɾˈɯ oɫaɾˈak kajˈɯt edˈijoɾʊm vɛ kapˈɯ numaɾˈanɯzɯ da ridʒˈa ededʒˈejɪm
+combined_dataset/male_013095.wav|baʃɫanɡˈɯtʃ taɾihinˈɪ dɛ tamamˈæn sɪz setʃˈijɔrsunʊz bʊ jøzdˈæn bʊ konudˈa strˈɛs japmˈanɯza ɟeɾˈɛk jˈɔk
+combined_dataset/female_003753.wav|bʊ polˈitʃɛ tyɾˈø vadelˈɪ hajˈat siɡɔrtasˈɯ mɯ onˈʊ nɛtlɛʃtiɾebilˈɪr mˈijɪz
+combined_dataset/female_014924.wav|anɫˈɯjoɾʊm ʃøkrˈø bˈɛj syɾedʒˈɪ adˈɯm adˈɯm nɛtlˈɛʃtiɾelɪm
+combined_dataset/male_015311.wav|bɪlɟileɾˈɪ doːɾuɫadɯktˈan sɔnrˈa sizˈɛ ʊjɡˈʊn pɫanɫaɾˈɯ hemˈæn ɛkrˈanɯmda lɪstelejedʒˈejɪm
+combined_dataset/male_009815.wav|refeɾˈans numaɾˈanɯz bˈɛʃ bˈɛʃ bˈɛʃ icˈi dˈœrt dˈœrt icˈi bˈɛʃ dˈokuz aɫtˈɯ jedˈi bunˈʊ nˈɔt edebilˈɪrsinɪz
+combined_dataset/female_019959.wav|efˈɛs varɫˈɯk jœnˈetimɪ refeɾˈansɯnɯz icˈi ˈytʃ sɯfˈɯr icˈi jedˈi jedˈi dˈœrt aɫtˈɯ bˈir bˈir ˈytʃ
+combined_dataset/male_023293.wav|vadˈɛ farkˈɯ vɛ fˈaɪz duɾumunˈʊ bɪrlɪktˈɛ nɛtlˈɛʃtiɾelɪm
+combined_dataset/male_003625.wav|sinˈan bˈɛj biɾazdˈan jenˈɪ ʃˈɪfrejɪ bɪrlɪktˈɛ kuɾˈaɾɯz
+combined_dataset/female_011314.wav|tɛslimatˈɯ bˈœjlɛ fatihˈɛ ɟœndɛrmemˈɪ ɪstˈɛrmisinɪz
+combined_dataset/female_015953.wav|buɟønkˈø ɟœɾˈøʃmedɛ tʃˈœzymø bˈœjlɛ nˈɛt anɫatabɪldˈɪm mɪ
+combined_dataset/male_022117.wav|ømrˈan hˈanɯm pændɪktˈæn aɾadˈɯɯɯnɯzɯ ɟœɾˈyjoɾʊm jardɯmdʒˈɯ oɫˈujoɾʊm
+combined_dataset/male_013083.wav|mˈɛrhaba redʒˈɛp bˈɛj bæn mastɛrdʒardtˈan jusˈʊf sizˈɛ jardɯmdʒˈɯ oɫˈujoɾʊm
+combined_dataset/female_017767.wav|bʊ dˈuɾʊm ørkytydʒˈø oɫabilˈɪr møʃteɾˈɪ ɟyvænlijˈɪ itʃˈɪn ødʒrˈɛt ˈaɫmadan ɪʃlemˈɪ dyzænlˈijoɾʊz
+combined_dataset/male_011484.wav|yɾˈøn tɛslimɪndˈɛ ødʒrˈɛt tʃɯkˈarsa yzølmejˈɪn tʃoːˈʊ zamˈan ødʒrˈɛtsɪz oɫˈʊr
+combined_dataset/male_007462.wav|ɯbanˈɯ dikːatlˈidʒɛ pajɫaʃadʒˈaːɯm lˈøtfæn sˈɯɾajɫa kɔntrˈɔɫ edˈɛr mˈisinɪz
+combined_dataset/female_001240.wav|bʊ ˈøtʃ setʃenɛktˈæn hanɟisˈɪ bøttʃˈenizɛ vɛ bɛklˈæntinizɛ dahˈa jakˈɯn duɾˈujɔr
+combined_dataset/male_010534.wav|dʒøzdˈan haɾekɛtleɾinˈɛ dʒevˈap dʒaɾˈɪ hesaptˈa ɟœɾynˈyjɔr
+combined_dataset/male_014621.wav|ɪstˈɛrsenɪz ˈɛpˈɔsta adrˈesinizɪ bɪr kˈɛz dahˈa baʃtˈan aɫˈɯp sˈɔn kɔntrolˈø japabilˈiɾɪm
+combined_dataset/male_014716.wav|ˈanɫadɯm kiɫˈonuzʊ aɫtmˌɯʃdˈœrt kiɫˈɔ oɫaɾˈak ɟøndʒællˈijoɾʊm
+combined_dataset/female_008934.wav|ɟeɾˈɛktʃɛ vɛ ødʒrˈɛt kalæmleɾinˈɪ tˈɛk tˈɛk hesapɫajadʒˈaːɯm
+combined_dataset/male_018748.wav|baʃakʃehɪrdekˈɪ kajdɯnɯzˈɯ ɟœrdˈøm kredˈɪ notˈʊ sɔrɡusunˈa ɟɛtʃmˈɛk yzeɾejˈɪm ʃɪmdˈɪ
+combined_dataset/male_004493.wav|zelihˈa hˈanɯm ødʒrˈɛtsɪz kʊrjˈɛ setʃenejinˈɪ dɛ dyʃynˈørsenɪz sizˈɪn itʃˈɪn ʊjɡˈʊn oɫˈʊr
+combined_dataset/female_003913.wav|polˈitʃɛ ɟældɪktˈæn sɔnrˈa ˈɔn dˈœrt ɟønlˈøk syɾˈɛ itʃɪndˈɛ ɪptˈaɫ hˈakːɯnɯz da buɫunˈujɔr
+combined_dataset/male_011957.wav|dahˈa ˈœndʒɛ brɔnkɔskopˈɪ ɟibˈɪ bɪr ɪʃlˈæm japtɯrdˈɯɯɯnɯzɯ belˈɪrtːinɪz mɪ
+combined_dataset/female_015983.wav|ɯbˈanɯnɯzɯ javaʃtʃˈa okˈujoɾʊm lˈøtfæn kɔntrˈɔɫ edˈɪp doːɾˈʊ oɫˈʊp ɔɫmadɯɯɯnˈɯ sœjlejˈɪn
+combined_dataset/female_003890.wav|bʊ syɾˈɛ itʃɪndˈɛ polˈitʃɛnɪn sizˈɛ ʊjɡˈʊn oɫˈʊp ɔɫmadɯɯɯnˈɯ rahattʃˈa dejɛrlændɪrmˈenizɪ œneɾˈiɾɪm
+combined_dataset/male_010622.wav|dˈɔndʊrma sɔnrasˈɯ tɛkrˈar eɾˈiʃɪm saːɫanɯndʒˈa ɟyvænlˈɪk kɔntrolˈøjlɛ hesˈabɯnɯz nɔrmˈaɫ ʃekɪldˈɛ atʃɯɫadʒˈak
+combined_dataset/male_018030.wav|kɪmlˈɪk kɔntrolynˈø hɯzɫɯdʒˈa tamamɫajˈɯp devˈam edelˈɪm
+combined_dataset/female_008669.wav|dʒevˈabɯnɯzɯ aɫɯndʒˈa ɪʃlemˈɪ atʃˈɯkɫama ˌilɛ kajdededʒˈejɪm
+combined_dataset/female_018321.wav|byjˈøk møʃteɾˈɪ ɛkranɯndˈa tˈøm ødʒrˈɛt kalæmleɾinˈɪ nˈɛt ɟœɾøntylejebiledʒˈɛksinɪz
+combined_dataset/female_003032.wav|ˌonbˈɛʃ bˈin doɫˈar itʃˈɪnsɛ ʃʊ ˈan dˈœrtjˈyz ˈon doɫˈar sevijesɪndˈɛ bɪr fijˈat tʃɯkˈɯjɔr
+combined_dataset/male_005136.wav|baːɫantɯjˈɯ saːɫamˈak adɯnˈa bɪlɟileɾˈɪ doːɾuɫamˈak ɪstˈijoɾʊm
+combined_dataset/female_014254.wav|dʒevˈap nˈɛt dˈejɪlsɛ tɛkrˈar edebilˈɪrsinɪz ɪbrˈahɪm bˈɛj ˈadʒɛlɛ ɛtmejˈɪn
+combined_dataset/female_010189.wav|sizˈɛ nˈɛt dʒevˈapɫa dʒaɾˈɪ ɪʃlˈæm œzetinˈɪ tʃɯkaɾajˈɯm
+combined_dataset/male_007220.wav|ˈadresinɪz bahtʃeliɛvlˈɛr mɪ tejˈɪt edˈɛr mˈisinɪz
+combined_dataset/female_013180.wav|dʒevˈabɯnɯzɯ aɫɯndʒˈa dʒaɾˈɪ hesˈap haɾeketinˈɪ ɪndʒelejedʒˈejɪm
+combined_dataset/male_007917.wav|nɛtlɛʃmesˈɪ itʃˈɪn fatuɾˈa satɯrɫaɾɯnˈɯ tˈɛk tˈɛk soɾadʒˈaːɯm
+combined_dataset/female_018905.wav|kaːɯthanˈɛ atatˈørk bʊɫvaɾˈɯ adresinˈɪ nɛtlˈɛʃtiɾelɪm metˈɪn bˈɛj refeɾˈans kajdˈɯ doːɾˈʊ mʊ
+combined_dataset/male_008529.wav|baːɫantɯjˈɯ saːɫamˈak itʃˈɪn bɪrkˈatʃ bɪlɡˈɪ aɫadʒˈaːɯm
+combined_dataset/male_009348.wav|ɪbrˈahɪm bˈɛj sˌɛmˌɛsˈɛtekˈɪ doːɾˈuɫama kodunˈʊ nˈɛtdʒɛ okujabilˈɪr mˈisinɪz
+combined_dataset/female_003399.wav|ɪstˈɛrsenɪz ʃɪmdˈɪ baʃvuɾujˈʊ devˈam etːiɾelˈɪm ɪstˈɛrsenɪz dɛ sizˈɛ ʊjɡˈʊn bɪr saatːˈɛ tɛkrˈar aɾajaɾˈak tamˈamɫajaɫɯm
+combined_dataset/male_005372.wav|ødʒrˈɛtsɪz ɟøndʒˈællemɛ vˈarsa onˈʊ da ɛklejedʒˈejɪm
+combined_dataset/male_001878.wav|ˈœndʒɛ bɔrdʒˈʊn kajnaːɯnˈɯ œːɾænmˈɛk ɪstˈijoɾʊm sɔnrˈa pɫanˈɯ dejɛrlændiɾedʒˈejɪz
+combined_dataset/female_015139.wav|ødʒrˈɛtsɪz oɫaɾˈak ɟœɾøntylemˈɛk adɯnˈa dʒømlˈenizɪ jenidˈæn kuɾabilˈɪr mˈisinɪz
+combined_dataset/female_002254.wav|lˈøtfæn kˈɯsa syɾˈɛ hatːˈa bɛklejˈɪn hemˈæn aɾˈamajɯ baʃɫatˈɯjoɾʊm
+combined_dataset/female_008336.wav|œdˈemɛ ɟynynˈø œnˈɛ aɫmˈak ɪstˈɛrmisinɪz jaʃˈar bˈɛj
+combined_dataset/male_019852.wav|tˈɛ rˈɛ jedˈi bˈɛʃ sɯfˈɯr sɯfˈɯr bˈir ˈytʃ secˈɪz doːɾˈʊ mʊ
+combined_dataset/male_010256.wav|ødʒrˈɛtsɪz oɫaɾˈak ɟœɾøntylemˈɛk adɯnˈa dʒømlˈenizɪ jenidˈæn kuɾabilˈɪr mˈisinɪz
+combined_dataset/male_018043.wav|tˌɛdʒˈɛ kɪmlˈɪk sɔrɡusˈʊ itʃˈɪn onˈaj veɾˈijɔr mˈusunʊz
+combined_dataset/female_021959.wav|dʒevˈap ɟedʒɪktˈɪjsɛ œzˈør dilˈeɾɪm randevujˈʊ ajarɫˈɯjoɾʊm
+combined_dataset/female_016427.wav|refeɾˈans numaɾˈanɯzɯ nˈɔt ɛtmˈɛk ɪstˈɛrmisinɪz pˈakizɛ hˈanɯm
+combined_dataset/female_012727.wav|dʒevˈap ɟelˈɪndʒɛ dʒaɾˈɪ ɛkrandˈan doːɾuɫˈamajɯ tamamɫajadʒˈaːɯm rahˈat oɫˈʊn
+combined_dataset/male_013156.wav|zamˈan ajɯrdˈɯɯɯnɯz itʃˈɪn teʃekːˈør edˈeɾɪm ijˈi ɟønlˈɛr dilˈeɾɪm
+combined_dataset/female_006408.wav|refeɾˈans numaɾˈanɯzɯ kajdˈa aɫˈɯjoɾʊm secˈɪz icˈi sɯfˈɯr sɯfˈɯr dˈœrt bˈir sɯfˈɯr dˈœrt secˈɪz sɯfˈɯr sɯfˈɯr ʃɛklɪndˈɛ ɟœɾynˈyjɔr
+combined_dataset/female_006001.wav|jaʃatːˈɯɯɯm kaɾɯʃɯkɫˈɯk itʃˈɪn œzˈør dilˈeɾɪm sɪstæmdekˈɪ œzˈæl nɔtɫˈar ɟœɾønmemˈɪʃ
+combined_dataset/female_015211.wav|ɟeɾˈɛktʃɛ kajdɯnˈɯ ɟøndʒællejˈɪp ɪʃlemˈɪ ɟɛrtʃɛklɛʃtiɾedʒˈejɪm
+combined_dataset/female_006217.wav|œdˈemɛ pɫanɯnˈɯ ɟœzdˈæn ɟetʃiɾˈɪp tʃˈœzøm œneɾedʒˈejɪm
+combined_dataset/male_009962.wav|dɔsjanˈɯn fotoːɾafˈɯ nˈɛt ɔɫsˈʊn kenarɫˈar ɟœɾynˈør kaɫsˈɯn
+combined_dataset/male_017258.wav|tˌɛdʒˈɛ kɪmlˈɪk numaɾˈanɯzɯn sˈɔn dˈœrt hanesinˈɪ pajɫaʃˈɯr mˈɯsɯnɯz
+combined_dataset/female_015863.wav|ɛrzuɾʊmdakˈɪ kɔnjaaɫtˈɯ dʒadːesˈɪ kajdɯnˈɯ tejˈɪt edelˈɪm sɔnrˈa devˈam edelˈɪm
+combined_dataset/male_003406.wav|hesˈap atʃɯɫɯʃɯnˈɯ biɾɛjsˈæl mɪ jˌɔksa ʃɪrkˈɛt kajdˈɯjɫa mɯ japaɫˈɯm
+combined_dataset/female_023164.wav|alæmdˈar dʒadːesˈɪ dʒivaɾɯndˈa tʃˈekɪm soɾunˈʊ oɫˈujɔr mʊ
+combined_dataset/female_017990.wav|baːɫantɯjˈɯ saːɫamˈak adɯnˈa kˈɯsa soɾuɫˈar soɾadʒˈaːɯm
+combined_dataset/female_007030.wav|adˈɯm adˈɯm ilˈɛrlejelɪm ˈœndʒɛ bˈɔrtʃ tutˈaɾɯnɯzɯ bɪrlɪktˈɛ tejˈɪt edelˈɪm
+combined_dataset/male_023138.wav|haɾikˈa ɟœnˈøl hˈanɯm paɾˈa pɫanˈɯ onajˈɯ itʃˈɪn kodˈʊ ɟiɾˈɪndʒɛ syɾˈɛtʃ tamamɫanˈɯr
+combined_dataset/male_011453.wav|pˈɔsta ˌilɛ bælɡˈɛ ɪstˈɛrsenɪz pɫanɫajˈɯp paketˈɛ ɛklejebilˈiɾɪm nuɾˈɪ bˈɛj
+combined_dataset/male_015847.wav|bʊ tanˈɯ sizˈɛ jakɫaʃˈɯk ˈøtʃ ˈaj ˈœndʒɛ mɪ kɔnmʊʃtˈʊ doːɾˈʊ mʊ
+combined_dataset/male_010937.wav|bæn jˈelɪz standˈart varɫˈɯk jœnetimɪndˈæn aɾˈɯjoɾʊm nedʒatˈɪ bˈɛj
+combined_dataset/female_014007.wav|sˈaː oɫˈʊn joːʊnɫˈʊk ˈɔɫsa da doːɾuɫˈamajɯ hɯzɫˈɯ japadʒˈaːɯm
+combined_dataset/male_007048.wav|tɛslimˈat adrˈesinizɪ mˈɛrsɪn ɡazˈɪ bʊɫvaɾˈɯ oɫaɾˈak ɟœɾˈyjoɾʊm
+combined_dataset/male_009146.wav|refeɾˈansɫa dʒevˈap veɾˈɪp dʒaɾˈɪ syɾedʒˈɪ baʃɫatadʒˈaːɯm
+combined_dataset/female_001671.wav|ejˈɛr hazˈɯrsanɯz bɪr sɔnrakˈɪ adɯmdˈa baʃvˈuɾunuzʊ vˈisa sɪstemˈɪ yzeɾɪndˈæn ɟœndeɾedʒˈejɪm
+combined_dataset/female_008135.wav|kytʃøktʃˈɛkmedʒɛ ʃubˈenizɛ œzˈæl fɯrsˈat vˈar mɯ kɔntrˈɔɫ edejˈɪm mɪ
+combined_dataset/female_002552.wav|dʊjdʊkɫˈaɾɯmɯ nɛtlɛʃtɪrmˈɛk itʃˈɪn soɾˈujoɾʊm bʊ dˈuɾʊm anksijetˈɛ mɪ jˌɔksa trˈavma sɔnrasˈɯ strˈɛs bozʊkɫˈʊː mʊ oɫaɾˈak ɟetʃˈijɔr
+combined_dataset/female_013464.wav|refeɾˈans numaɾˈanɯz dˈœrt aɫtˈɯ secˈɪz bˈɛʃ secˈɪz jedˈi ˈytʃ dˈœrt dˈokuz ˈytʃ secˈɪz oɫaɾˈak ɟœɾynˈyjɔr redʒˈɛp bˈɛj
+combined_dataset/male_000734.wav|ʃɪmdˈɪ tutaɾˈɯ vɛ vadˈɛ setʃenɛkleɾinˈɪ nˈɛt anɫatadʒˈaːɯm
+combined_dataset/male_013137.wav|œndʒelˈɪklɛ tˈørkijɛ dʒʊmhuɾijetˈɪ vatandaʃˈɯ ɔɫdˈuːnuzʊ vɛ tˌɛdʒˈɛ kɪmlˈɪk numaɾˈanɯzɯ tejˈɪt edebɪlmˈemɪz ɟeɾekˈijɔr
+combined_dataset/male_019655.wav|møʃteɾˈɪ ɟyvænlijˈɪ itʃˈɪn syɾedʒˈɪ adˈɯm adˈɯm jyɾytedʒˈejɪm
+combined_dataset/female_010441.wav|ɟyvænlˈɪk itʃˈɪn doːɾuɫˈamajɯ hɯzɫɯdʒˈa tamˈamɫajaɫɯm
+combined_dataset/female_017072.wav|dʒaɾˈɪ hesˈap dʒøzdˈan haɾeketinˈɪ kɔntrˈɔɫ ededʒˈejɪm
+combined_dataset/male_006069.wav|bˌenˌɛpˈɛ paɾibˈas dʒardˈɪf tˈørkijɛ kajdɯnɯzˈɯ ʃɪmdˈɪ ɟøndʒællˈijoɾʊm
+combined_dataset/female_016450.wav|bæn tʃaːɾˈɯ dˈɯʃ tidʒaɾˈɛt akreditˈɪf syɾˈedʒinizɪ takˈɪp edˈijoɾʊm
+combined_dataset/female_017190.wav|bælɟejˈɪ jøklejˈɪp doːɾuɫamˈak itʃˈɪn baːɫantˈɯ sˈaːɫajajɯm mɯ
+combined_dataset/male_013299.wav|siɡaɾˈa vejˌa tytˈøn yɾynˈø kʊɫɫanˈɯjɔr mˈusunʊz kʊɫɫanˈɯjɔrsanɯz ɟøndˈɛ ɔrtˈaɫama nˈɛ kadˈar tyketˈijɔrsunʊz
+combined_dataset/female_004161.wav|ɟˈøndøz aɫdˈɯɯɯnɯz iɫˈatʃ ʊjkˈʊ halˈɪ japmadɯɯˈɯ itʃˈɪn tɛrdʒˈɪh edilˈijɔr doːɾˈʊ mʊ
+combined_dataset/male_023566.wav|fˈaɪz jˈa da fˈɔn ɪʃlemˈɪ jˈapmadan ˈœndʒɛ doːɾˈuɫama ʃˈart sakˈɪn oɫaɫˈɯm
+combined_dataset/female_013615.wav|hidajˈɛt bˈɛj ɪʃlˈæm œndʒesˈɪ sˈɔn kɔntrolˈø hemˈæn japaɫˈɯm
+combined_dataset/female_017054.wav|dˈɔndʊrma talˈebinizɪ hemˈæn sɪstæmdˈæn kɔntrˈɔɫ edˈijoɾʊm
+combined_dataset/female_005752.wav|sɛrpˈɪl hˈanɯm hesˈabɯnɯzɯ koɾumˈak itʃˈɪn adɯmɫaɾˈɯ hɯzɫɯdʒˈa tamˈamɫajaɫɯm
+combined_dataset/female_022114.wav|akreditˈɪf ʃartɫaɾɯnˈɯ sɪstˈemɛ ˈɛkledɪm kɔntrˈɔɫ edebilˈɪrsinɪz
+combined_dataset/female_023022.wav|møʃteɾˈɪ tæmsɪldʒisˈɪ yɾynˈø bɪrlɪktˈɛ ɟœɾøntylejebilˈɪr
+combined_dataset/male_005082.wav|bʊ syɾˈɛtʃ joɾudʒˈʊ oɫabilˈijɔr sizˈɪ tʃˈɔk ijˈi anɫˈɯjoɾʊm
+combined_dataset/female_022234.wav|dʒaɾˈɪ hesˈap dʒevabɯnˈɯ da ɛʃzamanɫˈɯ kɔntrˈɔɫ ededʒˈejɪm
+combined_dataset/female_018427.wav|ʊjɡˈʊn zamˈanɯnɯzɯ nˈɔt ˈetːɪm takvˈimɛ ɛklˈijoɾʊm
+combined_dataset/male_009976.wav|byjˈøk ɟœɾøntˈø nˈɛtsɛ ødʒrˈɛtsɪz jˈøklemɛ tamamɫanˈɯr
+combined_dataset/female_022177.wav|yɾˈøn kajdɯnˈɯz ɟœɾøntylenˈijɔr doːɾˈuɫama ødʒrˈɛtsɪz ilɛrlˈijɔr
+combined_dataset/female_019988.wav|jaʃadˈɯɯɯnɯz belɪrsɪzlijˈɪ anɫˈɯjoɾʊm hamˈɪt bˈɛj tˈøm syɾedʒˈɪ œzˈɛtledɪm
+combined_dataset/male_010252.wav|sizˈɪ anɫˈɯjoɾʊm doːɾˈʊ œːɾænmˈɛk itʃˈɪn sœjledˈijinizɪ jenidˈæn aɫadʒˈaːɯm
+combined_dataset/female_015901.wav|refeɾˈans numaɾasɯnˈɯ tɛkrˈar okˈujoɾʊm dʒevˈap veɾˈɪr mˈisinɪz
+combined_dataset/male_023569.wav|dʒevabˈɯ aɫdɯktˈan sɔnrˈa sɔrɡujˈʊ ɟɛrtʃɛklɛʃtiɾedʒˈejɪm
+combined_dataset/male_019323.wav|adˈɯm adˈɯm ilˈɛrlejelɪm sɪz sadˈedʒɛ soɾuɫˈaɾɯmɯ janɯtɫajˈɯn lˈøtfæn
+combined_dataset/male_013925.wav|ɟenældˈɛ ˈæn saːɫɯkɫɯsˈɯ tɔpɫˈam tutardˈan tʃˈɔk ajɫˈɯk œdˈemenɪn sørdyɾylebilˈɪr ɔɫmasɯnˈa odakɫanmˈak oɫˈujɔr
+combined_dataset/male_016057.wav|zamˈan ajɯrdˈɯɯɯnɯz itʃˈɪn teʃekːˈør edˈeɾɪm taɾˈɯk bˈɛj ɟœɾøʃmˈɛk yzeɾˈɛ
+combined_dataset/female_004961.wav|œdˈemɛ pɫanɯnˈɯ ɟœzdˈæn ɟetʃiɾˈɪp tʃˈœzøm œneɾˈijoɾʊm ʃɪmdˈɪ
+combined_dataset/male_003003.wav|ɪstˈɛrsenɪz bɛklejˈɪn bæn kajdˈɯ atʃˈɯk tutadʒˈaːɯm boɾˈa bˈɛj
+combined_dataset/female_004765.wav|mɛvdʒˈʊt ʃɪrkˈetinɪzlɛ ɟœɾyʃˈørcæn sizˈɛ sœjlenˈæn teminˈat rakamɯnˈɯ hatɯrlˈɯjɔr mˈusunʊz
+combined_dataset/male_021005.wav|kodunuzˈʊ sadˈedʒɛ ɪʃlˈæm itʃˈɪn dejɛrlændiɾedʒˈejɪz
+combined_dataset/male_001114.wav|ʃɪmdˈɪ ɟœzdˈæn ɟetʃiɾˈɪp doːɾˈʊ ʃekɪldˈɛ ɟœndɛrmˈɛk ɪstˈijoɾʊm
+combined_dataset/male_015613.wav|bʊ setʃenɛklɛrdˈæn hanɟisˈɪ sizˈɪn itʃˈɪn dahˈa œndʒelɪklˈɪ dyʃˈøk prˈɪm mɪ jˌɔksa dahˈa jˈøksɛk teminˈat mɯ
+combined_dataset/male_009831.wav|œzˈør dilˈeɾɪm dʒevˈap syɾesˈɪ uzadˈɯ dʒaɾˈɪ kajɯtːˈa ɟedʒˈɪkmɛ ɔɫdˈʊ
+combined_dataset/male_008324.wav|ɯbanˈɯ javaʃtʃˈa okˈujoɾʊm doːɾˈʊ ɔɫduːnˈʊ tejˈɪt edˈɛr mˈisinɪz
+combined_dataset/male_000674.wav|ɟœɾˈøʃmejɪ kajˈɯt aɫtɯnˈa aɫˈɯjoɾʊm œzˈæl bɪlɟilˈeɾinɪz koɾunˈʊr
+combined_dataset/female_022490.wav|fatuɾˈa œdemesɪndˈɛ farkɫˈɯ ɯbˈan vˈar mɯ vɪldˈan hˈanɯm
+combined_dataset/male_015071.wav|polˈitʃɛ bedelˈɪ vɛ œdˈemɛ pɫanɯnˈɯ nɛtlɛʃtˈɪrmedæn ilɛrlˈemejelɪm
+combined_dataset/female_018005.wav|sonudʒˈʊ ɟœrdˈyːmøzdɛ nˈɛ ˈanɫama ɟældijinˈɪ bɪrlɪktˈɛ joɾʊmɫˈaɾɯz
+combined_dataset/female_003778.wav|mˈɛrhaba sˈelɪm bˈɛj bæn ɔrhˈan bˌenˌɛpˈɛ paɾibˈas dʒardˈɪf tørkijedˈæn aɾˈɯjoɾʊm
+combined_dataset/male_015432.wav|kˈɯsa bɪr bˈɛklemɛ ridʒˈa ededʒˈejɪm sɪstæmdˈɛ aɫtɛrnatˈɪf pɫanɫaɾˈɯ taɾˈɯjoɾʊm
+combined_dataset/male_015233.wav|ɟeɾˈɪ aɾamˈam itʃˈɪn ʊjɡˈʊn zamˈanɯnɯz jakɫaʃˈɯk otˈuz dakikˈa sɔnrˈa mˈɯdɯr
+combined_dataset/male_007821.wav|ɯbanˈɯ bɪrlɪktˈɛ kɔntrˈɔɫ edelˈɪm sɪstæmdˈɛ ɟœɾynˈæn ɯbˈan doːɾˈʊ mʊ ʃøkrˈø bˈɛj
+combined_dataset/female_001529.wav|baʃkˈa bɪr konudˈa jardɯmdʒˈɯ ɔɫmamˈɯ ɪstˈɛrmisinɪz sɛvɡˈɪ hˈanɯm
+combined_dataset/male_022649.wav|behijˈɛ hˈanɯm bæn ryjˈa kˈɔnja kajdɯnɯzˈɯ bɪrlɪktˈɛ topˈarɫajaɫɯm
+combined_dataset/female_017534.wav|ɟœɾˈøʃmɛ sonʊndˈa œːɾændˈijimɪz detajɫaɾˈɯ dejɛrlændiɾˈɪp œzˈɛt ɟetʃˈijoɾʊm
+combined_dataset/male_004670.wav|ɟelˈɪr bælɟˈenizɪ ʃɪmdˈɪ jˈøkledinɪz mɪ jˌɔksa biɾazdˈan mɯ ɟœndeɾedʒˈɛksinɪz
+combined_dataset/male_002721.wav|ødʒrˈɛt tʃɯkˈarsa ˈœndʒɛ sizˈɛ sœjlejedʒˈejɪm sˈørprɪz ɔɫmˈaz
+combined_dataset/male_018033.wav|fatuɾˈa vejˌa vɛrɡˈɪ kajdˈɯjɫa ɛʃleʃˈæn bɪr bˈɪlɡinɪz vˈar mɯ
+combined_dataset/male_010098.wav|nuɾˈɪ bˈɛj syɾedʒˈɪn byjˈøk kɯsmˈɯ ødʒrˈɛtsɪz vɛ hɯzɫˈɯ ilɛrlˈɛr
+combined_dataset/female_005926.wav|ødʒrˈɛt jˈa da ɪptˈaɫ ɟeɾɛktʃˈenizɪ kɯsadʒˈa atʃɯkɫˈar mˈɯsɯnɯz
+combined_dataset/female_010500.wav|bʊ syɾˈɛtʃ joɾudʒˈʊ oɫabilˈijɔr janɯnɯzdajˈɯm mynɛvvˈɛr hˈanɯm
+combined_dataset/male_016194.wav|kajɯtɫaɾˈɯmɯzda adɯnɯzˈɯ tørkˈan jɯɫmˈaz oɫaɾˈak ɟøndʒællˈijoɾʊm
+combined_dataset/female_020539.wav|ˈœndʒɛ œdˈemɛ koʃʊɫɫaɾɯnˈɯ œzˈɛtlejejɪm sɔnrˈa ɟœndˈeɾɪm ɛvrakɯnˈɯ ɟœzdˈæn ɟetʃiɾˈɪp tʃˈœzøm sunajˈɯm
+combined_dataset/male_016954.wav|pˈɔsta ˌilɛ ɟelˈæn prɔmptˈʊ hemˈæn atʃˈɯp onˈajɫajaɫɯm
+combined_dataset/female_009475.wav|refeɾˈans secˈɪz bˈir dˈokuz aɫtˈɯ icˈi bˈɛʃ aɫtˈɯ icˈi secˈɪz icˈi sɯfˈɯr kajdɯnˈɯ ˈatʃtɯm
+combined_dataset/male_016528.wav|aɾadˈɯɯɯmda aɾajˈan numaɾˈa oɫaɾˈak sɯfˈɯrbˈɛʃˈytʃicˈɪ dˈœrtjˈyz kˌɯrkbˈir seksˌɛnjedˈi jirmˌiˈytʃ ɟœɾynedʒˈɛk lˈøtfæn kajdedˈɪn
+combined_dataset/female_017774.wav|dʒøzdˈan eɾiʃiminˈɪ ʃɪmdˈɪ kapatˈɯp dʒevˈap bˈɛklejelɪm
+combined_dataset/female_019314.wav|fɪndˈɛks kajdɯnɯzˈa ɟœɾˈɛ refeɾansˈɯ ʃɪmdˈɪ kɔntrˈɔɫ edˈijoɾʊm
+combined_dataset/male_001937.wav|myzɛjjˈæn hˈanɯm bʊ syɾˈɛtʃ joɾudʒˈʊ ɟelebilˈɪr sizˈɪ anɫˈɯjoɾʊm
+combined_dataset/male_019647.wav|dʒevˈabɯnɯzɯ aɫɯndʒˈa dʒaɾˈɪ hesˈap ɟeɾɛktʃesinˈɪ atʃɯkɫajˈɯp ɪʃlemˈɪ ɟɛrtʃɛklɛʃtiɾedʒˈejɪm
+combined_dataset/female_018258.wav|nɛvzˈat bˈɛj baːɫantɯdˈa joːʊnɫˈʊk oɫabilˈijɔr sizˈɪ anɫˈɯjoɾʊm
+combined_dataset/male_014544.wav|kˈɯsa bɪr kɔntrˈɔɫ japˈɯjoɾʊm lˈøtfæn hatːˈa kaɫˈɯn
+combined_dataset/female_006139.wav|ɟedʒˈɪkmɛ itʃˈɪn œzˈør dilˈeɾɪm hemˈæn kɔntrˈɔɫ edˈijoɾʊm
+combined_dataset/male_012976.wav|siɡɔrtˈa ʃɪrkɛtleɾˈɪ kɪmlˈɪk doːɾuɫamasˈɯ itʃˈɪn ɟenællˈɪklɛ tˌɛdʒˈɛ kɪmlˈɪk numaɾasˈɯ ɪstˈɛr bunˈʊ pajɫaʃmˈanɯz sizˈɪn itʃˈɪn ʊjɡˈʊn mˈudʊr
+combined_dataset/female_003497.wav|dilˈɛrsenɪz sizˈɪ bɛklɛtmˈɛk jeɾinˈɛ ʊjɡˈʊn ɔɫdˈuːnʊzda ɟeɾˈɪ ˈaɾama japabilˈiɾɪm
+combined_dataset/male_009372.wav|dʒevˈap nˈɛt dˈejɪlsɛ tɛkrˈar edebilˈɪrsinɪz ɪbrˈahɪm bˈɛj ˈadʒɛlɛ ɛtmejˈɪn
+combined_dataset/female_011229.wav|sæltʃˈʊk bˈæn aɫanjˈa ʃubˈenɪz adɯnˈa jardɯmdʒˈɯ oɫadʒˈaːɯm
+combined_dataset/female_010029.wav|kemˈaɫ bˈɛj ɪdʒrˈa dɔsjˈanɯzɯn duɾumunˈʊ bɪrlɪktˈɛ kɔntrˈɔɫ edelˈɪm mɪ
+combined_dataset/male_001037.wav|bʊ ɪʃlemˈɪ ødʒrˈɛtsɪz ʃekɪldˈɛ dyzænlejebilˈiɾɪz meɾˈak ɛtmejˈɪn
+combined_dataset/female_015368.wav|telefˈɔn numaɾˈanɯzɯ vɛ vadˈɛ taɾihinˈɪ sœjlˈɛr mˈisinɪz
+combined_dataset/female_021520.wav|ɪstˈɛrsenɪz œrnˈɛk veɾˈɪn bæn ajnˈɯ ʃekɪldˈɛ œzˈɛtlejejɪm
+combined_dataset/male_015184.wav|ˈoːɫunuzʊn adˈɯ vɛ sojadˈɯ æmrˈɛ jɯɫmˈaz ʃɛklɪndˈɛ mɪ jazajˈɯm
+combined_dataset/male_021135.wav|lˈøtfæn møʃteɾˈɪ panelinˈɛ ɟiɾˈɪp bælɟejˈɪ jøklejˈɪn
+combined_dataset/male_022194.wav|œzˈɛt bɪlɟijˈɪ ekibˈɛ ɟœndeɾˈɪp hemˈæn aktaɾˈɯjoɾʊm
+combined_dataset/female_002239.wav|ʃɪmdˈɪ kajdˈɯ ɟeɾˈɪ aɫˈɯp ɪlɟilˈɪ ɛkranˈa jenidˈæn ɟetʃˈijoɾʊm lˈøtfæn hatːˈa kaɫˈɯn
+combined_dataset/female_012662.wav|œzˈør dilˈeɾɪm bˈœjlɛ oɫʊndʒˈa tʃˈœzøm itʃˈɪn ɟœndeɾˈijoɾʊm
+combined_dataset/female_023606.wav|maɫˈatja ɔsmanɡazˈɪ dʒadːesɪndekˈɪ ˌatˌɛmˈɛ doːɾˈʊ mʊ
+combined_dataset/female_015934.wav|sɪstæmdˈɛ kajɯtɫˈɯ ɯbˈan bˈɪlɡinɪz bʊ ʃekɪldˈɛ ɟœɾynˈyjɔr
+combined_dataset/male_013023.wav|fˈæltʃ ˈɪnmɛ vejˌa nœɾoɫoʒˈɪk bɪr rahˈatsɯzɫɯk jaʃadɯnˈɯz mɯ
+combined_dataset/female_002649.wav|teminˈat baʃɫanɡɯdʒɯnˈɯ hemˈæn mɪ ɪstˈijɔrsunʊz jˌɔksa ileɾˈɪ bɪr taɾˈɪh mɪ dyʃynˈyjɔrsunʊz
+combined_dataset/male_021500.wav|kartˈaɫ zybɛjdˈɛ hˈanɯm dʒadːesˈɪ adrˈesinizɪ kajɯtːˈa doːɾˈuɫadɯm metˈɪn bˈɛj
+combined_dataset/male_003487.wav|dʒevˈap ɟelˈɪndʒɛ atʃˈɯkɫama vɛ ødʒretˈɪ ajrɯdʒˈa hesapɫajadʒˈaːɯm
+combined_dataset/male_012451.wav|kajɯtɫˈaɾɯnɯz itʃˈɪn teʃekːˈør edˈeɾɪm ʃɪmdˈɪ polˈitʃɛ bɪlɟileɾinˈɛ ɛklˈijoɾʊm
+combined_dataset/male_013528.wav|ˈɪlk œdˈemɛ tutaɾˈɯ vɛ pɫanˈɯ oɫʊʃtʊːndˈa sizˈɛ okujˈʊp onˈajɯnɯzɯ aɫadʒˈaːɯm
+combined_dataset/female_008394.wav|ɪstˈɛrsenɪz adˈɯm adˈɯm ilˈɛrlejelɪm hˈɪtʃ ˈadʒɛlɛ ˈɛtmejelɪm
+combined_dataset/male_014158.wav|jakɫaʃˈɯk nˈɛ kadˈar sˈyɾedɪr kʊɫɫanˈɯjɔrsunʊz œrnejˈɪn ikˈɪ jˈɯɫ ɟibˈɪ
+combined_dataset/male_010094.wav|ɟyvænlˈijinɪz vɛ varɫˈɯɯɯnɯz bˈizɪm itʃˈɪn œnæmlˈɪ
+combined_dataset/female_020316.wav|profˈɪl puˈanɯnɯz ɛtkilænmesˈɪn dijˈɛ onˈaj aɫajˈɯm mɯ
+combined_dataset/female_004176.wav|pɯnˈar hˈanɯm kʊɫɫandˈɯɯɯnɯz iɫadʒˈɯn dozˈʊ kˈatʃ milɪɟrˈam bilˈijɔr mˈusunʊz
+combined_dataset/male_005863.wav|bˈɔdrʊm ʃubˈenɪzdɛ senˈɛt sɔrɡusˈʊ atʃˈɯjoɾʊm ʃɪmdˈɪ
+combined_dataset/male_023077.wav|konˈʊjɫa ɪlɟilˈɪ ødʒrˈɛtsɪz kajˈɯt oɫʊʃtuɾˈʊp dˈuɾumʊ dyzænlˈɪ takˈɪp ededʒˈejɪm
+combined_dataset/female_004121.wav|œrnejˈɪn ajɫˈɯk jedˈijˈyz ellˈi tˌɛlˈɛ ˌilɛ icˈi bˈin ˈicijyz ellˈi tˌɛlˈɛ aɾasɯndˈa dejiʃˈæn setʃenɛklˈeɾimɪz buɫunˈujɔr
+combined_dataset/male_001637.wav|sɔnrˈa aɫmˈak mɯ satmˈak mɯ ɪstedˈijinizɪ sœjlemˈɛk jetɛrlˈɪ
+combined_dataset/female_019950.wav|pakˈɛt pɫˈanɫama vɛ paɾˈa tutaɾˈɯ ajnˈɯ mɯ onajɫˈar mˈɯsɯnɯz
+combined_dataset/male_012088.wav|bæn sɛvdʒˈan efˈɛs varɫˈɯk jœnˈetimɪ adɯnˈa ˈaɾadɯm refeɾˈans numaɾˈanɯz ˈytʃ bˈin aɫtˈɯjˈyz kˌɯrksecˈɪz bˈɛʃ bˈin aɫtˈɯjˈyz kˌɯrkbˈir dˈœrtjˈyz otˌuzjedˈi ˌilɛ diledˈijinɪz zamˈan tɛkrˈar uɫaʃabilˈɪrsinɪz
+combined_dataset/male_008280.wav|byjˈøk bɪr yjˈe yɾˈynynøz vˈarsa ødʒrˈɛtsɪz dyzænlejˈɪp ɟœɾøntylejebilˈiɾɪz meɾˈak ɛtmejˈɪn
+combined_dataset/female_023576.wav|œdˈemɛ œzetˈɪ kafˈanɯzɯ kaɾɯʃtɯrdˈɯjsa bɪrlɪktˈɛ tʃˈœzøm buɫaɫˈɯm
+combined_dataset/male_010943.wav|fˈaɪz vɛ fˈɔn setʃenɛkleɾinˈɪ farkɫˈɯ vadˈɛ aɾaɫɯkɫaɾɯndˈa anɫatmamˈɯ ɪstˈɛrmisinɪz
+combined_dataset/female_007389.wav|ødʒrˈɛtsɪz ɛkstrˈɛ ɟœɾøntˈylejelɪm mɪ sɛrpˈɪl hˈanɯm
+combined_dataset/male_015605.wav|siɡaɾˈa kʊɫɫˈanɯmɯ duɾˈumunuzʊ da kɯsadʒˈa œːɾenebilˈɪr mˈijɪm
+combined_dataset/male_003840.wav|yjelˈijinizɛ baːɫˈɯ oɫaɾˈak ødʒrˈɛt tʃɯkˈarsa ødʒrˈɛtsɪz aɫtɛrnatɪfleɾˈɪ dɛ ɟœɾøntylejˈɪp pajɫaʃadʒˈaːɯm sizˈɛ
+combined_dataset/female_022442.wav|tajfˈʊn bˈæn karʃɯjakˈa ɪskelesˈɪ sokˈak itʃˈɪn sizˈɛ ʊjɡˈʊn saatˈɪ bɪrlɪktˈɛ setʃelˈɪm
+combined_dataset/male_013978.wav|ɔ haɫdˈɛ elˈɪf hˈanɯm jøzdˈɛ ellˈi pˈaj aɫadʒˈak ʃekɪldˈɛ ilˈɛrlejelɪm mɪ
+combined_dataset/male_011119.wav|adˈɯm adˈɯm ilɛrlejedʒˈejɪz kajdˈɯ ʃɪmdˈɪ bɪrlɪktˈɛ toparɫˈɯjoɾʊm
+combined_dataset/female_004609.wav|tamˈamdɯr ʃɪmdˈɪ sizˈɛ ˈæn ʊjɡˈʊn ˈøtʃ setʃenejˈɪ prˈɪm vɛ teminˈat tutaɾˈɯjɫa bɪrlɪktˈɛ aktaɾadʒˈaːɯm
+combined_dataset/female_015407.wav|bakɯrkˈœj dʒʊmhuɾijˈɛt dʒadːesˈɪ kajdɯnˈɯz ɟœɾynˈyjɔr
+combined_dataset/male_022837.wav|nˈisan hˈanɯm syɾedʒˈɪ dyzænlˈɪ vɛ ødʒrˈɛtsɪz jyɾytˈyjoɾʊz
+combined_dataset/male_009265.wav|dʒaɾˈɪ hesˈap dʒevˈap ɟedʒˈɪkmedæn ʃɪmdˈɪ kɔntrˈɔɫ ededʒˈejɪm eminˈɛ hˈanɯm
+combined_dataset/male_000167.wav|jenˈilemɛ tɛklˈifinizɪ hazˈɯrɫadɯm kˈapsam vɛ prˈɪm detajɫaɾˈɯ nˈɛt
+combined_dataset/female_008168.wav|ʃartɫaɾˈɯ kɔntrˈɔɫ edˈɪp sizˈɛ nˈɛt bɪlɡˈɪ veɾedʒˈejɪm
+combined_dataset/male_001989.wav|ˈœndʒɛ kˈɯsa bɪr ɟœɾøʃmˈɛk ɪstˈijoɾʊm sɔnrˈa kapˈatma adɯmɯnˈa ɟetʃelˈɪm
+combined_dataset/female_001904.wav|lɛhtˈar oɫaɾˈak kˈɯzɯnɯzɯ mɯ jˌɔksa ˈoːɫunuzʊ mʊ dyʃynˈyjɔrsunʊz
+combined_dataset/male_020961.wav|sakˈɪn oɫˈʊn dʒøzdˈan haɾekɛtleɾinˈɪ bɪrlɪktˈɛ kɔntrˈɔɫ ededʒˈejɪz pɯnˈar hˈanɯm
+combined_dataset/male_023758.wav|jaʃˈar bˈɛj ɟœɾˈøʃmɛ œzetinˈɪ pajɫaʃˈɯp syɾedʒˈɪ nɛtlɛʃtɪrmˈɛk ɪstˈijoɾʊm ʊjɡˈʊn mˈudʊr
+combined_dataset/male_004769.wav|ʃɪmdˈɪ polˈitʃɛ jenilemesinˈɪ hɯzɫɯdʒˈa toparɫajadʒˈaːɯm
+combined_dataset/male_010205.wav|kˈɯsa bɪr pɫˈan japaɫˈɯm paɾˈa vɛ puˈan kɯsmɯnˈɯ konuʃˈʊp aktaɾadʒˈaːɯm
+combined_dataset/female_004911.wav|metˈɪn bˈɛj hesabˈɯ ʃɪmdˈɪ atʃˈɯp kapanˈɯʃ ʃartɫaɾɯnˈɯ da nˈɛt bˈitʃɪmdɛ bɪrlɪktˈɛ œzˈɛtlejelɪm
+combined_dataset/male_013226.wav|bʊ setʃenɛktˈɛ ajɫˈɯk prˈiminɪz bˈin ˈicijyz ellˈi tˌɛlˈɛ oɫˈʊr
+combined_dataset/male_017327.wav|bæn sɛvdʒˈan kɔntrˈɔɫ ededʒˈejɪm dʒaɾˈɪ hesˈap kajdɯnˈɯ atʃˈɯjoɾʊm
+combined_dataset/male_023073.wav|baːɫantɯjˈɯ saːɫamˈak adɯnˈa joːʊnɫˈʊː dejɛrlændiɾˈɪp dœnˈøʃ japadʒˈaːɯm
+combined_dataset/male_008299.wav|dʒevˈabɯnɯzɯ aɫɯndʒˈa dʒaɾˈɪ hesˈap haɾeketinˈɪ ɪndʒelejedʒˈejɪm
+combined_dataset/female_001005.wav|kˈɯsa bɪr bˈɛklemɛ aɫabilˈɪr mˈijɪm tɛklˈɪf ɛkranˈɯ ʃʊ andˈa jøklenˈijɔr
+combined_dataset/female_006273.wav|ɯbanˈɯ ikˈɪ partʃˈa halɪndˈɛ okujadʒˈaːɯm lˈøtfæn dɪnlejˈɪn
+combined_dataset/male_005629.wav|ɟœɾøʃmˈɛk yzeɾˈɛ œdˈemɛ pɫanɯnˈɯ œzˈɛtlɛ ɟœndeɾedʒˈejɪm
+combined_dataset/male_019018.wav|øzɟˈynøm zekˈɪ bˈɛj ødʒrˈɛt vɛ yɾˈøn bɪlɟisinˈɪ tɛkrˈar okˈujoɾʊm
+combined_dataset/female_001870.wav|ikɪndʒˈɪ oɫaɾˈak finansˈaɫ kaɾarɫˈaɾɯnɯzɯ kændˈɪ adɯnɯzˈa veɾebiledʒˈɛk jɛtkijˈɛ sahˈɪp ɔɫmˈanɯz ɟeɾekˈijɔr
+combined_dataset/male_009892.wav|suˈat bˈɛj saɾɯjˈɛr ʃubesˈɪjlɛ ɟœɾøʃmˈɛk itʃˈɪn randˈevunuzʊ ɟœzdˈæn ɟetʃiɾˈijoɾʊm
+combined_dataset/male_013198.wav|buɡˈøn sizˈɛ œneɾedʒˈejɪm fˈɪrma aɾabuɫudʒuɫˈʊk mɛrkezˈɪ oɫadʒˈak
+combined_dataset/female_013651.wav|baːɫantˈɯ vɛ hˈɯz atʃɯsɯndˈan bɪr zɔrɫˈʊk jaʃadɯnˈɯz mɯ
+combined_dataset/female_004376.wav|tamˈamdɯr teʃekːˈør edˈeɾɪm ʃɪmdˈɪ bɪlɟileɾˈɪ javaʃtʃˈa pajɫaʃˈɯjoɾʊm
+combined_dataset/female_001239.wav|ytʃøndʒˈø setʃenˈɛk ˈise biɾˈaz dahˈa jˈøksɛk prɪmlˈɪ ˈama ˈɛk teminatɫˈar sunˈujɔr
+combined_dataset/male_012312.wav|jardɯmdʒˈɯ oɫabɪldˈɪjsæm nˈɛ mʊtɫˈʊ ijˈi ɟønlˈɛr dilˈeɾɪm
+combined_dataset/female_012652.wav|joːʊnɫˈʊk nedenˈɪjlɛ baːɫantˈɯ saːɫamaktˈa ɟedʒɪktˈɪk œzˈør dilˈeɾɪm
+combined_dataset/female_021093.wav|kodˈʊ javaʃtʃˈa pajɫaʃadʒˈaːɯm lˈøtfæn dikːˈatlɛ nˈɔt ɛdˈin
+combined_dataset/male_006327.wav|kajdˈɯ œːɾænmˈɛk itʃˈɪn sɪstæmdˈɛ ˈaː baːɫantɯsɯnˈɯ kɔntrˈɔɫ edˈijoɾʊm
+combined_dataset/male_023152.wav|œzetˈɪ ɟœzdˈæn ɟetʃiɾˈijoɾʊz tʃˈœzøm bˈœjlɛ meɾˈak ɛtmejˈɪn
+combined_dataset/female_006231.wav|baːɫantɯjˈɯ saːɫajˈɯp bɔrdʒˈʊ doːɾuɫajadʒˈaːɯm lˈøtfæn bɛklejˈɪn
+combined_dataset/male_012075.wav|mɛvdʒˈʊt politʃˈenɪzdɛ prˈɪm œdemeleɾˈɪ dyzænlˈɪ mɪ hɛrhanɡˈɪ bɪr ɟedʒˈɪkmɛ ɔɫdˈʊ mʊ
+combined_dataset/female_024012.wav|eminˈɛ hˈanɯm bˈʊrsa kajdɯnˈɯz itʃˈɪn telefˈɔn numaɾˈanɯzɯ nˈɛt ʃekɪldˈɛ aɫadʒˈaːɯm
+combined_dataset/female_017486.wav|sˈesinɪz tʃˈɔk ˈaz ɟelˈijɔr sœjledˈijinizɪ ɟœzdˈæn katʃɯɾˈɯjoɾʊm
+combined_dataset/male_010620.wav|tˌɛˌɛbˈɛ tidʒaɾˈɪ bankadʒɯɫɯktˈa dʒaɾˈɪ hesˈap ɪʃleminˈɪ ɟedʒˈɪkmedæn ɟɛrtʃɛklɛʃtiɾedʒˈejɪm
+combined_dataset/male_008417.wav|rapoɾˈʊ ˈɛpˈɔsta mɯ sˌɛmˌɛsˈɛ mɪ ilɛtmemˈɪ ɪstˈɛrsinɪz
+combined_dataset/female_000906.wav|ɟœɾøʃmˈemɪzlɛ ɪlɟilˈɪ refeɾˈans numaɾˈanɯz dˈœrt jedˈi ˈytʃ bˈɛʃ icˈi bˈir secˈɪz jedˈi ˈytʃ secˈɪz icˈi dˈɪr
+combined_dataset/female_013967.wav|dʒaɾˈɪ hesaptˈa dʒevˈabɯnɯz ɟelˈɪndʒɛ ɪʃlemˈɪ ɟɛrtʃɛklɛʃtiɾedʒˈejɪm
+combined_dataset/female_023382.wav|byjˈøk bɪr soɾˈʊn ɟœɾønmˈyjɔr syɾedʒˈɪ profɛsjonˈældʒɛ tamamɫajadʒˈaːɯm
+combined_dataset/male_010562.wav|dʒaɾˈɪ hesaptˈa bʊ tʃɯkɯʃˈɯn ɟeɾɛktʃesˈɪ vˈar mɯ sˈɪzdʒɛ
+combined_dataset/female_020129.wav|nazˈan hˈanɯm ɟyvænlˈɪk nedenˈɪjlɛ hɯzɫɯdʒˈa tamˈamɫajaɫɯm kodˈʊ dikːˈatlɛ ɟɪrmˈenizɪ ridʒˈa edˈijoɾʊm
+combined_dataset/female_010726.wav|ɪstˈɛrsenɪz hemˈæn emɛklilˈɪk pɫanɯnˈɯ bɪrlɪktˈɛ nɛtlˈɛʃtiɾelɪm
+combined_dataset/male_014042.wav|ɪstˈɛrsenɪz bæn sizˈɪ tɛkrˈar aɾajˈɯp bɪlɟileɾˈɪ aɫabilˈiɾɪm sizˈɪn itʃˈɪn ʊjɡˈʊn oɫˈʊr mʊ
+combined_dataset/male_010324.wav|ʃɪmdˈɪ ɟœɾˈøʃmɛ œzetinˈɪ tamamɫajˈɯp refeɾansˈɯ iletˈijoɾʊm
+combined_dataset/female_008570.wav|refeɾˈans numaɾˈanɯzɯ oɫˈʊʃtʊrdʊm sizˈɪnlɛ pajɫaʃˈɯjoɾʊm
+combined_dataset/female_002358.wav|ʃʊ andˈa bɪr huzuɾevɪndˈɛ vejˌa bˈakɯm evɪndˈɛ jaʃˈɯjɔr mˈusunʊz
+combined_dataset/female_009939.wav|sˈɔn ˈøtʃ ajˈɯn ɪʃlæmleɾinˈɪ sˈɯɾajɫa lɪstelejebilˈiɾɪm
+combined_dataset/female_017494.wav|refeɾˈans numaɾasˈɯjɫa kɔntrˈɔɫ ededʒˈejɪm lˈøtfæn konujˈʊ jenidˈæn kɯsadʒˈa œzɛtlˈɛr mˈisinɪz refeɾˈans doːɾˈʊ mʊ
+combined_dataset/female_001960.wav|tɛkrˈar edebilˈɪr mˈisinɪz dʒevˈabɯnɯzɯ doːɾˈʊ ɪʃlemˈɛk ɪstˈijoɾʊm
+combined_dataset/female_021948.wav|œdˈemɛ kanaɫɯnˈɯ ɟœzdˈæn ɟetʃɪrdˈɪm bˈœjlɛ bɪr ɟœndˈeɾɪm ɪznˈɪ ɟœɾønmˈyjɔr
+combined_dataset/female_020780.wav|yjˈe ɛkranɯndˈan ødʒrˈɛtsɪz ɟœɾøntylejˈɪp møʃteɾˈɪ œzetinˈɪ dyzˈænledɪm
+combined_dataset/female_003326.wav|bɪlɟileɾˈɪ doːɾuɫadɯktˈan sɔnrˈa sizˈɛ ˈæn ʊjɡˈʊn prˈɪm vɛ teminˈat setʃenɛkleɾinˈɪ tˈɛk tˈɛk sunadʒˈaːɯm
+combined_dataset/male_004959.wav|sˈelɪm bˈɛj œdˈemɛ pɫanɯnˈɯ ɟœzdˈæn ɟetʃiɾˈɪp sizˈɛ nˈɛt bɪr œzˈɛt sœjlejedʒˈejɪm
+combined_dataset/male_013276.wav|ˈoːlunʊz sizˈɪn adɯnɯzˈa tˈøm finansˈaɫ kaɾarɫaɾˈɯ veɾˈijɔrsa bʊ baʃvuɾujˈʊ onˈʊnɫa bɪrlɪktˈɛ tamamɫamˈamɯz ɟeɾekˈɪr
+combined_dataset/male_013479.wav|bʊ sɛslˈɪ onˈaj baʃvˈuɾunuzʊ rɛsmˈɪ oɫaɾˈak jɛtkilændɪrdˈijinizɪ doːɾuɫamˈak itʃˈɪn aɫɯnadʒˈak
+combined_dataset/female_002661.wav|ɟœɾøʃmˈemɪz bojʊndʒˈa ɟœstɛrdˈijinɪz sabˈɯr itʃˈɪn teʃekːˈør edˈeɾɪm dʒeɫˈaɫ bˈɛj
+combined_dataset/male_012980.wav|bˈɛʃ bˈin tˌɛlˈɛ teminˈat itʃˈɪn ajɫˈɯk œdˈemɛ aɾaɫɯɯˈɯ kiʃisˈæl bɪlɟileɾˈɛ ɟœɾˈɛ dejiʃebilˈɪr jakɫaʃˈɯk bøttʃˈenɪz nˈedɪr
+combined_dataset/female_010759.wav|tʃekˈɪn œdænmesˈɪ mɪ jˌɔksa senedˈɪn dˈuɾumʊ mʊ œndʒelɪklˈɪ ɔɫsˈʊn
+combined_dataset/female_011980.wav|lˈøtfæn hɯzɫɯdʒˈa doːɾˈuɫajaɫɯm bajrˈam bˈɛj vakˈɪt kajbˈɛtmejelɪm
+combined_dataset/male_022277.wav|œzˈɛt notunˈʊ sɪstˈemɛ ɟɪrdˈɪm ˈɛk bɪr ɪstˈejinɪz oɫˈʊrsa iletˈɪn tʃˈœzøm refeɾˈansɫa takˈɪp edilˈɪr
+combined_dataset/male_020940.wav|paɾˈa pɫˈanɯnɯz itʃˈɪn prˈɪm vɛ pakˈɛt detajɫaɾˈɯjɫa kuɾuʃunˈa kadˈar bakijˈɛ pajɫaʃˈɯjoɾʊm panˈɪk jˈɔk
+combined_dataset/female_002657.wav|sizˈɛ sʊndˈʊːm setʃenɛkleɾˈɪ nˈɔt aɫmˈanɯz itʃˈɪn javˈaʃ vɛ anɫaʃɯɫˈɯr ʃekɪldˈɛ ilɛrlejedʒˈejɪm
+combined_dataset/female_003975.wav|siɡɔrtˈa baʃɫanɡɯdʒɯnˈɯ hemˈæn mɪ pɫanɫˈɯjɔrsunʊz jˌɔksa œnymøzdekˈɪ ˈaj ɟibˈɪ bɪr taɾɪhtˈɛ mɪ dyʃynˈyjɔrsunʊz
+combined_dataset/male_004685.wav|refeɾˈans numaɾˈanɯz bˈɛʃ icˈi ˈytʃ icˈi secˈɪz dˈœrt aɫtˈɯ bˈɛʃ ˈytʃ jedˈi dˈokuz doːɾuɫajˈɯp dejɛrlændɪrmˈɛk yzeɾˈɛ kajdedˈijoɾʊm
+combined_dataset/male_013523.wav|ʃʊ ˈan sɪstæmdekˈɪ baʃvuɾˈʊ numaɾˈanɯz dˈokuz bˈin aɫtˈɯjˈyz seksˌɛnbˈɛʃ dˈokuz bˈin dˈokuzjˈyz jirmˌiaɫtˈɯ secˈɪzjˈyz dˈœrt oɫaɾˈak ɟœɾynˈyjɔr doːɾˈʊ mˈudʊr
+combined_dataset/male_013835.wav|bʊ dejiʃɪklˈɪk œzællˈɪklɛ pandemˈɪ sɔnrasˈɯ syɾɛtʃtˈɛ ʊjɡuɫˈamaja aɫɯndˈɯ vɛ tˈøm ɪʃlæmlˈɛr kˈart vejˌa bˈanka hesabˈɯ yzeɾɪndˈæn ilɛrlˈijɔr
+combined_dataset/male_016426.wav|anɫˈɯjoɾʊm ɔ zamˈan dahˈa ijˈi fijˈatfajdˈa saːɫajˈan bɪr setʃenˈɛk bʊɫmˈak itʃˈɪn aɫtɛrnatɪfleɾˈɪ taɾajadʒˈaːɯm
+combined_dataset/female_015552.wav|sinˈan bˈɛj polˈitʃɛ jˈa da pakˈɛt pɫanˈɯ vˈarsa pɫanɫˈamajɯ bɪrlɪktˈɛ japˈaɾɯz
+combined_dataset/female_004089.wav|bˈɛʃjˈyz bˈin tˌɛlˈɛ teminˈat itʃˈɪn ajɫˈɯk prˈɪm aɫtˈɯjˈyz doksˈan tˌɛlˈɛ oɫaɾˈak tʃɯkˈɯjɔr
+combined_dataset/male_016942.wav|zybɛjdˈɛ hˈanɯm dʒadːesˈɪ kajdɯnˈɯz ɟœɾynˈyjɔr adrˈɛs ɛʃleʃˈijɔr
+combined_dataset/female_001639.wav|mˈɛrhaba ɟœnˈøl hˈanɯm bæn didˈæm vˈisa møʃteɾˈɪ hɪzmɛtleɾinˈɛ hˈɔʃ ɟældinˈɪz
+combined_dataset/male_011521.wav|baːɫantɯjˈɯ saːɫajˈamadɯm joːʊnɫˈʊk jyzøndˈæn ɟedʒˈɪkmɛ ɔɫdˈʊ
+combined_dataset/male_006071.wav|ødʒrˈɛt konusʊndˈa yzølmˈenizɪ ɪstemˈæm mynˈɪr bˈɛj ødʒrˈɛtsɪz setʃenɛkleɾˈɪ dɛ ɟœɾøntylejˈɪp dyzænlejebilˈiɾɪz
+combined_dataset/female_017081.wav|jaʃanˈan kaɾɯʃɯkɫˈɯk itʃˈɪn œzˈør dilˈeɾɪm saadˈɛt hˈanɯm
+combined_dataset/female_007285.wav|yɾˈøn detajɫaɾɯnˈɯ bɪrlɪktˈɛ dyʃynelˈɪm ødʒrˈɛtsɪz anɫatajˈɯm
+combined_dataset/male_001714.wav|bʊ byjˈøk ʃikajetˈɪ byjˈøtmedæn tʃœzmˈɛk itʃˈɪn ødʒrˈɛt adɯmɯnˈɯ ʃɪmdˈɪ dyzænlˈijoɾʊm
+combined_dataset/male_002585.wav|sizˈɛ ˈæn nˈɛt kampanjˈa œzetinˈɪ biɾazdˈan iletedʒˈejɪm
+combined_dataset/male_023168.wav|adrˈesinizɪ ikˈɪ dʒˈømlɛjlɛ tɛkrˈar aɫabilˈɪr mˈijɪm
+combined_dataset/male_003923.wav|ødʒrˈɛtsɪz japɯɫˈandɯrma setʃenejinˈɪ dɛ dyʃynebilˈiɾɪz
+combined_dataset/male_016117.wav|tamˈamdɯr jˈyz ellˈi bˈin tˌɛlˈɛ teminˈatɫa devˈam edˈɪp baʃvˈuɾunuzʊ hemˈæn oɫˈʊʃtuɾaɫɯm
+combined_dataset/male_011545.wav|refeɾˈans numaɾˈanɯzɯ nˈɔt ɛtmˈɛk ɪstˈɛrmisinɪz pˈakizɛ hˈanɯm
+combined_dataset/male_003245.wav|ødʒrˈɛt tʃɯkˈarsa ɟeɾˈɛktʃɛjɪ atʃɯktʃˈa sizˈɛ anɫatadʒˈaːɯm
+combined_dataset/female_009362.wav|dʒøzdˈan ɪʃlˈæm ødʒretˈɪ atʃɯkɫamasɯnˈɯ adʒˈɪl kɔntrˈɔɫ edˈijoɾʊm
+combined_dataset/male_015334.wav|medihˈa hˈanɯm siɡaɾˈa kʊɫɫanmˈɯjɔrsunʊz doːɾˈʊ mʊ
+combined_dataset/male_011277.wav|œːɾænmˈæm itʃˈɪn tʃaːɾˈɯ saatˈɪ aɾaɫɯɯˈɯ sœjlejebilˈɪr mˈisinɪz
+combined_dataset/male_014455.wav|ejˈɛr tɔpɫˈam bˈɔrtʃ jˈyz jirmˈi bˈin tˌɛlˈɛjˈɛ tʃɯkˈarsa vɛ sɪzdˈɛ doksˈan bˈin tˌɛlˈɛ vˈarsa aɾadakˈɪ otˈuz bˈin tˌɛlˈɛjˈɪ tamamɫamˈak dahˈa jœnetilebilˈɪr oɫˈʊr
+combined_dataset/female_023558.wav|fatuɾˈanɯzɯ vadˈɛ farkˈɯ ˈɔɫmadan hɯzɫɯdʒˈa tʃœzejˈɪm
+combined_dataset/female_009925.wav|ʃɪmdˈɪ javaʃtʃˈa doːɾuɫˈujoɾʊm baːɫantˈɯ saːɫamˈak œnæmlˈɪ ʃeɾifˈɛ hˈanɯm refeɾˈansɯnɯzɯ tejˈɪt edelˈɪm
+combined_dataset/male_013989.wav|ʃɪmdˈɪ ˈoːlunʊz dʒˈan jɯɫmazˈɯn dˈoːʊm taɾihinˈɪ dɛ aɫabilˈɪr mˈijɪm
+combined_dataset/male_000613.wav|bæn ˈʊːr jardɯmdʒˈɯ ɔɫmaktˈan mæmnunijˈɛt dujˈaɾɯm
+combined_dataset/female_004526.wav|politʃˈenɪzdɛ ˈɔn bˈɛʃ ɟˈøn ødʒrˈɛtsɪz dʒˈajma syɾesˈɪ buɫunˈujɔr bʊ syɾˈɛ itʃɪndˈɛ vazɟetʃˈɛrsenɪz primˈɪ iadˈɛ aɫabilˈɪrsinɪz
+combined_dataset/female_002866.wav|tamˈamdɯr dˈoːʊm taɾˈihinizɪ dɛ sɪstæmdˈɛ onajɫˈɯjoɾʊm
+combined_dataset/male_015418.wav|ɪstˈɛrsenɪz aɾˈamajɯ dʒˈuma ɟynˈø pɫˈanɫajaɫɯm sizˈɪn itʃˈɪn ʊjɡˈʊn oɫˈʊr mʊ
+combined_dataset/male_011887.wav|lɛhtˈaɾɯnɯzɯn ɛvrakɫaɾɯnˈa bʊ tutaɾˈɯ nasˈɯɫ tahsˈɪl ededʒejinˈɛ daˈɪr jœnɛrɟeleɾˈɪ dɛ ɛklejedʒˈejɪm
+combined_dataset/female_013225.wav|refeɾˈans numaɾˈanɯzɯ ridʒˈa ededʒˈejɪm hazˈɯr mˈɯsɯnɯz
+combined_dataset/male_018721.wav|byjˈøk bælɟeleɾˈɪ tˈɛk yɾˈøn ɟibˈɪ ajrˈɯ ajrˈɯ jøklejˈɪn kaɾɯʃmasˈɯn
+combined_dataset/male_007240.wav|møʃteɾˈɪ yjˈe yɾynˈø javaʃtʃˈa tɛkrarɫˈar mˈɯsɯnɯz
+combined_dataset/male_009861.wav|yzølmejˈɪn ødʒrˈɛtsɪz ʃekɪldˈɛ dyzænlejˈɪp tʃœzebilˈiɾɪz
+combined_dataset/male_017499.wav|saːɫamˈak adɯnˈa bɛklejˈɪn dejɛrlændɪrmˈɛk yzeɾˈɛ kɔntrˈɔɫ edˈijoɾʊm
+combined_dataset/male_020499.wav|ɟœnˈøl hˈanɯm møʃteɾˈɪ ɟyvænlijˈɪ atʃɯsɯndˈan ødʒrˈɛtsɪz itiɾˈaz kajdˈɯ dyzænlejˈɪp syɾedʒˈɪ ɟœɾøntylejedʒˈejɪm ʊjɡˈʊn mʊ
+combined_dataset/male_008849.wav|ʊjɡˈʊnsanɯz hemˈæn bɪr ɟeɾˈɪ ˈaɾama saatˈɪ setʃelˈɪm
+combined_dataset/female_011366.wav|dʒaɾˈɪ hesˈap haɾekɛtleɾinˈɪ atʃɯkɫamamˈɯ ɪstˈɛrmisinɪz fɛhmˈɪ bˈɛj
+combined_dataset/male_015767.wav|baʃvuɾujˈa devˈam edebɪlmˈemɪz itʃˈɪn aktˈɪf bɪr vadˈesɪz hesˈap vejˌa tasarrˈʊf hesabˈɯ buɫʊnmasˈɯ ɟeɾekˈijɔr sɪzdˈɛ mɛvdʒˈʊt mʊ
+combined_dataset/female_002886.wav|œdˈemejɪ kredˈɪ kartˈɯ bˈanka kartˈɯ jˈa da vadˈesɪz hesˈabɯnɯzdan mɯ aɫmˈak ɪstˈɛrsinɪz
+combined_dataset/male_014178.wav|ʃɪrkˈetimɪz dʒardˈɪf siɡɔrtˈa vɛ œzællˈɪklɛ dʒenazˈɛ masrafɫaɾˈɯ teminatɫaɾɯndˈa bilinˈæn bɪr saːɫajɯdʒˈɯdɯr
+combined_dataset/male_011953.wav|sizˈɪ janɫˈɯʃ jœnlændɪrmˈɛk ɪstemˈæm bʊ jøzdˈæn bejˈanɯnɯzɯ ɔɫdˈʊː ɟibˈɪ aɫadʒˈaːɯm
+combined_dataset/female_000078.wav|kˈɯsa bɪr bˈɛklemɛ dahˈa ridʒˈa ededʒˈejɪm sɪstˈæm janɯtɯnˈɯ aɫˈɯjoɾʊm
+combined_dataset/male_003539.wav|adʒˈɪldʒɛ dʒøzdˈan ʊjɡuɫamasɯndˈan ɪʃlˈæm japˈɯn ɟedʒˈɪkmɛ ødʒretˈɪ ˈartmadan tʃœzebilˈiɾɪz
+combined_dataset/male_001527.wav|ødʒrˈɛt tʃɯkˈarsa ɛkrandˈa atʃˈɯkɫama oɫaɾˈak ajrɯdʒˈa belɪrtˈiɾɪm
+combined_dataset/male_018106.wav|hatˈidʒɛ hˈanɯm bɪrkˈatʃ sanijˈɛ bɛklemˈenizɪ ridʒˈa edˈeɾɪm
+combined_dataset/male_013159.wav|ˈanɫadɯm tabʊtɫˈʊ dʒenazˈɛ hɪzmetˈɪ hakːɯndˈa bɪlɡˈɪ aɫmˈak ɪstˈijɔrsunʊz
+combined_dataset/male_008777.wav|baːɫantˈɯ joːʊnɫˈʊk vɛ doːɾˈuɫama adɯmɫaɾɯnˈɯ tˈɛk tˈɛk dejɛrlˈændiɾelɪm
+combined_dataset/male_005010.wav|kusuɾˈa bakmajˈɯn ʃeɾifˈɛ hˈanɯm baːɫantˈɯ kɔptˈʊ sanˈɯp tɛkrˈar ˈaɾadɯm
+combined_dataset/female_019731.wav|œndʒelˈɪklɛ œzˈør dilˈeɾɪm bˈœjlɛ dˈuɾʊmɫar zɔrɫajɯdʒˈɯ oɫabilˈijɔr
+combined_dataset/female_021429.wav|dʒevˈabɯnɯzɯ ɟedʒɪktˈɪrmedæn aɫˈɯn dʒaɾˈɪ kɔntrˈɔɫ japadʒˈaːɯm
+combined_dataset/male_019871.wav|paɾˈa transfeɾˈɪ profˈilinɪzdɛ pɫˈanɫama adɯmˈɯ ɟœɾynˈyjɔr ʃɪmdˈɪ
+combined_dataset/male_001014.wav|baːɫantɯjˈɯ saːɫamˈak vɛ doːɾuɫamˈak ɪstˈijoɾʊm ʃɪmdˈɪ
+combined_dataset/male_018330.wav|paɾˈa iadesˈɪ pɫˈanɫama syɾedʒɪndˈɛ panˈɪk japmajˈɯn
+combined_dataset/male_016216.wav|tamˈam ʃɪmdˈɪ bʊ fɔrmˈatɫa tɛkrˈar denˈemɛ japadʒˈaːɯm
+combined_dataset/female_022990.wav|kemˈaɫ bˈɛj sizˈɪ ʃɪmdˈɪ ˈɪnsan tæmsɪldʒijˈɛ aktaɾajˈɯm mɯ
+combined_dataset/male_019486.wav|doːɾuɫamˈak itʃˈɪn ʃɪmdˈɪ joːˈʊn sɪstˈemɛ baːɫanˈɯjoɾʊm
+combined_dataset/male_013640.wav|ɟœɾøʃmˈemɪz itʃˈɪn tɛkrˈar teʃekːˈør edˈeɾɪm ijˈi ɟønlˈɛr dilˈeɾɪm
+combined_dataset/female_003150.wav|teʃekːˈør edˈeɾɪm doːɾˈuɫama adɯmɫaɾɯnˈɯ tamamɫˈɯjoɾʊm
+combined_dataset/male_009508.wav|paɾˈa tʃɯkɯʃˈɯ œndʒesˈɪ pɫˈanɫama notˈʊ dyʃˈyjoɾʊm
+combined_dataset/female_016300.wav|paɾˈanɯz ɟyvændˈɛ ɪptˈaɫ pɫanɯnˈɯ adˈɯm adˈɯm japadʒˈaːɯz
+combined_dataset/male_004770.wav|ødʒrˈɛt bɪlɟisinˈɪ nˈɛt sœjlejemedˈɪjsæm œzˈør dilˈeɾɪm
+combined_dataset/male_001211.wav|bˌeˌɛsˈɛ biɾˈikiminɪz dɛvlˈɛt katkɯsˈɯjɫa artˈar koʃʊɫɫˈaɾɯnɯzɯ adˈɯm adˈɯm anɫatadʒˈaːɯm
+combined_dataset/male_001648.wav|ɟœɾøʃmˈemizɪ kajˈɯt aɫtɯnˈa aɫˈɯjoɾʊm bʊ syɾɛtʃtˈɛ ʃɛffafɫˈɯk œnæmlˈɪ
+combined_dataset/male_010745.wav|refeɾˈans numaɾˈanɯz dˈokuz sɯfˈɯr dˈœrt bˈɛʃ bˈɛʃ icˈi jedˈi jedˈi bˈɛʃ bˈɛʃ secˈɪz ˌilɛ ilɛrlˈijoɾʊm
+combined_dataset/male_012440.wav|kɔnjaaɫtˈɯ dʒadːesˈɪ jazɯmɯnˈɯ sˈɔn kˈɛz hˈarf hˈarf tejˈɪt edelˈɪm mɪ
+combined_dataset/male_012813.wav|sizˈɛ ˈæn ʊjɡˈʊn setʃenejˈɪ buɫabɪlmˈæm itʃˈɪn bɪrkˈatʃ kˈɯsa soɾˈʊ soɾadʒˈaːɯm
+combined_dataset/male_017449.wav|doːɾuɫamˈak adɯnˈa baːɫantˈɯ saːɫajˈɯp kajdˈɯ dejɛrlændiɾedʒˈejɪm ʃɪmdˈɪ
+combined_dataset/female_006755.wav|ɪdʒrˈa ɛvrakˈɯ ɟˈælmedæn ˈœndʒɛ œdˈemɛ pɫanɯnˈɯ nɛtlɛʃtɪrmˈemɪz œnæmlˈɪ
+combined_dataset/male_014021.wav|taɾihˈɪ hatɯrɫamˈɯjɔrsanɯz telefˈonunʊzdan kɔntrˈɔɫ ɛtmˈenizɪ ridʒˈa ededʒˈejɪm tʃønkˈø kajɯtːˈa sizˈɛ taɾˈɪh sœjlejemˈijoɾʊm
+combined_dataset/male_004486.wav|bæn ɟyɫˈaj kˈart jenˈilemɛ ɪʃlˈeminizɪ kɔntrˈɔɫ edˈijoɾʊm
+combined_dataset/female_008268.wav|dʒaɾˈɪ hesˈap atʃɯɫɯʃˈɯ itʃˈɪn kɪmlˈɪk doːɾˈuɫama ɪʃlemˈɪ japaɫˈɯm mɯ
+combined_dataset/male_000039.wav|dʒøzdˈan ɟelˈɪr bˈɪlɟinɪzlɛ dʒaɾˈɪ hesˈap atʃɯkɫamasˈɯ pajɫaʃˈɯr mˈɯsɯnɯz
+combined_dataset/male_023044.wav|dʒevˈabɯnɯzɯ aɫamadˈɯjsam œzˈør dilˈeɾɪm dʒaɾˈɪ hesˈap syɾedʒinˈɪ nˈɛt anɫatadʒˈaːɯm
+combined_dataset/male_007235.wav|ødʒrˈɛt jˈa da ødʒrˈɛtsɪz syɾɛtʃtˈæn mɪ sˈœz edˈijɔrsunʊz bɪr dʒˈømlɛjlɛ nɛtlɛʃtiɾˈɪr mˈisinɪz
+combined_dataset/female_008965.wav|esænjˈʊrt ʃubˈenɪzdɛ byjˈøk joːʊnɫˈʊk ˈɔɫsa da syɾedʒˈɪ ødʒrˈɛtsɪz takˈɪp edˈeɾɪz
+combined_dataset/male_023128.wav|dʒøzdˈanɯnɯz janɯnɯzdˈajsa dʒevabˈɯ bɪrlɪktˈɛ kɔntrˈɔɫ edelˈɪm
+combined_dataset/male_005117.wav|ødʒrˈɛt oɫuʃˈʊrsa ɟeɾˈɛktʃɛjɪ atʃɯkɫajˈɯp sizˈɛ nˈɛt dʒevˈap veɾedʒˈejɪm
+combined_dataset/female_011095.wav|anɫˈɯjoɾʊm nuɾˈɪ bˈɛj daɫɡaɫˈanma tedɪrɡˈɪn edebilˈijɔr ɟɛrtʃɛktˈæn
+combined_dataset/female_020340.wav|ɪstɪkɫˈaɫ dʒadːesˈɪ kajdɯnˈɯzɫa yjˈe hesˈabɯnɯzɯ ɟœɾøntˈyledɪm
+combined_dataset/female_013285.wav|ømrˈan hˈanɯm kɔnjadˈan aɾadˈɯɯɯnɯz itʃˈɪn mæmnˈʊn ɔɫdˈʊm œzˈɛt pajɫaʃajˈɯm
+combined_dataset/male_019031.wav|zɛjtɪnbʊrnˈʊ dʒʊmhuɾijˈɛt dʒadːesˈɪ adresinˈɪ tejˈɪt edˈijoɾʊm
+combined_dataset/female_001691.wav|teʃekːˈør edˈeɾɪm bɪlɟijˈɪ nˈɔt aɫdˈɯm vɛ sɪstæmdˈɛ ɟøndʒællˈijoɾʊm
+combined_dataset/male_022460.wav|dʒaɾˈɪ hesˈap bakijˈenizɪ kuɾuʃunˈa kadˈar okujadʒˈaːɯm dʒevˈabɯnɯz hazˈɯr mɯ
+combined_dataset/female_003867.wav|bunˈʊn itʃˈɪn ˈœndʒɛ bɪr baʃvuɾˈʊ oɫʊʃtuɾˈʊp teminˈat onajˈɯ aɫˈɯp aɫamajadʒˈaːɯnɯzɯ kɔntrˈɔɫ ɛtmˈemɪz ɟeɾekˈijɔr
+combined_dataset/female_022216.wav|hˈɪtʃ meɾˈak ɛtmejˈɪn hemˈæn dœnˈøʃ saːɫajadʒˈaːɯm
+combined_dataset/male_019604.wav|mˈɛrhaba pɯnˈar hˈanɯm bæn baɾˈɯʃ kobˈɪ tidʒaɾˈɪ hesˈabɯnɯzɫa ɪlɟilˈɪ dɛstˈɛk saːɫajadʒˈaːɯm buɡˈøn
+combined_dataset/female_015585.wav|ɛvrakˈɯ pˌɛdˌɛfˈɛ oɫaɾˈak sɪstˈemɛ jøklejebilˈɪrsinɪz
+combined_dataset/female_003897.wav|tamˈamdɯr jaʃˈar bˈɛj ˈeʃinizɪn dɛ ɪndʒelemˈɛk ɪstemesˈɪ ɡajˈɛt anɫaʃɯɫˈɯr bɪr dˈuɾʊm
+combined_dataset/female_023833.wav|sˈɔn kɔntrˈɔɫ baːdʒɯɫˈar atatˈørk bʊɫvaɾˈɯ vɛ tˌɛˌɛbˈɛ faktoɾˈɪnɡ
+combined_dataset/female_008253.wav|senˈɛt sɔrɡˈuɫama kajdɯnɯzˈɯ sɪstæmdˈɛ ˈatʃtɯm ilɛrlˈijoɾʊz
+combined_dataset/male_014269.wav|kʊɫɫandˈɯɯɯnɯz iɫˈatʃ ɪnsylˈɪn mɪ doːɾˈʊ mʊ ˈanɫadɯm
+combined_dataset/male_016532.wav|sˈelɪm bˈɛj syɾɛtʃtˈɛ kafˈanɯza takɯɫˈan bɪr nɔktˈa oɫˈʊrsa banˈa hemˈæn soɾabilˈɪrsinɪz
+combined_dataset/female_012446.wav|pakˈɛt profilɪndˈɛ puˈan prɔɡramˈɯ pasˈɪf ɟœɾynˈyjɔr
+combined_dataset/male_017514.wav|ødʒrˈɛt jansɯtɯɫdˈɯ mɯ jˌɔksa ødʒrˈɛtsɪz hatˈa ujaɾɯsˈɯ mɯ tʃɯktˈɯ
+combined_dataset/female_017927.wav|vadˈesɪz tɛslimˈat setʃɪlmˈɪʃ ˈɛk vɛrɡˈɪ jˈa da fˈaɪz jˈɔk
+combined_dataset/male_007426.wav|syɾˈɛ dˈɔɫmadan ɟiɾˈɪʃ japaɫˈɯm lˈøtfæn sakˈɪn oɫˈʊn ɛkrandakˈɪ ˌɔtˌɛpˈɛ kodunˈʊ ʃɪmdˈɪ ɟiɾˈɛr mˈisinɪz
+combined_dataset/male_014639.wav|jakˈɯn zamandˈa bɪr anʒijˈɔ ɪʃlemˈɪ ɟetʃɪrdinˈɪz mɪ
+combined_dataset/female_002897.wav|ajrɯdʒˈa jakˈɯn zamandˈa ɟetʃɪrdˈijinɪz bɪr tɯbːˈɪ ɪʃlˈæm ɔɫdˈʊ mʊ
+combined_dataset/male_013590.wav|dilˈɛrsenɪz œdˈemɛ jœntemˈɪ oɫaɾˈak bˈanka hesabˈɯ jˈa da kˈartɫa tahsiɫˈat setʃenɛkleɾinˈɪ dɛ konuʃabilˈiɾɪz
+combined_dataset/male_004064.wav|ˈɪzninɪz oɫˈʊrsa ɟœɾøʃmˈemizɪn œzetinˈɪ sˌɛmˌɛsˈɛ ˌilɛ iletejˈɪm
+combined_dataset/male_001883.wav|onajɫˈarsanɯz dɔsjˈanɯzɯn ɟøndʒˈæl duɾumunˈʊ pajɫaʃadʒˈaːɯm
+combined_dataset/male_012729.wav|tekˈɪn bˈɛj dˈoːʊm taɾˈihinizɪ ɟˈøn ˈaj vɛ jˈɯɫ oɫaɾˈak aɫabilˈɪr mˈijɪm
+combined_dataset/male_014417.wav|kansˈɛr tymˈœr vejˌa kemoteɾapˈɪ ɟibˈɪ bɪr tedavˈɪ ɟɛtʃmˈiʃinɪz ɔɫdˈʊ mʊ
+combined_dataset/male_016496.wav|baʃkˈa bɪr bˈɪlɟinizɪ kɔntrˈɔɫ ɛtmemˈɪ ɪstˈɛrmisinɪz redʒˈɛp bˈɛj
+combined_dataset/female_006761.wav|jaʃatːˈɯɯɯmɯz ɟedʒˈɪkmɛ itʃˈɪn œzˈør dilˈeɾɪm sæmrˈa hˈanɯm
+combined_dataset/male_006418.wav|møʃteɾˈɪ ɟyvænlijˈɪ itʃˈɪn yjˈe bɪlɟilˈeɾinɪz ɟøndʒˈæl ˈɔɫmaɫɯ
+combined_dataset/male_014555.wav|sizˈɛ dœnˈøʃ japɯɫmasɯnˈɯ telefˈɔnɫa mɯ jˌɔksa mesˈaʒɫa mɯ tɛrdʒˈɪh edˈɛrsinɪz
+combined_dataset/female_022229.wav|ɯbˈan tˈɛ rˈɛ dˈœrt icˈi sɯfˈɯr sɯfˈɯr bˈir ˈytʃ dˈœrt sɯfˈɯr ˈytʃ dˈœrt jedˈi bˈɛʃ aɫtˈɯ sɯfˈɯr secˈɪz bˈir jedˈi bˈir dˈœrt secˈɪz jedˈi dˈœrt
+combined_dataset/male_015825.wav|zamˈan ajɯrdˈɯɯɯnɯz itʃˈɪn teʃekːˈør edˈeɾɪm ɟɛtʃmˈɪʃ ɔɫsˈʊn
+combined_dataset/female_006780.wav|bɪrlɪktˈɛ ɟɛrtʃɛktʃˈɪ bɪr jˈɔɫ haɾitasˈɯ tʃɯkaɾaɫˈɯm
+combined_dataset/female_007019.wav|dʒevˈabɯnɯzɯ nˈɔt aɫadʒˈaːɯm dʒaɾˈɪ hesˈap ɪʃleminˈɪ bɪrlɪktˈɛ tʃœzˈeɾɪz sɛvɡˈɪ hˈanɯm
+combined_dataset/male_013577.wav|jˈaʃ bˈɪlɟinizɪ tejˈɪt edˈɛr mˈisinɪz œrnejˈɪn kˌɯrkjedˈi jaʃɯndˈa mˈɯsɯnɯz
+combined_dataset/male_012466.wav|tˌɛˌɛbˈɛ tidʒaɾˈɪ bankadʒɯɫɯkˈɯ aɾadˈɯɯɯnɯz itʃˈɪn teʃekːˈør edˈeɾɪm ijˈi ɟønlˈɛr dilˈeɾɪm
+combined_dataset/male_023489.wav|dʒaɾˈɪ hesˈapɫa ɪlɟilˈɪ dʒevabˈɯ ɟedʒɪktɪrdˈɪjsæm tʃˈɔk øzɟˈynøm fɛhmˈɪ bˈɛj
+combined_dataset/female_009564.wav|baʃvˈuɾunʊz onajˈa ɟitːˈɪ kˈɯsa sˈyɾedɛ sonʊtʃɫanˈɯr
+combined_dataset/male_023625.wav|fatuɾˈa vɛ vadˈɛ bɪlɟilˈeɾinizɪ tejˈɪt edebilˈɪr mˈijɪm
+combined_dataset/female_002576.wav|sɪstæmdˈɛ ˈæn ʊjɡˈʊn tɛklifˈɪ ʃʊ ˈan tˌɛˌɛbˈɛ tidʒaɾˈɪ bankadʒɯɫˈɯk yzeɾɪndˈæn ɟelˈæn setʃenɛklˈɛr itʃɪndˈɛ ɟœɾˈyjoɾʊm
+combined_dataset/male_000969.wav|ødʒrˈɛtsɪz bˈɪldiɾɪm atʃˈɯp bɪrlɪktˈɛ dyzænlejebilˈiɾɪz
+combined_dataset/female_005730.wav|yɾˈøn eɾˈiʃiminɪz itʃˈɪn yjˈe kajdɯnɯzˈɯ ɟœɾøntylejebilˈɪr mˈijɪm ʊjɡˈʊn mˈudʊr
+combined_dataset/female_014270.wav|pakˈɛt pɫˈanɫama partʃˈa partʃˈa lˈøtfæn bɛklejˈɪn
+combined_dataset/male_014237.wav|teminˈat tutaɾˈɯ oɫaɾˈak jakɫaʃˈɯk jˈyz jirmˈi bˈin tˌɛlˈɛ dyʃynˈyjɔrdunʊz doːɾˈʊ mˈudʊr
+combined_dataset/male_004978.wav|sˈelɪm bˈɛj ɪʃlˈæm uzamasˈɯn dijˈɛ dʒevˈap vɛ atʃɯkɫˈamajɯ ʃɪmdˈɪ nɛtlˈɛʃtiɾelɪm
+combined_dataset/female_016037.wav|byjˈøk bɪr nˈɔt dyʃˈyjoɾʊm ødʒrˈɛtsɪz ɟeɾˈɪ ˈaɾama
+combined_dataset/male_020092.wav|dʒaɾˈɪ hesˈap itʃˈɪn mɪ kʊɫɫanadʒˈaksɯnɯz tyɫˈaj hˈanɯm
+combined_dataset/male_007738.wav|œzˈør dilˈeɾɪm fatuɾˈa vɛ vadˈɛ detajɯnˈɯ doːɾuɫajˈɯp vɛrɡˈɪ kaleminˈɪ jenidˈæn hesapɫajadʒˈaːɯm
+combined_dataset/female_013949.wav|ænɟˈæl kaɫdˈɯrmajɯ œːɾænmˈɛk itʃˈɪn baːɫantɯjˈɯ doːɾuɫajˈɯp dejɛrlˈændiɾelɪm
+combined_dataset/male_001001.wav|ødʒrˈɛt ɟeɾɛktʃesinˈɛ daˈɪr nˈɛt dʒevˈap veɾejˈɪm mɪ
+combined_dataset/female_001588.wav|jˈaʃɯnɯzɯ aɫabilˈɪr mˈijɪm œrnejˈɪn kˌɯrkjedˈi ɟibˈɪ bɪr jˈaʃ aɾaɫɯɯɯndˈa mˈɯsɯnɯz
+combined_dataset/female_015421.wav|yjˈe kajdɯnˈɯzɫa ødʒrˈɛt bɪlɟisinˈɪ profɛsjonˈældʒɛ aktaɾadʒˈaːɯm
+combined_dataset/female_023649.wav|profˈɪl tejidˈɪ itʃˈɪn pˈɔsta kodˈʊ da ɟeɾɛklˈɪ mɪ hatˈidʒɛ hˈanɯm
+combined_dataset/female_017856.wav|hemˈæn dʒevˈap veɾˈɪrsenɪz dʒaɾˈɪ hesˈap tʃɯkɯʃɯnˈɯ dˈʊrdʊrma ʃˈansɯmɯz artˈar
+combined_dataset/female_011930.wav|dʒøzdanɯnɯzdakˈɪ kˈart itʃˈɪn ɪʃlˈæm baʃɫatadʒˈaːɯm
+combined_dataset/male_023445.wav|avdʒɯɫardˈa zybɛjdˈɛ hˈanɯm dʒadːesˈɪ kajdɯnɯzˈɯ ɟœɾˈyjoɾʊm
+combined_dataset/male_022574.wav|øzɟˈynøm refeɾˈans dˈœrt ˈytʃ aɫtˈɯ dˈœrt dˈœrt secˈɪz aɫtˈɯ bˈɛʃ dˈokuz icˈi ˈytʃ ˌilɛ ɪʃlˈeminizɪ ɟedʒˈɪkmedæn tamamɫajadʒˈaːɯm doːˈan bˈɛj
+combined_dataset/female_017103.wav|ʃøphelˈɪ ɪʃlˈæm kajdɯnˈɯ kapˈatmadan ˈœndʒɛ sˈɔn kˈɛz kɔntrˈɔɫ ededʒˈejɪm
+combined_dataset/female_014886.wav|jaʃanˈan pˈyɾøz itʃˈɪn œzˈør dilˈeɾɪm paɾˈa aktˈaɾɯmɯ ɟedʒɪkmˈɪʃ ɟœɾynˈyjɔr
+combined_dataset/male_016323.wav|ɟyvˈæn konusˈʊ œnæmlˈɪjsɛ tˈøm bʊ adɯmɫaɾˈɯ sizˈɪn onˈajɯnɯz ˈɔɫmadan ilɛrlɛtmˈijoɾʊm
+combined_dataset/female_002146.wav|ijˈi habˈɛr ʃʊ kɪ fizˈɪk muajenˈɛ jˈa da hastanedˈɛ ɪʃlˈæm ɟeɾɛktiɾˈæn bɪr syɾˈɛtʃ jˈɔk
+combined_dataset/male_013293.wav|bʊ pɫanˈɯ kændinˈɪz itʃˈɪn mɪ dyʃynˈyjɔrsunʊz jˌɔksa aˈiledæn biɾˈɪ itʃˈɪn mɪ
+combined_dataset/female_005865.wav|ødʒrˈɛt vɛ ɪʃlˈæm kalæmleɾinˈɪ ajrɯdʒˈa hesapɫajadʒˈaːɯm
+combined_dataset/female_011231.wav|ˈœndʒɛ fatuɾˈa saːɫajɯdʒɯsɯnˈɯ setʃˈijoɾʊz sɔnrˈa œdˈemɛ ɟynynˈø belɪrlˈijoɾʊz
+combined_dataset/female_003019.wav|ajrɯdʒˈa teminatˈɯ kadˈemelɪ artˈɯrma ɟibˈɪ bɪr setʃenˈɛk oɫˈʊp ɔɫmadɯɯɯnˈɯ da kɔntrˈɔɫ edebilˈiɾɪm
+combined_dataset/female_021991.wav|refeɾˈans numaɾˈanɯzɯ nˈɔt aɫdˈɯm bʊ kajˈɯt yzeɾɪndˈæn ilɛrlejedʒˈejɪz
+combined_dataset/female_021758.wav|œzˈør dilˈeɾɪm bˈœjlɛ joːʊnɫʊktˈa bɛklemˈɛk zˈɔr oɫˈujɔr
+combined_dataset/male_006613.wav|ɟeɾˈɛktʃɛ ɟœɾynˈørsɛ atʃˈɯkɫama ɛklejˈɪp ɪʃlˈæm kajdɯnˈɯ ajnˈɯ andˈa ɟøndʒællejedʒˈejɪm meɾˈak ɛtmejˈɪn
+combined_dataset/male_015103.wav|adrˈɛs tejidˈɪ itʃˈɪn hørrijˈɛt dʒadːesˈɪ ˌilɛ bɪr baːɫˈantɯnɯz vˈar mɯ
+combined_dataset/male_021081.wav|randevˈʊ saatɪndˈæn ˈɔn dakikˈa ˈœndʒɛ ɟælmˈenɪz jetɛrlˈɪ
+combined_dataset/female_015959.wav|ɟenˈæl oɫaɾˈak hɪzmˈɛt hɯzˈɯmɯzdan mæmnˈʊn kaɫdɯnˈɯz mɯ
+combined_dataset/male_012313.wav|mˈɛrhaba ɛrdˈaɫ bˈɛj bæn buɾˈak dʒardˈɪf siɡɔrtˈa møʃteɾˈɪ hɪzmɛtleɾɪndˈæn aɾˈɯjoɾʊm
+combined_dataset/male_004332.wav|baːɫantˈɯ sˈaːɫadɯm fˈɔn bɪlɟisinˈɪ œːɾenˈɪp dœnedʒˈejɪm
+combined_dataset/female_005054.wav|jenˈilemɛ tɛklˈifinizɪ hazˈɯrɫadɯm kˈapsam vɛ prˈɪm detajɫaɾˈɯ nˈɛt
+combined_dataset/male_014865.wav|sizˈɛ ˈøtʃ farkɫˈɯ pɫanˈɯn priminˈɪ vɛ teminˈat tutaɾɯnˈɯ karʃɯɫaʃtˈɯrmaɫɯ ʃekɪldˈɛ aktaɾadʒˈaːɯm
+combined_dataset/female_000129.wav|teʃekːˈør edˈeɾɪm dʒˈænɡɪz bˈɛj bɪlɟilˈeɾinizɪ aɫdˈɯm
+combined_dataset/female_014217.wav|dʒevapɫˈaɾɯnɯzɫa dʒaɾˈɪ kajɯtɫaɾˈɯ ɛʃlɛʃtiɾˈɪp ɪʃlemˈɪ ɟɛrtʃɛklɛʃtiɾedʒˈejɪm
+combined_dataset/female_001448.wav|jardɯmdʒˈɯ oɫabɪldˈɪjsæm nˈɛ mʊtɫˈʊ baʃkˈa bɪr konudˈa ɪhtijˈadʒɯnɯz oɫˈʊrsa tˌɛˌɛbˈɛ jatˈɯɾɯm yzeɾɪndˈæn hˈɛr zamˈan uɫaʃabilˈɪrsinɪz
+combined_dataset/male_017179.wav|bˈœjlɛ bɪr ˈaksakɫɯk jaʃamˈanɯza ɟɛrtʃɛktˈæn yzøldˈøm
+combined_dataset/female_005366.wav|bˈɛjkɔz tɛslimatˈɯ itʃˈɪn ødʒrˈɛt jˈɔk syɾedʒˈɪ bɪrlɪktˈɛ dyzænlejˈɪp sizˈɪ bɪlɟilændiɾedʒˈejɪm
+combined_dataset/male_005306.wav|ˈœndʒɛ kˈart limˈitinizɪ hɯzɫɯdʒˈa kɔntrˈɔɫ edˈijoɾʊm
+combined_dataset/female_011363.wav|œdˈemɛ pɫanɯnˈɯ ɟœzdˈæn ɟetʃiɾˈɪp tʃˈœzøm buɫaɫˈɯm
+combined_dataset/male_001094.wav|ødʒrˈɛtsɪz ɟœɾøntˈylemɛ itʃˈɪn møʃteɾˈɪ menysynˈø kʊɫɫanabilˈɪrsinɪz
+combined_dataset/male_003080.wav|dʒøzdˈan ɪʃlˈæm ødʒretinˈɛ daˈɪr atʃɯkɫˈamajɯ hemˈæn kɔntrˈɔɫ ededʒˈejɪm
+combined_dataset/female_004037.wav|ajrɯdʒˈa prˈɪm œdemˈenɪz sabitːˈɪr vɛ ilɛrlejˈæn dœnæmlɛrdˈɛ artmˈaz
+combined_dataset/male_005233.wav|ɪʃlˈeminɪzlɛ ɪlɟilˈɪ dʒevˈap buɫanˈa kadˈar janɯnɯzdajˈɯm
+combined_dataset/female_007660.wav|ʃɪmdˈɪ kˈart limˈitinizɪ vɛ tɔpɫˈam bˈɔrdʒunuzʊ bɪrlɪktˈɛ nɛtlɛʃtiɾedʒˈejɪm
+combined_dataset/male_008173.wav|ɪʃlemˈɪ ilɛrlɛtmˈɛk itʃˈɪn telefˈɔn numaɾˈanɯzɯ doːɾuɫajabilˈɪr mˈijɪm doːɾˈʊ mʊ
+combined_dataset/female_021487.wav|ɟœɾˈøʃmejɪ doːɾˈʊ ekibˈɛ ɟœndeɾˈijoɾʊm biɾazdˈan dœnˈøʃ oɫadʒˈak
+combined_dataset/male_021750.wav|ɪʃlˈæm onajˈɯ ɟælmedˈɪjsɛ hesabˈɯ ɟetʃidʒˈɪ kɯsɯtɫajadʒˈaːɯm
+combined_dataset/male_011747.wav|fatuɾˈa vɛ vadˈɛ bɪlɟileɾinˈɪ ʃɪmdˈɪ tejˈɪt edejˈɪm mɪ
+combined_dataset/male_022439.wav|telefˈɔn numaɾˈanɯzɯ nˈɔt aɫˈɯjoɾʊm lˈøtfæn tɛkrˈar edˈɛr mˈisinɪz
+combined_dataset/female_022598.wav|ødʒrˈɛtsɪz ˈytʃ dˈɛ sedʒuɾˈɛ adɯmɯnˈɯ bɪrlɪktˈɛ ɟœɾøntˈylejelɪm
+combined_dataset/female_009359.wav|ødʒrˈɛtsɪz ɟœɾøntˈylemɛ itʃˈɪn janɯnɯzdajˈɯm meɾˈak ɛtmejˈɪn
+combined_dataset/female_008974.wav|ɪstˈɛrsenɪz limitˈɪ artˈɯrma talˈebinizɪ dɛ sɪstˈemɛ aɫˈɯp ɪlɟilˈɪ ekibˈɛ iletebilˈiɾɪm
+combined_dataset/female_004831.wav|tamˈamdɯr vɛrdˈijinɪz dˈoːʊm taɾihinˈɪ nˈɔt aɫdˈɯm vɛ kajdˈetːɪm
+combined_dataset/female_004574.wav|baʃtakˈɪ kɯsmˈɯ sɯfˈɯr sɯfˈɯr ˌilɛ baʃɫajˈɯp sɔnrˈa sɯfˈɯr bˈɛʃ ˈytʃ icˈi dˈœrt dˈœrt bˈir secˈɪz jedˈi icˈi ˈytʃ dijˈɛ devˈam edˈijɔr dijˈɛ nˈɔt aɫˈɯjoɾʊm doːɾˈʊ mˈudʊr
+combined_dataset/male_001078.wav|sʊɫtanbɛjlˈɪ ʃubˈenɪz yzeɾɪndˈæn ɪʃlæmleɾˈɪ ʃɪmdˈɪ sɔrɡuɫˈujoɾʊm
+combined_dataset/male_007661.wav|ɪstˈɛrsenɪz ɯbˈan bɪlɟisinˈɪ dɛ ajrɯdʒˈa nˈɔt aɫˈɯɾɯm
+combined_dataset/female_017410.wav|œzˈɛt bɪlɟijˈɪ ɟœzdˈæn ɟetʃiɾˈɪp dœnˈøʃ japadʒˈaːɯm
+combined_dataset/male_016307.wav|sadˈedʒɛ aɾabuɫudʒuɫˈʊk mɛrkezˈɪ œdemˈenizɪ hanɡˈɪ taɾɪhtˈɛ aɫdˈɯɯɯnɯzɯ sœjlemˈenɪz jetɛrlˈɪ oɫadʒˈak
+combined_dataset/male_012669.wav|pɫˈan tutaɾˈɯ itʃˈɪn hedɛfledˈijinɪz bɪr kˈapsam vejˌa bˈøttʃɛ aɾaɫɯɯˈɯ vˈar mɯ
+combined_dataset/male_012147.wav|sizˈɪn itʃˈɪn œnæmlˈɪ oɫˈan ˈœndʒɛlɪk teminˈat tutaɾˈɯ mɯ jˌɔksa ajɫˈɯk œdˈemɛ mɪ
+combined_dataset/female_009732.wav|ˈaː yzeɾɪndˈæn ɟelˈæn doːɾˈuɫama ɪstejinˈɪ joːʊnɫˈʊk nedenˈɪjlɛ tɛkrˈar baːɫajˈɯp ilɛrlˈijoɾʊm
+combined_dataset/female_007957.wav|dʊjɡˈʊ hˈanɯm joːʊnɫˈʊk vˈar ˈama baːɫantɯjˈɯ ʃɪmdˈɪ saːɫajadʒˈaːɯm
+combined_dataset/male_006673.wav|notɛrlˈɪk hesˈabɯnɯzda kaɫˈan bɔrdʒˈʊ sɪstæmdˈæn atʃˈɯjoɾʊm
+combined_dataset/male_000742.wav|ardɯndˈan baːɫantɯjˈɯ sɪstˈemɛ doːɾˈʊ ʃekɪldˈɛ baːɫajadʒˈaːɯm
+combined_dataset/male_022782.wav|baːɫantɯjˈɯ saːɫamˈak itʃˈɪn bɪlɟilˈeɾinizɪ aɫadʒˈaːɯm
+combined_dataset/female_019368.wav|metˈɪn bˈɛj ødʒrˈɛt kalæmleɾinˈɪ dyzænlˈɪ bˈitʃɪmdɛ ɟœɾøntylemˈɛk ɪstˈijoɾʊm
+combined_dataset/female_022341.wav|bɛkletːˈijɪm itʃˈɪn œzˈør dilˈeɾɪm syɾedʒˈɪ nɛtlˈɛʃtɪrdɪm refeɾˈans numaɾˈanɯz nˈɔt edɪldˈɪ
+combined_dataset/male_015114.wav|boɾˈa bˈɛj siɡaɾˈa kʊɫɫanˈɯjɔr mˈusunʊz jˌɔksa kʊɫɫanmˈɯjɔr mˈusunʊz
+combined_dataset/male_011116.wav|dʒˈæm dʒaɾˈɪ dʒevˈap kajdɯnˈɯ atʃˈɯp ɟeɾˈɛktʃɛjɪ nɛtlɛʃtiɾˈijoɾʊm ʃɪmdˈɪ
+combined_dataset/female_019961.wav|refeɾˈans numaɾˈanɯzɯ ɪstˈɛrsenɪz ˈɛpˈɔsta ˌilɛ dɛ pajɫaʃabilˈiɾɪm
+combined_dataset/male_008426.wav|ɯbanˈɯ nˈɔt aɫdˈɯm kɔntrˈɔɫ ɛtmˈenɪz itʃˈɪn tɛkrˈar tejˈɪt edebilˈiɾɪz
+combined_dataset/female_018502.wav|ʃɪmdˈɪ javˈaʃ okujadʒˈaːɯm ɯbanˈɯn baʃɯndˈan baʃɫajadʒˈaːɯm hazˈɯr mˈɯsɯnɯz
+combined_dataset/female_015896.wav|hˈɛr adɯmdˈa baːɫantˈɯ saːɫˈamaja devˈam ededʒˈejɪm
+combined_dataset/female_011041.wav|ʃeɾifˈɛ hˈanɯm kˈartɯnɯzɯn kajbˈɯ itʃˈɪn byjˈøk bɪr ødʒrˈɛt tʃɯkˈar mɯ dyʃynˈyjɔrsunʊz
+combined_dataset/male_015113.wav|kɪmlˈɪk doːɾuɫamasˈɯ itʃˈɪn dˈoːʊm taɾˈihinizɪ ɟˈøn vɛ ˈaj oɫaɾˈak pajɫaʃabilˈɪr mˈisinɪz
+combined_dataset/male_010809.wav|sizˈɪ anɫˈɯjoɾʊm bɛklemˈɛk zˈɔr oɫabilˈijɔr ɟɛrtʃɛktˈæn
+combined_dataset/female_012056.wav|doːɾˈuɫama adɯmɯnˈɯ baːɫamˈak itʃˈɪn ɛkranˈɯ jenilejedʒˈejɪm
+combined_dataset/male_022007.wav|sizˈɪ anɫˈɯjoɾʊm hamˈɪt bˈɛj fatuɾˈa vɛ vɛrɡˈɪ jykˈø zɔrɫajabilˈijɔr
+combined_dataset/male_006562.wav|baːɫantˈɯ sˈaːɫadɯm kajdɯnɯzˈɯ doːɾuɫamˈak yzeɾejˈɪm ʃɪmdˈɪ
+combined_dataset/male_015933.wav|bʊ ˈaɾada kajdɯnɯzˈɯ dˈokuz bˈin aɫtˈɯjˈyz aɫtˈɯ aɫtˈɯ bˈin jedˈijˈyz doksˌanbˈɛʃ ˈytʃjˈyz doksˈan refeɾˈans numaɾasˈɯjɫa atʃˈɯjoɾʊm
+combined_dataset/female_020190.wav|sizˈɪ anɫˈɯjoɾʊm bʊ syɾɛtʃtˈɛ bɛklemˈɛk ɟɛrtʃɛktˈæn joɾudʒˈʊ oɫabilˈijɔr
+combined_dataset/male_011259.wav|dʒaɾˈɪ hesˈap ɟøndʒællemesˈɪ itʃˈɪn sakˈarja dʒadːesˈɪ adresinˈɛ dʒevˈap veɾebilˈɪr mˈisinɪz redʒˈɛp bˈɛj
+combined_dataset/female_014730.wav|adʒˈɪl ˈama sakˈɪn ilˈɛrlejelɪm dʒevabˈɯ ʃɪmdˈɪ tejˈɪt edelˈɪm
+combined_dataset/male_022173.wav|baːɫantɯjˈɯ hɯzɫɯdʒˈa saːɫˈɯjoɾʊm joːʊnɫˈʊk nedenˈɪjlɛ kˈɯsa bɪr bˈɛklemɛ oɫabilˈɪr
+combined_dataset/male_020275.wav|ɪʃlˈæm sɔnrasˈɯ sizˈɛ œzˈæl bɪr œzˈɛt ɟœndeɾejˈɪm mɪ
+combined_dataset/female_007504.wav|byjˈøk dɔsjˈa ɟœɾˈønsɛ dɛ yɾynˈɛ ɟœɾˈɛ ødʒrˈɛt dejiʃebilˈɪr
+combined_dataset/male_005997.wav|taɫatpaʃˈa bʊɫvaɾˈɯ adrˈɛs kajdˈɯ yzeɾɪndˈæn mɪ ilɛrlˈijoɾʊz
+combined_dataset/male_004981.wav|doːɾuɫamˈak yzeɾˈɛ ˈaː kajdɯnˈɯ dejɛrlændiɾˈɪp bɪlɡˈɪ veɾedʒˈejɪm
+combined_dataset/male_014479.wav|benˈɪm itʃˈɪn œnæmlˈɪ oɫˈan pɫanˈɯn sizˈɪ zɔrɫˈamadan sørdyɾylebilˈɪr ɔɫmasˈɯ
+combined_dataset/female_002725.wav|ajɫˈɯk bazdˈa sizˈɪn itʃˈɪn rahˈat oɫˈan tutˈar aɾaɫɯɯˈɯ nˈedɪr banˈa sœjlejebilˈɪr mˈisinɪz
+combined_dataset/male_015728.wav|bʊ setʃenˈɛk dɛ ˈonici ˈaj bojʊndʒˈa ajɫˈɯk œdˈemɛ ʃɛklɪndˈɛ ilɛrlˈijɔr
+combined_dataset/male_013824.wav|sizˈɪn itʃˈɪn ajˈɯn hanɡˈɪ ɟynˈø dahˈa ʊjɡˈʊn oɫˈʊr
+combined_dataset/female_020654.wav|profˈilinɪz itʃˈɪn kodˈʊ ɟiɾˈɪp paketˈɪ tamamɫajadʒˈaːɯz
+combined_dataset/female_013296.wav|dʒevˈabɯnɯzɯ aɫɯndʒˈa dʒaɾˈɪ hesˈap œzetinˈɪ tʃɯkaɾadʒˈaːɯm
+combined_dataset/male_009802.wav|byjˈøk rˈɪsk vˈar ødʒrˈɛtsɪz bɫokaʒˈɯ hemˈæn baʃɫatˈɯjoɾʊm
+combined_dataset/female_014801.wav|sadˈedʒɛ vadˈɛ vɛ fijˈat bɪlɟisˈɪ ɟeɾekˈijɔrsa sœjlejˈɪn
+combined_dataset/male_014670.wav|sizˈɛ doːɾˈʊ fijatˈɯ sunabɪlmˈæm itʃˈɪn bazˈɯ temˈæl bɪlɟileɾˈɪ vɛ kˈɯsa saːɫˈɯk soɾuɫaɾɯnˈɯ aɫmˈam ɟeɾekedʒˈɛk devˈam edebilˈɪr mˈijɪz
+combined_dataset/female_013311.wav|jaʃadˈɯɯɯnɯz ɟedʒˈɪkmejɪ anɫˈɯjoɾʊm dʒaɾˈɪ hesˈap dʒevabɯnˈɯ hɯzɫɯdʒˈa tʃɯkaɾˈɯp ɟeɾˈɛktʃɛjɪ pajɫaʃadʒˈaːɯm
+combined_dataset/male_007822.wav|refeɾˈans kajdɯnˈɯz oɫʊʃtuɾʊɫdˈʊ profˈɪl paketˈɪ hazˈɯr ɪʃlemˈɪ baʃɫatˈɯjoɾʊm
+combined_dataset/male_001970.wav|ɯbanˈɯ tejˈɪt edelˈɪm mɪ pɯnˈar hˈanɯm sɪzdekˈɪ bɪlɟilˈɛrlɛ ajnˈɯ ɟœɾynˈyjɔr mʊ
+combined_dataset/female_014556.wav|vadˈesɪz ɪʃlˈæm vɛ vɛrɡˈɪ adɯmˈɯ itʃˈɪn kodˈʊ tˈɛk tˈɛk sœjlejedʒˈejɪm
+combined_dataset/female_005862.wav|ændiʃˈenɪz ɔɫmasˈɯn nuɾˈɪ bˈɛj dɔsjˈanɯzɯ hemˈæn kɔntrˈɔɫ ededʒˈejɪm
+combined_dataset/female_019140.wav|ɯbˈanɯnɯzɯ javaʃtʃˈa okˈujoɾʊm lˈøtfæn kɔntrˈɔɫ ɛdˈin
+combined_dataset/male_004415.wav|ødʒrˈɛt iadesinˈɪ ødʒrˈɛtsɪz baʃɫatˈɯp møʃteɾˈɪ kajdɯnˈɯ dyzænlejedʒˈejɪm
+combined_dataset/male_013848.wav|belɪrlenˈæn taɾɪhtˈɛ hanɡˈɪ ɟynˈɛ dˈænk ɟelˈɪrsɛ ɟælsˈɪn bʊ bɪlɟilˈɛrlɛ hesˈabɯnɯzdan otomatˈɪk bɪr tʃˈekɪm ɟɛrtʃɛkleʃˈɪr
+combined_dataset/female_000832.wav|buɡˈøn bˈuɾada nɛtlɛʃtɪrdˈijimɪz bɪlɟilˈɛrlɛ baʃvuɾujˈʊ baʃɫatmamˈɯ ɪstˈɛrmisinɪz
+combined_dataset/male_020598.wav|sizˈɪ jˈɔrmadan vadˈesɪz hesˈap vɛ fatuɾˈa duɾumunˈʊ nɛtlɛʃtiɾedʒˈejɪm
+combined_dataset/male_008110.wav|vadˈesɪz ɪʃlˈæm onajˈɯ itʃˈɪn kodˈʊ tɛkrˈar ˈɛtmelɪ mˈisinɪz
+combined_dataset/female_022895.wav|refeɾˈans numaɾˈanɯzɯ kɔntrˈɔɫ edˈijoɾʊm ardɯndˈan kɪmlˈɪk adɯmɯnˈa ɟetʃedʒˈejɪz
+combined_dataset/male_015256.wav|bɪlɟilˈændɪrmɛ amatʃɫˈɯ sˈœjlejejɪm polˈitʃɛ dyzænlenebɪlmesˈɪ itʃˈɪn kɪmlˈɪk doːɾuɫamasˈɯ zoɾʊnɫˈudʊr
+combined_dataset/female_005489.wav|ɪdʒrˈa mydørlˈøː jazɯsˈɯ hesˈabɯnɯza uɫaʃtˈɯ mɯ refeɾˈans numaɾasˈɯ doːɾˈʊ mʊ
+combined_dataset/female_001230.wav|sˈɔn ikˈɪ jˈɯɫ itʃɪndˈɛ hastanejˈɛ jatˈɯʃ amelijˈat vejˌa dyzænlˈɪ takˈɪp ɟeɾɛktiɾˈæn bɪr tedavˈɪ ɟœrdynˈøz mø
+combined_dataset/male_012646.wav|ɟœɾøʃmˈemɪz bˈɛʃ bˈin dˈokuzjˈyz otˌuzjedˈi bˈin jedˈijˈyz icˈi aɫtˈɯjˈyz jetmˌiʃdˈœrt refeɾˈans numaɾasˈɯjɫa kajˈɯt aɫtɯndˈadɯr
+combined_dataset/female_020517.wav|baːɫantˈɯ joːˈʊn doːɾuɫˈamajɯ saːɫajˈɯp œːɾænmˈemɪz ɟeɾekˈijɔr hemˈæn
+combined_dataset/female_021459.wav|ɯbanˈɯ javaʃtʃˈa okujadʒˈaːɯm lˈøtfæn kɔntrˈɔɫ edeɾˈɛk jazˈɯn
+combined_dataset/female_015678.wav|œːɾænmˈɛk ɪstˈijoɾʊm mˈɛrsɪn bɪlɟisˈɪ halˈa ɟetʃɛrlˈɪ mɪ
+combined_dataset/female_001857.wav|sizˈɛ doːɾˈʊ bɪr tɛklˈɪf sunabɪlmˈæm itʃˈɪn sɪzdˈæn kɯsadʒˈa bazˈɯ bɪlɟilˈɛr tɔpɫajadʒˈaːɯm
+combined_dataset/male_015819.wav|iɫatʃɫaɾˈɯn jˈan ɛtkisˈɪ oɫaɾˈak bˈaʃ dœnmesˈɪ midˈɛ buɫantɯsˈɯ vejˌa sˈɛrsæmlɪk jaʃˈɯjɔr mˈusunʊz
+combined_dataset/female_019155.wav|bʊ ˈaɾama mæmnunijˈɛt anketˈidɪr dʒardˈɪf siɡɔrtˈa adɯnˈa aɾˈɯjoɾʊm
+combined_dataset/male_023921.wav|anɫˈɯjoɾʊm mʊstafˈa bˈɛj bɪrlɪktˈɛ adˈɯm adˈɯm ilˈɛrlejelɪm
+combined_dataset/male_013901.wav|iɫˈatʃ isɪmleɾinˈɪ sœjlemˈɛk ɪstemˈɛzsenɪz soɾˈʊn dˈejɪl hanɡˈɪ rahˈatsɯzɫɯk itʃˈɪn kʊɫɫanˈɯjɔrsunʊz dijˈɛ soɾajˈɯm
+combined_dataset/female_001806.wav|tamˈamdɯr jaɾˈɯn sabˈah sizˈɪ aɾajˈɯp kaɫdˈɯɯɯmɯz jɛrdˈæn devˈam ededʒˈejɪm
+combined_dataset/male_013923.wav|mˈɛrhaba sæmrˈa hˈanɯm bæn kaˈan kˌɛkˌɛbˈɛ møʃteɾˈɪ dɛstˈɛk hatːɯnˈa hˈɔʃ ɟældinˈɪz
+combined_dataset/female_007675.wav|baːɫantɯjˈɯ saːɫamˈak adɯnˈa ɯbˈan doːɾˈuɫajaɫɯm mɯ ʃɪmdˈɪ
+combined_dataset/male_011202.wav|kusuɾˈa bakmajˈɯn tɛkrˈar ededʒˈejɪm kˈɯsa bɪr œzˈɛt ɟetʃeɾˈɛk kodˈʊ jenidˈæn iletedʒˈejɪm
+combined_dataset/female_000336.wav|aktˈɪf politʃˈenɪz vˈarsa ɪptˈaɫ ˈɛtmejɪ mɪ dyʃynˈyjɔrsunʊz jˌɔksa ˈɛk teminˈat mɯ ɪstˈijɔrsunʊz
+combined_dataset/male_014990.wav|ʃʊ andˈa dyzænlˈɪ kʊɫɫandˈɯɯɯnɯz retʃetelˈɪ bɪr iɫˈatʃ vˈar mɯ
+combined_dataset/male_009274.wav|pakˈɛt prɔɡramˈɯ pɔrtˈaɫa jøklejˈɪp polˈitʃɛ vɛ prˈɪm adɯmɫaɾɯnˈɯ hɯzɫɯdʒˈa tamamɫajadʒˈaːɯz eminˈɛ hˈanɯm
+combined_dataset/male_011583.wav|baːɫantɯjˈɯ doːɾuɫajˈɯp dejɛrlændˈɪrmejɪ sizˈɛ nˈɛt aktaɾadʒˈaːɯm
+combined_dataset/male_016695.wav|jaʃadˈɯɯɯnɯz byjˈøk ˈaksakɫɯk itʃˈɪn øzɟˈynøm zɛhrˈa hˈanɯm
+combined_dataset/female_002173.wav|ˈon bˈin tˌɛlˈɛ teminˈat itʃˈɪnsɛ ajɫˈɯk œdˈemɛ jakɫaʃˈɯk icˈi bˈin aɫtˈɯjˈyz tˌɛlˈɛ dʒivaɾɯndˈa oɫabilˈɪr
+combined_dataset/male_008121.wav|lˈøtfæn møʃteɾˈɪ ɛkranɯndˈa doːɾˈuɫama kodunˈʊ doːɾˈʊ ʃekɪldˈɛ ɟiɾˈɪn
+combined_dataset/female_017553.wav|sɛvɡˈɪ hˈanɯm ɟeɾˈɪ bɪldˈiɾiminɪz benˈɪm itʃˈɪn tʃˈɔk dejɛrlˈɪ
+combined_dataset/female_001887.wav|sˈɔn oɫaɾˈak polˈitʃɛ itʃˈɪn ʊjɡʊnɫˈʊk koʃʊɫɫaɾɯnˈɯ nɛtlɛʃtɪrdɪktˈæn sɔnrˈa sizˈɛ ˈøtʃ setʃenˈɛk sunadʒˈaːɯm
+combined_dataset/female_006344.wav|kartaɫdakˈɪ adrˈɛs dejiʃɪklijˈɪ kafˈa kaɾɯʃtɯrmˈɯʃ hakɫˈɯsɯnɯz detajɫaɾˈɯ sakˈɪn sakˈɪn atʃaɫˈɯm
+combined_dataset/male_018120.wav|bɛkletːˈijɪm itʃˈɪn œzˈør dilˈeɾɪm joːʊnɫˈʊk jaʃandˈɯ
+combined_dataset/female_005729.wav|œzˈæl bɪr kˈɔd ɟœndeɾedʒˈejɪm lˈøtfæn ɟœzdˈæn ɟetʃiɾˈɪp sœjlejˈɪn
+combined_dataset/female_002365.wav|koˈah jˈa da amfizˈæm ɟibˈɪ kronˈɪk akdʒijˈɛr hastaɫˈɯɯɯnɯz vˈar mɯ
+combined_dataset/male_004490.wav|kɪmlˈijinizɪ doːɾuɫamˈak itʃˈɪn baːɫantˈɯ sˈaːɫajaɫɯm
+combined_dataset/male_012981.wav|œdˈemejɪ ajɫˈɯk mɯ jˌɔksa jɯɫɫˈɯk mɯ tɛrdʒˈɪh edˈɛrsinɪz
+combined_dataset/female_003770.wav|bɪlɟileɾˈɪ ɟøndʒælledɪktˈæn sɔnrˈa sizˈɛ ˈæn nˈɛt primˈɪ tɛkrˈar hesapɫajadʒˈaːɯm
+combined_dataset/male_023090.wav|refeɾˈans kajdɯnɯzˈɯ aɫdˈɯm dʒaɾˈɪ hesˈap dʒevabɯnˈɯ bʊ kajdˈa baːɫajadʒˈaːɯm
+combined_dataset/female_016379.wav|dʒøzdˈan fotoːɾafˈɯ vɛ ɟeɾˈɛktʃɛ notˈʊ ɛklejebilˈɪrsinɪz
+combined_dataset/male_009047.wav|sɪstˈemɪmdɛ ɪʃlˈæm refeɾˈans numaɾˈanɯz ɟœɾøntylenˈijɔr
+combined_dataset/female_004377.wav|esænjʊrttˈajsanɯz vɛ dʒʊmhuɾijˈɛt dʒadːesˈɪ dʒivaɾɯndˈa oɫˈʊrsanɯz ɟeɾekˈɪrsɛ jˈøz jyzˈɛ ɛvrˈak jœnlændɪrmesˈɪ dɛ japabilˈiɾɪz
+combined_dataset/male_000020.wav|ɟœɾˈøʃmejɪ ɟœzdˈæn ɟetʃiɾˈɪp œdˈemɛ vɛ kapanˈɯʃ tʃœzymynˈø bˈœjlɛ nɛtlɛʃtiɾˈijoɾʊz metˈɪn bˈɛj
+combined_dataset/male_017146.wav|fɪndˈɛks yɾˈøn detajɯnˈɯ œzɛtlejedʒˈejɪm byjˈøk farkɫaɾˈɯ bɪrlɪktˈɛ dyʃynelˈɪm
+combined_dataset/female_013187.wav|sɔnrˈa œdˈemejɪ ɟœzdˈæn ɟetʃiɾˈɪp œzˈɛt pajɫaʃadʒˈaːɯm
+combined_dataset/female_016649.wav|abdˈɪ ipɛktʃˈɪ dʒadːesˈɪ adresinˈɪ tejˈɪt edˈɪp tæmsɪldʒijˈɛ jœnlændɪrmemˈɪ ɪstˈɛrmisinɪz
+combined_dataset/female_004645.wav|bʊ ˈaɾada nˈɔt aɫmˈanɯz ɟeɾekˈɪrsɛ dijˈɛ dɔsjˈa numaɾˈanɯzɯ pajɫaʃajˈɯm dˈokuz jedˈi secˈɪz icˈi dˈœrt icˈi jedˈi jedˈi bˈir ˈytʃ dˈœrt
+combined_dataset/female_017079.wav|ʃɪmdˈɪ ɪʃlemˈɪn saatinˈɪ vɛ tutaɾɯnˈɯ tˈɛk tˈɛk nɛtlɛʃtiɾedʒˈejɪm
+combined_dataset/male_005180.wav|ˈaː yzeɾɪndˈæn kajdˈɯ baːɫajˈɯp œːɾænmˈɛk ɪstˈijoɾʊm
+combined_dataset/male_000639.wav|jaʃatːˈɯɯɯm kaɾɯʃɯkɫˈɯk itʃˈɪn ɟɛrtʃɛktˈæn œzˈør dilˈeɾɪm
+combined_dataset/male_022368.wav|uɫaʃamamˈɯʃ ɔɫmˈamɯz dʒˈan sɯkɯdʒˈɯ bunˈʊ anɫˈɯjoɾʊm
+combined_dataset/male_005468.wav|baːɫantˈɯ vɛ ˈaː kajdɯnˈɯ dejɛrlændiɾˈɪp sonudʒˈʊ pajɫaʃadʒˈaːɯm
+combined_dataset/male_022572.wav|vadˈesɪz hesˈap dˈɔndʊrma jyzøndˈæn jaʃanˈan ˈaksakɫɯk itʃˈɪn affedˈɪn tɔɫɡˈa bˈæn
+combined_dataset/female_000281.wav|ɪstˈɛrsenɪz dɔsjˈanɯzɯn refeɾˈans numaɾasɯnˈɯ da pajɫaʃajˈɯm jedˈi bˈir bˈɛʃ dˈœrt aɫtˈɯ ˈytʃ dˈœrt dˈokuz icˈi bˈɛʃ bˈir
+combined_dataset/male_006656.wav|ɟœndˈeɾɪm œndʒesˈɪ ɯbanˈɯ œzˈæl oɫaɾˈak ɟœzdˈæn ɟetʃiɾˈɪp œzˈɛt tʃɯkaɾˈɯjoɾʊm bˈœjledʒɛ hatˈa kaɫmˈaz
+combined_dataset/male_005236.wav|yjˈe bˈɪlɟinizɪ doːɾuɫajˈɯp byjˈøk tutaɾˈɯ da kɔntrˈɔɫ edejˈɪm mɪ
+combined_dataset/male_000253.wav|tˈɛ rˈɛ dˈœrt ˈytʃ sɯfˈɯr sɯfˈɯr bˈir sɯfˈɯr ˈytʃ sɯfˈɯr bˈir jedˈi bˈir jedˈi jedˈi dˈokuz dˈœrt aɫtˈɯ jedˈi aɫtˈɯ sɯfˈɯr sɯfˈɯr dˈœrt icˈi oɫaɾˈak ɟœɾynˈyjɔr
+combined_dataset/male_011843.wav|ˈɪzmɪr bœlɟesˈɪ itʃˈɪn eɾiʃebɪldˈijɪm tˈøm ʊjɡˈʊn polˈitʃɛ setʃenɛkleɾinˈɪ taɾajaɾˈak sizˈɛ ˈæn hɯzɫˈɯ sonudʒˈʊ tʃɯkˈarmaja tʃaɫɯʃˈɯjoɾʊm
+combined_dataset/female_021883.wav|ʃɪmdˈɪ syɾedʒˈɪ hɯzɫandɯɾˈɯp sizˈɪ rahatɫatadʒˈaːɯm
+combined_dataset/male_005455.wav|ɟyvænlˈɪk adɯmɫaɾɯnˈɯ sˈɯɾajɫa ʊjɡuɫajadʒˈaːɯz meɾˈak ɛtmejˈɪn
+combined_dataset/female_016035.wav|aɾˈamajɯ taɫatpaʃˈa bʊɫvaɾˈɯ dʒivaɾɯndˈa mɯ aɫadʒˈaksɯnɯz
+combined_dataset/male_013525.wav|dijabˈɛt dɯʃɯndˈa ˈɛk bɪr saːɫˈɯk dˈuɾumunʊz vejˌa dyzænlˈɪ kʊɫɫandˈɯɯɯnɯz iɫˈatʃ vˈar mɯ
+combined_dataset/male_015538.wav|ɪndʒˈelemɛ syɾˈenɪz itʃɪndˈɛ vazɟɛtʃmˈɛk ɪstˈɛrsenɪz ɪptˈaɫ syɾedʒinˈɪ dɛ bæn jœnlændiɾˈiɾɪm
+combined_dataset/male_011716.wav|doːɾuɫˈamajɯ saːɫamˈak adɯnˈa refeɾansˈɯ bˈaːɫajajɯm mɯ
+combined_dataset/male_007270.wav|yjˈe profilinɪzdekˈɪ yɾˈøn ødʒretˈɪ bɪlɟisinˈɪ bɪrlɪktˈɛ ɟœɾøntylejˈɪp dyzˈænlejelɪm
+combined_dataset/male_009147.wav|ɯbˈan tˈɛ rˈɛ dˈœrt dˈokuz sɯfˈɯr sɯfˈɯr bˈir icˈi ˈytʃ sɯfˈɯr jedˈi secˈɪz jedˈi bˈir dˈokuz icˈi bˈir bˈɛʃ secˈɪz aɫtˈɯ secˈɪz ˈytʃ secˈɪz bˈɛʃ
+combined_dataset/female_013504.wav|refeɾˈans numaɾasˈɯ icˈi aɫtˈɯ bˈɛʃ sɯfˈɯr bˈɛʃ icˈi dˈokuz dˈœrt jedˈi ˈytʃ jedˈi ˌilɛ kajˈɯt atʃˈɯjoɾʊm tamˈam mɯ
+combined_dataset/male_014088.wav|devˈam edebɪlmˈæm itʃˈɪn esænlɛrdˈɛ ikamˈɛt ɛdˈen bɪr tˈørkijɛ dʒʊmhuɾijetˈɪ vatandaʃˈɯ ɔɫdˈuːnuzʊ vɛ kɪmlˈɪk numaɾˈanɯzɯ doːɾuɫamˈamɯz ɟeɾekˈijɔr
+combined_dataset/female_012201.wav|bˈœjlɛ kytʃˈøk nɔtɫˈar tʃˈœzøm yɾɛtmˈemizɛ jardˈɯm edˈijɔr
+combined_dataset/male_015960.wav|ajrɯdʒˈa politʃˈenɪz zamˈanɫa nakˈɪt dejˈɛr biɾɪktˈɪrmejɛ baʃlˈɯjɔr
+combined_dataset/male_010599.wav|kodunuzˈʊ javaʃtʃˈa okˈujoɾʊm lˈøtfæn ajnˈɯ sˈɯɾajɫa tɛkrˈar edˈɛr mˈisinɪz
+combined_dataset/female_018974.wav|lˈøtfæn kodˈʊ ʃɪmdˈɪ okujˈʊn syɾˈɛ dˈɔɫmadan doːɾuɫˈamajɯ tamˈamɫajaɫɯm nevˈɪn hˈanɯm
+combined_dataset/female_003744.wav|siɡaɾˈa kʊɫɫˈanɯmɯ vˈar mɯ onˈʊ da tejˈɪt edebilˈɪr mˈijɪm
+combined_dataset/female_010127.wav|joːʊnɫˈʊk vˈar ˈama doːɾuɫajˈɯp baːɫantɯjˈɯ hemˈæn saːɫajadʒˈaːɯm bɛklɛtmejedʒˈejɪm
+combined_dataset/female_008047.wav|zelihˈa hˈanɯm otomatˈɪk œdˈemɛ baːɫamˈak itʃˈɪn bɪlɟilˈeɾinizɪ œːɾænmˈɛk ɪstˈijoɾʊm
+combined_dataset/male_011560.wav|kobˈɪ møʃtˈeɾimɪz oɫaɾˈak ødʒrˈɛt vɛ yɾˈøn detajɫaɾɯnˈɯ buɡˈøn nɛtlɛʃtiɾˈiɾɪz
+combined_dataset/male_005536.wav|bæn tuːbˈa jatˈɯɾɯm yɾˈøn detajɫaɾɯnˈɯ byjˈøk ɛkrandˈan ɟœɾøntylejˈɪp aktaɾadʒˈaːɯm
+combined_dataset/female_006517.wav|dʒaɾˈɪ hesˈap yzeɾɪndˈæn ɪʃlemˈɪ rahattʃˈa baʃɫatˈɯɾɯz
+combined_dataset/male_007067.wav|œzˈør dilˈeɾɪm ɟœɾˈøʃmɛ sɯɾasɯndˈa bɪr detˈaj atɫanmˈɯʃ
+combined_dataset/male_016412.wav|baːdʒɯɫˈar mɪthatpaʃˈa dʒadːesɪndekˈɪ ˈadresinɪz ɟøndʒˈælsɛ tɛklɪfleɾˈɪ onˈa ɟœɾˈɛ dyzænlejebɪlmˈæm itʃˈɪn tejˈɪt edˈɛr mˈisinɪz
+combined_dataset/male_001430.wav|bɔrdʒˈʊn œzetinˈɪ hazˈɯrɫadɯm ˈœndʒɛ ɟedʒˈɪkmejɪ ɟœzdˈæn ɟetʃiɾedʒˈejɪm
+combined_dataset/female_019940.wav|dʒaɾˈɪ hesˈap atʃˈɯkɫama ɟeɾˈɛktʃɛ kɔntrˈɔɫ edˈijoɾʊm ʃɪmdˈɪ
+combined_dataset/male_012667.wav|tɛklɪftˈɛ dejɛrlændiɾedʒˈejimɪz baʃɫanɡˈɯtʃ taɾihˈɪ itʃˈɪn tɛrdʒˈɪh etːˈijinɪz bɪr zamˈan aɾaɫɯɯˈɯ vˈar mɯ œrnejˈɪn buɡˈøn bʊ haftˈa jˈa da ˈaj baʃˈɯ ɟibˈɪ
+combined_dataset/male_015506.wav|œdˈemɛ pɫanɯndˈa ajɫˈɯk mɯ jˌɔksa farkɫˈɯ bɪr peɾijˈɔt mʊ tɛrdʒˈɪh edˈɛrsinɪz
+combined_dataset/male_021416.wav|doːɾuɫamˈak itʃˈɪn refeɾansˈɯ da dejɛrlændiɾedʒˈejɪm
+combined_dataset/male_016966.wav|ødʒrˈɛtsɪz kɔntrˈɔɫ japˈɯp yɾynˈø onajˈa hazˈɯr hˈalɛ ɟetiɾedʒˈejɪm
+combined_dataset/female_001939.wav|hɛrhanɡˈɪ bɪr soɾˈʊ sizˈɛ ujˈujɔrsa lˈøtfæn ˈaɾaja ɟiɾˈɪp benˈɪ dˈʊrduɾʊn
+combined_dataset/male_002884.wav|adaɫˈar kajdɯnɯzˈɯ kɔntrˈɔɫ edˈɪp nˈɛt bɪr œzˈɛt sunadʒˈaːɯm
+combined_dataset/male_023520.wav|kusuɾˈa bakmajˈɯn sɪstæmdˈɛ kˈɯsa bɪr kesɪntˈɪ ɔɫdˈʊ
+combined_dataset/female_008437.wav|sizˈɪ anɫˈɯjoɾʊm bʊ belˈɪrsɪzlɪk joɾudʒˈʊ oɫabilˈɪr
+combined_dataset/male_013820.wav|sˈelɪm bˈɛj bɪr dakikˈa hatːˈa bɛkletedʒˈejɪm sɪstæmdˈæn kɔntrˈɔɫ japˈɯjoɾʊm
+combined_dataset/female_001049.wav|kajɯtɫˈaɾɯnɯzɯ kɔntrˈɔɫ edˈɛrcæn hatːˈa kaɫabilˈɪr mˈisinɪz lˈøtfæn
+combined_dataset/female_003290.wav|sizˈɪn itʃˈɪn ˈæn ʊjɡˈʊn setʃenejˈɪ belɪrlemˈɛk adɯnˈa bɪrkˈatʃ kˈɯsa soɾˈʊ dahˈa soɾadʒˈaːɯm
+combined_dataset/female_006521.wav|kˈʊr dejˈɪʃsɛ bˈilɛ sizˈɛ ˈæn ʊjɡˈʊn setʃenejˈɪ ɟœsteɾedʒˈejɪm
+combined_dataset/male_017796.wav|ɟeɾˈɛktʃɛjɪ ɟiɾˈɪp ɪptˈaɫ ɪʃleminˈɪ ɟɛrtʃɛklɛʃtiɾedʒˈejɪm
+combined_dataset/male_012674.wav|ʃɪmdˈɪ bɪrkˈatʃ setʃenˈɛk tʃɯkaɾadʒˈaːɯm bʊ sˈɯɾada hatːˈa kaɫabilˈɪr mˈisinɪz
+combined_dataset/male_017721.wav|ɔtpjˈɪ doːɾˈʊ ɟiɾelˈɪm sɔnrˈa yɾˈøn œdemesˈɪ tamamɫanˈɯr
+combined_dataset/male_008226.wav|ɟœɾøʃmˈɛk ɪstˈijoɾʊm œzˈæl tʃˈœzøm itʃˈɪn œzˈɛt ɟœndeɾelˈɪm
+combined_dataset/male_002890.wav|ødʒrˈɛtsɪz ɟœɾøntˈylemɛ baːɫantɯsɯnˈɯ ʃɪmdˈɪ ɟœndeɾejˈɪm mɪ
+combined_dataset/female_011894.wav|bˈœjlɛ oɫˈʊrsa ɟœzdˈæn ɟetʃɪrmˈenɪz dahˈa koɫˈaj oɫˈʊr
+combined_dataset/male_016461.wav|haɾikˈa teʃekːˈør edˈeɾɪm adrˈɛs bɪlɟilˈeɾinizɪ sɪstæmdˈɛ ɟøndʒællˈijoɾʊm
+combined_dataset/female_011326.wav|takˈɪp tʃœzymˈøjlɛ kʊrjejˈɪ anɫˈɯk ɟœzdˈæn ɟetʃiɾebilˈiɾɪz
+combined_dataset/female_003685.wav|bɪlɟileɾˈɪ kɔntrˈɔɫ edˈɛrcæn sɪzdˈæn bɪr dakikˈa ridʒˈa ededʒˈejɪm
+combined_dataset/female_009980.wav|ødʒrˈɛt tʃɯkˈarsa ɟeɾˈɛktʃɛjɪ nˈɛt bɪr atʃɯkɫˈamajɫa pajɫaʃadʒˈaːɯm
+combined_dataset/female_020791.wav|ɛdˈa oɫaɾˈak ødʒrˈɛtsɪz ɟœɾˈøʃmɛ œzetinˈɪ vɛ refeɾansˈɯ dyzˈænledɪm
+combined_dataset/male_012322.wav|bɪr sɔnrakˈɪ adˈɯm oɫaɾˈak baʃvˈuɾunuzʊ sɪstæmdˈɛ ɟyvˈændʒɛ aɫtɯnˈa aɫˈɯp siɡɔrtˈa ʃɪrketinˈɛ nihaˈɪ onˈaj itʃˈɪn ilɛtmˈæm ɟeɾekˈijɔr
+combined_dataset/female_018067.wav|refeɾˈans numaɾasɯnˈɯ kajdˈa aɫdˈɯm ɪʃlemˈɪ baʃɫatˈɯjoɾʊm
+combined_dataset/female_017405.wav|bæn sɛvdʒˈan kɔntrˈɔɫ ededʒˈejɪm dʒaɾˈɪ hesˈap kajdɯnˈɯ atʃˈɯjoɾʊm
+combined_dataset/female_007298.wav|aɫsandʒˈak kɔrdˈɔn adrˈesinizɪ sɪstˈemɛ ɛklˈijoɾʊm
+combined_dataset/female_002613.wav|ʃunˈʊ da sœjlemˈɛk ɪstˈeɾɪm kɪ azˈɯ bˈilɛ hˈɪtʃ ɔɫmamasɯndˈan ijˈidɪr
+combined_dataset/female_005860.wav|nuɾˈɪ bˈɛj bʊ syɾˈɛtʃ joɾudʒˈʊ oɫabilˈijɔr sizˈɪ tʃˈɔk ijˈi anɫˈɯjoɾʊm
+combined_dataset/male_022500.wav|rahˈatsɯz etːˈɪjsæm kusuɾˈa bakmajˈɯn mɛrvˈɛ hˈanɯm
+combined_dataset/female_000937.wav|anɫajˈɯʃɯnɯz itʃˈɪn teʃekːˈør edˈeɾɪm biɾazdˈan sonʊtʃɫaɾˈɯ aktaɾˈɯjoɾʊm
+combined_dataset/male_010080.wav|œzˈɛt oɫaɾˈak paɾˈa mɯ tʃɯktˈɯ jˌɔksa hˈɪtʃ tʃˈɯkmadɯ mɯ
+combined_dataset/female_005812.wav|ɯbˈan yzeɾɪndˈæn paɾˈa aktˈaɾɯmɯ japɯɫdˈɯ mɯ kɔntrˈɔɫ ɛtmemˈɪ ɪstˈɛrmisinɪz
+combined_dataset/male_017695.wav|jaʃadˈɯɯɯnɯz joːʊnɫˈʊk itʃˈɪn œzˈør dilˈeɾɪm baːɫantɯjˈɯ saːɫamˈak yzeɾejˈɪm
+combined_dataset/female_003831.wav|tamˈamdɯr kolɛsteɾˈɔɫ itʃˈɪn kʊɫɫandˈɯɯɯnɯz iɫatʃɫaɾˈɯ da ɛklˈijoɾʊm
+combined_dataset/male_010777.wav|dʒaɾˈɪ hesˈap haɾekɛtleɾinˈɪ tˈɛk tˈɛk hesapɫajadʒˈaːɯm
+combined_dataset/female_013355.wav|joːʊnɫˈʊk ˈɔɫsa da dejɛrlændˈɪrmejɪ hɯzɫandɯɾˈɯjoɾʊm
+combined_dataset/female_002432.wav|sizˈɛ dijabˈɛt ɟibˈɪ bɪr rahˈatsɯzɫɯk tɛʃhisˈɪ konuɫˈʊrsa vefˈat teminatɯnˈɯn bɪr kɯsmɯnˈa hajatːˈajcæn eɾˈɪʃmɛ setʃenejˈɪ dɛ buɫunˈʊr
+combined_dataset/female_020426.wav|refeɾˈans numaɾˈanɯzɫa kajdˈɯ kɔntrˈɔɫ edˈɪp kʊrjˈɛ duɾumunˈʊ pajɫaʃadʒˈaːɯm
+combined_dataset/female_017383.wav|ødʒrˈɛtsɪz doːɾˈuɫama adɯmɯnˈɯ ʃɪmdˈɪ ɟœɾøntylejedʒˈejɪm
