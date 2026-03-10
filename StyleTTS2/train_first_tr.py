@@ -352,7 +352,7 @@ def main(config_path):
                     en.append(asr[bib, :, random_start:random_start+mel_len])
                     gt.append(mels[bib, :, (random_start * 2):((random_start+mel_len) * 2)])
                     y = waves[bib][(random_start * 2) * 300:((random_start+mel_len) * 2) * 300]
-                    wav.append(torch.from_numpy(y).to('cuda'))
+                    wav.append(torch.from_numpy(y).to(device))
 
                 wav = torch.stack(wav).float().detach()
 

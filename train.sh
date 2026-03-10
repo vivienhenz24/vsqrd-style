@@ -4,6 +4,11 @@ set -e
 REPO_ROOT="$(cd "$(dirname "$0")" && pwd)"
 HF_DATASET="vsqrd/styletts2-turkish"
 HF_PLBERT="vsqrd/pl-bert-turkish"
+NUM_PROCESSES="${NUM_PROCESSES:-4}"
+NUM_MACHINES="${NUM_MACHINES:-1}"
+MACHINE_RANK="${MACHINE_RANK:-0}"
+MAIN_PROCESS_PORT="${MAIN_PROCESS_PORT:-29500}"
+MIXED_PRECISION="${MIXED_PRECISION:-bf16}"
 
 echo "=== Setting up Turkish StyleTTS2 training ==="
 
@@ -102,4 +107,12 @@ print('All checks passed')
 # Launch training
 echo "=== Launching stage 1 training ==="
 cd $REPO_ROOT/StyleTTS2
-"$PY" train_first_tr.py -p Configs/config_turkish.yml
+echo "  num_processes=$NUM_PROCESSES"
+echo "  mixed_precision=$MIXED_PRECISION"
+exec "$PY" -m accelerate.commands.launch \
+    --num_processes "$NUM_PROCESSES" \
+    --num_machines "$NUM_MACHINES" \
+    --machine_rank "$MACHINE_RANK" \
+    --main_process_port "$MAIN_PROCESS_PORT" \
+    --mixed_precision "$MIXED_PRECISION" \
+    train_first_tr.py -p Configs/config_turkish.yml
