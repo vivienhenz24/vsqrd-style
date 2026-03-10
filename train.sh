@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-REPO_ROOT=/workspace
+REPO_ROOT="$(cd "$(dirname "$0")" && pwd)"
 HF_DATASET="vsqrd/styletts2-turkish"
 HF_PLBERT="vsqrd/pl-bert-turkish"
 
