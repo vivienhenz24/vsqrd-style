@@ -28,7 +28,7 @@ skipped = 0
 
 with open(MANIFEST, newline="", encoding="utf-8") as f:
     for row in csv.DictReader(f):
-        phonemes = row["phonemes"].replace("\n", " ").strip()
+        phonemes = row["phonemes"].replace("\r", "").replace("\n", " ").strip()
 
         # skip corrupted rows (non-Turkish text phonemized with language tags)
         if "(" in phonemes or ")" in phonemes:

@@ -50,3 +50,6 @@ StyleTTS2/Utils/PLBERT_turkish/step_*.t7
 
 # HuggingFace cache
 .cache/
+
+# Upload archives
+*.tar.gz
