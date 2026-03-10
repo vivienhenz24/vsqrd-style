@@ -43,11 +43,10 @@ print('Downloading alignments.tar.gz...')
 hf_hub_download('vsqrd/styletts2-turkish', 'alignments.tar.gz',
     repo_type='dataset', local_dir='$REPO_ROOT', token=token)
 
-print('Downloading Turkish PL-BERT...')
+print('Downloading Turkish PL-BERT checkpoint...')
 os.makedirs('$REPO_ROOT/StyleTTS2/Utils/PLBERT_turkish', exist_ok=True)
-for f in ['config.yml', 'step_160000.t7']:
-    hf_hub_download('vsqrd/pl-bert-turkish', f,
-        local_dir='$REPO_ROOT/StyleTTS2/Utils/PLBERT_turkish', token=token)
+hf_hub_download('vsqrd/pl-bert-turkish', 'step_160000.t7',
+    local_dir='$REPO_ROOT/StyleTTS2/Utils/PLBERT_turkish', token=token)
 
 print('Downloading F0 model...')
 hf_hub_download('yl4579/StyleTTS2-LibriTTS', 'Utils/JDC/bst.t7',
