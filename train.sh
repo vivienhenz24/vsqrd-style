@@ -25,10 +25,11 @@ cd $REPO_ROOT
 # Install dependencies
 echo "--- Installing dependencies ---"
 uv sync
+source "$REPO_ROOT/.venv/bin/activate"
 
 # Download and extract dataset
 echo "--- Downloading dataset ---"
-uv run huggingface-cli download $HF_DATASET combined_dataset.tar.gz \
+huggingface-cli download $HF_DATASET combined_dataset.tar.gz \
     --repo-type dataset --local-dir $REPO_ROOT --quiet
 echo "--- Extracting dataset ---"
 tar -xzf $REPO_ROOT/combined_dataset.tar.gz -C $REPO_ROOT
@@ -36,7 +37,7 @@ rm $REPO_ROOT/combined_dataset.tar.gz
 
 # Download and extract alignments
 echo "--- Downloading alignments ---"
-uv run huggingface-cli download $HF_DATASET alignments.tar.gz \
+huggingface-cli download $HF_DATASET alignments.tar.gz \
     --repo-type dataset --local-dir $REPO_ROOT --quiet
 echo "--- Extracting alignments ---"
 tar -xzf $REPO_ROOT/alignments.tar.gz -C $REPO_ROOT
@@ -45,7 +46,7 @@ rm $REPO_ROOT/alignments.tar.gz
 # Download Turkish PL-BERT (160k checkpoint only)
 echo "--- Downloading Turkish PL-BERT ---"
 mkdir -p $REPO_ROOT/StyleTTS2/Utils/PLBERT_turkish
-uv run huggingface-cli download $HF_PLBERT \
+huggingface-cli download $HF_PLBERT \
     config.yml \
     step_160000.t7 \
     --local-dir $REPO_ROOT/StyleTTS2/Utils/PLBERT_turkish \
@@ -56,14 +57,14 @@ uv run huggingface-cli download $HF_PLBERT \
 
 # Download JDC pitch model (from StyleTTS2 LibriTTS repo)
 echo "--- Downloading F0 model ---"
-uv run python3 -c "
+python3 -c "
 from huggingface_hub import hf_hub_download
 hf_hub_download('yl4579/StyleTTS2-LibriTTS', 'Utils/JDC/bst.t7', local_dir='StyleTTS2')
 print('F0 model downloaded')
 "
 
 echo "--- Verifying setup ---"
-uv run python3 -c "
+python3 -c "
 import os
 checks = [
     'combined_dataset/manifest_phonemized.csv',
@@ -88,4 +89,4 @@ print('All checks passed')
 # Launch training
 echo "=== Launching stage 1 training ==="
 cd $REPO_ROOT/StyleTTS2
-uv run python train_first_tr.py -p Configs/config_turkish.yml
+python train_first_tr.py -p Configs/config_turkish.yml
