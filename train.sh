@@ -55,11 +55,11 @@ print('All downloads complete')
 "
 
 echo "--- Extracting dataset ---"
-tar -xzf $REPO_ROOT/combined_dataset.tar.gz -C $REPO_ROOT 2>&1 | grep -v 'LIBARCHIVE.xattr'
+tar --warning=no-unknown-keyword -xzf $REPO_ROOT/combined_dataset.tar.gz -C $REPO_ROOT
 rm $REPO_ROOT/combined_dataset.tar.gz
 
 echo "--- Extracting alignments ---"
-tar -xzf $REPO_ROOT/alignments.tar.gz -C $REPO_ROOT 2>&1 | grep -v 'LIBARCHIVE.xattr'
+tar --warning=no-unknown-keyword -xzf $REPO_ROOT/alignments.tar.gz -C $REPO_ROOT
 rm $REPO_ROOT/alignments.tar.gz
 
 echo "--- Verifying setup ---"
