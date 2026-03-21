@@ -56,6 +56,7 @@ def finish_timed_block(device, timings, name, start_time):
 
 
 def cuda_mem_gb(device):
+    device = torch.device(device)
     if device.type != 'cuda':
         return 'cpu'
     allocated = torch.cuda.memory_allocated(device) / (1024 ** 3)
