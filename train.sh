@@ -46,7 +46,6 @@ downloads = [
     ('vsqrd/styletts2-turkish', 'combined_dataset.tar.gz', 'dataset', repo_root, os.path.join(repo_root, 'combined_dataset')),
     ('vsqrd/styletts2-turkish', 'alignments.tar.gz',       'dataset', repo_root, os.path.join(repo_root, 'alignments')),
     ('vsqrd/pl-bert-turkish',   'step_160000.t7',          'model',   os.path.join(repo_root, 'StyleTTS2/Utils/PLBERT_turkish'), None),
-    ('hexgrad/Kokoro-82M',      'kokoro-v1_0.pth',         'model',   os.path.join(repo_root, 'weights'), None),
     ('yl4579/StyleTTS2-LibriTTS', 'Models/LibriTTS/epochs_2nd_00020.pth', 'model', os.path.join(repo_root, 'weights'), None),
 ]
 
@@ -69,27 +68,6 @@ for repo, filename, repo_type, local_dir, extracted_dir in downloads:
 print('All downloads complete')
 "
 
-echo "--- Generating kokoro_training_init.pth ---"
-if [ ! -f "$REPO_ROOT/kokoro_training_init.pth" ]; then
-    "$PY" -c "
-import torch, os
-repo_root = '$REPO_ROOT'
-kokoro = torch.load(os.path.join(repo_root, 'weights/kokoro-v1_0.pth'), map_location='cpu', weights_only=True)
-libritts = torch.load(os.path.join(repo_root, 'weights/Models/LibriTTS/epochs_2nd_00020.pth'), map_location='cpu', weights_only=True)['net']
-merged = dict(kokoro)
-merged['style_encoder'] = libritts['style_encoder']
-merged['predictor_encoder'] = libritts['predictor_encoder']
-merged['diffusion'] = libritts['diffusion']
-merged['text_aligner'] = libritts['text_aligner']
-merged['pitch_extractor'] = libritts['pitch_extractor']
-for k in ['mpd', 'msd', 'wd', 'mwd']:
-    merged[k] = libritts[k]
-torch.save({'net': merged, 'epoch': 0, 'iters': 0}, os.path.join(repo_root, 'kokoro_training_init.pth'))
-print('  done.')
-"
-else
-    echo "  skipping (already exists)"
-fi
 
 echo "--- Extracting dataset ---"
 if [ ! -d "$REPO_ROOT/combined_dataset" ]; then
