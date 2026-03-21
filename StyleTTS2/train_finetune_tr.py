@@ -161,16 +161,16 @@ def main(config_path):
     multispeaker = model_params.multispeaker
     model = build_model(model_params, text_aligner, pitch_extractor, plbert)
 
-    # prepare all modules with accelerate
-    for k in model:
-        model[k] = accelerator.prepare(model[k])
-
-    train_dataloader, val_dataloader = accelerator.prepare(train_dataloader, val_dataloader)
-    _ = [model[key].to(device) for key in model]
+    # Drop text_aligner before DDP so its parameters never land in a reducer bucket.
+    # We use pre-computed alignments instead of the aligner during fine-tuning.
+    del model['text_aligner']
+    n_down = 1
 
     start_epoch = 0
     iters = 0
 
+    # Load checkpoint into the raw (non-DDP) model so state_dict keys match without
+    # the DDP "module." prefix that would otherwise cause silent load failures.
     with accelerator.main_process_first():
         load_pretrained = config.get('pretrained_model', '') != '' and config.get('second_stage_load_pretrained', False)
         if load_pretrained:
@@ -189,9 +189,12 @@ def main(config_path):
         else:
             raise ValueError('Specify pretrained_model or first_stage_path in config.')
 
-    # drop text_aligner — pre-computed alignments replace it
-    del model['text_aligner']
-    n_down = 1
+    # Prepare all modules with accelerate (DDP) after weights are loaded
+    for k in model:
+        model[k] = accelerator.prepare(model[k])
+
+    train_dataloader, val_dataloader = accelerator.prepare(train_dataloader, val_dataloader)
+    _ = [model[key].to(device) for key in model]
 
     gl = GeneratorLoss(model.mpd, model.msd).to(device)
     dl = DiscriminatorLoss(model.mpd, model.msd).to(device)
