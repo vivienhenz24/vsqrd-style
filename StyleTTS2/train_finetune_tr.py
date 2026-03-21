@@ -55,6 +55,14 @@ def finish_timed_block(device, timings, name, start_time):
     return time.perf_counter()
 
 
+def cuda_mem_gb(device):
+    if device.type != 'cuda':
+        return 'cpu'
+    allocated = torch.cuda.memory_allocated(device) / (1024 ** 3)
+    reserved = torch.cuda.memory_reserved(device) / (1024 ** 3)
+    return f'alloc={allocated:.2f}GB reserved={reserved:.2f}GB'
+
+
 def load_alignments(paths, alignment_dir, input_lengths, mel_input_length, n_down, device):
     """Load pre-computed alignment matrices and pad into a batch tensor.
     Missing files get zero attention (uniform) rather than raising, to avoid DDP deadlocks."""
@@ -451,15 +459,39 @@ def main(config_path):
             s_dur = model.predictor_encoder(gt.unsqueeze(1))
 
             with torch.no_grad():
+                if i < 3:
+                    print(
+                        f"[rank{accelerator.local_process_index}] batch={i} before gt decode "
+                        f"en={tuple(en.shape)} gt={tuple(gt.shape)} s={tuple(s.shape)} {cuda_mem_gb(device)}",
+                        flush=True,
+                    )
                 F0_real, _, F0 = model.pitch_extractor(gt.unsqueeze(1))
                 F0 = F0.reshape(F0.shape[0], F0.shape[1] * 2, F0.shape[2], 1).squeeze()
                 N_real = log_norm(gt.unsqueeze(1)).squeeze(1)
                 y_rec_gt = wav.unsqueeze(1)
                 y_rec_gt_pred = model.decoder(en, F0_real, N_real, s)
+                if i < 3:
+                    print(
+                        f"[rank{accelerator.local_process_index}] batch={i} after gt decode "
+                        f"y_rec_gt_pred={tuple(y_rec_gt_pred.shape)} {cuda_mem_gb(device)}",
+                        flush=True,
+                    )
                 wav = y_rec_gt
 
             F0_fake, N_fake = unwrap(model['predictor']).F0Ntrain(p_en, s_dur)
+            if i < 3:
+                print(
+                    f"[rank{accelerator.local_process_index}] batch={i} before pred decode "
+                    f"F0_fake={tuple(F0_fake.shape)} N_fake={tuple(N_fake.shape)} {cuda_mem_gb(device)}",
+                    flush=True,
+                )
             y_rec = model.decoder(en, F0_fake, N_fake, s)
+            if i < 3:
+                print(
+                    f"[rank{accelerator.local_process_index}] batch={i} after pred decode "
+                    f"y_rec={tuple(y_rec.shape)} {cuda_mem_gb(device)}",
+                    flush=True,
+                )
             block_start = finish_timed_block(device, step_timings, 'decoder_prepare', block_start)
 
             loss_F0_rec = (F.smooth_l1_loss(F0_real, F0_fake)) / 10

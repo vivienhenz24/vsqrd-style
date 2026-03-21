@@ -6,7 +6,7 @@ device: "cuda"
 epochs_1st: 200
 epochs_2nd: 100
 epochs: 100
-batch_size: 8
+batch_size: 4
 max_len: 400
 pretrained_model: "../weights/Models/LibriTTS/epochs_2nd_00020.pth"
 second_stage_load_pretrained: true
