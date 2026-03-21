@@ -1,0 +1,2 @@
+combined_dataset/male_020750.wav|ødʒrˈɛt konusʊndˈa rahˈatsɯz ɔɫdˈuːnʊz bɪr nɔktˈa vˈar mɯ|0
+combined_dataset/female_013421.wav|ˌɔtˌɛpˈɛ kodunˈʊ javaʃtʃˈa aɫadʒˈaːɯm lˈøtfæn pajɫaʃˈɯn|1
