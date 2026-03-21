@@ -78,6 +78,59 @@ def load_alignments(paths, alignment_dir, input_lengths, mel_input_length, n_dow
     return attn
 
 
+@torch.no_grad()
+def generate_sample(model, sample_tokens, ref_mel_sample, device, sr, log_dir, epoch):
+    """Decode a fixed sentence from the current model weights. Main process only, eval mode."""
+    try:
+        texts = sample_tokens.to(device)                                    # [1, T_text]
+        input_lengths = torch.LongTensor([texts.shape[1]]).to(device)
+        text_mask = length_to_mask(input_lengths).to(device)
+
+        ref_mel = ref_mel_sample.to(device).unsqueeze(0).unsqueeze(1)       # [1, 1, n_mels, T]
+        s     = unwrap(model['style_encoder'])(ref_mel)                     # [1, 128]
+        s_dur = unwrap(model['predictor_encoder'])(ref_mel)                 # [1, 128]
+
+        bert_dur = unwrap(model['bert'])(texts, attention_mask=(~text_mask).int())
+        d_en = unwrap(model['bert_encoder'])(bert_dur).transpose(-1, -2)
+        t_en = unwrap(model['text_encoder'])(texts, input_lengths, text_mask)
+
+        T_text = texts.shape[1]
+
+        # First predictor pass with a dummy alignment to obtain duration logits
+        dummy_attn = torch.randn(1, T_text, 2, device=device)
+        d, _ = unwrap(model['predictor'])(d_en, s_dur, input_lengths, dummy_attn, text_mask)
+
+        # Convert duration logits → hard integer durations, cap total length
+        dur_pred = torch.sigmoid(d[0, :T_text]).sum(-1).round().long().clamp(min=1)
+        mel_len = int(dur_pred.sum().item())
+        mel_len = max(10, min(mel_len, 800))
+
+        # Build a hard monotonic alignment [1, T_text, mel_len]
+        s2s_attn = torch.zeros(1, T_text, mel_len, device=device)
+        pos = 0
+        for i in range(T_text):
+            d_i = int(dur_pred[i].item())
+            end = min(pos + d_i, mel_len)
+            if end > pos:
+                s2s_attn[0, i, pos:end] = 1.0 / (end - pos)
+            pos = min(pos + d_i, mel_len)
+
+        # Second predictor pass with the alignment to get frame-wise features
+        _, p = unwrap(model['predictor'])(d_en, s_dur, input_lengths, s2s_attn, text_mask)
+        asr  = t_en @ s2s_attn                                              # [1, d, mel_len]
+        p_en = p[:, :, :mel_len]
+        F0, N = unwrap(model['predictor']).F0Ntrain(p_en, s_dur)
+
+        y = unwrap(model['decoder'])(asr, F0, N, s)
+        wav = y.squeeze().cpu().float().numpy()
+
+        out_path = osp.join(log_dir, f'sample_epoch_{epoch+1:05d}.wav')
+        sf.write(out_path, wav, sr)
+        print(f'[sample] saved {out_path}', flush=True)
+    except Exception as exc:
+        print(f'[sample] generation failed: {exc}', flush=True)
+
+
 @click.command()
 @click.option('-p', '--config_path', default='Configs/config_turkish.yml', type=str)
 def main(config_path):
@@ -251,6 +304,30 @@ def main(config_path):
     best_loss = float('inf')
     iters = 0
     running_std = []
+
+    # Pre-load the fixed reference sample used for periodic audio generation.
+    # Uses the first entry in the validation list so it stays constant across runs.
+    sample_tokens = None
+    ref_mel_sample = None
+    if accelerator.is_main_process:
+        try:
+            _sv = val_list[0].strip().split('|')
+            _sipa, _swav = _sv[1], _sv[0]
+            _wave, _wsr = sf.read(osp.join(root_path, _swav))
+            if _wave.ndim == 2:
+                _wave = _wave[:, 0]
+            if _wsr != sr:
+                _wave = librosa.resample(_wave, orig_sr=_wsr, target_sr=sr)
+            _mel = preprocess(_wave).squeeze()          # [n_mels, T]
+            if _mel.shape[1] > 192:
+                _mel = _mel[:, :192]
+            ref_mel_sample = _mel.cpu()
+            _tc = TextCleaner()
+            sample_tokens = torch.LongTensor([0] + _tc(_sipa) + [0]).unsqueeze(0)
+            log_info(f'[sample] reference audio: {_swav}')
+            log_info(f'[sample] text: {_sipa}')
+        except Exception as exc:
+            log_info(f'[sample] preload failed, generation disabled: {exc}')
 
     stft_loss = MultiResolutionSTFTLoss().to(device)
 
@@ -637,6 +714,9 @@ def main(config_path):
                     'epoch': epoch,
                 }
                 torch.save(state, osp.join(log_dir, 'epoch_2nd_%05d.pth' % epoch))
+
+                if sample_tokens is not None:
+                    generate_sample(model, sample_tokens, ref_mel_sample, device, sr, log_dir, epoch)
 
                 if model_params.diffusion.dist.estimate_sigma_data:
                     config['model_params']['diffusion']['dist']['sigma_data'] = float(np.mean(running_std))
