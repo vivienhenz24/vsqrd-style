@@ -2,6 +2,7 @@ import argparse
 import os
 from pathlib import Path
 from concurrent.futures import ProcessPoolExecutor
+from concurrent.futures import as_completed
 
 import numpy as np
 import torch
@@ -59,7 +60,7 @@ def main():
     parser.add_argument("--manifests", nargs="+", required=True, help="Manifest files to scan.")
     parser.add_argument("--sr", type=int, default=24000, help="Target sample rate.")
     parser.add_argument("--overwrite", action="store_true", help="Rewrite existing cache files.")
-    parser.add_argument("--workers", type=int, default=max(1, min(8, os.cpu_count() or 1)), help="Number of worker processes.")
+    parser.add_argument("--workers", type=int, default=1, help="Number of worker processes.")
     args = parser.parse_args()
 
     root = Path(args.root)
@@ -85,11 +86,11 @@ def main():
                 skipped += 1
     else:
         with ProcessPoolExecutor(max_workers=args.workers) as executor:
-            futures = [
-                executor.submit(process_one, wav_rel_path, root, cache_root, args.sr, args.overwrite)
+            futures = {
+                executor.submit(process_one, wav_rel_path, root, cache_root, args.sr, args.overwrite): wav_rel_path
                 for wav_rel_path in wav_paths
-            ]
-            for future in tqdm(futures, desc="Caching mels"):
+            }
+            for future in tqdm(as_completed(futures), total=len(futures), desc="Caching mels"):
                 status = future.result()
                 if status == "written":
                     written += 1
