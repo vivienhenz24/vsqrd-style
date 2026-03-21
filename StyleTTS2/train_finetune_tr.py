@@ -241,6 +241,8 @@ def main(config_path):
         _ = [model[key].train() for key in model]
 
         for i, batch in enumerate(train_dataloader):
+            if i < 3 or (i + 1) % 50 == 0:
+                print(f'[rank{accelerator.local_process_index}] epoch={epoch+1} batch={i} start', flush=True)
             waves = batch[0]
             paths = batch[-1]
             batch = [b.to(device) for b in batch[1:-1]]
@@ -306,9 +308,13 @@ def main(config_path):
 
             d, p = model.predictor(d_en, s_dur, input_lengths, s2s_attn_mono, text_mask)
 
+            if i < 3:
+                print(f'[rank{accelerator.local_process_index}] batch={i} before gather, mel_input_length={mel_input_length.tolist()}', flush=True)
             mel_input_length_all = accelerator.gather(mel_input_length)
             mel_len_st = int(mel_input_length.min().item() / 2 - 1)
             mel_len = min(int(mel_input_length_all.min().item() / 2 - 1), max_len // 2)
+            if i < 3:
+                print(f'[rank{accelerator.local_process_index}] batch={i} after gather, mel_len={mel_len}, gt_size={mel_len*2}', flush=True)
 
             en = []; gt = []; p_en = []; wav = []; st = []
             for bib in range(len(mel_input_length)):
@@ -329,6 +335,7 @@ def main(config_path):
             st = torch.stack(st).detach()
 
             if gt.size(-1) < 80:
+                print(f'[rank{accelerator.local_process_index}] batch={i} SKIP gt.size(-1)={gt.size(-1)} < 80', flush=True)
                 continue
 
             s = model.style_encoder(gt.unsqueeze(1))
@@ -451,6 +458,8 @@ def main(config_path):
                         optimizer.step('wd')
 
             iters += 1
+            if iters <= 3:
+                print(f'[rank{accelerator.local_process_index}] step {iters} COMPLETE', flush=True)
 
             if (i+1) % log_interval == 0 and accelerator.is_main_process:
                 log_info('Epoch [%d/%d], Step [%d/%d], Loss: %.5f, Disc Loss: %.5f, Dur Loss: %.5f, CE Loss: %.5f, Norm Loss: %.5f, F0 Loss: %.5f, LM Loss: %.5f, Gen Loss: %.5f, Sty Loss: %.5f, Diff Loss: %.5f, DiscLM Loss: %.5f, GenLM Loss: %.5f'

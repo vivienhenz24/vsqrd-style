@@ -162,7 +162,9 @@ cd $REPO_ROOT/StyleTTS2
 GPU_COUNT=$("$PY" -c "import torch; print(torch.cuda.device_count())")
 echo "  GPUs detected: $GPU_COUNT"
 
-exec "$PY" -m accelerate.commands.launch \
+mkdir -p Models/Turkish
+"$PY" -m accelerate.commands.launch \
     --num_processes "$GPU_COUNT" \
     --mixed_precision "bf16" \
-    train_finetune_tr.py -p Configs/config_turkish.yml
+    train_finetune_tr.py -p Configs/config_turkish.yml \
+    2>&1 | tee Models/Turkish/stdout.log
