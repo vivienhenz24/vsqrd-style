@@ -499,13 +499,38 @@ def main(config_path):
             loss_norm_rec = F.smooth_l1_loss(N_real, N_fake)
 
             optimizer.zero_grad()
+            if i < 3:
+                print(
+                    f"[rank{accelerator.local_process_index}] batch={i} before disc loss {cuda_mem_gb(device)}",
+                    flush=True,
+                )
             d_loss = dl(wav.detach(), y_rec.detach()).mean()
+            if i < 3:
+                print(
+                    f"[rank{accelerator.local_process_index}] batch={i} after disc loss d_loss={float(d_loss.detach().cpu()):.4f} {cuda_mem_gb(device)}",
+                    flush=True,
+                )
             accelerator.backward(d_loss)
+            if i < 3:
+                print(
+                    f"[rank{accelerator.local_process_index}] batch={i} after disc backward {cuda_mem_gb(device)}",
+                    flush=True,
+                )
             optimizer.step('msd')
             optimizer.step('mpd')
+            if i < 3:
+                print(
+                    f"[rank{accelerator.local_process_index}] batch={i} after disc opt step {cuda_mem_gb(device)}",
+                    flush=True,
+                )
             block_start = finish_timed_block(device, step_timings, 'disc_step', block_start)
 
             optimizer.zero_grad()
+            if i < 3:
+                print(
+                    f"[rank{accelerator.local_process_index}] batch={i} before gen losses {cuda_mem_gb(device)}",
+                    flush=True,
+                )
             loss_mel = stft_loss(y_rec, wav)
             loss_gen_all = gl(wav, y_rec).mean()
             loss_lm = wl(wav.detach().squeeze(), y_rec.squeeze()).mean()
@@ -537,6 +562,11 @@ def main(config_path):
 
             running_loss += accelerator.gather(loss_mel).mean().item()
             accelerator.backward(g_loss)
+            if i < 3:
+                print(
+                    f"[rank{accelerator.local_process_index}] batch={i} after gen backward {cuda_mem_gb(device)}",
+                    flush=True,
+                )
 
             optimizer.step('bert_encoder')
             optimizer.step('bert')
@@ -548,6 +578,11 @@ def main(config_path):
 
             if epoch >= diff_epoch:
                 optimizer.step('diffusion')
+            if i < 3:
+                print(
+                    f"[rank{accelerator.local_process_index}] batch={i} after gen opt step {cuda_mem_gb(device)}",
+                    flush=True,
+                )
             block_start = finish_timed_block(device, step_timings, 'gen_step', block_start)
 
             d_loss_slm, loss_gen_lm = 0, 0
