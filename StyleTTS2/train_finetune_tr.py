@@ -44,7 +44,8 @@ def unwrap(m):
 
 
 def load_alignments(paths, alignment_dir, input_lengths, mel_input_length, n_down, device):
-    """Load pre-computed alignment matrices and pad into a batch tensor."""
+    """Load pre-computed alignment matrices and pad into a batch tensor.
+    Missing files get zero attention (uniform) rather than raising, to avoid DDP deadlocks."""
     B = len(paths)
     T_text = int(input_lengths.max().item())
     T_frames = int((mel_input_length // (2 ** n_down)).max().item())
@@ -52,10 +53,16 @@ def load_alignments(paths, alignment_dir, input_lengths, mel_input_length, n_dow
     for i, path in enumerate(paths):
         stem = Path(path).stem
         pt = Path(alignment_dir) / f"{stem}.pt"
-        a = torch.load(pt, map_location=device, weights_only=True)
-        t_ph = min(a.shape[0], T_text)
-        t_fr = min(a.shape[1], T_frames)
-        attn[i, :t_ph, :t_fr] = a[:t_ph, :t_fr]
+        if not pt.exists():
+            print(f"[load_alignments] WARNING: missing {pt}", flush=True)
+            continue
+        try:
+            a = torch.load(pt, map_location=device, weights_only=True)
+            t_ph = min(a.shape[0], T_text)
+            t_fr = min(a.shape[1], T_frames)
+            attn[i, :t_ph, :t_fr] = a[:t_ph, :t_fr]
+        except Exception as e:
+            print(f"[load_alignments] WARNING: failed to load {pt}: {e}", flush=True)
     return attn
 
 
@@ -248,12 +255,9 @@ def main(config_path):
                     ref_sp = model.predictor_encoder(ref_mels.unsqueeze(1))
                     ref = torch.cat([ref_ss, ref_sp], dim=1)
 
-            try:
-                s2s_attn_mono = load_alignments(
-                    paths, alignment_dir, input_lengths, mel_input_length, n_down, device
-                )
-            except Exception:
-                continue
+            s2s_attn_mono = load_alignments(
+                paths, alignment_dir, input_lengths, mel_input_length, n_down, device
+            )
 
             t_en = model.text_encoder(texts, input_lengths, text_mask)
             asr = (t_en @ s2s_attn_mono)
@@ -478,7 +482,6 @@ def main(config_path):
         with torch.no_grad():
             iters_test = 0
             for batch_idx, batch in enumerate(val_dataloader):
-                try:
                     waves = batch[0]
                     paths = batch[-1]
                     batch = [b.to(device) for b in batch[1:-1]]
@@ -525,7 +528,7 @@ def main(config_path):
                     gt = torch.stack(gt).detach()
                     s = model.predictor_encoder(gt.unsqueeze(1))
 
-                    F0_fake, N_fake = model.predictor.F0Ntrain(p_en, s)
+                    F0_fake, N_fake = unwrap(model['predictor']).F0Ntrain(p_en, s)
 
                     loss_dur = 0
                     for _s2s_pred, _text_input, _text_length in zip(d, d_gt, input_lengths):
@@ -548,8 +551,6 @@ def main(config_path):
                     loss_align += accelerator.gather(loss_dur).mean().item()
                     loss_f += accelerator.gather(loss_F0).mean().item()
                     iters_test += 1
-                except Exception:
-                    continue
 
         if accelerator.is_main_process:
             print('Epochs:', epoch + 1)
