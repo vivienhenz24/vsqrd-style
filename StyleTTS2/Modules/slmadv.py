@@ -134,7 +134,9 @@ class SLMAdversarialLoss(torch.nn.Module):
         en = torch.stack(en)
         p_en = torch.stack(p_en)
         
-        F0_fake, N_fake = self.model.predictor.F0Ntrain(p_en, sp[:, 128:])
+        predictor = self.model.predictor
+        predictor = predictor.module if hasattr(predictor, 'module') else predictor
+        F0_fake, N_fake = predictor.F0Ntrain(p_en, sp[:, 128:])
         y_pred = self.model.decoder(en, F0_fake, N_fake, sp[:, :128])
         
         # discriminator loss

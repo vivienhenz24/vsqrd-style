@@ -35,6 +35,11 @@ from accelerate.logging import get_logger
 logger = get_logger(__name__, log_level="DEBUG")
 
 
+def unwrap(m):
+    """Access underlying module through DDP/DP wrapper."""
+    return m.module if hasattr(m, 'module') else m
+
+
 def load_alignments(paths, alignment_dir, input_lengths, mel_input_length, n_down, device):
     """Load pre-computed alignment matrices and pad into a batch tensor."""
     B = len(paths)
@@ -321,7 +326,7 @@ def main(config_path):
                 y_rec_gt_pred = model.decoder(en, F0_real, N_real, s)
                 wav = y_rec_gt
 
-            F0_fake, N_fake = model.predictor.F0Ntrain(p_en, s_dur)
+            F0_fake, N_fake = unwrap(model['predictor']).F0Ntrain(p_en, s_dur)
             y_rec = model.decoder(en, F0_fake, N_fake, s)
 
             loss_F0_rec = (F.smooth_l1_loss(F0_real, F0_fake)) / 10
@@ -409,10 +414,10 @@ def main(config_path):
                                 if pp.grad is not None:
                                     pp.grad *= (1 / total_norm['predictor'])
 
-                    for pp in model.predictor.duration_proj.parameters():
+                    for pp in unwrap(model['predictor']).duration_proj.parameters():
                         if pp.grad is not None:
                             pp.grad *= slmadv_params.scale
-                    for pp in model.predictor.lstm.parameters():
+                    for pp in unwrap(model['predictor']).lstm.parameters():
                         if pp.grad is not None:
                             pp.grad *= slmadv_params.scale
                     for pp in model.diffusion.parameters():
