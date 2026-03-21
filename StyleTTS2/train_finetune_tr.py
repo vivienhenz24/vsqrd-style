@@ -191,7 +191,7 @@ def main(config_path):
         optimizer.schedulers[k] = accelerator.prepare(optimizer.schedulers[k])
 
     sampler = DiffusionSampler(
-        model.diffusion.diffusion,
+        accelerator.unwrap_model(model['diffusion']).diffusion,
         sampler=ADPM2Sampler(),
         sigma_schedule=KarrasSchedule(sigma_min=0.0001, sigma_max=3.0, rho=9.0),
         clamp=False
