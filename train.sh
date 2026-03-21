@@ -9,7 +9,8 @@ NUM_MACHINES="${NUM_MACHINES:-1}"
 MACHINE_RANK="${MACHINE_RANK:-0}"
 MAIN_PROCESS_PORT="${MAIN_PROCESS_PORT:-29500}"
 MIXED_PRECISION="${MIXED_PRECISION:-bf16}"
-MEL_CACHE_WORKERS="${MEL_CACHE_WORKERS:-1}"
+MEL_CACHE_WORKERS="${MEL_CACHE_WORKERS:-4}"
+MEL_CACHE_CHUNKSIZE="${MEL_CACHE_CHUNKSIZE:-32}"
 
 echo "=== Setting up Turkish StyleTTS2 training ==="
 
@@ -138,6 +139,7 @@ echo "--- Precomputing mel cache ---"
     --root "$REPO_ROOT" \
     --cache-dir "$REPO_ROOT/mel_cache" \
     --workers "$MEL_CACHE_WORKERS" \
+    --chunksize "$MEL_CACHE_CHUNKSIZE" \
     --manifests \
     "$REPO_ROOT/StyleTTS2/Data/tr_train.txt" \
     "$REPO_ROOT/StyleTTS2/Data/tr_val.txt"

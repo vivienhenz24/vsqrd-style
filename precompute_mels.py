@@ -2,7 +2,7 @@ import argparse
 import os
 from pathlib import Path
 from concurrent.futures import ProcessPoolExecutor
-from concurrent.futures import as_completed
+from itertools import repeat
 
 import numpy as np
 import torch
@@ -39,6 +39,7 @@ def build_cache_path(cache_root, wav_rel_path):
 
 
 def process_one(wav_rel_path, root, cache_root, sr, overwrite):
+    torch.set_num_threads(1)
     cache_path = build_cache_path(cache_root, wav_rel_path)
     if cache_path.exists() and not overwrite:
         return "skipped"
@@ -61,6 +62,7 @@ def main():
     parser.add_argument("--sr", type=int, default=24000, help="Target sample rate.")
     parser.add_argument("--overwrite", action="store_true", help="Rewrite existing cache files.")
     parser.add_argument("--workers", type=int, default=1, help="Number of worker processes.")
+    parser.add_argument("--chunksize", type=int, default=32, help="Chunk size for parallel worker scheduling.")
     args = parser.parse_args()
 
     root = Path(args.root)
@@ -86,12 +88,16 @@ def main():
                 skipped += 1
     else:
         with ProcessPoolExecutor(max_workers=args.workers) as executor:
-            futures = {
-                executor.submit(process_one, wav_rel_path, root, cache_root, args.sr, args.overwrite): wav_rel_path
-                for wav_rel_path in wav_paths
-            }
-            for future in tqdm(as_completed(futures), total=len(futures), desc="Caching mels"):
-                status = future.result()
+            results = executor.map(
+                process_one,
+                wav_paths,
+                repeat(root),
+                repeat(cache_root),
+                repeat(args.sr),
+                repeat(args.overwrite),
+                chunksize=args.chunksize,
+            )
+            for status in tqdm(results, total=len(wav_paths), desc="Caching mels"):
                 if status == "written":
                     written += 1
                 else:
