@@ -158,4 +158,11 @@ print('All checks passed')
 # Launch training
 echo "=== Launching Turkish finetune training ==="
 cd $REPO_ROOT/StyleTTS2
-exec "$PY" train_finetune_tr.py -p Configs/config_turkish.yml
+
+GPU_COUNT=$("$PY" -c "import torch; print(torch.cuda.device_count())")
+echo "  GPUs detected: $GPU_COUNT"
+
+exec "$PY" -m accelerate.commands.launch \
+    --num_processes "$GPU_COUNT" \
+    --mixed_precision "bf16" \
+    train_finetune_tr.py -p Configs/config_turkish.yml
