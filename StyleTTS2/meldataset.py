@@ -174,6 +174,7 @@ class FilePathDataset(torch.utils.data.Dataset):
 
     def _load_data(self, data):
         wave_path, _, speaker_id = data
+        speaker_id = int(speaker_id)
         mel_tensor = self._load_mel(wave_path)
 
         mel_length = mel_tensor.size(1)
