@@ -34,6 +34,9 @@ import logging
 from accelerate.logging import get_logger
 logger = get_logger(__name__, log_level="DEBUG")
 
+# Module-level standard logger for file/stdout output (used on main process only)
+_file_logger = logging.getLogger("train_tr")
+
 
 def unwrap(m):
     """Access underlying module through DDP/DP wrapper."""
@@ -71,10 +74,19 @@ def main(config_path):
         shutil.copy(config_path, osp.join(log_dir, osp.basename(config_path)))
         writer = SummaryWriter(log_dir + "/tensorboard")
 
-    file_handler = logging.FileHandler(osp.join(log_dir, 'train.log'))
-    file_handler.setLevel(logging.DEBUG)
-    file_handler.setFormatter(logging.Formatter('%(levelname)s:%(asctime)s: %(message)s'))
-    logger.logger.addHandler(file_handler)
+    if accelerator.is_main_process:
+        _file_logger.setLevel(logging.DEBUG)
+        _fh = logging.FileHandler(osp.join(log_dir, 'train.log'))
+        _fh.setFormatter(logging.Formatter('%(levelname)s:%(asctime)s: %(message)s'))
+        _file_logger.addHandler(_fh)
+        _sh = logging.StreamHandler()
+        _sh.setFormatter(logging.Formatter('%(levelname)s:%(asctime)s: %(message)s'))
+        _file_logger.addHandler(_sh)
+
+    def log_info(msg):
+        if accelerator.is_main_process:
+            _file_logger.info(msg)
+            print(msg, flush=True)
 
     batch_size = config.get('batch_size', 10)
     device = accelerator.device
@@ -437,7 +449,7 @@ def main(config_path):
             iters += 1
 
             if (i+1) % log_interval == 0 and accelerator.is_main_process:
-                logger.info('Epoch [%d/%d], Step [%d/%d], Loss: %.5f, Disc Loss: %.5f, Dur Loss: %.5f, CE Loss: %.5f, Norm Loss: %.5f, F0 Loss: %.5f, LM Loss: %.5f, Gen Loss: %.5f, Sty Loss: %.5f, Diff Loss: %.5f, DiscLM Loss: %.5f, GenLM Loss: %.5f'
+                log_info('Epoch [%d/%d], Step [%d/%d], Loss: %.5f, Disc Loss: %.5f, Dur Loss: %.5f, CE Loss: %.5f, Norm Loss: %.5f, F0 Loss: %.5f, LM Loss: %.5f, Gen Loss: %.5f, Sty Loss: %.5f, Diff Loss: %.5f, DiscLM Loss: %.5f, GenLM Loss: %.5f'
                     % (epoch+1, epochs, i+1, len(train_list)//batch_size,
                        running_loss / log_interval, d_loss, loss_dur, loss_ce,
                        loss_norm_rec, loss_F0_rec, loss_lm, loss_gen_all,
@@ -541,8 +553,8 @@ def main(config_path):
 
         if accelerator.is_main_process:
             print('Epochs:', epoch + 1)
-            logger.info('Validation loss: %.3f, Dur loss: %.3f, F0 loss: %.3f'
-                        % (loss_test / iters_test, loss_align / iters_test, loss_f / iters_test))
+            log_info('Validation loss: %.3f, Dur loss: %.3f, F0 loss: %.3f'
+                     % (loss_test / iters_test, loss_align / iters_test, loss_f / iters_test))
             writer.add_scalar('eval/mel_loss', loss_test / iters_test, epoch + 1)
             writer.add_scalar('eval/dur_loss', loss_align / iters_test, epoch + 1)
             writer.add_scalar('eval/F0_loss', loss_f / iters_test, epoch + 1)
