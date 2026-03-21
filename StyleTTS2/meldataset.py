@@ -1,24 +1,21 @@
 #coding: utf-8
 import os
 import os.path as osp
-import time
 import random
+from collections import defaultdict
+from pathlib import Path
+
 import numpy as np
-import random
 import soundfile as sf
 import librosa
 
 import torch
-from torch import nn
-import torch.nn.functional as F
 import torchaudio
 from torch.utils.data import DataLoader
 
 import logging
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
-
-import pandas as pd
 
 _pad = "$"
 _punctuation = ';:,.!?¡¿—…"«»“” '
@@ -74,6 +71,7 @@ class FilePathDataset(torch.utils.data.Dataset):
                  validation=False,
                  OOD_data="Data/OOD_texts.txt",
                  min_length=50,
+                 mel_cache_dir=None,
                  ):
 
         spect_params = SPECT_PARAMS
@@ -83,11 +81,6 @@ class FilePathDataset(torch.utils.data.Dataset):
         self.data_list = [data if len(data) == 3 else (*data, 0) for data in _data_list]
         self.text_cleaner = TextCleaner()
         self.sr = sr
-
-        self.df = pd.DataFrame(self.data_list)
-
-        self.to_melspec = torchaudio.transforms.MelSpectrogram(**MEL_PARAMS)
-
         self.mean, self.std = -4, 4
         self.data_augmentation = data_augmentation and (not validation)
         self.max_mel_length = 192
@@ -99,6 +92,10 @@ class FilePathDataset(torch.utils.data.Dataset):
         self.ptexts = [t.split('|')[idx].strip() for t in tl]
         
         self.root_path = root_path
+        self.mel_cache_dir = Path(mel_cache_dir) if mel_cache_dir else None
+        self.speaker_to_indices = defaultdict(list)
+        for i, row in enumerate(self.data_list):
+            self.speaker_to_indices[int(row[2])].append(i)
 
     def __len__(self):
         return len(self.data_list)
@@ -108,15 +105,15 @@ class FilePathDataset(torch.utils.data.Dataset):
         path = data[0]
         
         wave, text_tensor, speaker_id = self._load_tensor(data)
-        
-        mel_tensor = preprocess(wave).squeeze()
+        mel_tensor = self._load_mel(path, wave)
         
         acoustic_feature = mel_tensor.squeeze()
         length_feature = acoustic_feature.size(1)
         acoustic_feature = acoustic_feature[:, :(length_feature - length_feature % 2)]
         
         # get reference sample
-        ref_data = (self.df[self.df[2] == str(speaker_id)]).sample(n=1).iloc[0].tolist()
+        ref_idx = random.choice(self.speaker_to_indices[speaker_id])
+        ref_data = self.data_list[ref_idx]
         ref_mel_tensor, ref_label = self._load_data(ref_data[:3])
         
         # get OOD text
@@ -160,9 +157,24 @@ class FilePathDataset(torch.utils.data.Dataset):
 
         return wave, text, speaker_id
 
+    def _get_mel_cache_path(self, wave_path):
+        if self.mel_cache_dir is None:
+            return None
+        rel_path = Path(wave_path)
+        return self.mel_cache_dir / rel_path.with_suffix(".pt")
+
+    def _load_mel(self, wave_path, wave=None):
+        cache_path = self._get_mel_cache_path(wave_path)
+        if cache_path is not None and cache_path.is_file():
+            return torch.load(cache_path, map_location="cpu", weights_only=True)
+
+        if wave is None:
+            wave, _, _ = self._load_tensor((wave_path, "", 0))
+        return preprocess(wave).squeeze(0)
+
     def _load_data(self, data):
-        wave, text_tensor, speaker_id = self._load_tensor(data)
-        mel_tensor = preprocess(wave).squeeze()
+        wave_path, _, speaker_id = data
+        mel_tensor = self._load_mel(wave_path)
 
         mel_length = mel_tensor.size(1)
         if mel_length > self.max_mel_length:
@@ -242,17 +254,27 @@ def build_dataloader(path_list,
                      batch_size=4,
                      num_workers=1,
                      device='cpu',
+                     persistent_workers=None,
+                     prefetch_factor=2,
                      collate_config={},
                      dataset_config={}):
     
     dataset = FilePathDataset(path_list, root_path, OOD_data=OOD_data, min_length=min_length, validation=validation, **dataset_config)
     collate_fn = Collater(**collate_config)
+    if persistent_workers is None:
+        persistent_workers = num_workers > 0
+    loader_kwargs = dict(
+        batch_size=batch_size,
+        shuffle=(not validation),
+        num_workers=num_workers,
+        drop_last=(not validation),
+        collate_fn=collate_fn,
+        pin_memory=(device != 'cpu'),
+        persistent_workers=persistent_workers,
+    )
+    if num_workers > 0:
+        loader_kwargs["prefetch_factor"] = prefetch_factor
     data_loader = DataLoader(dataset,
-                             batch_size=batch_size,
-                             shuffle=(not validation),
-                             num_workers=num_workers,
-                             drop_last=(not validation),
-                             collate_fn=collate_fn,
-                             pin_memory=(device != 'cpu'))
+                             **loader_kwargs)
 
     return data_loader

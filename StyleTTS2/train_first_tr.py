@@ -92,6 +92,9 @@ def main(config_path):
     root_path = data_params['root_path']
     min_length = data_params['min_length']
     OOD_data = data_params['OOD_data']
+    dataset_config = {}
+    if data_params.get('mel_cache_dir'):
+        dataset_config['mel_cache_dir'] = data_params['mel_cache_dir']
     
     max_len = config.get('max_len', 200)
     alignment_dir = config.get('alignment_dir', 'alignments/')
@@ -105,7 +108,7 @@ def main(config_path):
                                         min_length=min_length,
                                         batch_size=batch_size,
                                         num_workers=2,
-                                        dataset_config={},
+                                        dataset_config=dataset_config,
                                         device=device)
 
     val_dataloader = build_dataloader(val_list,
@@ -116,7 +119,7 @@ def main(config_path):
                                       validation=True,
                                       num_workers=0,
                                       device=device,
-                                      dataset_config={})
+                                      dataset_config=dataset_config)
     
     with accelerator.main_process_first():
         # text_aligner: stub — pre-computed alignments are used instead

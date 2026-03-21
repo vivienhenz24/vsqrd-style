@@ -43,6 +43,17 @@ def unwrap(m):
     return m.module if hasattr(m, 'module') else m
 
 
+def sync_device(device):
+    if device.type == 'cuda':
+        torch.cuda.synchronize(device)
+
+
+def finish_timed_block(device, timings, name, start_time):
+    sync_device(device)
+    timings[name] = timings.get(name, 0.0) + (time.perf_counter() - start_time)
+    return time.perf_counter()
+
+
 def load_alignments(paths, alignment_dir, input_lengths, mel_input_length, n_down, device):
     """Load pre-computed alignment matrices and pad into a batch tensor.
     Missing files get zero attention (uniform) rather than raising, to avoid DDP deadlocks."""
@@ -101,6 +112,8 @@ def main(config_path):
     save_freq = config.get('save_freq', 2)
     log_interval = config.get('log_interval', 10)
     saving_epoch = config.get('save_freq', 2)
+    enable_step_timing = config.get('enable_step_timing', True)
+    timing_log_interval = config.get('timing_log_interval', log_interval)
 
     data_params = config.get('data_params', None)
     sr = config['preprocess_params'].get('sr', 24000)
@@ -109,6 +122,9 @@ def main(config_path):
     root_path = data_params['root_path']
     min_length = data_params['min_length']
     OOD_data = data_params['OOD_data']
+    dataset_config = {}
+    if data_params.get('mel_cache_dir'):
+        dataset_config['mel_cache_dir'] = data_params['mel_cache_dir']
 
     max_len = config.get('max_len', 200)
     alignment_dir = config.get('alignment_dir', '../alignments/')
@@ -123,11 +139,11 @@ def main(config_path):
     train_dataloader = build_dataloader(train_list, root_path,
                                         OOD_data=OOD_data, min_length=min_length,
                                         batch_size=batch_size, num_workers=2,
-                                        dataset_config={}, device=device)
+                                        dataset_config=dataset_config, device=device)
     val_dataloader = build_dataloader(val_list, root_path,
                                       OOD_data=OOD_data, min_length=min_length,
                                       batch_size=batch_size, validation=True,
-                                      num_workers=0, device=device, dataset_config={})
+                                      num_workers=0, device=device, dataset_config=dataset_config)
 
     with accelerator.main_process_first():
         ASR_config = config.get('ASR_config', False)
@@ -237,10 +253,16 @@ def main(config_path):
     for epoch in range(start_epoch, epochs):
         running_loss = 0
         start_time = time.time()
+        timing_sums = {}
+        timing_count = 0
+        prev_step_end = time.perf_counter()
 
         _ = [model[key].train() for key in model]
 
         for i, batch in enumerate(train_dataloader):
+            step_timings = {}
+            step_start = time.perf_counter()
+            step_timings['data_wait'] = step_start - prev_step_end
             if i < 3 or (i + 1) % 50 == 0:
                 print(f'[rank{accelerator.local_process_index}] epoch={epoch+1} batch={i} start', flush=True)
             waves = batch[0]
@@ -248,6 +270,7 @@ def main(config_path):
             batch = [b.to(device) for b in batch[1:-1]]
             texts, input_lengths, ref_texts, ref_lengths, mels, mel_input_length, ref_mels = batch
 
+            block_start = time.perf_counter()
             with torch.no_grad():
                 mask = length_to_mask(mel_input_length // (2 ** n_down)).to(device)
                 text_mask = length_to_mask(input_lengths).to(texts.device)
@@ -264,6 +287,7 @@ def main(config_path):
             t_en = model.text_encoder(texts, input_lengths, text_mask)
             asr = (t_en @ s2s_attn_mono)
             d_gt = s2s_attn_mono.sum(axis=-1).detach()
+            block_start = finish_timed_block(device, step_timings, 'align_text', block_start)
 
             ss = []
             gs = []
@@ -278,6 +302,7 @@ def main(config_path):
             s_dur = torch.stack(ss).squeeze()
             gs = torch.stack(gs).squeeze()
             s_trg = torch.cat([gs, s_dur], dim=-1).detach()
+            block_start = finish_timed_block(device, step_timings, 'style_targets', block_start)
 
             bert_dur = model.bert(texts, attention_mask=(~text_mask).int())
             d_en = model.bert_encoder(bert_dur).transpose(-1, -2)
@@ -305,6 +330,7 @@ def main(config_path):
             else:
                 loss_sty = 0
                 loss_diff = 0
+            block_start = finish_timed_block(device, step_timings, 'bert_diffusion', block_start)
 
             d, p = model.predictor(d_en, s_dur, input_lengths, s2s_attn_mono, text_mask)
 
@@ -333,9 +359,11 @@ def main(config_path):
             p_en = torch.stack(p_en)
             gt = torch.stack(gt).detach()
             st = torch.stack(st).detach()
+            block_start = finish_timed_block(device, step_timings, 'crop_prepare', block_start)
 
             if gt.size(-1) < 80:
                 print(f'[rank{accelerator.local_process_index}] batch={i} SKIP gt.size(-1)={gt.size(-1)} < 80', flush=True)
+                prev_step_end = time.perf_counter()
                 continue
 
             s = model.style_encoder(gt.unsqueeze(1))
@@ -351,6 +379,7 @@ def main(config_path):
 
             F0_fake, N_fake = unwrap(model['predictor']).F0Ntrain(p_en, s_dur)
             y_rec = model.decoder(en, F0_fake, N_fake, s)
+            block_start = finish_timed_block(device, step_timings, 'decoder_prepare', block_start)
 
             loss_F0_rec = (F.smooth_l1_loss(F0_real, F0_fake)) / 10
             loss_norm_rec = F.smooth_l1_loss(N_real, N_fake)
@@ -360,6 +389,7 @@ def main(config_path):
             accelerator.backward(d_loss)
             optimizer.step('msd')
             optimizer.step('mpd')
+            block_start = finish_timed_block(device, step_timings, 'disc_step', block_start)
 
             optimizer.zero_grad()
             loss_mel = stft_loss(y_rec, wav)
@@ -404,6 +434,7 @@ def main(config_path):
 
             if epoch >= diff_epoch:
                 optimizer.step('diffusion')
+            block_start = finish_timed_block(device, step_timings, 'gen_step', block_start)
 
             d_loss_slm, loss_gen_lm = 0, 0
             if epoch >= joint_epoch:
@@ -456,10 +487,34 @@ def main(config_path):
                         optimizer.zero_grad()
                         accelerator.backward(d_loss_slm, retain_graph=True)
                         optimizer.step('wd')
+            block_start = finish_timed_block(device, step_timings, 'slmadv', block_start)
 
             iters += 1
             if iters <= 3:
                 print(f'[rank{accelerator.local_process_index}] step {iters} COMPLETE', flush=True)
+            step_timings['step_total'] = time.perf_counter() - step_start
+            prev_step_end = time.perf_counter()
+
+            if enable_step_timing:
+                for key, value in step_timings.items():
+                    timing_sums[key] = timing_sums.get(key, 0.0) + value
+                timing_count += 1
+                if accelerator.is_main_process and ((i + 1) % timing_log_interval == 0 or i < 3):
+                    avg_timings = {k: timing_sums[k] / timing_count for k in timing_sums}
+                    timing_parts = ', '.join(
+                        f'{name}={avg_timings[name] * 1000:.1f}ms'
+                        for name in [
+                            'data_wait', 'align_text', 'style_targets', 'bert_diffusion',
+                            'crop_prepare', 'decoder_prepare', 'disc_step', 'gen_step',
+                            'slmadv', 'step_total'
+                        ] if name in avg_timings
+                    )
+                    log_info(f'Timing Epoch [{epoch+1}/{epochs}] Step [{i+1}/{len(train_list)//batch_size}]: {timing_parts}')
+                    if accelerator.is_main_process:
+                        for name, value in avg_timings.items():
+                            writer.add_scalar(f'timing/{name}_ms', value * 1000.0, iters)
+                    timing_sums = {}
+                    timing_count = 0
 
             if (i+1) % log_interval == 0 and accelerator.is_main_process:
                 log_info('Epoch [%d/%d], Step [%d/%d], Loss: %.5f, Disc Loss: %.5f, Dur Loss: %.5f, CE Loss: %.5f, Norm Loss: %.5f, F0 Loss: %.5f, LM Loss: %.5f, Gen Loss: %.5f, Sty Loss: %.5f, Diff Loss: %.5f, DiscLM Loss: %.5f, GenLM Loss: %.5f'

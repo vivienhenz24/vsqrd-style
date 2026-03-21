@@ -20,6 +20,7 @@ data_params:
   train_data: "Data/tr_train.txt"
   val_data: "Data/tr_val.txt"
   root_path: ".."
+  mel_cache_dir: "../mel_cache"
   OOD_data: "Data/tr_ood.txt"
   min_length: 50
 

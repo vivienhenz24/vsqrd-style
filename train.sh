@@ -132,6 +132,14 @@ for manifest in manifests:
     print(f'  {manifest.name}: kept {len(cleaned)}, removed {removed}')
 "
 
+echo "--- Precomputing mel cache ---"
+"$PY" precompute_mels.py \
+    --root "$REPO_ROOT" \
+    --cache-dir "$REPO_ROOT/mel_cache" \
+    --manifests \
+    "$REPO_ROOT/StyleTTS2/Data/tr_train.txt" \
+    "$REPO_ROOT/StyleTTS2/Data/tr_val.txt"
+
 echo "--- Verifying setup ---"
 "$PY" -c "
 import os
@@ -143,6 +151,7 @@ checks = [
     'StyleTTS2/Data/tr_train.txt',
     'StyleTTS2/Data/tr_val.txt',
     'StyleTTS2/Data/tr_ood.txt',
+    'mel_cache/combined_dataset/male_000001.pt',
 ]
 all_ok = True
 for f in checks:
