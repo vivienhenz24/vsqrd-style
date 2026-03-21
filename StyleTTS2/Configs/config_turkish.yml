@@ -7,7 +7,7 @@ epochs_1st: 200
 epochs_2nd: 100
 batch_size: 16
 max_len: 400
-pretrained_model: ""
+pretrained_model: "../kokoro_training_init.pth"
 second_stage_load_pretrained: true
 load_only_params: false
 

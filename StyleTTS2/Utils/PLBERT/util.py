@@ -26,6 +26,13 @@ def load_plbert(log_dir):
 
     iters = [int(f.split('_')[-1].split('.')[0]) for f in ckpts if os.path.isfile(os.path.join(log_dir, f))]
     iters = sorted(iters)[-1]
+    # Allow overriding the checkpoint step via a 'checkpoint_step' key in the training config
+    # (set by passing plbert_config directly, or via a step_override file)
+    step_file = os.path.join(log_dir, "use_step.txt")
+    if os.path.isfile(step_file):
+        override = int(open(step_file).read().strip())
+        if override in sorted([int(f.split('_')[-1].split('.')[0]) for f in ckpts if os.path.isfile(os.path.join(log_dir, f))]):
+            iters = override
 
     checkpoint = torch.load(log_dir + "/step_" + str(iters) + ".t7", map_location='cpu')
     state_dict = checkpoint['net']

@@ -41,6 +41,7 @@ data/
 datasets/
 !StyleTTS2/Data/
 /weights/
+/kokoro_training_init.pth
 /voices/
 /alignments/
 /alignments_test/
